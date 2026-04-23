@@ -108,6 +108,16 @@ a:focus-visible {
   margin: 0;
 }
 
+a.brand-mark {
+  color: var(--text);
+  text-decoration: none;
+}
+
+a.brand-mark:hover,
+a.brand-mark:focus-visible {
+  text-decoration: none;
+}
+
 h1 {
   margin: 20px 0 16px;
   font-size: clamp(1.9rem, 3.8vw, 2.25rem);

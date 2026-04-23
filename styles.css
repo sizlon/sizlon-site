@@ -99,6 +99,12 @@ a:focus-visible {
   letter-spacing: 0;
 }
 
+.brand-mark {
+  color: var(--text);
+  font-size: 1rem;
+  font-weight: 800;
+}
+
 h1 {
   margin: 20px 0 16px;
   font-size: clamp(1.9rem, 3.8vw, 2.25rem);

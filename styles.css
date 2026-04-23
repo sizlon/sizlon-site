@@ -116,6 +116,30 @@ p {
   line-height: 1.2;
 }
 
+.principles {
+  display: grid;
+  gap: 12px;
+}
+
+.principle {
+  display: grid;
+  gap: 4px;
+  padding: 14px 16px;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  background: #fbfcff;
+}
+
+.principle strong {
+  font-size: 1rem;
+  color: var(--text);
+}
+
+.principle span {
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
 .contact-list {
   margin: 0;
   display: grid;
@@ -271,6 +295,10 @@ p {
   }
 
   .contact-item {
+    padding: 12px 14px;
+  }
+
+  .principle {
     padding: 12px 14px;
   }
 

@@ -101,11 +101,12 @@ a:focus-visible {
 
 .brand-mark {
   color: var(--text);
-  font-size: 1.15rem;
+  font-size: 1.18rem;
   font-weight: 800;
-  letter-spacing: 0;
+  letter-spacing: 0.03em;
   line-height: 1;
   margin: 0;
+  text-transform: uppercase;
 }
 
 a.brand-mark {

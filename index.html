@@ -13,13 +13,19 @@
     <section class="shell">
       <div class="topbar">
         <p class="eyebrow">Sizlon Inc.</p>
-        <div class="lang-switch" role="tablist" aria-label="Language switch">
-          <button type="button" class="lang-switch__button is-active" data-lang-target="ko" aria-pressed="true" data-label-ko="한글" data-label-en="Korean">한글</button>
-          <button type="button" class="lang-switch__button" data-lang-target="en" aria-pressed="false" data-label-ko="영어" data-label-en="English">영어</button>
+        <div class="top-actions">
+          <div class="lang-switch" role="tablist" aria-label="Language switch">
+            <button type="button" class="lang-switch__button is-active" data-lang-target="ko" aria-pressed="true" data-label-ko="한글" data-label-en="Korean">한글</button>
+            <button type="button" class="lang-switch__button" data-lang-target="en" aria-pressed="false" data-label-ko="영어" data-label-en="English">영어</button>
+          </div>
+          <button type="button" class="site-nav-toggle" data-site-nav-toggle aria-controls="site-nav" aria-expanded="false">
+            <span class="site-nav-toggle__icon" aria-hidden="true"><span></span><span></span><span></span></span>
+            <span class="site-nav-toggle__text" data-label-ko="메뉴" data-label-en="Menu">메뉴</span>
+          </button>
         </div>
       </div>
 
-      <nav class="nav" aria-label="주요 메뉴">
+      <nav class="nav site-nav" id="site-nav" aria-label="주요 메뉴" data-site-nav>
         <a href="/" data-label-ko="홈" data-label-en="Home">홈</a>
         <a href="/about.html" data-label-ko="소개" data-label-en="About">소개</a>
         <a href="/notices.html" data-label-ko="공고" data-label-en="Notices">공고</a>

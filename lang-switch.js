@@ -1,9 +1,9 @@
 (function () {
-  const buttons = document.querySelectorAll('[data-lang-target]');
-  const panels = document.querySelectorAll('[data-lang]');
-  const labels = document.querySelectorAll('[data-label-ko][data-label-en]');
-  const navs = document.querySelectorAll('[data-site-nav]');
-  const backdrops = document.querySelectorAll('[data-site-nav-backdrop]');
+  const buttons = Array.from(document.querySelectorAll('[data-lang-target]'));
+  const panels = Array.from(document.querySelectorAll('[data-lang]'));
+  const labels = Array.from(document.querySelectorAll('[data-label-ko][data-label-en]'));
+  const navs = Array.from(document.querySelectorAll('[data-site-nav]'));
+  const backdrops = Array.from(document.querySelectorAll('[data-site-nav-backdrop]'));
   const navToggle = document.querySelector('[data-site-nav-toggle]');
   const mobileQuery = window.matchMedia('(max-width: 640px)');
 

@@ -11,10 +11,28 @@
   function readStoredLang() {
     try {
       const stored = window.localStorage.getItem(STORAGE_KEY);
-      return stored === 'en' ? 'en' : 'ko';
+      if (stored === 'ko' || stored === 'en') {
+        return stored;
+      }
     } catch (_error) {
+      // Fall through to language detection below.
+    }
+
+    const browserLang = String(window.navigator.language || '').toLowerCase();
+    if (browserLang.startsWith('ko')) {
       return 'ko';
     }
+
+    try {
+      const browserLanguages = Array.isArray(window.navigator.languages) ? window.navigator.languages : [];
+      if (browserLanguages.some((lang) => String(lang).toLowerCase().startsWith('ko'))) {
+        return 'ko';
+      }
+    } catch (_error) {
+      // Ignore navigator access failures and use the default fallback.
+    }
+
+    return 'en';
   }
 
   function writeStoredLang(lang) {

@@ -148,6 +148,11 @@ p {
   box-shadow: none;
 }
 
+.page-bridge {
+  margin-top: 18px;
+  color: var(--muted);
+}
+
 .muted {
   color: var(--muted);
 }
@@ -218,6 +223,50 @@ p {
   margin: 20px 0 10px;
   font-size: 1.05rem;
   line-height: 1.25;
+}
+
+.solution-summary {
+  margin-bottom: 22px;
+}
+
+.solution-grid {
+  display: grid;
+  gap: 14px;
+  margin: 18px 0 22px;
+}
+
+.solution-card {
+  padding: 16px 18px;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  background: #fbfcff;
+}
+
+.solution-card p:last-child {
+  margin-bottom: 0;
+}
+
+.solution-meta {
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+.solution-link {
+  display: inline-flex;
+  align-items: center;
+  min-height: 40px;
+  padding: 10px 14px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--accent-soft);
+  font-weight: 700;
+}
+
+.solution-link:hover,
+.solution-link:focus-visible {
+  text-decoration: none;
+  border-color: #c2cdf3;
+  background: #e2ebff;
 }
 
 .principles {

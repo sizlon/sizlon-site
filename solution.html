@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>솔루션 - Sizlon Inc.</title>
+  <meta name="description" content="주식회사 시즐론의 솔루션 구조 설명 페이지입니다.">
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <main class="page">
+    <section class="shell">
+      <div class="topbar">
+        <button type="button" class="site-nav-toggle" data-site-nav-toggle aria-controls="site-nav" aria-expanded="false" aria-label="Open navigation">
+          <span class="site-nav-toggle__icon" aria-hidden="true"><span></span><span></span><span></span></span>
+        </button>
+        <a class="eyebrow brand-mark" href="/" aria-label="SIZLON home">SIZLON</a>
+        <div class="top-actions">
+          <div class="lang-switch" role="tablist" aria-label="Language switch">
+            <button type="button" class="lang-switch__button is-active" data-lang-target="ko" aria-pressed="true" data-label-ko="한글" data-label-en="Korean">한글</button>
+            <button type="button" class="lang-switch__button" data-lang-target="en" aria-pressed="false" data-label-ko="영어" data-label-en="English">영어</button>
+          </div>
+        </div>
+      </div>
+
+      <nav class="nav site-nav" id="site-nav" aria-label="주요 메뉴" data-site-nav>
+        <a href="/" data-label-ko="홈" data-label-en="Home">홈</a>
+        <a class="is-active" href="/solution.html" aria-current="page" data-label-ko="솔루션" data-label-en="Solution">솔루션</a>
+        <a href="/notices.html" data-label-ko="공고" data-label-en="Notices">공고</a>
+        <a href="/contact.html" data-label-ko="문의" data-label-en="Contact">문의</a>
+      </nav>
+
+      <section class="lang-panel" data-lang="ko">
+        <h1>솔루션</h1>
+
+        <p class="solution-summary">
+          시즐론은 경계를 정의하고 고정하는 원칙 위에 규칙 기반 검증 운영을 구축합니다.<br>
+          공개되어 있는 기반은 프로토콜 계층이며, 실행과 목적별 엔진 계층은 별도의 운영 저장소에서 관리됩니다.
+        </p>
+
+        <h2 class="section-title">Foundation</h2>
+        <div class="solution-card">
+          <p>
+            시즐론의 규범적 책임성 기반은 <strong>boundary-protocol</strong>에 있습니다.<br>
+            이 저장소는 프로토콜 의미, 책임 모델, 검증 가능한 아티팩트 의미를 공개 기준점으로 문서화합니다.
+          </p>
+          <p>
+            <a class="solution-link" href="https://github.com/sizlon/boundary-protocol" target="_blank" rel="noreferrer">boundary-protocol GitHub</a>
+          </p>
+        </div>
+
+        <h2 class="section-title">Execution</h2>
+        <div class="solution-card">
+          <p>
+            실행 런타임은 <strong>boundary-executor</strong>로 구현됩니다.<br>
+            이 계층은 프로토콜 의미를 새로 정의하지 않고, 고정된 실행 계약과 단계 경계를 집행합니다.
+          </p>
+        </div>
+
+        <h2 class="section-title">Current Path</h2>
+        <div class="solution-card">
+          <p>
+            현재 공식 통합 경로는 <strong>dpurix</strong>를 중심으로 구성됩니다.<br>
+            dpurix는 고정 명세에 대해 문서와 문서 패키지를 검증하는 엔진이며, executor는 최종 검증 산출물과 실행 경계를 소유합니다.
+          </p>
+          <p class="solution-meta">
+            현재 공개 저장소로 직접 노출되는 것은 protocol layer이며, integrated execution stack은 운영 저장소에서 관리됩니다.
+          </p>
+        </div>
+
+        <h2 class="section-title">Expansion Directions</h2>
+        <div class="solution-grid">
+          <div class="solution-card">
+            <p>
+              <strong>code-boundary</strong>는 코드 구현 경계가 고정된 명세와 일치하는지 검증하는 방향입니다.
+            </p>
+          </div>
+          <div class="solution-card">
+            <p>
+              <strong>archispect</strong>는 선언된 아키텍처 경계와 설계 계약이 근거와 정책 맥락으로 지지되는지 검토하는 방향입니다.
+            </p>
+          </div>
+        </div>
+
+        <h2 class="section-title">Boundary</h2>
+        <p>
+          이 솔루션은 해석, 권고, 결과 최적화를 소유하지 않습니다.<br>
+          최종 판단은 사용자 또는 조직의 책임입니다.
+        </p>
+      </section>
+
+      <section class="lang-panel" data-lang="en" hidden>
+        <h1>Solution</h1>
+
+        <p class="solution-summary">
+          Sizlon builds rule-based verification operations on principles that define and fix boundaries.<br>
+          The public layer is the protocol foundation, while execution and purpose-specific engine layers are maintained in separate operational repositories.
+        </p>
+
+        <h2 class="section-title">Foundation</h2>
+        <div class="solution-card">
+          <p>
+            Sizlon's normative accountability foundation is grounded in <strong>boundary-protocol</strong>.<br>
+            That repository serves as the public reference for protocol meaning, responsibility model, and verifiable artifact meaning.
+          </p>
+          <p>
+            <a class="solution-link" href="https://github.com/sizlon/boundary-protocol" target="_blank" rel="noreferrer">View boundary-protocol on GitHub</a>
+          </p>
+        </div>
+
+        <h2 class="section-title">Execution</h2>
+        <div class="solution-card">
+          <p>
+            The execution runtime is implemented through <strong>boundary-executor</strong>.<br>
+            This layer does not redefine protocol meaning. It enforces fixed execution contracts and stage boundaries.
+          </p>
+        </div>
+
+        <h2 class="section-title">Current Path</h2>
+        <div class="solution-card">
+          <p>
+            The current integrated path centers on <strong>dpurix</strong>.<br>
+            dpurix is the engine for verifying documents and document packages against fixed specifications, while the executor owns final verification artifacts and runtime boundaries.
+          </p>
+          <p class="solution-meta">
+            The protocol layer is the public repository surface. The integrated execution stack is maintained in operational repositories.
+          </p>
+        </div>
+
+        <h2 class="section-title">Expansion Directions</h2>
+        <div class="solution-grid">
+          <div class="solution-card">
+            <p>
+              <strong>code-boundary</strong> extends the model toward verifying whether implemented code stays within a fixed boundary specification.
+            </p>
+          </div>
+          <div class="solution-card">
+            <p>
+              <strong>archispect</strong> extends the model toward reviewing whether declared architecture boundaries and design contracts are supported by evidence and policy context.
+            </p>
+          </div>
+        </div>
+
+        <h2 class="section-title">Boundary</h2>
+        <p>
+          The solution does not own interpretation, recommendation, or outcome optimization.<br>
+          Final judgment remains with the user or organization.
+        </p>
+      </section>
+
+      <div class="site-nav-backdrop" data-site-nav-backdrop></div>
+    </section>
+  </main>
+
+  <footer class="page footer">
+      <div class="footer-grid">
+        <div>
+          <p class="eyebrow">Sizlon</p>
+          <p class="muted">Boundary-governed verification solution structure</p>
+        </div>
+        <div class="footer-links">
+          <a href="https://github.com/sizlon" target="_blank" rel="noreferrer">Sizlon GitHub</a>
+          <a href="https://github.com/sizlon/boundary-protocol" target="_blank" rel="noreferrer">boundary-protocol</a>
+        </div>
+      </div>
+  </footer>
+
+  <script src="/lang-switch.js"></script>
+</body>
+</html>

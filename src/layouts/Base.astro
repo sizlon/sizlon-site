@@ -107,10 +107,11 @@ const canonical = new URL(Astro.url.pathname, Astro.site);
         addressLocality: 'Seoul',
         addressCountry: 'KR',
       },
+      // 전화 응대를 하지 않으므로 telephone은 넣지 않는다 — 구조화 데이터의
+      // telephone은 검색 결과에 통화 버튼을 띄우는 신호다. 문의는 이메일.
       contactPoint: {
         '@type': 'ContactPoint',
         email: 'hello@sizlon.io',
-        telephone: '+82-2-702-5795',
         contactType: 'sales',
         availableLanguage: ['ko', 'en'],
       },

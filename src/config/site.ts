@@ -8,8 +8,9 @@ export const site = {
   tagline: 'AI proposes. A deterministic layer verifies.',
   portalLoginUrl: 'https://portal.sizlon.io',
   contactEmail: 'hello@sizlon.io',
+  // 대표전화는 사업자 표기 의무용이다 — 전화 응대는 하지 않으므로 문의 채널로
+  // 노출하지 않는다(푸터 사업자정보 줄과 법적 고지에만 등장). 문의는 이메일·폼.
   contactPhone: '02-702-5795',
-  contactPhoneHref: '+82-2-702-5795',
   // Contact form endpoint — a Google Apps Script web-app /exec URL. Paste the
   // deployed URL here to activate the form; while empty, the form no-ops on
   // submit and the mailto fallback carries. Not a secret (it's client-visible).

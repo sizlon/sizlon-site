@@ -8,6 +8,8 @@ export const site = {
   tagline: 'AI proposes. A deterministic layer verifies.',
   portalLoginUrl: 'https://portal.sizlon.io',
   contactEmail: 'hello@sizlon.io',
+  contactPhone: '02-702-5795',
+  contactPhoneHref: '+82-2-702-5795',
   // Contact form endpoint — a Google Apps Script web-app /exec URL. Paste the
   // deployed URL here to activate the form; while empty, the form no-ops on
   // submit and the mailto fallback carries. Not a secret (it's client-visible).
@@ -73,6 +75,8 @@ export const nav = [
   // 소개 페이지(/bid-verification)로 — 외부 점프는 그 페이지의 CTA가 담당한다.
   { href: '/bid-verification', key: 'Miriboa' },
   { href: '/web-crawling', key: 'Crawler Platform' },
+  // 회사 사이트인데 회사를 설명하는 페이지가 없었다(2026-07-29 추가).
+  { href: '/about', key: 'About' },
   { href: '/contact', key: 'Contact' },
 ] as const;
 
@@ -96,7 +100,9 @@ export const crawlerPages = [
 // far better by the connector reading a real notice in chat.)
 export const miriboaPages = [
   { href: 'https://miriboa.sizlon.io/bid-monitoring', key: 'Free alerts' },
+  { href: 'https://miriboa.sizlon.io/tools/notice', key: 'Tools' },
   { href: 'https://miriboa.sizlon.io/connector', key: 'Connector' },
+  { href: 'https://miriboa.sizlon.io/pricing', key: 'Pricing' },
 ] as const;
 
 // The MCP connector endpoint users paste into Claude. Public, no auth.

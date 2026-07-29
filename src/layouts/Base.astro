@@ -14,16 +14,24 @@ import '../styles/global.css';
 import Nav from '../components/Nav.astro';
 import Footer from '../components/Footer.astro';
 import type { Lang } from '../i18n/content';
-import { t } from '../i18n/utils';
+import { t, localizePath, logicalPath } from '../i18n/utils';
 
 interface Props {
   title: string;
   description: string;
   lang?: Lang;
+  /** 색인 제외 — 리디렉트 스텁 등. sitemap 제외(astro.config.mjs filter)와 쌍. */
+  noindex?: boolean;
 }
-const { title, description, lang = 'en' } = Astro.props;
+const { title, description, lang = 'en', noindex = false } = Astro.props;
 const fullTitle = title === 'Sizlon' ? title : `${title} — Sizlon`;
 const tr = t(lang);
+// en/ko 쌍의 hreflang — 언어 스위처와 같은 logicalPath/localizePath 로직.
+// x-default는 en(기본 로케일). noindex 페이지는 hreflang 클러스터에서 제외.
+const logical = logicalPath(Astro.url);
+const altEn = new URL(localizePath(logical, 'en'), Astro.site);
+const altKo = new URL(localizePath(logical, 'ko'), Astro.site);
+const canonical = new URL(Astro.url.pathname, Astro.site);
 ---
 
 <!doctype html>
@@ -38,6 +46,10 @@ const tr = t(lang);
          is no flash of the wrong language. */
       (function () {
         try {
+          /* 검색엔진 렌더러(WRS 등)는 localStorage가 비고 언어가 en-US라 모든
+             ko 페이지가 en으로 리디렉트돼 보인다 — 봇은 자동 리디렉트에서 제외
+             (언어 매칭은 hreflang이 담당). */
+          if (/bot|crawler|spider|crawling|yeti|slurp|bingpreview|headless/i.test(navigator.userAgent)) return;
           if (localStorage.getItem('lang')) return; // user chose explicitly — respect it
           var path = location.pathname;
           var onKo = path === '/ko' || path.indexOf('/ko/') === 0;
@@ -62,10 +74,48 @@ const tr = t(lang);
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
     <title>{fullTitle}</title>
     <meta name="description" content={description} />
+    {noindex && <meta name="robots" content="noindex" />}
     <meta name="naver-site-verification" content="d0586033fd852b5a82dfb099fa52528c9d74a792" />
     <meta property="og:title" content={fullTitle} />
     <meta property="og:description" content={description} />
     <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Sizlon" />
+    <meta property="og:locale" content={lang === 'ko' ? 'ko_KR' : 'en_US'} />
+    <meta property="og:locale:alternate" content={lang === 'ko' ? 'en_US' : 'ko_KR'} />
+    <meta property="og:url" content={canonical.href} />
+    <meta property="og:image" content={new URL('/og.png', Astro.site).href} />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Sizlon — AI proposes. A deterministic layer verifies." />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="canonical" href={canonical.href} />
+    {!noindex && <link rel="alternate" hreflang="en" href={altEn.href} />}
+    {!noindex && <link rel="alternate" hreflang="ko" href={altKo.href} />}
+    {!noindex && <link rel="alternate" hreflang="x-default" href={altEn.href} />}
+    <script type="application/ld+json" set:html={JSON.stringify({
+      '@context': 'https://schema.org',
+      '@type': 'Organization',
+      name: 'Sizlon Inc.',
+      alternateName: '주식회사 시즐론',
+      url: 'https://sizlon.io',
+      logo: 'https://sizlon.io/logo/sizlon-logo.svg',
+      description: 'Sizlon builds systems for work that can’t be wrong — an AI layer proposes, a deterministic layer verifies, and only what holds is promoted.',
+      founder: { '@type': 'Person', name: 'Kwangyeon Lee' },
+      address: {
+        '@type': 'PostalAddress',
+        streetAddress: '302, 189-7 Wonhyo-ro, Yongsan-gu',
+        addressLocality: 'Seoul',
+        addressCountry: 'KR',
+      },
+      contactPoint: {
+        '@type': 'ContactPoint',
+        email: 'hello@sizlon.io',
+        telephone: '+82-2-702-5795',
+        contactType: 'sales',
+        availableLanguage: ['ko', 'en'],
+      },
+      subOrganization: { '@type': 'Organization', name: 'Miriboa', url: 'https://miriboa.sizlon.io' },
+    })} />
   </head>
   <body>
     <a class="skip" href="#main">{tr.common.skip}</a>

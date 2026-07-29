@@ -8,10 +8,11 @@ const { slug } = Astro.params;
 const target = `https://miriboa.sizlon.io/bid-verification${slug ? `/${slug}` : ''}`;
 ---
 <!doctype html>
-<html lang="ko">
+<html lang="en">
   <head>
     <meta charset="utf-8" />
     <title>Redirecting…</title>
+    <meta name="robots" content="noindex,follow" />
     <script is:inline define:vars={{ target }}>location.replace(target + location.search);</script>
     <meta http-equiv="refresh" content={`1;url=${target}`} />
     <link rel="canonical" href={target} />

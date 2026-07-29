@@ -13,7 +13,7 @@ with a little inline JS. See `README.md` for the file-tree overview.
 
 ```
 npm run dev      # local dev server at localhost:4321
-npm run build    # static build to ./dist/  (22 routes today)
+npm run build    # static build to ./dist/  (65 routes today, incl. redirect stubs)
 npm run preview  # serve the built ./dist/ locally
 ```
 
@@ -54,10 +54,23 @@ wire nav/product entries in `site.ts` and copy in `content.ts` (both locales).
 ## Products & navigation
 
 The company umbrella is *AI proposes, a deterministic layer verifies* — product-
-neutral. Products live in `solutions[]` (Crawler Platform, Miriboa, Verify) and
-each has a `/products/<slug>` page. Crawler-specific pages (How it works,
-Security, Editions) are **scoped under Crawler Platform** (`crawlerPages`), not
-in the global nav. Keep that split when adding product-specific pages.
+neutral. Products live in `solutions[]` (Crawler Platform, Miriboa). Crawler-
+specific pages (How it works, Security, Editions) are **scoped under Crawler
+Platform** (`crawlerPages`), not in the global nav. Keep that split when adding
+product-specific pages.
+
+**This is the company site, not a product site.** Miriboa was split out to
+miriboa.sizlon.io (2026-07-23); that repo (`miriboa-site`) owns the service copy,
+prices, and the service's own legal docs. Here Miriboa gets exactly one thin
+gateway page (`/bid-verification`, `MiriboaGateway.astro`) whose cards link out.
+**Do not restate Miriboa prices, credit rules, or SLA on this site** — the
+2026-07-29 audit found the company site advertising a paid tier for a feature
+that had become free, because the copy was duplicated here and drifted. Legal
+pages follow the same rule: sizlon.io's terms/privacy cover this site only and
+point at the Miriboa docs for the service.
+
+`/about` is the company page (legal entity, principles, contact). Product
+narratives belong on the product pages, not there.
 
 ## Contact form
 
@@ -79,6 +92,17 @@ backend was retired 2026-07-18.)
   script untouched (e.g. the Turnstile api.js). There is no CSP on the site.
 - **New UI strings must be bilingual** — the `as const` content object fails the
   build if a locale is missing a key.
+- **noindex and the sitemap move together:** a page excluded by
+  `SITEMAP_EXCLUDE` in `astro.config.mjs` must also carry `noindex` (the `Base`
+  prop, or a literal meta tag in the hand-written redirect stubs), and vice versa.
+- **`public/robots.txt` must exist.** Without an origin robots.txt, Cloudflare
+  serves a *managed* one that blocks GPTBot/ClaudeBot/Google-Extended and omits
+  the Sitemap line — that was the live state until 2026-07-29.
+- **`content.ts` holds only live copy.** The blocks left over from the split-off
+  app pages (`monitor`, `verifyCredits`, `verifyRequest`, `verifyManage`,
+  `solutions`, `connector`, `miriboa`, `precheck`) were deleted 2026-07-29 along
+  with their sections. Both locales must keep the *same* key set — if you add a
+  key to one, add it to the other or the `as const` object fails the build.
 
 ## Deploy
 

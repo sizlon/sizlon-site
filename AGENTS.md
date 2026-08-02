@@ -12,14 +12,16 @@ with a little inline JS. See `README.md` for the file-tree overview.
 ## Dev / build / verify
 
 ```
-npm run dev      # local dev server at localhost:4322 (sizlon.localhost via the dev harness Caddy;
-                 # 4322 so it can run alongside miriboa-site's 4321)
 npm run build    # static build to ./dist/  (65 routes today, incl. redirect stubs)
 npm run preview  # serve the built ./dist/ locally
 ```
 
-When starting the dev server here, use background mode: `astro dev --background`,
-and manage it with `astro dev stop` / `status` / `logs`.
+**Dev server: don't start one here.** The dev harness (sizlon-dev-harness) runs
+`astro dev` as a resident container (`site-dev-www`, port 4322) — open
+https://sizlon.localhost (alias: www.localhost) and edits hot-reload on save.
+Logs: `docker compose logs -f site-dev-www` (harness dir). After changing
+dependencies (package-lock), `docker compose restart site-dev-www`. Running
+`npm run dev` on the host is unnecessary and will port-bump.
 
 **Verify changes with `npm run build`** and inspect the emitted files under
 `dist/` (e.g. `dist/contact/index.html`). The build is the source of truth for

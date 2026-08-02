@@ -12,7 +12,8 @@ with a little inline JS. See `README.md` for the file-tree overview.
 ## Dev / build / verify
 
 ```
-npm run dev      # local dev server at localhost:4321
+npm run dev      # local dev server at localhost:4322 (sizlon.localhost via the dev harness Caddy;
+                 # 4322 so it can run alongside miriboa-site's 4321)
 npm run build    # static build to ./dist/  (65 routes today, incl. redirect stubs)
 npm run preview  # serve the built ./dist/ locally
 ```

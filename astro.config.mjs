@@ -14,6 +14,9 @@ const SITEMAP_EXCLUDE = [
 
 export default defineConfig({
   site: 'https://sizlon.io',
+  // dev 포트 고정: miriboa-site(4321)와 동시에 뜰 수 있게 4322 — 로컬 Caddy가
+  // sizlon.localhost → 4322 로 프록시한다 (sizlon-dev-harness README 주소표).
+  server: { port: 4322, host: true },
   integrations: [sitemap({
     filter: (page) => !SITEMAP_EXCLUDE.some((re) => re.test(new URL(page).pathname)),
     // en 루트 + /ko 하위 쌍에 xhtml:link hreflang alternates를 붙인다.

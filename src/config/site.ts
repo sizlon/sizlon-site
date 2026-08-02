@@ -3,7 +3,35 @@
  * The only coupling point to the rest of the monorepo. In a later step these
  * values (portal URL, version) can be generated from build_info() / a shared file.
  */
-export const site = {
+// 환경별 호스트 재매핑 — miriboa-site와 동일 장치(그쪽 site.ts 주석 참조).
+// dev 서버(astro dev)는 로컬 스택(*.localhost), SITE_TARGET=staging 빌드는
+// hnlab 스테이징(stg-*), 기본 빌드는 프로드 URL 그대로.
+const DEV_HOSTS: Array<[string, string]> = [
+  ['https://svc.sizlon.io', 'https://svc.localhost'],
+  ['https://portal.sizlon.io', 'https://portal.localhost'],
+];
+const STAGING_HOSTS: Array<[string, string]> = [
+  ['https://svc.sizlon.io', 'https://stg-svc.sizlon.io'],
+  ['https://portal.sizlon.io', 'https://stg-portal.sizlon.io'],
+];
+
+function devRemap<T extends Record<string, string>>(config: T): T {
+  const hostMap = import.meta.env.DEV
+    ? DEV_HOSTS
+    : (typeof process !== 'undefined' && process.env.SITE_TARGET === 'staging')
+      ? STAGING_HOSTS
+      : null;
+  if (!hostMap) return config;
+  const remapped = { ...config } as Record<string, string>;
+  for (const [key, value] of Object.entries(remapped)) {
+    for (const [prodHost, mappedHost] of hostMap) {
+      if (value.startsWith(prodHost)) remapped[key] = mappedHost + value.slice(prodHost.length);
+    }
+  }
+  return remapped as T;
+}
+
+export const site = devRemap({
   name: 'Sizlon',
   tagline: 'AI proposes. A deterministic layer verifies.',
   portalLoginUrl: 'https://portal.sizlon.io',
@@ -63,7 +91,7 @@ export const site = {
   // script property in Apps Script to activate bot verification. While empty,
   // the widget is not rendered and the server skips the Turnstile check.
   turnstileSiteKey: '0x4AAAAAADzkjelT6SU8nIio',
-};
+});
 
 // Global nav — buyer-first. Each product has its own problem-first landing and a
 // direct nav entry (each buyer reaches their product in one hop — CONTEXT §94 IA

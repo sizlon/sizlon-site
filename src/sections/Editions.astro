@@ -42,7 +42,9 @@ const c = tr.editions;
             <span class="amount">{c.priceAmount}</span>
             <span class="period">{c.pricePeriod}</span>
           </div>
-          <a class="btn btn-primary" href={`${localizePath('/contact', lang)}?topic=pricing`}>{c.requestPricing} <span class="arrow">&rarr;</span></a>
+          {/* 가격 문의는 Crawler 문의와 같은 사람에게 같은 내용으로 간다 —
+              전용 topic 을 두지 않고 demo(데모·가격) 하나로 받는다(2026-08-06). */}
+          <a class="btn btn-primary" href={`${localizePath('/contact', lang)}?topic=demo`}>{c.requestPricing} <span class="arrow">&rarr;</span></a>
         </article>
       ))}
     </div>

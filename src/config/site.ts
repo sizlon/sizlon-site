@@ -129,6 +129,9 @@ export const crawlerPages = [
 // far better by the connector reading a real notice in chat.)
 export const miriboaPages = [
   { href: 'https://miriboa.sizlon.io/bid-monitoring', key: 'Free alerts' },
+  // 미 연방조달(SAM.gov·주한미군) 랜딩. 시장 축이 URL로 분리돼(2026-08-04) 자기
+  // 주소를 갖는다 — 회사 사이트에서 해외 축이 아예 안 보이던 것을 여는 링크다.
+  { href: 'https://miriboa.sizlon.io/sam/bid-verification/', key: 'Federal' },
   { href: 'https://miriboa.sizlon.io/tools/notice', key: 'Tools' },
   { href: 'https://miriboa.sizlon.io/connector', key: 'Connector' },
   { href: 'https://miriboa.sizlon.io/pricing', key: 'Pricing' },

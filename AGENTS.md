@@ -95,9 +95,20 @@ backend was retired 2026-07-18.)
   script untouched (e.g. the Turnstile api.js). There is no CSP on the site.
 - **New UI strings must be bilingual** — the `as const` content object fails the
   build if a locale is missing a key.
-- **noindex and the sitemap move together:** a page excluded by
-  `SITEMAP_EXCLUDE` in `astro.config.mjs` must also carry `noindex` (the `Base`
-  prop, or a literal meta tag in the hand-written redirect stubs), and vice versa.
+- **noindex and the sitemap move together — with one carve-out.** A page excluded
+  by `SITEMAP_EXCLUDE` in `astro.config.mjs` must also carry `noindex` (the `Base`
+  prop), and vice versa. **Redirect stubs are the exception (2026-08-08): they get
+  sitemap exclusion + `canonical`, and must NOT carry `noindex`.** Combining
+  `noindex` with a canonical that points elsewhere is a conflicting signal, and
+  Google may apply the `noindex` to the canonical *target* — here those targets
+  are miriboa's live pages and `/web-crawling`. GSC flagged it. So for stubs the
+  sitemap exclusion carries the "don't index this URL" job alone; keep it.
+- **Redirect stubs are hand-written pages, not `redirects:` config.** Astro's
+  `redirects:` emits `noindex` on the generated page and you cannot turn it off —
+  which is exactly the conflict above. The four legacy `/products/*` URLs were
+  moved out of `redirects:` into `src/pages/products/**` for that reason, and
+  `/products` was added to `SITEMAP_EXCLUDE` (as config-generated pages they had
+  been excluded automatically; hand-written ones are not).
 - **`public/robots.txt` must exist.** Without an origin robots.txt, Cloudflare
   serves a *managed* one that blocks GPTBot/ClaudeBot/Google-Extended and omits
   the Sitemap line — that was the live state until 2026-07-29.

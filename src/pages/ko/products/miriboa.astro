@@ -1,0 +1,20 @@
+---
+// 구 제품 URL — 랜딩이 기능 슬러그로 최상위 이동(2026-07). 미리보아는 2026-07-23 에 전용 사이트로 분리됐다.
+//
+// Astro `redirects:` 설정 대신 **손으로 쓴 스텁**이다 (2026-08-08). 설정이
+// 만드는 페이지는 noindex 를 강제로 붙이는데, canonical 과 함께 달리면 신호가
+// 모순돼 구글이 noindex 를 canonical **대상**에 적용할 수 있다. 그 대상이
+// 여기서는 미리보아 홈과 Crawler Platform 페이지 — 둘 다 주력이다.
+const target = 'https://miriboa.sizlon.io/';
+---
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <title>Redirecting…</title>
+    <script is:inline define:vars={{ target }}>location.replace(target + location.search);</script>
+    <meta http-equiv="refresh" content={`1;url=${target}`} />
+    <link rel="canonical" href={target} />
+  </head>
+  <body><p>Moved: <a href={target}>{target}</a></p></body>
+</html>

@@ -10,6 +10,10 @@ import sitemap from '@astrojs/sitemap';
 const SITEMAP_EXCLUDE = [
   /\/(monitor|bid-monitoring|account|manage|verify-request|connector)(\/|$)/,
   /\/bid-verification\/credits(\/|$)/,
+  // 구 제품 URL 스텁 — 손으로 쓴 페이지가 되면서 사이트맵 후보로 올라온다.
+  // noindex 를 안 달기로 했으므로(위 redirects 주석) 색인 후보에서 빼는 일은
+  // 이 제외 목록이 혼자 진다.
+  /\/products(\/|$)/,
 ];
 
 export default defineConfig({
@@ -22,13 +26,10 @@ export default defineConfig({
     // en 루트 + /ko 하위 쌍에 xhtml:link hreflang alternates를 붙인다.
     i18n: { defaultLocale: 'en', locales: { en: 'en-US', ko: 'ko-KR' } },
   })],
-  // Legacy product URLs — landing pages moved top-level with function slugs.
-  redirects: {
-    '/products/miriboa': 'https://miriboa.sizlon.io',
-    '/products/crawler-platform': '/web-crawling',
-    '/ko/products/miriboa': 'https://miriboa.sizlon.io',
-    '/ko/products/crawler-platform': '/ko/web-crawling',
-  },
+  // 구 제품 URL 은 `redirects:` 가 아니라 **손으로 쓴 스텁**(src/pages/products/**)
+  // 이 처리한다 (2026-08-08). 설정이 만드는 리디렉트 페이지는 noindex 를 강제로
+  // 붙이는데, canonical 과 함께 달리면 신호가 모순돼 구글이 noindex 를 canonical
+  // 대상(미리보아 홈·Crawler Platform 페이지)에 적용할 수 있다. GSC 통지로 드러났다.
   i18n: {
     defaultLocale: 'en',
     locales: ['en', 'ko'],

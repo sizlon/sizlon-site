@@ -52,7 +52,7 @@ export const content = {
         { h: 'Who we are', p: ['Sizlon Inc. (주식회사 시즐론) was founded by Kwangyeon Lee, a data-mining engineer who spent fifteen years building news and media data pipelines — collecting, cleaning, and structuring data that grows every year. The products are built and operated in-house — the person who writes the code is the person who answers your question.'] },
         { h: 'Why we exist', p: ['Out of that data grew the AI era, and AI-generated answers are convenient and usually accurate. But fifteen years of handling data taught one thing: parts of enterprise work do not want usually accurate — they demand definitively accurate. A public tender where one missing form disqualifies the bid. A data pipeline that quietly returns the wrong number after a page changed shape. In that work, "mostly right" is not an answer.'] },
         { h: 'How we build', p: ['One discipline runs through every product: AI proposes, a deterministic layer verifies, and only what holds is promoted. Every result carries a confidence score; low-confidence results are isolated for a human instead of shipped silently; every decision traces back to the evidence behind it. Nothing irreversible happens without a verified backup and an audit trail.'] },
-        { h: 'What we make', p: ['Two products today. Miriboa checks a bid package — U.S. federal (SAM.gov, including USFK) or Korean 나라장터 — against what the notice actually requires, before submission; it runs at miriboa.sizlon.io. Crawler Platform runs web extraction that repairs itself instead of breaking silently — licensed and installed in your own infrastructure.', 'Both were designed from evidence rather than intuition: Miriboa’s checks come from 4.5 million rows of public bid-award records — the actual distribution of why bidders get disqualified.', 'And the extraction those checks run on is measured, not asserted. Against a golden set built from real solicitations — every requirement in every document enumerated, not a curated sample — requirement recall is 93.2% on English U.S. federal notices (1,481 requirements) and 87.4% on Korean ones (1,985 requirements), measured August 2026. We publish the number we measure, including the lower one. A percentage you are asked to believe is worth less than one you can see the method behind.', 'The same engineering also gets applied directly: Korean-document extraction, data pipelines, and MCP connectors built for a specific customer. If your problem is adjacent to what we build, it is worth a conversation.'] },
+        { h: 'What we make', p: ['Two products today. Miriboa checks a bid package — U.S. federal (SAM.gov, including USFK) or Korean 나라장터 — against what the notice actually requires, before submission; it runs at miriboa.sizlon.io. Crawler Platform runs web extraction that repairs itself instead of breaking silently — licensed and installed in your own infrastructure.', 'Both were designed from evidence rather than intuition: Miriboa’s checks come from 4.5 million rows of public bid-opening records — the actual distribution of why bidders get disqualified.', 'And the extraction those checks run on is measured, not asserted. Against a golden set built from real solicitations — every requirement in every document enumerated, not a curated sample — requirement recall is 93.2% on English U.S. federal notices (1,481 requirements) and 87.4% on Korean ones (1,985 requirements), measured August 2026. We publish the number we measure, including the lower one. A percentage you are asked to believe is worth less than one you can see the method behind.', 'The same engineering also gets applied directly: Korean-document extraction, data pipelines, and MCP connectors built for a specific customer. If your problem is adjacent to what we build, it is worth a conversation.'] },
       ],
       factsTitle: 'Company',
       facts: [
@@ -231,7 +231,14 @@ export const content = {
         { t: 'Opportunity Matching', d: 'Every Monday, the new notices matching your keywords — each carrying a verdict on whether your company can actually bid it. Alerts and eligibility screening are both free.', cta: 'See opportunity matching', href: 'https://miriboa.sizlon.io/bid-monitoring' },
         { t: 'Free tools', d: 'Tender search, the deadline D-day calculator, the bid notice analyzer, and a Claude connector that reads Korean notice documents with their tables intact. No account needed.', cta: 'Open the tools', href: 'https://miriboa.sizlon.io/tools/notice' },
       ],
-      trust: 'Built on the official SAM.gov and 나라장터 open APIs · designed from 4.5M bid-award records',
+      // 근거 순서 (2026-08-10, miriboa-site 와 동일 처리): 강한 것을 앞으로. "공식 개방 API
+      // 기반"은 **데이터 접근**이라 소스 소유자(조달청·SAM) 앞에서 가장 약한 카드다 — 원본은
+      // 그쪽이 갖고 있고, 차세대 나라장터는 이미 AI로 첨부까지 읽는다. "450만 행"은 **우리가
+      // 쌓은 것**이라 응찰자 관점으로는 그쪽도 못 쌓는다. 순서만 바꿨다(새 주장 없음).
+      // bid-award → bid-opening (같은 날): 코퍼스는 **개찰** 데이터다(dq 리포트 정의와 동일).
+      // ko 쪽과 miriboa-site 는 전부 개찰/bid-opening 인데 **EN 만** 낙찰로 어긋나 있었다 —
+      // 이 줄과 About §'What we make' 두 곳. 둘 다 고쳤다(한쪽만 고치면 EN 내부가 어긋난다).
+      trust: 'Designed from 4.5M bid-opening records · built on the official SAM.gov and 나라장터 open APIs',
       cta: 'Open the Miriboa site',
       href: 'https://miriboa.sizlon.io',
       cta2: 'See pricing',
@@ -516,7 +523,8 @@ export const content = {
         { t: '입찰기회 매칭', d: '관심 키워드에 맞는 신규 공고를 매주 월요일 이메일로 — 공고마다 귀사가 낼 수 있는지 참가자격 판정을 붙여서. 알림과 자격 사전판정 모두 무료입니다.', cta: '매칭 보기', href: 'https://miriboa.sizlon.io/bid-monitoring' },
         { t: '무료 도구', d: '입찰공고 검색, 마감 D-day 계산기, 입찰공고 분석기, 그리고 공고문을 표 그대로 읽는 Claude 커넥터. 계정 없이 바로 씁니다.', cta: '도구 열기', href: 'https://miriboa.sizlon.io/tools/notice' },
       ],
-      trust: '나라장터·SAM.gov 공식 개방 API 기반 · 개찰 데이터 450만 행 분석으로 설계',
+      // 근거 순서 — en 블록 주석 참조 (2026-08-10).
+      trust: '개찰 데이터 450만 행 분석으로 설계 · 나라장터·SAM.gov 공식 개방 API 기반',
       cta: '미리보아 사이트로',
       href: 'https://miriboa.sizlon.io',
       cta2: '가격 보기',

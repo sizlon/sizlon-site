@@ -29,7 +29,7 @@ const homeHref = localizePath('/', lang);
     </nav>
 
     <div class="utility">
-      <a class="portal" href="https://miriboa.sizlon.io/account"><span data-acct-text data-login={tr.common.login} data-account={tr.common.account}>{tr.common.login}</span> &rarr;</a>
+      <a class="portal" href="https://miriboa.sizlon.io/account">{tr.common.login} &rarr;</a>
       <span class="lang" aria-label="Language">
         <a href={localizePath(logical, 'en')} data-lang-choice="en" aria-current={lang === 'en' ? 'true' : undefined}>EN</a>
         <span class="sep">/</span>
@@ -59,7 +59,7 @@ const homeHref = localizePath('/', lang);
 
         <div class="m-divider"></div>
 
-        <a class="m-portal" href="https://miriboa.sizlon.io/account"><span data-acct-text data-login={tr.common.login} data-account={tr.common.account}>{tr.common.login}</span> &rarr;</a>
+        <a class="m-portal" href="https://miriboa.sizlon.io/account">{tr.common.login} &rarr;</a>
         <span class="m-lang" aria-label="Language">
           <a href={localizePath(logical, 'en')} data-lang-choice="en" aria-current={lang === 'en' ? 'true' : undefined}>EN</a>
           <span class="sep">/</span>
@@ -96,21 +96,11 @@ const homeHref = localizePath('/', lang);
     });
   });
 
-  // Sizlon 계정(미리보아 세션) 로그인 상태를 nav에 반영: 로그인 중이면 '내 계정'.
-  // 같은 페이지에서 로그인/로그아웃해도 즉시 바뀌도록, 로그인 코드가 쏘는
-  // 'miriboa-session-change' 이벤트와 (타 탭용) storage 이벤트에도 반응한다.
-  const applyAcctLabel = () => {
-    try {
-      const on = !!localStorage.getItem('miriboa_session');
-      document.querySelectorAll<HTMLElement>('[data-acct-text]').forEach((el) => {
-        const label = on ? el.dataset.account : el.dataset.login;
-        if (label) el.textContent = label;
-      });
-    } catch (e) {}
-  };
-  applyAcctLabel();
-  window.addEventListener('miriboa-session-change', applyAcctLabel);
-  window.addEventListener('storage', (e) => { if (e.key === 'miriboa_session') applyAcctLabel(); });
+  // 계정 라벨은 정적이다. 분리(2026-07-23) 전에는 여기서 localStorage의
+  // 'miriboa_session'을 읽어 '내 계정'으로 바꿨지만, localStorage는 origin
+  // 스코프라 로그인 화면이 전부 miriboa.sizlon.io로 옮겨간 뒤로는 이 origin에
+  // 그 키를 쓰는 코드가 없다 — 항상 '로그인'이었다. 로그인 상태를 알려면
+  // HttpOnly인 sizlon_sso 쿠키를 svc에 물어보는 공개 엔드포인트가 필요하다.
 </script>
 
 <style>

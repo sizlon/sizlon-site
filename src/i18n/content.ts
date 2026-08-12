@@ -17,7 +17,6 @@ export const content = {
       // 회사 사이트에는 자체 로그인이 없다 — 이 링크는 미리보아 계정으로 간다.
       // 라벨에 제품명을 박아 "어느 계정인지" 모호하지 않게 한다(2026-07-29).
       login: 'Miriboa log in',
-      account: 'Miriboa account',
       customerPortal: 'Customer portal',
       categories: { extraction: 'Web extraction', verification: 'Document verification' },
       solutionStatus: { live: 'Available now', pilot: 'Pilots open', next: 'Coming next', roadmap: 'On the roadmap' },
@@ -309,7 +308,6 @@ export const content = {
       skip: '본문으로 건너뛰기',
       portalLogin: '포털 로그인',
       login: '미리보아 로그인',
-      account: '미리보아 내 계정',
       customerPortal: '고객 포털',
       categories: { extraction: '웹 추출', verification: '문서 검증' },
       solutionStatus: { live: '지금 사용 가능', pilot: '파일럿 진행 중', next: '다음 출시 예정', roadmap: '로드맵 예정' },

@@ -43,50 +43,11 @@ export const site = devRemap({
   // deployed URL here to activate the form; while empty, the form no-ops on
   // submit and the mailto fallback carries. Not a secret (it's client-visible).
   contactFormEndpoint: 'https://svc.sizlon.io/api/contact',
-  // Free notice-alert subscription (site-backend, double opt-in). Empty = form no-ops.
-  subscribeEndpoint: 'https://svc.sizlon.io/api/subscribe',
-  // Eligibility profile (A2) — token-authed GET (prefill) + POST (save). Empty = no-op.
-  subscribeProfileEndpoint: 'https://svc.sizlon.io/api/subscribe/profile',
-  // Paid screening application — one form (alert settings + company credentials);
-  // creates the pending subscription + profile + account, then the confirmation
-  // email's link goes straight to checkout (confirm?next=billing → 302).
-  subscribeScreeningEndpoint: 'https://svc.sizlon.io/api/subscribe/screening',
-  // Paid tier — Toss Payments monthly subscription (billing key). The checkout
-  // endpoint returns the public Toss clientKey + a per-subscriber customerKey;
-  // confirm exchanges the redirect authKey for a billingKey and charges month 1.
-  billingCheckoutEndpoint: 'https://svc.sizlon.io/api/billing/checkout',
-  billingConfirmEndpoint: 'https://svc.sizlon.io/api/billing/confirm',
-  billingStatusEndpoint: 'https://svc.sizlon.io/api/billing/status',
-  billingCancelEndpoint: 'https://svc.sizlon.io/api/billing/cancel',
-  // Verification credits (self-serve 입찰검증) — one-time Toss payment. checkout
-  // returns packs+orderIds (session-authed); confirm approves and credits the ledger.
-  creditsEndpoint: 'https://svc.sizlon.io/api/credits',
-  creditsCheckoutEndpoint: 'https://svc.sizlon.io/api/credits/checkout',
-  creditsConfirmEndpoint: 'https://svc.sizlon.io/api/credits/confirm',
-  // Miriboa verification-request endpoint (site-backend, same host). The
-  // connector and the site post the SAME form here; only `src` differs so we can
-  // compare which surface converts (CONTEXT §94). While empty, the form no-ops.
-  verifyRequestEndpoint: 'https://svc.sizlon.io/api/verification-request',
-  // Multi-step wizard: step 2 creates a draft here; documents upload and the final
-  // finalize go through manageBase/<token>/documents and /finalize.
-  verifyDraftEndpoint: 'https://svc.sizlon.io/api/verification-draft',
-  authRequestEndpoint: 'https://svc.sizlon.io/auth/request',
-  authVerifyEndpoint: 'https://svc.sizlon.io/auth/verify',
-  authLoginEndpoint: 'https://svc.sizlon.io/auth/login',
-  authLogoutEndpoint: 'https://svc.sizlon.io/auth/logout',
-  authSetPasswordEndpoint: 'https://svc.sizlon.io/auth/set-password',
-  accountRequestsEndpoint: 'https://svc.sizlon.io/account/requests',
-  accountProductsEndpoint: 'https://svc.sizlon.io/account/products',
-  accountProfileEndpoint: 'https://svc.sizlon.io/account/profile',
-  // Notice lookup (parse.sizlon.io, has the g2b key server-side). The verify form
-  // calls GET ?no=<공고번호> to auto-fill 공고명·마감일·기관명·판돈. CORS-allowed for sizlon.io.
-  noticeLookupEndpoint: 'https://parse.sizlon.io/api/notice',
-  // Precheck (miriboa-precheck, check.sizlon.io): parses each dropped file transiently
-  // (deleted immediately, no AI reads it) to flag scans/corrupt files before submission.
-  precheckEndpoint: 'https://check.sizlon.io/api/precheck',
-  // Manage-request base (site-backend). The /manage page reads ?t=<token> and calls
-  // GET <base>/<token>, POST <base>/<token>/documents, POST <base>/<token>/delete.
-  manageBase: 'https://svc.sizlon.io/r',
+  // 미리보아 앱 엔드포인트(구독·결제·크레딧·위저드·계정·공고조회·precheck·/r)는
+  // 여기 없다. 2026-07-23 분리로 그 화면들이 전부 miriboa-site로 갔고, 정본은
+  // 그쪽 src/config/site.ts다. 이 사이트는 문의 폼 하나만 svc를 호출한다.
+  // 미리보아 엔드포인트가 다시 필요해 보이면 그건 이 사이트가 제품 사이트를
+  // 흉내내고 있다는 신호다 — AGENTS.md "Products & navigation" 참조.
   // Cloudflare Turnstile site key (public). Set this AND the TURNSTILE_SECRET
   // script property in Apps Script to activate bot verification. While empty,
   // the widget is not rendered and the server skips the Turnstile check.

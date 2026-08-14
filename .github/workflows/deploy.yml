@@ -20,9 +20,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
       - name: Setup Node
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v7
         with:
           node-version: 22
           cache: npm
@@ -30,8 +30,12 @@ jobs:
         run: npm ci
       - name: Build
         run: npm run build
+      # v4 부터 dotfile 을 아티팩트에서 **말없이 제외**한다. 지금 dist/ 에는
+      # dotfile 이 0개라 include-hidden-files 를 켜지 않았다 — 나중에 public/
+      # 에 .nojekyll 같은 걸 넣는다면 그것만으로는 배포에 실려가지 않으니
+      # 여기에 include-hidden-files: true 를 함께 켤 것 (2026-08-14).
       - name: Upload Pages artifact
-        uses: actions/upload-pages-artifact@v3
+        uses: actions/upload-pages-artifact@v5
         with:
           path: dist
 
@@ -44,4 +48,4 @@ jobs:
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v4
+        uses: actions/deploy-pages@v5

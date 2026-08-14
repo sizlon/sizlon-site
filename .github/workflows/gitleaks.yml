@@ -27,7 +27,7 @@ jobs:
       GITLEAKS_VERSION: 8.24.3   # 로컬 pre-push 훅과 같은 버전으로 핀
     steps:
       - name: Checkout (full history)
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
         with:
           fetch-depth: 0          # gitleaks git이 전 히스토리를 스캔하도록
 

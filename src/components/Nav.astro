@@ -8,12 +8,15 @@ const { lang } = Astro.props;
 const tr = t(lang);
 const logical = logicalPath(Astro.url);
 const homeHref = localizePath('/', lang);
+// 언어 스위치는 홈 한 쌍만 — 다른 페이지에서 EN 을 누르면 /en/ 으로 간다.
+const otherLangHref = lang === 'ko' ? '/en/' : '/';
+const telHref = `tel:${site.contactPhoneIntl}`;
 ---
 
 <header class="nav band-ink">
   <div class="wrap nav-inner">
     <a class="brand" href={homeHref}>
-      <img src="/logo/sizlon-logo-white.svg" alt="Sizlon" width="107" height="27" />
+      <img src="/logo/sizlon-logo-white.svg" alt="시즐론 Sizlon" width="107" height="27" />
     </a>
 
     <nav class="links" aria-label="Primary">
@@ -29,12 +32,8 @@ const homeHref = localizePath('/', lang);
     </nav>
 
     <div class="utility">
-      <a class="portal" href="https://miriboa.sizlon.io/account">{tr.common.login} &rarr;</a>
-      <span class="lang" aria-label="Language">
-        <a href={localizePath(logical, 'en')} data-lang-choice="en" aria-current={lang === 'en' ? 'true' : undefined}>EN</a>
-        <span class="sep">/</span>
-        <a href={localizePath(logical, 'ko')} data-lang-choice="ko" aria-current={lang === 'ko' ? 'true' : undefined}>KO</a>
-      </span>
+      <a class="phone" href={telHref}>{site.contactPhone}</a>
+      <a class="lang" href={otherLangHref} aria-label="Language">{tr.common.langSwitch}</a>
     </div>
 
     <details class="mnav" data-mobile-nav>
@@ -59,12 +58,8 @@ const homeHref = localizePath('/', lang);
 
         <div class="m-divider"></div>
 
-        <a class="m-portal" href="https://miriboa.sizlon.io/account">{tr.common.login} &rarr;</a>
-        <span class="m-lang" aria-label="Language">
-          <a href={localizePath(logical, 'en')} data-lang-choice="en" aria-current={lang === 'en' ? 'true' : undefined}>EN</a>
-          <span class="sep">/</span>
-          <a href={localizePath(logical, 'ko')} data-lang-choice="ko" aria-current={lang === 'ko' ? 'true' : undefined}>KO</a>
-        </span>
+        <a class="m-phone" href={telHref}>{tr.common.call} {site.contactPhone} <span class="m-hours">{tr.common.hours}</span></a>
+        <a class="m-lang" href={otherLangHref}>{tr.common.langSwitch}</a>
       </div>
     </details>
   </div>
@@ -83,24 +78,10 @@ const homeHref = localizePath('/', lang);
     document.addEventListener('click', (e) => {
       if (details.open && !details.contains(e.target as Node)) close();
     });
-    window.matchMedia('(min-width: 721px)').addEventListener('change', (e) => {
+    window.matchMedia('(min-width: 821px)').addEventListener('change', (e) => {
       if (e.matches) close();
     });
   }
-
-  // Remember an explicit EN/KO choice so the first-visit auto-detect in Base.astro
-  // does not override it on later visits.
-  document.querySelectorAll<HTMLAnchorElement>('[data-lang-choice]').forEach((el) => {
-    el.addEventListener('click', () => {
-      try { localStorage.setItem('lang', el.getAttribute('data-lang-choice') || ''); } catch (e) {}
-    });
-  });
-
-  // 계정 라벨은 정적이다. 분리(2026-07-23) 전에는 여기서 localStorage의
-  // 'miriboa_session'을 읽어 '내 계정'으로 바꿨지만, localStorage는 origin
-  // 스코프라 로그인 화면이 전부 miriboa.sizlon.io로 옮겨간 뒤로는 이 origin에
-  // 그 키를 쓰는 코드가 없다 — 항상 '로그인'이었다. 로그인 상태를 알려면
-  // HttpOnly인 sizlon_sso 쿠키를 svc에 물어보는 공개 엔드포인트가 필요하다.
 </script>
 
 <style>
@@ -135,6 +116,7 @@ const homeHref = localizePath('/', lang);
     padding: 0.25rem 0;
     border-bottom: 1px solid transparent;
     transition: color 0.15s ease, border-color 0.15s ease;
+    white-space: nowrap;
   }
   .link:hover { color: var(--color-mist); }
   .link[aria-current='page'] {
@@ -148,16 +130,13 @@ const homeHref = localizePath('/', lang);
     font-family: var(--font-mono);
     font-size: var(--step--1);
   }
-  .portal {
+  .phone {
     text-decoration: none;
     color: var(--color-recovered);
     white-space: nowrap;
   }
-  .lang { color: var(--slate-on-dark); }
-  .lang a { color: var(--slate-on-dark); text-decoration: none; }
-  .lang a:hover { color: var(--color-mist); }
-  .lang a[aria-current] { color: var(--color-mist); }
-  .lang .sep { opacity: 0.5; margin: 0 0.15em; }
+  .lang { color: var(--slate-on-dark); text-decoration: none; }
+  .lang:hover { color: var(--color-mist); }
 
   /* Mobile disclosure nav — hidden on desktop. */
   .mnav { display: none; }
@@ -207,24 +186,23 @@ const homeHref = localizePath('/', lang);
   }
   .m-link[aria-current='page'] { color: var(--color-recovered); }
   .m-divider { height: 0.5rem; }
-  .m-portal {
+  .m-phone {
     font-family: var(--font-mono);
     font-size: var(--step-0);
     text-decoration: none;
     color: var(--color-recovered);
     padding: 0.6rem 0;
   }
+  .m-hours { color: var(--slate-on-dark); font-size: var(--step--1); margin-left: 0.5em; }
   .m-lang {
     font-family: var(--font-mono);
     font-size: var(--step--1);
     color: var(--slate-on-dark);
+    text-decoration: none;
     padding-top: 0.4rem;
   }
-  .m-lang a { color: var(--slate-on-dark); text-decoration: none; }
-  .m-lang a[aria-current] { color: var(--color-mist); }
-  .m-lang .sep { opacity: 0.5; margin: 0 0.3em; }
 
-  @media (max-width: 720px) {
+  @media (max-width: 820px) {
     .links, .utility { display: none; }
     .mnav { display: block; margin-inline-start: auto; }
   }

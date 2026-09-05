@@ -1,30 +1,37 @@
 ---
+// 문의 (v3 §3.7) — 전화 최상단, 20분 예약, 폼(회사/담당·이메일·전화·서비스), 이메일 하단.
+// 폼은 site-backend `/api/contact` 로 POST 한다(name·email·message 필수, topic 은
+// TOPIC_LABELS 키). 서비스 라벨은 message 앞에도 박아 두므로 백엔드 표에 키가
+// 아직 없어도 주제가 유실되지 않는다. `company_url` 은 허니팟.
 import Base from '../layouts/Base.astro';
 import { site } from '../config/site';
-import type { Lang } from '../i18n/content';
-import { t, localizePath } from '../i18n/utils';
-// The form fetch-POSTs to the site backend (site.contactFormEndpoint →
-// svc.sizlon.io, source: sizlon-platform repo `site-backend/`), which verifies
-// Turnstile server-side, stores the submission, and emails contactEmail.
-// `company_url` is a honeypot. While the endpoint is empty the submit no-ops
-// and the mailto fallback carries.
+import { content } from '../i18n/content';
 
-interface Props { lang: Lang }
-const { lang } = Astro.props;
-const tr = t(lang);
+const tr = content.ko;
 const c = tr.contact;
 const endpoint = site.contactFormEndpoint;
 const turnstileKey = site.turnstileSiteKey;
 ---
 
-<Base title={c.title} description={c.description} lang={lang}>
-  <section class="section wrap grid">
-    <div class="copy">
+<Base title={c.title} description={c.description} lang="ko">
+  <section class="hero band-ink">
+    <div class="wrap head">
       <span class="eyebrow">{c.eyebrow}</span>
       <h1>{c.h1}</h1>
-      <p class="lede">{c.lede}</p>
-      <p class="alt">{c.applyPrefix} <a href={`${localizePath('/verify-request', lang)}?src=contact`}>{c.applyLink} &rarr;</a></p>
-      <p class="alt">{c.altPrefix} <a href={`mailto:${site.contactEmail}`}>{site.contactEmail}</a></p>
+      <a class="phone" href={`tel:${site.contactPhoneIntl}`}>{site.contactPhone}</a>
+      <p class="hours">{c.phoneLabel} · {c.phoneMissed}</p>
+      <p class="book">{c.bookLead} {site.bookingUrl
+        ? <a class="btn btn-primary" href={site.bookingUrl}>{c.book} <span class="arrow">&rarr;</span></a>
+        : <a class="btn btn-primary" href="#form">{c.book} <span class="arrow">&darr;</span></a>}
+      </p>
+    </div>
+  </section>
+
+  <section class="section wrap grid" id="form">
+    <div class="copy">
+      <h2>{c.formH}</h2>
+      <p class="alt">{c.note}</p>
+      <p class="alt">{c.altPrefix}: <a href={`mailto:${site.contactEmail}`}>{site.contactEmail}</a></p>
     </div>
 
     <div class="formcol">
@@ -34,32 +41,33 @@ const turnstileKey = site.turnstileSiteKey;
         action={endpoint || undefined}
         data-contact-form
         data-sending={c.sending}
+        data-message-default={c.messageDefault}
         data-turnstile={turnstileKey ? 'on' : undefined}
       >
         <label>
           <span>{c.labels.name}</span>
-          <input type="text" name="name" autocomplete="name" maxlength="120" required />
+          <input type="text" name="name" autocomplete="organization" maxlength="120" required />
         </label>
         <label>
           <span>{c.labels.email}</span>
           <input type="email" name="email" autocomplete="email" maxlength="180" required />
         </label>
         <label>
-          <span>{c.labels.company}</span>
-          <input type="text" name="company" autocomplete="organization" maxlength="160" />
+          <span>{c.labels.phone}</span>
+          <input type="tel" name="phone" autocomplete="tel" maxlength="40" data-phone />
         </label>
         <label>
-          <span>{c.labels.topic}</span>
-          <select name="topic">
-            <option value="">{c.topicPlaceholder}</option>
-            {Object.entries(c.topics).map(([key, label]) => (
+          <span>{c.labels.service}</span>
+          <select name="topic" data-service>
+            <option value="">{c.servicePlaceholder}</option>
+            {Object.entries(c.services).map(([key, label]) => (
               <option value={key}>{label}</option>
             ))}
           </select>
         </label>
         <label>
           <span>{c.labels.message}</span>
-          <textarea name="message" rows="4" maxlength="4000" required></textarea>
+          <textarea name="message" rows="3" maxlength="4000" data-message></textarea>
         </label>
 
         <div class="hp" aria-hidden="true">
@@ -68,13 +76,13 @@ const turnstileKey = site.turnstileSiteKey;
           </label>
         </div>
         <input type="hidden" name="elapsed" value="" data-elapsed />
+        <input type="hidden" name="company" value="" />
 
         {turnstileKey && <div class="cf-turnstile" data-sitekey={turnstileKey}></div>}
         {turnstileKey && <p class="verr" hidden data-verify-error>{c.verifyNeeded}</p>}
         <p class="verr" hidden data-send-error>{c.sendError}</p>
 
         <button class="btn btn-primary" type="submit">{c.submit} <span class="arrow">&rarr;</span></button>
-        <p class="note eyebrow">{c.note}</p>
       </form>
 
       <div class="sent" hidden data-contact-sent>
@@ -95,11 +103,11 @@ const turnstileKey = site.turnstileSiteKey;
   const loadedAt = Date.now();
   const form = document.querySelector<HTMLFormElement>('[data-contact-form]');
   const sent = document.querySelector<HTMLElement>('[data-contact-sent]');
-  // Preselect the topic carried by the referring CTA (?topic=demo|pilot|...).
-  const topicParam = new URLSearchParams(location.search).get('topic');
-  const topicSel = form?.querySelector<HTMLSelectElement>('select[name="topic"]');
-  if (topicSel && topicParam && [...topicSel.options].some((o) => o.value === topicParam)) {
-    topicSel.value = topicParam;
+  // 서비스 페이지 CTA 가 넘긴 ?service= 를 미리 선택한다.
+  const serviceParam = new URLSearchParams(location.search).get('service');
+  const serviceSel = form?.querySelector<HTMLSelectElement>('[data-service]');
+  if (serviceSel && serviceParam && [...serviceSel.options].some((o) => o.value === serviceParam)) {
+    serviceSel.value = serviceParam;
   }
   if (form && sent) {
     form.addEventListener('submit', async (e) => {
@@ -107,10 +115,9 @@ const turnstileKey = site.turnstileSiteKey;
       const hp = form.querySelector<HTMLInputElement>('[name="company_url"]');
       if (hp && hp.value) return; // bot — silent no-op (server enforces too)
       const endpoint = form.getAttribute('action');
-      if (!endpoint) return; // endpoint not set yet — mailto fallback carries
+      if (!endpoint) return;
       const verr = document.querySelector<HTMLElement>('[data-verify-error]');
       const serr = document.querySelector<HTMLElement>('[data-send-error]');
-      // Turnstile: block submit until the widget has produced a token.
       if (form.dataset.turnstile) {
         const tok = form.querySelector<HTMLInputElement>('[name="cf-turnstile-response"]');
         if (!tok || !tok.value) {
@@ -120,14 +127,28 @@ const turnstileKey = site.turnstileSiteKey;
         if (verr) verr.hidden = true;
       }
       if (serr) serr.hidden = true;
-      // Stamp elapsed ms since load; the backend drops bot-fast posts.
       const elapsed = form.querySelector<HTMLInputElement>('[data-elapsed]');
       if (elapsed) elapsed.value = String(Date.now() - loadedAt);
+      // 백엔드는 message 를 필수로 본다. 비어 있으면 기본 문구를, 서비스·전화는
+      // 항상 앞에 붙인다 — 주제 키가 서버 표에 없어도 메일에서 읽을 수 있게.
+      const msg = form.querySelector<HTMLTextAreaElement>('[data-message]');
+      const phone = form.querySelector<HTMLInputElement>('[data-phone]');
+      const sel = form.querySelector<HTMLSelectElement>('[data-service]');
+      const original = msg ? msg.value : '';
+      if (msg) {
+        const parts: string[] = [];
+        if (sel && sel.value) parts.push(`[서비스] ${sel.options[sel.selectedIndex].text}`);
+        if (phone && phone.value.trim()) parts.push(`[전화] ${phone.value.trim()}`);
+        parts.push(original.trim() || form.dataset.messageDefault || '통화 요청');
+        msg.value = parts.join('\n');
+      }
       const btn = form.querySelector<HTMLButtonElement>('button[type="submit"]');
       const btnLabel = btn ? btn.innerHTML : '';
-      if (btn) { btn.disabled = true; btn.textContent = form.dataset.sending || 'Sending…'; }
+      if (btn) { btn.disabled = true; btn.textContent = form.dataset.sending || '…'; }
       try {
-        const res = await fetch(endpoint, { method: 'POST', body: new FormData(form) });
+        const body = new FormData(form);
+        body.delete('phone');
+        const res = await fetch(endpoint, { method: 'POST', body });
         const data = await res.json().catch(() => null);
         if (res.ok && data && data.ok) {
           form.hidden = true;
@@ -141,6 +162,7 @@ const turnstileKey = site.turnstileSiteKey;
         if (serr) serr.hidden = false;
       }
       // 실패 — 재시도 가능 상태로 복원 (Turnstile 토큰은 1회용이라 리셋)
+      if (msg) msg.value = original;
       if (btn) { btn.disabled = false; btn.innerHTML = btnLabel; }
       const ts = (window as { turnstile?: { reset: () => void } }).turnstile;
       if (ts) ts.reset();
@@ -149,11 +171,15 @@ const turnstileKey = site.turnstileSiteKey;
 </script>
 
 <style>
+  .hero { padding-block: clamp(3rem, 2rem + 5vw, 5.5rem); }
+  .head { display: flex; flex-direction: column; gap: 0.9rem; max-width: var(--measure); align-items: flex-start; }
+  .phone { font-family: var(--font-display); font-size: var(--step-4); font-weight: 600; color: var(--color-recovered); text-decoration: none; letter-spacing: -0.02em; }
+  .hours { color: var(--slate-on-dark); }
+  .book { display: flex; align-items: center; gap: 1rem; flex-wrap: wrap; margin-top: 0.75rem; color: var(--slate-on-dark); }
   .grid { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(2rem, 1rem + 4vw, 4rem); align-items: start; }
-  /* The `display` rules below beat the UA [hidden] rule, so restore it: an
-     element with the hidden attribute must stay hidden until JS clears it. */
   [hidden] { display: none !important; }
   .copy { display: flex; flex-direction: column; gap: 1rem; max-width: 46ch; }
+  .copy h2 { font-size: var(--step-2); }
   .alt { color: var(--color-slate); }
   .alt a { color: var(--color-ink); text-decoration: underline; text-decoration-color: var(--color-recovered); text-underline-offset: 3px; }
   .form { display: flex; flex-direction: column; gap: 1rem; padding: 1.75rem; border: 1px solid var(--hairline); border-radius: var(--radius); background: var(--color-mist); }
@@ -162,18 +188,9 @@ const turnstileKey = site.turnstileSiteKey;
   input, textarea, select { font-family: var(--font-body); font-size: var(--step-0); color: var(--color-ink); background: var(--color-vellum); border: 1px solid var(--hairline); border-radius: var(--radius); padding: 0.7rem 0.85rem; }
   input:focus, textarea:focus, select:focus { outline: 2px solid var(--color-recovered); outline-offset: 1px; border-color: transparent; }
   .form .btn { align-self: flex-start; }
-  .note { margin-top: 0.25rem; }
   .verr { color: #b3261e; font-size: var(--step--1); }
   .hp { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; }
-  .sent {
-    padding: 1.75rem;
-    border: 1px solid var(--color-recovered);
-    border-radius: var(--radius);
-    background: var(--color-mist);
-    display: flex;
-    flex-direction: column;
-    gap: 0.6rem;
-  }
+  .sent { padding: 1.75rem; border: 1px solid var(--color-recovered); border-radius: var(--radius); background: var(--color-mist); display: flex; flex-direction: column; gap: 0.6rem; }
   .sent h2 { font-size: var(--step-1); }
   @media (max-width: 760px) { .grid { grid-template-columns: 1fr; } }
 </style>

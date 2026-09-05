@@ -1,0 +1,38 @@
+---
+// 구 한국어 경로(/ko/*) 스텁 — 2026-09-06 개편 v3 로 한국어가 루트가 됐다.
+// 마케팅 페이지만 여기서 처리한다. /ko/monitor 등 앱 경로 스텁은 같은 디렉터리의
+// 개별 [...slug] 파일이 미리보아로 보낸다(분리 당시 그대로).
+// 진짜 301 은 Cloudflare 규칙(v3 §1 표 6번 `/ko/*` → `/${1}`, 1~4번이 제품 경로를
+// 먼저 잡는다). 이 파일은 폴백이며 2단 리다이렉트를 피해 목적지로 직접 보낸다.
+// getStaticPaths 는 호이스팅되어 프런트매터의 다른 상수를 못 본다 — 지도는 함수 안에.
+export function getStaticPaths() {
+  const MAP: Record<string, string> = {
+    '': '/',
+    'about': '/about/',
+    'contact': '/contact/',
+    'legal/terms': '/legal/terms/',
+    'legal/privacy': '/legal/privacy/',
+    'legal/licenses': '/legal/licenses/',
+    'bid-verification': 'https://miriboa.sizlon.io/',
+    'web-crawling': '/services/data/',
+    'editions': '/services/data/',
+    'how-it-works': '/services/data/#how',
+    'security': '/services/data/#principles',
+    'products/miriboa': 'https://miriboa.sizlon.io/',
+    'products/crawler-platform': '/services/data/',
+  };
+  return Object.entries(MAP).map(([s, target]) => ({ params: { slug: s || undefined }, props: { target } }));
+}
+const { target } = Astro.props as { target: string };
+---
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <title>이동 중…</title>
+    <script is:inline define:vars={{ target }}>location.replace(target + location.search);</script>
+    <meta http-equiv="refresh" content={`1;url=${target}`} />
+    <link rel="canonical" href={target} />
+  </head>
+  <body><p>이동했습니다: <a href={target}>{target}</a></p></body>
+</html>

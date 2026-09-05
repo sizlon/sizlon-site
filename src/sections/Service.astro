@@ -1,0 +1,136 @@
+---
+// 서비스 페이지 공통 본문 (v3 §3.2~3.4). 세 서비스가 같은 뼈대를 쓰고 블록은
+// 내용이 비면 렌더하지 않는다. rtm 은 `brief` 로 짧은 판(제목·부제·가격·근거·CTA).
+import Base from '../layouts/Base.astro';
+import { site, servicePages, bookingHref } from '../config/site';
+import { content, type ServiceKey } from '../i18n/content';
+
+interface Props { service: ServiceKey }
+const { service } = Astro.props;
+const tr = content.ko;
+const c = tr.services[service];
+const brief = 'brief' in c && c.brief;
+const topic = servicePages.find((s) => s.key === service)?.topic ?? service;
+const toolLine = 'toolLine' in c ? c.toolLine : '';
+const principles = 'principles' in c ? c.principles : [];
+const principlesH = 'principlesH' in c ? c.principlesH : '';
+const minLine = 'minLine' in c ? c.minLine : '';
+---
+
+<Base title={c.title} description={c.description} lang="ko">
+  <section class="hero band-ink">
+    <div class="wrap head">
+      <span class="eyebrow">{c.eyebrow}</span>
+      <h1>{c.h1}</h1>
+      <p class="lede">{c.sub}</p>
+      <p class="price">{c.price}</p>
+      {c.priceNote && <p class="price-note">{c.priceNote}</p>}
+      <div class="cta-row">
+        <a class="btn btn-primary" href={bookingHref(topic)}>{tr.common.book} <span class="arrow">&rarr;</span></a>
+        <a class="btn btn-ghost" href={`tel:${site.contactPhoneIntl}`}>{tr.common.call} {site.contactPhone}</a>
+      </div>
+    </div>
+  </section>
+
+  {!brief && c.who.length > 0 && (
+    <section class="section wrap block">
+      <h2>{c.whoH}</h2>
+      <ul class="plain">{c.who.map((w) => <li>{w}</li>)}</ul>
+    </section>
+  )}
+
+  {!brief && c.how.length > 0 && (
+    <section class="section wrap block" id="how">
+      <h2>{c.howH}</h2>
+      <ol class="steps">
+        {c.how.map((s) => (
+          <li>
+            <span class="eyebrow">{s.name}</span>
+            <p>{s.text}</p>
+          </li>
+        ))}
+      </ol>
+      {toolLine && <p class="tool">{toolLine}</p>}
+    </section>
+  )}
+
+  {!brief && c.deliverables.length > 0 && (
+    <section class="section wrap block">
+      <h2>{c.deliverH}</h2>
+      <ul class="plain">{c.deliverables.map((d) => <li>{d}</li>)}</ul>
+      {c.options.length > 0 && (
+        <div class="options">
+          <span class="eyebrow">{c.optionH}</span>
+          <ul class="plain">{c.options.map((o) => <li>{o}</li>)}</ul>
+        </div>
+      )}
+    </section>
+  )}
+
+  <section class="section wrap block proof">
+    <h2>{c.proofH}</h2>
+    <ul class="plain">{c.proofLines.map((p) => <li>{p}</li>)}</ul>
+    <p class="vat eyebrow">{tr.common.vatNote}</p>
+  </section>
+
+  {principles.length > 0 && (
+    <section class="section wrap block" id="principles">
+      <h2>{principlesH}</h2>
+      <ul class="plain">{principles.map((p) => <li>{p}</li>)}</ul>
+      {minLine && <p class="min">{minLine}</p>}
+    </section>
+  )}
+
+  {!brief && c.faq.length > 0 && (
+    <section class="section wrap block">
+      <h2>{c.faqH}</h2>
+      <dl class="faq">
+        {c.faq.map((f) => (
+          <div class="qa">
+            <dt>{f.q}</dt>
+            <dd>{f.a}</dd>
+          </div>
+        ))}
+      </dl>
+    </section>
+  )}
+
+  <section class="cta-band band-ink">
+    <div class="wrap cta-inner">
+      <h2>{c.cta}</h2>
+      <div class="cta-row">
+        <a class="btn btn-primary" href={bookingHref(topic)}>{tr.common.book} <span class="arrow">&rarr;</span></a>
+        <a class="btn btn-ghost" href={`tel:${site.contactPhoneIntl}`}>{site.contactPhone}</a>
+      </div>
+      {c.crossLine && <p class="cross"><a href={c.crossHref}>{c.crossLine} &rarr;</a></p>}
+    </div>
+  </section>
+</Base>
+
+<style>
+  .hero { padding-block: clamp(3rem, 2rem + 5vw, 5.5rem); }
+  .head { display: flex; flex-direction: column; gap: 1rem; max-width: var(--measure); align-items: flex-start; }
+  .price { font-family: var(--font-mono); font-size: var(--step-1); color: var(--color-recovered); }
+  .price-note { color: var(--slate-on-dark); }
+  .cta-row { display: flex; gap: 0.75rem; flex-wrap: wrap; margin-top: 0.5rem; }
+  .block { display: flex; flex-direction: column; gap: 1rem; max-width: var(--measure); padding-block: clamp(2.5rem, 2rem + 2vw, 4rem); }
+  .block h2 { font-size: var(--step-2); }
+  .plain { margin: 0; padding-left: 1.2em; display: flex; flex-direction: column; gap: 0.5rem; }
+  .plain li { color: color-mix(in srgb, var(--color-ink) 85%, var(--color-vellum)); }
+  .steps { margin: 0; padding: 0; list-style: none; display: grid; gap: 1px; background: var(--hairline); border: 1px solid var(--hairline); border-radius: var(--radius); overflow: hidden; }
+  .steps li { background: var(--color-vellum); padding: 1.25rem 1.5rem; display: flex; flex-direction: column; gap: 0.4rem; }
+  .tool { color: var(--color-slate); }
+  .options { margin-top: 0.75rem; display: flex; flex-direction: column; gap: 0.5rem; }
+  .proof .plain li { font-family: var(--font-body); }
+  .vat { margin-top: 0.75rem; }
+  .min { color: var(--color-slate); }
+  .faq { margin: 0; display: flex; flex-direction: column; gap: 1rem; }
+  .qa { display: flex; flex-direction: column; gap: 0.3rem; padding-bottom: 1rem; border-bottom: 1px solid var(--hairline); }
+  dt { font-weight: 600; }
+  dd { margin: 0; color: color-mix(in srgb, var(--color-ink) 82%, var(--color-vellum)); }
+  .cta-band { padding-block: var(--section-y); }
+  .cta-inner { display: flex; flex-direction: column; gap: 1.5rem; align-items: flex-start; }
+  .cta-inner h2 { font-size: var(--step-2); max-width: var(--measure); }
+  .cross { color: var(--slate-on-dark); }
+  .cross a { color: var(--color-mist); text-decoration: none; border-bottom: 1px solid var(--color-recovered); }
+</style>

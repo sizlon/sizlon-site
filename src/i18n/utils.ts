@@ -1,28 +1,32 @@
 import { content, type Lang } from './content';
 
-export const defaultLang: Lang = 'en';
-export const languages: Record<Lang, string> = { en: 'EN', ko: 'KO' };
+// 2026-09-05 개편 v3: 한국어가 기본 로케일(루트), 영어는 /en/ 한 장만.
+export const defaultLang: Lang = 'ko';
+export const languages: Record<Lang, string> = { ko: 'KO', en: 'EN' };
 
-/** Locale of a URL pathname ('/ko/...' → 'ko', otherwise the default). */
+/** Locale of a URL pathname ('/en' or '/en/...' → 'en', otherwise ko). */
 export function langFromUrl(url: URL): Lang {
   const [, first] = url.pathname.split('/');
-  return first in languages ? (first as Lang) : defaultLang;
+  return first === 'en' ? 'en' : defaultLang;
 }
 
-/** Strip the locale prefix to the logical (default-locale) path. */
+/** Strip the /en prefix to the logical (default-locale) path. */
 export function logicalPath(url: URL): string {
-  const stripped = url.pathname.replace(/^\/ko(?=\/|$)/, '');
+  const stripped = url.pathname.replace(/^\/en(?=\/|$)/, '');
   return stripped === '' ? '/' : stripped;
 }
 
-/** Map a logical path to its localized URL ('/products' + ko → '/ko/products'). */
+/**
+ * Map a logical path to its localized URL. Only the home page has an English
+ * twin (/en/); every other path is Korean-only and returned unchanged.
+ */
 export function localizePath(path: string, lang: Lang): string {
-  if (path.startsWith('http')) return path;   // 외부(서비스 사이트) 링크는 로케일 무가공
-  if (lang === defaultLang) return path;
-  return path === '/' ? '/ko/' : `/ko${path}`;
+  if (path.startsWith('http')) return path;
+  if (lang === 'en' && path === '/') return '/en/';
+  return path;
 }
 
-/** Convenience accessor for a locale's content tree. */
+/** Chrome-level accessor (Nav/Footer/Base). Page bodies read content.ko directly. */
 export function t(lang: Lang) {
   return content[lang];
 }

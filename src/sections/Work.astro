@@ -1,0 +1,60 @@
+---
+// 만든 것들 (v3 §3.5) — 시즐론 명의로 만들고 실제로 쓰이는 것만. 크롤러 섹션 없음.
+import Base from '../layouts/Base.astro';
+import { servicePages } from '../config/site';
+import { content } from '../i18n/content';
+
+const tr = content.ko;
+const c = tr.work;
+const serviceHref = (key: string) => servicePages.find((s) => s.key === key)?.href ?? '/';
+const serviceLabel = (key: string) => tr.nav[key as keyof typeof tr.nav] ?? key;
+---
+
+<Base title={c.title} description={c.description} lang="ko">
+  <section class="hero band-ink section">
+    <div class="wrap head">
+      <span class="eyebrow">{c.eyebrow}</span>
+      <h1>{c.h1}</h1>
+      <p class="lede">{c.lede}</p>
+    </div>
+  </section>
+
+  <section class="section wrap items">
+    {c.items.map((it) => (
+      <article class="item" id={it.id}>
+        <span class="eyebrow">{it.tag}</span>
+        <h2>{it.name}</h2>
+        <p class="body">{it.body}</p>
+        <div class="meta">
+          <div>
+            <span class="eyebrow">{c.provesLabel}</span>
+            <ul class="tags">{it.proves.map((p) => <li>{p}</li>)}</ul>
+          </div>
+          <div>
+            <span class="eyebrow">{c.evidenceLabel}</span>
+            <p><a href={serviceHref(it.evidenceFor)}>{serviceLabel(it.evidenceFor)} &rarr;</a></p>
+          </div>
+        </div>
+        <div class="links">
+          {it.links.map((l) => <a class="btn btn-ghost" href={l.href}>{l.label} <span class="arrow">&rarr;</span></a>)}
+        </div>
+      </article>
+    ))}
+  </section>
+</Base>
+
+<style>
+  .head { display: flex; flex-direction: column; gap: 1rem; max-width: var(--measure); }
+  .items { display: flex; flex-direction: column; gap: 3rem; max-width: var(--measure); }
+  .item { display: flex; flex-direction: column; gap: 0.9rem; padding-bottom: 3rem; border-bottom: 1px solid var(--hairline); }
+  .item:last-child { border-bottom: 0; }
+  .item h2 { font-size: var(--step-2); }
+  .body { color: color-mix(in srgb, var(--color-ink) 85%, var(--color-vellum)); line-height: 1.7; }
+  .meta { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-top: 0.5rem; }
+  .meta > div { display: flex; flex-direction: column; gap: 0.4rem; }
+  .tags { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 0.4rem; }
+  .tags li { font-family: var(--font-mono); font-size: var(--step--1); padding: 0.2rem 0.55rem; border: 1px solid var(--hairline); border-radius: var(--radius); }
+  .meta a { color: var(--color-ink); text-decoration: none; border-bottom: 1px solid var(--color-recovered); }
+  .links { display: flex; gap: 0.75rem; flex-wrap: wrap; margin-top: 0.5rem; }
+  @media (max-width: 640px) { .meta { grid-template-columns: 1fr; } }
+</style>

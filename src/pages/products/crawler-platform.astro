@@ -5,7 +5,7 @@
 // 만드는 페이지는 noindex 를 강제로 붙이는데, canonical 과 함께 달리면 신호가
 // 모순돼 구글이 noindex 를 canonical **대상**에 적용할 수 있다. 그 대상이
 // 여기서는 미리보아 홈과 Crawler Platform 페이지 — 둘 다 주력이다.
-const target = '/web-crawling/';
+const target = '/services/data/'; // v3(2026-09-06): 2단 리다이렉트 방지 — 목적지로 직접
 ---
 <!doctype html>
 <html lang="en">

@@ -1,28 +1,29 @@
-# sizlon.io — marketing site
+# sizlon.io — company site
 
-Public Sizlon marketing site. Static [Astro](https://astro.build) output,
-bilingual (English default + Korean), deployed to GitHub Pages at
+Sizlon company site. Static [Astro](https://astro.build) output, Korean-first
+(Korean at the root, one English page at `/en/`), deployed to GitHub Pages at
 [sizlon.io](https://sizlon.io).
 
-Presents Sizlon's products under one umbrella — *AI proposes, a deterministic
-layer verifies* — with a page per product (Crawler Platform, Miriboa) and a
-working contact form that submits into Sizlon's own Google Workspace.
+Sells three founder-delivered services — Korean search-quality diagnostics,
+audit-response requirements traceability (RTM), monthly data feeds — with
+Miriboa and the KONEPS bid-opening pipeline as evidence (`/work`). Restructured
+2026-09-05 (plan v3: `~/Projects/docs/sizlon-site-restructure-plan-v3.md`).
 
 ## Structure
 
 ```text
 src/
-├── pages/        # routes (en at root, ko under /ko); thin — render a section
-├── sections/     # page bodies (Home, Product, Miriboa, Contact, Legal, …)
-├── components/   # Nav, Footer, SolutionCard, StrategyLadder, …
+├── pages/        # routes (Korean at root, /en/ one page, redirect stubs); thin — render a section
+├── sections/     # page bodies (Home, Service, Work, About, Contact, En, Legal)
+├── components/   # Nav, Footer
 ├── layouts/      # Base.astro (html shell + meta)
 ├── config/       # site.ts — nav, product list, endpoints, keys
-├── i18n/         # content.ts (en + ko copy) + utils
+├── i18n/         # content.ts (ko copy + en one-pager + chrome labels) + utils
 └── styles/       # global.css
 ```
 
-Content lives in `src/i18n/content.ts` so markup stays language-free; pages read
-`content[lang]`. See `AGENTS.md` for dev-server notes.
+Content lives in `src/i18n/content.ts` so markup stays language-free; page bodies
+read `content.ko`, chrome reads `content[lang]`. See `AGENTS.md` for dev-server notes.
 
 ## Documentation
 

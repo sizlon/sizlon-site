@@ -23,6 +23,7 @@ const c = content.ko.about;
         {s.p.map((para) => <p>{para}</p>)}
       </div>
     ))}
+    <a class="founder" href="/founder">{c.founderCta} &rarr;</a>
   </section>
 
   <section class="section wrap">
@@ -51,5 +52,6 @@ const c = content.ko.about;
   dt { font-family: var(--font-mono); font-size: var(--step--1); color: var(--color-slate); }
   dd { margin: 0; font-size: var(--step-0); }
   .cta { margin-top: 2rem; }
+  .founder { align-self: flex-start; color: var(--color-ink); text-decoration: none; border-bottom: 1px solid var(--color-recovered); font-weight: 600; }
   @media (max-width: 640px) { .row { grid-template-columns: 1fr; gap: 0.2rem; } }
 </style>

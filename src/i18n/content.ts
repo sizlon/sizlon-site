@@ -35,7 +35,7 @@ export const content = {
       vatNote: '표시 가격은 모두 부가세 별도입니다.',
       fixedLine: '고정가 · 결과물 명시 · 대표가 직접 수행',
     },
-    nav: { search: '검색 품질 진단', rtm: '감리 대응 RTM', data: '데이터 피드', work: '만든 것들', about: '회사 소개', contact: '문의' },
+    nav: { search: '검색 품질 진단', rtm: '감리 대응 RTM', data: '데이터 피드', work: '만든 것들', about: '회사 소개', contact: '문의', founder: '대표 소개' },
     footer: {
       tagline: 'AI proposes. A deterministic layer verifies.',
       services: '서비스',
@@ -110,6 +110,15 @@ export const content = {
         options: ['하이브리드(BM25 + kNN) 설계 — 별도 견적'],
         proofH: '근거',
         proofLines: [proof.careerFull],
+        proofDetail: [
+          'Index · Component 템플릿 설계',
+          '커스텀 토크나이저, Nori · Mecab 커스터마이징',
+          '신규 단어 추출로 사용자 사전 자동 갱신',
+          '월별 인덱스 분할, 자동 스냅샷 정책',
+          'DB · 인덱스 동기화 검사 자동화',
+          'script · aggregation 포함 Query DSL',
+        ],
+        proofLink: { label: '대표 소개', href: '/founder' },
         faqH: '자주 묻는 것',
         faq: [
           { q: '데이터를 반출해야 하나요?', a: '아닙니다. 읽기 계정과 화면 공유로 진행합니다. 로그·설정 파일이 밖으로 나가지 않습니다.' },
@@ -253,11 +262,12 @@ export const content = {
       h1: '1인 기업입니다. 대표가 직접 수행합니다.',
       lede: '시즐론은 서울 용산의 소프트웨어 회사입니다. 견적을 내는 사람, 코드를 쓰는 사람, 결과물을 넘기는 사람이 한 사람입니다.',
       sections: [
-        { h: '대표 이광연', p: [proof.careerFull + '.'] },
-        { h: '지금 (시즐론, 2026.4~)', p: ['한국어 검색 품질 진단, 공공 SI 감리 대응 문서, 월정액 데이터 피드를 합니다. 같은 엔진으로 미리보아를 운영합니다. 미디어비에서 쓰던 설계로 자동 복구 크롤러를 시즐론에서 재구축했습니다.'] },
+        { h: '무엇을 하는가 (시즐론, 2026.4~)', p: ['한국어 검색 품질 진단, 공공 SI 감리 대응 문서, 월정액 데이터 피드를 합니다. 같은 엔진으로 미리보아를 운영합니다. 미디어비에서 쓰던 설계로 자동 복구 크롤러를 시즐론에서 재구축했습니다.'] },
         { h: '작업 방식', p: [method] },
         { h: '왜 1인인가', p: ['NDA 아래 받은 자료를 보는 사람이 한 사람이라는 뜻이고, 품질을 설명할 수 있는 사람이 만든 사람과 같다는 뜻입니다.'] },
+        { h: '대표 이광연', p: [proof.careerShort + '. 소프트웨어 엔지니어 20년.'] },
       ],
+      founderCta: '대표 소개 보기',
       factsTitle: '회사 정보',
       facts: [
         { k: '법인명', v: '주식회사 시즐론 (Sizlon Inc.)' },
@@ -267,6 +277,64 @@ export const content = {
         { k: '전화', v: '02-702-5795 — 평일 09:00–18:00' },
         { k: '이메일', v: 'hello@sizlon.io' },
       ],
+      cta: '20분 통화 예약',
+    },
+
+    // ── 대표 소개 (/founder, 2026-09-06) — 이름 검색에 걸리는 페이지. 회사 소개와 분리.
+    //    출처는 이력서(2026-09-03 판)만. 개인 연락처·월 단위 재직기간·입학연도는 쓰지 않는다.
+    founder: {
+      title: '이광연 — 시즐론 대표',
+      description: '시즐론 대표 이광연. 소프트웨어 엔지니어 20년. 코리아뉴스와이어 수석 엔지니어(2013~2025)로 매체 7,000곳·일 20만 건 수집·색인 인프라를 구축·운영. Elasticsearch 아키텍처, Nori·Mecab 커스터마이징, 자동 사전 갱신, 크롤링 플랫폼.',
+      eyebrow: '대표 소개',
+      h1: '이광연',
+      lede: '소프트웨어 엔지니어 20년. 대규모 뉴스·미디어 데이터의 수집, 검색엔진 색인, 검색 품질 개선, 운영까지 한 파이프라인을 처음부터 끝까지 설계하고 굴려 왔습니다. 지금은 그 일을 시즐론에서 서비스로 합니다.',
+      sections: [
+        {
+          h: '경력',
+          p: [],
+          list: [
+            '시즐론 대표 (2026~) — 검색 품질 진단 · 감리 대응 RTM · 데이터 피드. 미리보아와 나라장터 개찰 데이터 파이프라인을 만들고 운영',
+            '코리아뉴스와이어 수석 엔지니어 (2013~2025) — 언론 모니터링 서비스 미디어비의 데이터 마이닝·정제·검색·관리 시스템 구축',
+            '위키넷 웹개발 팀장 (2011~2013) — 비즈니스 SNS 링크나우 개발·운영, Sphinx 검색 인덱싱 튜닝',
+            '오리엔트웹 시스템 관리 팀장 (2005~2006) — 호스팅 웹시스템·멀티 도메인 웹메일 구축',
+            '그 앞 5년은 서버 호스팅·서버 기술영업',
+          ],
+        },
+        {
+          h: '검색엔진',
+          p: ['Elasticsearch 기반 대규모 검색 시스템의 아키텍처를 설계하고 운영했습니다.'],
+          list: [
+            'Index 템플릿 · Component 템플릿 설계와 적용',
+            '커스텀 토크나이저 개발, Nori · Mecab 형태소 분석기 커스터마이징',
+            '신규 단어 추출과 형태소 분석으로 사용자 사전을 자동 갱신하는 프로그램',
+            '대용량 인덱스의 월별 분할, 기간별 자동 스냅샷 정책',
+            'DB 와 인덱스를 대조하는 동기화 검사 자동화',
+            'script · aggregation 을 포함한 Query DSL 고급 활용, 역할 구성',
+          ],
+        },
+        {
+          h: '데이터 파이프라인',
+          p: [],
+          list: [
+            '매체 7,000여 곳을 패턴 분석해 크롤링 인스턴스를 생성하는 플랫폼 구축',
+            '추출 → 정제 → DB 저장 → 색인까지 지연 없이 이어지는 자동 파이프라인, 일평균 신규 기사 20만 건',
+            '매체별 수집 주기와 직전 종료 시각을 반영한 인스턴스 관리, Grafana 모니터링',
+            'Python · scrapy · playwright · MariaDB · Elasticsearch',
+          ],
+        },
+        {
+          h: '운영 환경',
+          p: ['온프레미스, Docker Compose, Kubernetes 세 환경에서 같은 시스템을 운영했습니다. GitLab CI/CD, PostgreSQL 설계, 데이터 정합성 검사 자동화.'],
+          list: [],
+        },
+        {
+          h: '학력',
+          p: ['고려대학교 물리학'],
+          list: [],
+        },
+      ],
+      workLine: '만든 것들은 따로 정리해 두었습니다.',
+      workLink: '만든 것들 보기',
       cta: '20분 통화 예약',
     },
 
@@ -379,7 +447,7 @@ export const content = {
       vatNote: 'Prices exclude VAT.',
       fixedLine: 'Fixed price · deliverables named up front · done by the founder',
     },
-    nav: { search: 'Search diagnostics', rtm: 'Audit RTM', data: 'Data feeds', work: 'Work', about: 'About', contact: 'Contact' },
+    nav: { search: 'Search diagnostics', rtm: 'Audit RTM', data: 'Data feeds', work: 'Work', about: 'About', contact: 'Contact', founder: 'Founder' },
     footer: {
       tagline: 'AI proposes. A deterministic layer verifies.',
       services: 'Services',
@@ -424,6 +492,8 @@ export const content = {
           p: 'BM25 + kNN, fused and evaluated against a frozen golden set of failing queries — before/after measured, not asserted.',
         },
       ],
+      backgroundH: 'Background',
+      background: 'Twenty years as a software engineer. At Korea Newswire (2013–2025, principal engineer) I designed and ran the Elasticsearch architecture behind a media-monitoring service: index and component templates, a custom tokenizer, Nori and Mecab customisation, automatic user-dictionary updates from new-term extraction, monthly index rollover with snapshot policies, and DB-to-index consistency checks. The ingestion side was a crawling platform generating per-source instances for about 7,000 news sources, ~200K new articles a day, on Python, scrapy and playwright, run on-prem, on Docker Compose and on Kubernetes.',
       caseH: 'Case study',
       caseTitle: 'Why Korean RAG fails: start with the tokenizer',
       caseNote: 'Coming shortly.',

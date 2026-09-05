@@ -1,0 +1,47 @@
+---
+// 대표 소개 (/founder, 2026-09-06). 회사 소개와 분리한 이유: 통화 뒤 상대는 회사명이
+// 아니라 사람 이름을 검색한다 — 제목에 이름이 박힌 페이지가 따로 있어야 걸린다.
+// 출처는 이력서만. 개인 연락처·월 단위 재직기간·입학연도는 쓰지 않는다.
+import Base from '../layouts/Base.astro';
+import { bookingHref } from '../config/site';
+import { content } from '../i18n/content';
+
+const c = content.ko.founder;
+---
+
+<Base title={c.title} description={c.description} lang="ko" rawTitle>
+  <section class="hero band-ink section">
+    <div class="wrap head">
+      <span class="eyebrow">{c.eyebrow}</span>
+      <h1>{c.h1}</h1>
+      <p class="lede">{c.lede}</p>
+    </div>
+  </section>
+
+  <section class="section wrap body">
+    {c.sections.map((s) => (
+      <div class="block">
+        <h2>{s.h}</h2>
+        {s.p.map((para) => <p>{para}</p>)}
+        {s.list.length > 0 && <ul>{s.list.map((li) => <li>{li}</li>)}</ul>}
+      </div>
+    ))}
+  </section>
+
+  <section class="section wrap tail">
+    <p>{c.workLine} <a href="/work">{c.workLink} &rarr;</a></p>
+    <a class="btn btn-primary" href={bookingHref()}>{c.cta} <span class="arrow">&rarr;</span></a>
+  </section>
+</Base>
+
+<style>
+  .head { display: flex; flex-direction: column; gap: 1rem; max-width: var(--measure); }
+  .body { display: flex; flex-direction: column; gap: 2.5rem; max-width: var(--measure); }
+  .block { display: flex; flex-direction: column; gap: 0.75rem; }
+  .block h2 { font-size: var(--step-1); }
+  .block p { color: var(--color-slate); line-height: 1.7; margin: 0; }
+  .block ul { margin: 0; padding-left: 1.2em; display: flex; flex-direction: column; gap: 0.45rem; }
+  .block li { color: color-mix(in srgb, var(--color-ink) 85%, var(--color-vellum)); line-height: 1.6; }
+  .tail { display: flex; flex-direction: column; gap: 1.25rem; align-items: flex-start; padding-top: 0; }
+  .tail a:not(.btn) { color: var(--color-ink); text-decoration: none; border-bottom: 1px solid var(--color-recovered); }
+</style>

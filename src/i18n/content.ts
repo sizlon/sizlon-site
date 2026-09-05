@@ -65,16 +65,16 @@ export const content = {
         { key: 'rtm', name: '감리 대응 RTM', terms: '감리 1회분 150~200만원 · 전체 400~500만원', deliverable: '요구사항 추적표 + 대조 리포트' },
         { key: 'data', name: '데이터 피드', terms: '구축 100~300만원 + 월 30~80만원', deliverable: '매달 오는 정제 데이터' },
       ],
-      whyEyebrow: '왜 이 사람인가',
-      whyLines: [
-        { k: '경력', v: proof.careerShort },
-        { k: '현재 실적', v: proof.current },
-        { k: '엔진 실적', v: proof.engine },
-      ],
       methodEyebrow: '작업 방식',
       method,
+      // "왜 이 사람인가" 절은 09-06 에 없앴다 — 경력은 히어로 부제·대표 소개가, 실적 숫자는
+      // 그 숫자를 만든 것 옆(아래 workItems)에 붙는다.
       workEyebrow: '만든 것들',
-      workLine: '미리보아와 나라장터 개찰 데이터 파이프라인 — 시즐론 명의로 만들고 실제로 쓰이는 것들입니다.',
+      workLine: '시즐론 명의로 만들고 실제로 쓰이는 것들입니다.',
+      workItems: [
+        { name: '미리보아', proof: '골든셋 기준 recall 87.4% · "확실" 판정 precision 96.5%', href: '/work#miriboa' },
+        { name: '나라장터 개찰 데이터 파이프라인', proof: '협상에 의한 계약 응찰 73,373건 · 업체 13,220곳 (6개월분)', href: '/work#pipeline' },
+      ],
       workLink: '만든 것들 보기',
       closingH2: '어느 쪽이든 먼저 20분 통화로 범위를 잡습니다.',
     },

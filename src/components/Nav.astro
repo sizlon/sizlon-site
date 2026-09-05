@@ -11,6 +11,8 @@ const homeHref = localizePath('/', lang);
 // 언어 스위치는 홈 한 쌍만 — 다른 페이지에서 EN 을 누르면 /en/ 으로 간다.
 const otherLangHref = lang === 'ko' ? '/en/' : '/';
 const telHref = `tel:${site.contactPhoneIntl}`;
+// 표기는 로케일을 따른다 — 한국어 02-…, 영어 +82-….
+const phoneLabel = lang === 'en' ? site.contactPhoneIntl : site.contactPhone;
 // /en/ 은 한 장뿐이다 — 내비가 한국어 페이지로 이끌면 영어로 들어온 사람이 한 번 클릭에
 // 한국어 사이트로 떨어진다(2026-09-06 보고). 영어 크롬은 이메일·전화·KO 만 낸다.
 const navItems = lang === 'en' ? [] : nav;
@@ -36,7 +38,7 @@ const navItems = lang === 'en' ? [] : nav;
 
     <div class="utility">
       {lang === 'en' && <a class="phone" href={`mailto:${site.contactEmail}`}>{site.contactEmail}</a>}
-      <a class="phone" href={telHref}>{site.contactPhoneIntl}</a>
+      <a class="phone" href={telHref}>{phoneLabel}</a>
       <a class="lang" href={otherLangHref} aria-label="Language">{lang === 'en' ? tr.common.koreanSite : tr.common.langSwitch}</a>
     </div>
 
@@ -63,7 +65,7 @@ const navItems = lang === 'en' ? [] : nav;
         <div class="m-divider"></div>
 
         {lang === 'en' && <a class="m-phone" href={`mailto:${site.contactEmail}`}>{site.contactEmail}</a>}
-        <a class="m-phone" href={telHref}>{tr.common.call} {site.contactPhoneIntl} <span class="m-hours">{tr.common.hours}</span></a>
+        <a class="m-phone" href={telHref}>{tr.common.call} {phoneLabel} <span class="m-hours">{tr.common.hours}</span></a>
         <a class="m-lang" href={otherLangHref}>{lang === 'en' ? tr.common.koreanSite : tr.common.langSwitch}</a>
       </div>
     </details>

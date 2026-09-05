@@ -60,7 +60,7 @@ const turnstileKey = site.turnstileSiteKey;
           <span>{c.labels.service}</span>
           <select name="topic" data-service>
             <option value="">{c.servicePlaceholder}</option>
-            {Object.entries(c.services).map(([key, label]) => (
+            {Object.entries(c.topics).map(([key, label]) => (
               <option value={key}>{label}</option>
             ))}
           </select>

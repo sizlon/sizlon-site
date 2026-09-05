@@ -283,7 +283,9 @@ export const content = {
       formH: '폼으로 남기기',
       labels: { name: '회사 / 담당자', email: '이메일', phone: '전화번호 (선택)', service: '서비스', message: '요청 내용 (선택)' },
       servicePlaceholder: '서비스 선택',
-      services: { search: '검색 품질 진단', rtm: '감리 대응 RTM', datafeed: '데이터 피드', other: '기타' },
+      // 키 이름은 `topics` 여야 한다 — sizlon-platform tests/test_contact_topics.py 가 이
+      // 파일에서 `topics: {…}` 를 읽어 백엔드 TOPIC_LABELS 와 대조한다(주제 유실 가드).
+      topics: { search: '검색 품질 진단', rtm: '감리 대응 RTM', datafeed: '데이터 피드', other: '기타' },
       messageDefault: '통화 요청',
       submit: '보내기',
       note: '영업일 1일 내 회신',

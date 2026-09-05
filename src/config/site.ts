@@ -38,7 +38,7 @@ export const site = devRemap({
   contactPhoneIntl: '+82-2-702-5795',
   // 20분 통화 예약 링크. 비어 있으면 CTA 가 /contact 폼으로 떨어진다 — 예약
   // 도구(Google Calendar 예약 일정 등) URL 이 정해지면 여기 한 줄만 채운다.
-  bookingUrl: '',
+  bookingUrl: 'https://calendar.app.google/Du1gf9ZL7b9k2WJT7',
   // Upwork 프로필. 비어 있으면 /en/ 에서 그 링크를 숨긴다.
   upworkUrl: '',
   // 문의 폼 엔드포인트 — sizlon-platform site-backend `/api/contact`.

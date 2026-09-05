@@ -1,18 +1,13 @@
 ---
+// 회사 소개 (v3 §3.6) — 대표 경력 중심. 회사 정보표는 실사에서 확인되는 것만.
 import Base from '../layouts/Base.astro';
-import type { Lang } from '../i18n/content';
-import { t, localizePath } from '../i18n/utils';
-// 회사 소개 — 제품 페이지가 아니라 회사 자체를 설명하는 유일한 페이지.
-// 제품 서사는 각 제품 페이지가, 미리보아 창업자 서사는 서비스 사이트가 담당하고,
-// 여기서는 법인·원칙·연락처 등 실사에서 확인되는 것을 정본으로 둔다.
+import { bookingHref } from '../config/site';
+import { content } from '../i18n/content';
 
-interface Props { lang: Lang }
-const { lang } = Astro.props;
-const tr = t(lang);
-const c = tr.about;
+const c = content.ko.about;
 ---
 
-<Base title={c.title} description={c.description} lang={lang}>
+<Base title={c.title} description={c.description} lang="ko">
   <section class="hero band-ink section">
     <div class="wrap head">
       <span class="eyebrow">{c.eyebrow}</span>
@@ -40,7 +35,7 @@ const c = tr.about;
         </div>
       ))}
     </dl>
-    <a class="btn btn-primary cta" href={localizePath('/contact', lang)}>{c.cta} <span class="arrow">&rarr;</span></a>
+    <a class="btn btn-primary cta" href={bookingHref()}>{c.cta} <span class="arrow">&rarr;</span></a>
   </section>
 </Base>
 
@@ -51,22 +46,10 @@ const c = tr.about;
   .block h2 { font-size: var(--step-1); }
   .block p { color: var(--color-slate); line-height: 1.7; margin: 0; }
   .facts-h { font-size: var(--step-1); margin-bottom: 1.25rem; }
-  .facts {
-    margin: 0;
-    border-top: 1px solid var(--hairline);
-    max-width: var(--measure);
-  }
-  .row {
-    display: grid;
-    grid-template-columns: 13rem 1fr;
-    gap: 1rem;
-    padding: 0.85rem 0;
-    border-bottom: 1px solid var(--hairline);
-  }
+  .facts { margin: 0; border-top: 1px solid var(--hairline); max-width: var(--measure); }
+  .row { display: grid; grid-template-columns: 13rem 1fr; gap: 1rem; padding: 0.85rem 0; border-bottom: 1px solid var(--hairline); }
   dt { font-family: var(--font-mono); font-size: var(--step--1); color: var(--color-slate); }
   dd { margin: 0; font-size: var(--step-0); }
   .cta { margin-top: 2rem; }
-  @media (max-width: 640px) {
-    .row { grid-template-columns: 1fr; gap: 0.2rem; }
-  }
+  @media (max-width: 640px) { .row { grid-template-columns: 1fr; gap: 0.2rem; } }
 </style>

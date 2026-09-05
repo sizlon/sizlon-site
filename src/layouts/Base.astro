@@ -1,6 +1,5 @@
 ---
-// Self-hosted variable fonts (no third-party runtime calls — matches the
-// product's offline ethos). Family names used in global.css.
+// Self-hosted variable fonts (no third-party runtime calls). Family names used in global.css.
 import '@fontsource-variable/bricolage-grotesque';
 import '@fontsource-variable/hanken-grotesk';
 import '@fontsource-variable/jetbrains-mono';
@@ -13,25 +12,28 @@ import '@fontsource/pretendard/700.css';
 import '../styles/global.css';
 import Nav from '../components/Nav.astro';
 import Footer from '../components/Footer.astro';
+import { site } from '../config/site';
 import type { Lang } from '../i18n/content';
-import { t, localizePath, logicalPath } from '../i18n/utils';
+import { t, logicalPath } from '../i18n/utils';
 
 interface Props {
   title: string;
   description: string;
   lang?: Lang;
-  /** 색인 제외 — 리디렉트 스텁 등. sitemap 제외(astro.config.mjs filter)와 쌍. */
+  /** 색인 제외 — 404 등. sitemap 제외(astro.config.mjs filter)와 쌍. */
   noindex?: boolean;
+  /** 제목을 그대로 쓴다(홈처럼 이미 브랜드가 들어간 제목). */
+  rawTitle?: boolean;
 }
-const { title, description, lang = 'en', noindex = false } = Astro.props;
-const fullTitle = title === 'Sizlon' ? title : `${title} — Sizlon`;
+const { title, description, lang = 'ko', noindex = false, rawTitle = false } = Astro.props;
+const fullTitle = rawTitle ? title : `${title} — ${lang === 'en' ? 'Sizlon' : '시즐론'}`;
 const tr = t(lang);
-// en/ko 쌍의 hreflang — 언어 스위처와 같은 logicalPath/localizePath 로직.
-// x-default는 en(기본 로케일). noindex 페이지는 hreflang 클러스터에서 제외.
+// hreflang 은 홈 한 쌍(/ ↔ /en/)에만. 다른 페이지는 한국어만 있다. x-default 는 ko.
 const logical = logicalPath(Astro.url);
-const altEn = new URL(localizePath(logical, 'en'), Astro.site);
-const altKo = new URL(localizePath(logical, 'ko'), Astro.site);
+const isHome = logical === '/';
 const canonical = new URL(Astro.url.pathname, Astro.site);
+const homeKo = new URL('/', Astro.site);
+const homeEn = new URL('/en/', Astro.site);
 ---
 
 <!doctype html>
@@ -39,38 +41,6 @@ const canonical = new URL(Astro.url.pathname, Astro.site);
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <script is:inline>
-      /* First-visit language: redirect between the en (root) and ko (/ko) versions
-         to match the browser's preferred language. A manual EN/KO choice is
-         remembered in localStorage and disables this. Runs before paint so there
-         is no flash of the wrong language. */
-      (function () {
-        try {
-          /* 검색엔진 렌더러(WRS 등)는 localStorage가 비고 언어가 en-US라 모든
-             ko 페이지가 en으로 리디렉트돼 보인다 — 봇은 자동 리디렉트에서 제외
-             (언어 매칭은 hreflang이 담당). */
-          if (/bot|crawler|spider|crawling|yeti|slurp|bingpreview|headless/i.test(navigator.userAgent)) return;
-          if (localStorage.getItem('lang')) return; // user chose explicitly — respect it
-          var path = location.pathname;
-          var onKo = path === '/ko' || path.indexOf('/ko/') === 0;
-          var langs = navigator.languages && navigator.languages.length
-            ? navigator.languages : [navigator.language || 'en'];
-          var prefersKo = false;
-          for (var i = 0; i < langs.length; i++) {
-            var l = (langs[i] || '').toLowerCase();
-            if (l.indexOf('ko') === 0) { prefersKo = true; break; }
-            if (l.indexOf('en') === 0) { break; }
-          }
-          var cur = onKo ? 'ko' : 'en';
-          var pref = prefersKo ? 'ko' : 'en';
-          if (pref === cur) return;
-          var target = pref === 'ko'
-            ? (path === '/' ? '/ko/' : '/ko' + path)
-            : (path.replace(/^\/ko(?=\/|$)/, '') || '/');
-          if (target !== path) location.replace(target + location.search + location.hash);
-        } catch (e) {}
-      })();
-    </script>
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
     <title>{fullTitle}</title>
     <meta name="description" content={description} />
@@ -79,39 +49,43 @@ const canonical = new URL(Astro.url.pathname, Astro.site);
     <meta property="og:title" content={fullTitle} />
     <meta property="og:description" content={description} />
     <meta property="og:type" content="website" />
-    <meta property="og:site_name" content="Sizlon" />
+    <meta property="og:site_name" content="시즐론 Sizlon" />
     <meta property="og:locale" content={lang === 'ko' ? 'ko_KR' : 'en_US'} />
-    <meta property="og:locale:alternate" content={lang === 'ko' ? 'en_US' : 'ko_KR'} />
     <meta property="og:url" content={canonical.href} />
     <meta property="og:image" content={new URL('/og.png', Astro.site).href} />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
-    <meta property="og:image:alt" content="Sizlon — AI proposes. A deterministic layer verifies." />
+    <meta property="og:image:alt" content="시즐론 — 검색 진단 · 감리 대응 · 데이터 피드" />
     <meta name="twitter:card" content="summary_large_image" />
     <link rel="canonical" href={canonical.href} />
-    {!noindex && <link rel="alternate" hreflang="en" href={altEn.href} />}
-    {!noindex && <link rel="alternate" hreflang="ko" href={altKo.href} />}
-    {!noindex && <link rel="alternate" hreflang="x-default" href={altEn.href} />}
+    {isHome && !noindex && <link rel="alternate" hreflang="ko" href={homeKo.href} />}
+    {isHome && !noindex && <link rel="alternate" hreflang="en" href={homeEn.href} />}
+    {isHome && !noindex && <link rel="alternate" hreflang="x-default" href={homeKo.href} />}
     <script type="application/ld+json" set:html={JSON.stringify({
       '@context': 'https://schema.org',
-      '@type': 'Organization',
-      name: 'Sizlon Inc.',
-      alternateName: '주식회사 시즐론',
+      '@type': 'ProfessionalService',
+      name: '시즐론',
+      alternateName: 'Sizlon Inc.',
       url: 'https://sizlon.io',
       logo: 'https://sizlon.io/logo/sizlon-logo.svg',
-      description: 'Sizlon builds systems for work that can’t be wrong — an AI layer proposes, a deterministic layer verifies, and only what holds is promoted.',
-      founder: { '@type': 'Person', name: 'Kwangyeon Lee' },
+      description: '한국어 검색 품질 진단, 공공 SI 감리 대응 요구사항 추적표, 월정액 데이터 피드. 매체 7,000곳·일 20만 건 수집·색인 인프라를 구축·운영한 검색 엔지니어가 직접 수행합니다.',
+      founder: { '@type': 'Person', name: '이광연', alternateName: 'Kwangyeon Lee' },
+      // 2026-09-05 전화 규칙 철회(v3 §3.7): 검색 결과의 통화 버튼이 원하는 신호다.
+      telephone: site.contactPhoneIntl,
+      email: site.contactEmail,
+      openingHours: 'Mo-Fr 09:00-18:00',
+      areaServed: 'KR',
       address: {
         '@type': 'PostalAddress',
-        streetAddress: '302, 189-7 Wonhyo-ro, Yongsan-gu',
-        addressLocality: 'Seoul',
+        streetAddress: '원효로 189-7, 302호',
+        addressLocality: '용산구',
+        addressRegion: '서울특별시',
         addressCountry: 'KR',
       },
-      // 전화 응대를 하지 않으므로 telephone은 넣지 않는다 — 구조화 데이터의
-      // telephone은 검색 결과에 통화 버튼을 띄우는 신호다. 문의는 이메일.
       contactPoint: {
         '@type': 'ContactPoint',
-        email: 'hello@sizlon.io',
+        telephone: site.contactPhoneIntl,
+        email: site.contactEmail,
         contactType: 'sales',
         availableLanguage: ['ko', 'en'],
       },
@@ -131,7 +105,7 @@ const canonical = new URL(Astro.url.pathname, Astro.site);
       // 스크롤 깊이·체류시간만 svc.sizlon.io(/api/hit)로 보낸다. 식별자와
       // 쿠키는 없고, 서버도 IP를 저장하지 않는다(일일 salt 해시만). DNT 존중.
       // text/plain 문자열로 보내 CORS preflight 없는 단순 요청을 유지한다.
-      const local = ['localhost', '127.0.0.1'].includes(location.hostname);
+      const local = ['localhost', '127.0.0.1'].includes(location.hostname) || location.hostname.endsWith('.localhost');
       const dnt = navigator.doNotTrack === '1';
       let t0 = Date.now();
       let maxScroll = 0;

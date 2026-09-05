@@ -1,5 +1,5 @@
 ---
-import { site, solutions, crawlerPages, miriboaPages, legalLinks } from '../config/site';
+import { site, servicePages, legalLinks } from '../config/site';
 import type { Lang } from '../i18n/content';
 import { t, localizePath } from '../i18n/utils';
 
@@ -12,39 +12,34 @@ const tr = t(lang);
   <div class="wrap footer-inner">
     <div class="col brandcol">
       <a class="brand" href={localizePath('/', lang)}>
-        <img src="/logo/sizlon-logo-white.svg" alt="Sizlon" width="95" height="24" />
+        <img src="/logo/sizlon-logo-white.svg" alt="시즐론 Sizlon" width="95" height="24" />
       </a>
       <p class="tag">{tr.footer.tagline}</p>
     </div>
 
-    <nav class="col" aria-label="Products">
-      <span class="eyebrow">{tr.footer.products}</span>
-      {solutions.filter((s) => s.href).map((s) => (
-        <a href={localizePath(s.href!, lang)}>{s.name}</a>
-      ))}
+    <nav class="col" aria-label={tr.footer.services}>
+      <span class="eyebrow">{tr.footer.services}</span>
+      {servicePages.map((item) => <a href={item.href}>{tr.nav[item.key]}</a>)}
     </nav>
 
-    <nav class="col" aria-label="Crawler Platform">
-      <span class="eyebrow">{tr.footer.crawler}</span>
-      {crawlerPages.map((item) => <a href={localizePath(item.href, lang)}>{tr.nav[item.key]}</a>)}
+    <nav class="col" aria-label={tr.footer.work}>
+      <span class="eyebrow">{tr.footer.work}</span>
+      {tr.footer.workItems.map((item) => <a href={item.href}>{item.label}</a>)}
     </nav>
 
-    <nav class="col" aria-label="Miriboa">
-      <span class="eyebrow">{tr.footer.miriboa}</span>
-      {miriboaPages.map((item) => <a href={localizePath(item.href, lang)}>{tr.nav[item.key]}</a>)}
-    </nav>
-
-    <nav class="col" aria-label="Legal">
-      <span class="eyebrow">{tr.footer.legal}</span>
-      {legalLinks.map((item) => <a href={localizePath(item.href, lang)}>{tr.legalNav[item.key]}</a>)}
-    </nav>
-
-    <div class="col">
-      <span class="eyebrow">{tr.footer.getInTouch}</span>
-      <a href={localizePath('/about', lang)}>{tr.nav.About}</a>
-      <a href={`${localizePath('/contact', lang)}?topic=demo`}>{tr.common.requestDemo}</a>
+    <nav class="col" aria-label={tr.footer.company}>
+      <span class="eyebrow">{tr.footer.company}</span>
+      <a href="/about">{tr.nav.about}</a>
+      <a href="/contact">{tr.nav.contact}</a>
+      <a href={`tel:${site.contactPhoneIntl}`}>{site.contactPhone}</a>
       <a href={`mailto:${site.contactEmail}`}>{site.contactEmail}</a>
-    </div>
+    </nav>
+
+    <nav class="col" aria-label={tr.footer.legal}>
+      <span class="eyebrow">{tr.footer.legal}</span>
+      {legalLinks.map((item) => <a href={item.href}>{tr.legalNav[item.key]}</a>)}
+      <a href="/services/data#principles">{tr.footer.principles}</a>
+    </nav>
   </div>
 
   <div class="wrap bizinfo">
@@ -61,7 +56,7 @@ const tr = t(lang);
   .footer { border-top: 1px solid var(--hairline-dark); padding-top: var(--section-y); }
   .footer-inner {
     display: grid;
-    grid-template-columns: 1.6fr 1fr 1fr 1fr 1fr 1.2fr;
+    grid-template-columns: 1.6fr 1fr 1fr 1fr 1fr;
     gap: 2rem;
     padding-bottom: 3rem;
   }
@@ -92,7 +87,6 @@ const tr = t(lang);
     font-size: var(--step--1);
     color: var(--slate-on-dark);
   }
-  /* 6열은 중간 폭에서 각 열이 너무 좁아진다 — 3열로 접었다가 모바일에서 2열로 */
   @media (max-width: 1080px) {
     .footer-inner { grid-template-columns: 1.6fr 1fr 1fr; }
   }

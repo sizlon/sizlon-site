@@ -1,93 +1,108 @@
 ---
+// 홈 (v3 §3.1) — 서비스 3 + 근거. 히어로 철학 문구는 푸터로, 제품 카드는 없다.
 import Base from '../layouts/Base.astro';
-import HealSignature from '../components/HealSignature.astro';
-import SolutionCard from '../components/SolutionCard.astro';
-import { solutions } from '../config/site';
-import type { Lang } from '../i18n/content';
-import { t, localizePath } from '../i18n/utils';
+import { site, servicePages, bookingHref } from '../config/site';
+import { content } from '../i18n/content';
 
-interface Props { lang: Lang }
-const { lang } = Astro.props;
-const tr = t(lang);
+const tr = content.ko;
 const c = tr.home;
-// Miriboa leads the card order on the home page — it is the revenue-priority
-// product, even though the global solutions[] order stays crawler-first.
-const homeSolutions = [...solutions].sort(
-  (a, b) => (a.slug === 'miriboa' ? 0 : 1) - (b.slug === 'miriboa' ? 0 : 1));
+const hrefOf = (key: string) => servicePages.find((s) => s.key === key)?.href ?? '/contact';
 ---
 
-<Base title={c.title} description={c.description} lang={lang}>
+<Base title={c.title} description={c.description} lang="ko" rawTitle>
   <section class="hero band-ink">
-    <div class="wrap hero-grid">
-      <div class="hero-copy">
-        <span class="eyebrow">{c.eyebrow}</span>
-        <h1>{c.h1}</h1>
-        <p class="lede">{c.lede}</p>
-        <div class="cta-row">
-          <a class="btn btn-primary" href="https://miriboa.sizlon.io">{tr.common.verifyDocs} <span class="arrow">&rarr;</span></a>
-          <a class="btn btn-ghost" href={localizePath('/web-crawling', lang)}>{c.ctaCrawler}</a>
-        </div>
-        <p class="trust eyebrow">{c.trust}</p>
+    <div class="wrap hero-copy">
+      <h1>{c.h1}</h1>
+      <p class="lede">{c.lede}</p>
+      <div class="cta-row">
+        <a class="btn btn-primary" href={bookingHref()}>{tr.common.book} <span class="arrow">&rarr;</span></a>
+        <a class="btn btn-ghost" href={`tel:${site.contactPhoneIntl}`}>{tr.common.call} {site.contactPhone}</a>
       </div>
-      <div class="hero-sig">
-        <HealSignature lang={lang} />
-      </div>
+      <p class="eyebrow fixed">{tr.common.fixedLine}</p>
     </div>
   </section>
 
   <section class="section wrap">
-    <span class="eyebrow">{c.problemEyebrow}</span>
-    <h2 class="thesis">{c.thesis}</h2>
-    <p class="lede thesis-sub">{c.thesisSub}</p>
-  </section>
-
-  <section class="section wrap">
-    <ul class="diffs">
-      {c.diffs.map((d) => (
-        <li class="diff">
-          <span class="eyebrow">{d.stage}</span>
-          <p>{d.text}</p>
-        </li>
+    <div class="head">
+      <span class="eyebrow">{c.servicesEyebrow}</span>
+      <h2>{c.servicesH2}</h2>
+    </div>
+    <div class="cards">
+      {c.cards.map((card) => (
+        <a class="card" href={hrefOf(card.key)}>
+          <h3>{card.name}</h3>
+          <p class="terms">{card.terms}</p>
+          <p class="deliverable">{card.deliverable}</p>
+          <span class="more">자세히 <span class="arrow">&rarr;</span></span>
+        </a>
       ))}
-    </ul>
+    </div>
+    <p class="vat eyebrow">{tr.common.vatNote}</p>
   </section>
 
-  <section class="section wrap">
-    <div class="sol-head">
-      <span class="eyebrow">{c.solEyebrow}</span>
-      <h2>{c.solH2}</h2>
-      <p class="lede">{c.solLede}</p>
-    </div>
-    <div class="sol-grid">
-      {homeSolutions.map((s) => <SolutionCard solution={s} lang={lang} />)}
-    </div>
+  <section class="section wrap why tight">
+    <span class="eyebrow">{c.whyEyebrow}</span>
+    <dl class="facts">
+      {c.whyLines.map((l) => (
+        <div class="row">
+          <dt>{l.k}</dt>
+          <dd>{l.v}</dd>
+        </div>
+      ))}
+    </dl>
+  </section>
+
+  <section class="section wrap method tight">
+    <span class="eyebrow">{c.methodEyebrow}</span>
+    <p class="lede">{c.method}</p>
+  </section>
+
+  <section class="section wrap work tight">
+    <span class="eyebrow">{c.workEyebrow}</span>
+    <p>{c.workLine}</p>
+    <a class="btn btn-ghost" href="/work">{c.workLink} <span class="arrow">&rarr;</span></a>
   </section>
 
   <section class="cta-band band-ink">
     <div class="wrap cta-inner">
       <h2>{c.closingH2}</h2>
-      <a class="btn btn-primary" href={localizePath('/contact', lang)}>{c.closingBtn} <span class="arrow">&rarr;</span></a>
+      <div class="cta-row">
+        <a class="btn btn-primary" href={bookingHref()}>{tr.common.book} <span class="arrow">&rarr;</span></a>
+        <a class="btn btn-ghost" href={`tel:${site.contactPhoneIntl}`}>{site.contactPhone}</a>
+      </div>
     </div>
   </section>
 </Base>
 
 <style>
   .hero { padding-block: clamp(3.5rem, 2rem + 8vw, 7rem); }
-  .hero-grid { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: clamp(2rem, 1rem + 4vw, 4rem); align-items: center; }
-  .hero-copy { display: flex; flex-direction: column; gap: 1.25rem; align-items: flex-start; }
+  .hero-copy { display: flex; flex-direction: column; gap: 1.25rem; align-items: flex-start; max-width: 60ch; }
+  .hero h1 { max-width: 24ch; }
   .cta-row { display: flex; gap: 0.75rem; flex-wrap: wrap; margin-top: 0.5rem; }
-  .trust { margin-top: 0.5rem; }
-  .thesis { max-width: 20ch; }
-  .thesis-sub { margin-top: 1.5rem; }
-  .diffs { list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: repeat(2, 1fr); gap: 1px; background: var(--hairline); border: 1px solid var(--hairline); border-radius: var(--radius); overflow: hidden; }
-  .diff { background: var(--color-vellum); padding: 1.75rem; display: flex; flex-direction: column; gap: 0.6rem; }
-  .sol-head { display: flex; flex-direction: column; gap: 0.75rem; margin-bottom: 2rem; max-width: var(--measure); }
-  .sol-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1.25rem; }
+  .fixed { margin-top: 0.5rem; }
+  .head { display: flex; flex-direction: column; gap: 0.75rem; margin-bottom: 2rem; max-width: var(--measure); }
+  .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1.25rem; }
+  .card {
+    display: flex; flex-direction: column; gap: 0.6rem; padding: 1.6rem;
+    border: 1px solid var(--hairline); border-radius: var(--radius); background: var(--color-mist);
+    text-decoration: none; color: inherit; transition: border-color 0.15s ease, transform 0.15s ease;
+  }
+  .card:hover { border-color: var(--color-recovered); transform: translateY(-2px); }
+  .terms { font-family: var(--font-mono); font-size: var(--step--1); color: var(--color-ink); }
+  .deliverable { color: var(--color-slate); }
+  .more { margin-top: 0.4rem; font-weight: 600; font-size: var(--step--1); }
+  .more .arrow { transition: transform 0.15s ease; display: inline-block; }
+  .card:hover .more .arrow { transform: translateX(3px); }
+  .vat { margin-top: 1.25rem; }
+  .facts { margin: 1.25rem 0 0; border-top: 1px solid var(--hairline); max-width: var(--measure); }
+  .row { display: grid; grid-template-columns: 9rem 1fr; gap: 1rem; padding: 0.85rem 0; border-bottom: 1px solid var(--hairline); }
+  dt { font-family: var(--font-mono); font-size: var(--step--1); color: var(--color-slate); }
+  dd { margin: 0; }
+  .method .lede { margin-top: 1rem; max-width: var(--measure); }
+  .work { display: flex; flex-direction: column; gap: 1rem; align-items: flex-start; }
+  /* 근거·작업 방식·만든 것들은 짧은 절이라 기본 section 여백이 과하다 */
+  .tight { padding-block: clamp(2rem, 1.5rem + 2vw, 3.25rem); }
   .cta-band { padding-block: var(--section-y); }
   .cta-inner { display: flex; justify-content: space-between; align-items: center; gap: 2rem; flex-wrap: wrap; }
-  @media (max-width: 860px) {
-    .hero-grid { grid-template-columns: 1fr; }
-    .hero-sig { order: -1; }
-    .diffs { grid-template-columns: 1fr; }
-  }
+  @media (max-width: 640px) { .row { grid-template-columns: 1fr; gap: 0.2rem; } }
 </style>

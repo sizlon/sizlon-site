@@ -1,42 +1,42 @@
 ---
-// GitHub Pages는 dist/404.html 하나로 모든 언어 경로의 404를 처리한다 —
-// 요청 경로가 /ko 하위면 인라인 스크립트가 본문을 한국어로 전환한다.
+// GitHub Pages는 dist/404.html 하나로 모든 경로의 404를 처리한다 — 한국어가 기본이고,
+// 요청 경로가 /en 하위면 인라인 스크립트가 본문을 영어로 전환한다.
 import Base from '../layouts/Base.astro';
-import { t } from '../i18n/utils';
+import { content } from '../i18n/content';
 
-const en = t('en').notFound;
-const ko = t('ko').notFound;
+const ko = content.ko.notFound;
+const en = content.en.notFound;
 ---
 
-<Base title={en.title} description={en.description} lang="en" noindex>
+<Base title={ko.title} description={ko.description} lang="ko" noindex>
   <section class="section wrap nf">
     <p class="code">404</p>
-    <div data-nf="en">
-      <h1>{en.h1}</h1>
-      <p class="lede">{en.body}</p>
-      <div class="cta-row">
-        <a class="btn btn-primary" href="/">{en.home}</a>
-        <a class="btn btn-ghost" href="/contact">{en.contact}</a>
-      </div>
-      <p class="alt">{en.miriboaNote} <a href="https://miriboa.sizlon.io">miriboa.sizlon.io</a></p>
-    </div>
-    <div data-nf="ko" hidden>
+    <div data-nf="ko">
       <h1>{ko.h1}</h1>
       <p class="lede">{ko.body}</p>
       <div class="cta-row">
-        <a class="btn btn-primary" href="/ko/">{ko.home}</a>
-        <a class="btn btn-ghost" href="/ko/contact">{ko.contact}</a>
+        <a class="btn btn-primary" href="/">{ko.home}</a>
+        <a class="btn btn-ghost" href="/contact">{ko.contact}</a>
       </div>
       <p class="alt">{ko.miriboaNote} <a href="https://miriboa.sizlon.io">miriboa.sizlon.io</a></p>
+    </div>
+    <div data-nf="en" hidden>
+      <h1>{en.h1}</h1>
+      <p class="lede">{en.body}</p>
+      <div class="cta-row">
+        <a class="btn btn-primary" href="/en/">{en.home}</a>
+        <a class="btn btn-ghost" href="/contact">{en.contact}</a>
+      </div>
+      <p class="alt">{en.miriboaNote} <a href="https://miriboa.sizlon.io/en/">miriboa.sizlon.io/en</a></p>
     </div>
   </section>
 </Base>
 
 <script>
-  if (location.pathname === '/ko' || location.pathname.startsWith('/ko/')) {
-    document.documentElement.lang = 'ko';
-    document.querySelector('[data-nf="en"]')?.setAttribute('hidden', '');
-    document.querySelector('[data-nf="ko"]')?.removeAttribute('hidden');
+  if (location.pathname === '/en' || location.pathname.startsWith('/en/')) {
+    document.documentElement.lang = 'en';
+    document.querySelector('[data-nf="ko"]')?.setAttribute('hidden', '');
+    document.querySelector('[data-nf="en"]')?.removeAttribute('hidden');
   }
 </script>
 

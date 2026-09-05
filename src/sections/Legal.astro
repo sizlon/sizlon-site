@@ -1,15 +1,14 @@
 ---
 import Base from '../layouts/Base.astro';
-import type { Lang } from '../i18n/content';
-import { t } from '../i18n/utils';
+import { content } from '../i18n/content';
 
-interface Props { lang: Lang; doc: 'terms' | 'privacy' | 'licenses' }
-const { lang, doc } = Astro.props;
-const tr = t(lang);
+interface Props { doc: 'terms' | 'privacy' | 'licenses' }
+const { doc } = Astro.props;
+const tr = content.ko;
 const c = tr.legal[doc];
 ---
 
-<Base title={c.title} description={c.description} lang={lang}>
+<Base title={c.title} description={c.description} lang="ko">
   <section class="section wrap legal">
     <span class="eyebrow">{tr.footer.legal}</span>
     <h1>{c.title}</h1>

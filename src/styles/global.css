@@ -164,6 +164,8 @@ a { color: inherit; }
 .band-ink h2,
 .band-ink h3 { color: var(--color-mist); }
 .band-ink .eyebrow { color: var(--slate-on-dark); }
+/* 어두운 띠 위의 리드 문장 — 밝은 배경용 잉크 혼합색은 여기서 너무 어둡다(v3 실측). */
+.band-ink .lede { color: color-mix(in srgb, var(--color-mist) 82%, var(--color-ink)); }
 .band-ink .btn-ghost {
   border-color: var(--hairline-dark);
   color: var(--color-mist);

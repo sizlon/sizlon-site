@@ -1,0 +1,58 @@
+---
+// /en/ — Upwork 용 영문 1페이지 (v3 §3.8). 문단 순서: 경력 → 추출(스크래핑이 앞인
+// 이유: 첫 리뷰 3개는 소형 추출 작업으로 만든다) → 토크나이저 → 하이브리드.
+import Base from '../layouts/Base.astro';
+import { site } from '../config/site';
+import { content } from '../i18n/content';
+
+const c = content.en.page;
+---
+
+<Base title={c.title} description={c.description} lang="en">
+  <section class="hero band-ink">
+    <div class="wrap head">
+      <span class="eyebrow">{c.eyebrow}</span>
+      <h1>{c.h1}</h1>
+      <p class="lede">{c.lede}</p>
+      <div class="cta-row">
+        <a class="btn btn-primary" href={`mailto:${site.contactEmail}`}>{site.contactEmail}</a>
+        {site.upworkUrl && <a class="btn btn-ghost" href={site.upworkUrl}>{c.upworkLabel} <span class="arrow">&rarr;</span></a>}
+      </div>
+    </div>
+  </section>
+
+  <section class="section wrap blocks">
+    {c.blocks.map((b) => (
+      <div class="block">
+        <h2>{b.h}</h2>
+        <p>{b.p}</p>
+      </div>
+    ))}
+  </section>
+
+  <section class="section wrap blocks">
+    <div class="block">
+      <span class="eyebrow">{c.caseH}</span>
+      <h2>{c.caseTitle}</h2>
+      <p class="muted">{c.caseNote}</p>
+    </div>
+    <div class="block">
+      <p>{c.miriboaLine} <a href={c.miriboaHref}>miriboa.sizlon.io &rarr;</a></p>
+    </div>
+    <div class="block">
+      <p>{c.contactLine}</p>
+    </div>
+  </section>
+</Base>
+
+<style>
+  .hero { padding-block: clamp(3rem, 2rem + 5vw, 5.5rem); }
+  .head { display: flex; flex-direction: column; gap: 1rem; max-width: var(--measure); align-items: flex-start; }
+  .cta-row { display: flex; gap: 0.75rem; flex-wrap: wrap; margin-top: 0.5rem; }
+  .blocks { display: flex; flex-direction: column; gap: 2rem; max-width: var(--measure); }
+  .block { display: flex; flex-direction: column; gap: 0.6rem; }
+  .block h2 { font-size: var(--step-1); }
+  .block p { color: color-mix(in srgb, var(--color-ink) 85%, var(--color-vellum)); line-height: 1.7; }
+  .muted { color: var(--color-slate); }
+  .block a { color: var(--color-ink); text-decoration: none; border-bottom: 1px solid var(--color-recovered); }
+</style>

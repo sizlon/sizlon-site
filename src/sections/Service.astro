@@ -16,7 +16,9 @@ const principles = 'principles' in c ? c.principles : [];
 const principlesH = 'principlesH' in c ? c.principlesH : '';
 const minLine = 'minLine' in c ? c.minLine : '';
 const proofDetail = 'proofDetail' in c ? c.proofDetail : [];
-const proofLink = 'proofLink' in c ? c.proofLink : null;
+const proofLinks = 'proofLinks' in c ? c.proofLinks : [];
+const termsH = 'termsH' in c ? c.termsH : '';
+const terms = 'terms' in c ? c.terms : [];
 ---
 
 <Base title={c.title} description={c.description} lang="ko">
@@ -73,9 +75,16 @@ const proofLink = 'proofLink' in c ? c.proofLink : null;
     <h2>{c.proofH}</h2>
     <ul class="plain">{c.proofLines.map((p) => <li>{p}</li>)}</ul>
     {proofDetail.length > 0 && <ul class="detail">{proofDetail.map((d) => <li>{d}</li>)}</ul>}
-    {proofLink && <p><a class="more" href={proofLink.href}>{proofLink.label} &rarr;</a></p>}
+    {proofLinks.length > 0 && <p class="links">{proofLinks.map((l) => <a class="more" href={l.href}>{l.label} &rarr;</a>)}</p>}
     <p class="vat eyebrow">{tr.common.vatNote}</p>
   </section>
+
+  {terms.length > 0 && (
+    <section class="section wrap block">
+      <h2>{termsH}</h2>
+      <ul class="plain">{terms.map((t) => <li>{t}</li>)}</ul>
+    </section>
+  )}
 
   {principles.length > 0 && (
     <section class="section wrap block" id="principles">
@@ -128,6 +137,7 @@ const proofLink = 'proofLink' in c ? c.proofLink : null;
   .proof .plain li { font-family: var(--font-body); }
   .detail { margin: 0.25rem 0 0; padding: 0; list-style: none; display: flex; flex-wrap: wrap; gap: 0.4rem; }
   .detail li { font-family: var(--font-mono); font-size: var(--step--1); padding: 0.2rem 0.55rem; border: 1px solid var(--hairline); border-radius: var(--radius); color: var(--color-slate); }
+  .links { display: flex; flex-wrap: wrap; gap: 0.5rem 1.5rem; }
   .more { color: var(--color-ink); text-decoration: none; border-bottom: 1px solid var(--color-recovered); font-weight: 600; }
   .vat { margin-top: 0.75rem; }
   .min { color: var(--color-slate); }

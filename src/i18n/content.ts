@@ -111,16 +111,23 @@ export const content = {
         optionH: '옵션',
         options: ['하이브리드(BM25 + kNN) 설계 — 별도 견적'],
         proofH: '근거',
-        proofLines: [proof.careerFull],
+        // 근거 점검(2026-09-06): 운영 항목(템플릿·스냅샷·동기화)은 검색 품질 근거가 아니라
+        // 뺐다(대표 소개에 남음). 대신 이 서비스의 약속(골든셋 before/after)을 실제로 해 본
+        // 증거인 미리보아 벤치마크(정답지 동결·재측정 73.5→87.4)를 넣는다.
+        proofLines: [
+          proof.careerFull,
+          '골든셋을 동결하고 재측정하는 방법은 미리보아 벤치마크에 공개돼 있습니다 — 같은 잣대로 요구조건 추출 재현율 73.5% → 87.4%.',
+        ],
         proofDetail: [
-          'Index · Component 템플릿 설계',
-          '커스텀 토크나이저, Nori · Mecab 커스터마이징',
+          '커스텀 토크나이저',
+          'Nori · Mecab 형태소 분석기 커스터마이징',
           '신규 단어 추출로 사용자 사전 자동 갱신',
-          '월별 인덱스 분할, 자동 스냅샷 정책',
-          'DB · 인덱스 동기화 검사 자동화',
           'script · aggregation 포함 Query DSL',
         ],
-        proofLink: { label: '대표 소개', href: '/founder' },
+        proofLinks: [
+          { label: '골든 벤치마크 — 측정 방법·실패 사례·한계', href: 'https://miriboa.sizlon.io/benchmark/' },
+          { label: '대표 소개', href: '/founder' },
+        ],
         faqH: '자주 묻는 것',
         faq: [
           { q: '데이터를 반출해야 하나요?', a: '아닙니다. 읽기 계정과 화면 공유로 진행합니다. 로그·설정 파일이 밖으로 나가지 않습니다.' },
@@ -164,7 +171,18 @@ export const content = {
         optionH: '',
         options: [],
         proofH: '근거',
-        proofLines: [proof.engine, 'NDA · 자료 15일 내 파기 · 대표가 직접 수행'],
+        // 근거 점검(2026-09-06): 이 수치는 입찰 공고 문서에서 잰 것이다. RTM(RFP·산출물)은
+        // 문서 종류와 조건 어휘가 달라 그대로 RTM 정확도로 읽히면 안 된다 — 출처를 밝히고
+        // 감리 산출물 기준 측정치는 첫 프로젝트에서 만든다고 적는다(ENGINE_BOUNDARY.md).
+        proofLines: [
+          '같은 엔진을 입찰 공고 문서에서 측정한 수치 — 요구조건 추출 recall 87.4%, "확실" 판정 precision 96.5% (미리보아 골든 벤치마크).',
+          '감리 산출물(RFP·요구사항정의서·설계서·테스트결과서) 기준 측정치는 아직 없습니다. 첫 프로젝트에서 골든셋을 만들어 같은 방식으로 공개합니다.',
+        ],
+        proofLinks: [
+          { label: '골든 벤치마크 — 측정 방법·실패 사례·한계', href: 'https://miriboa.sizlon.io/benchmark/' },
+        ],
+        termsH: '조건',
+        terms: ['NDA 체결 후 자료 수령', '자료는 납품 후 15일 내 파기', '대표가 직접 수행, 외부 인력 없음'],
         faqH: '',
         faq: [],
         crossLine: '경쟁 입찰·낙찰 동향은 데이터 피드로 매달',

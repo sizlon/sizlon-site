@@ -9,6 +9,26 @@ const tr = t(lang);
 ---
 
 <footer class="footer band-ink">
+  {lang === 'en' ? (
+  <div class="wrap footer-inner en">
+    <div class="col brandcol">
+      <a class="brand" href="/en/">
+        <img src="/logo/sizlon-logo-white.svg" alt="Sizlon" width="95" height="24" />
+      </a>
+      <p class="tag">{tr.footer.tagline}</p>
+    </div>
+    <nav class="col" aria-label={tr.footer.company}>
+      <span class="eyebrow">{tr.footer.company}</span>
+      <a href={`mailto:${site.contactEmail}`}>{site.contactEmail}</a>
+      <a href={`tel:${site.contactPhoneIntl}`}>{site.contactPhoneIntl}</a>
+      <a href="/">{tr.common.koreanSite} &rarr;</a>
+    </nav>
+    <nav class="col" aria-label={tr.common.legalNote}>
+      <span class="eyebrow">{tr.common.legalNote}</span>
+      {legalLinks.map((item) => <a href={item.href} hreflang="ko">{tr.legalNav[item.key]}</a>)}
+    </nav>
+  </div>
+  ) : (
   <div class="wrap footer-inner">
     <div class="col brandcol">
       <a class="brand" href={localizePath('/', lang)}>
@@ -42,6 +62,7 @@ const tr = t(lang);
       <a href="/services/data#principles">{tr.footer.principles}</a>
     </nav>
   </div>
+  )}
 
   <div class="wrap bizinfo">
     <span>{tr.footer.business}</span>
@@ -88,6 +109,7 @@ const tr = t(lang);
     font-size: var(--step--1);
     color: var(--slate-on-dark);
   }
+  .footer-inner.en { grid-template-columns: 1.6fr 1fr 1fr; }
   @media (max-width: 1080px) {
     .footer-inner { grid-template-columns: 1.6fr 1fr 1fr; }
   }

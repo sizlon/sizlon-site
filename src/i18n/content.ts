@@ -99,7 +99,7 @@ export const content = {
         ],
         howH: '진행',
         how: [
-          { name: '1주 — 진단', text: '로그·설정 분석, 실패 쿼리 골든셋 100건 확정.' },
+          { name: '1주 — 진단', text: '로그·설정 분석, 실패 쿼리 골든셋 100건 확정.', note: '골든셋을 동결하고 재측정하는 방법은 미리보아 벤치마크와 같습니다 — 같은 잣대로 요구조건 추출 재현율 73.5% → 87.4%.', link: { label: '벤치마크 보기', href: 'https://miriboa.sizlon.io/benchmark/' } },
           { name: '2주 — 재설정', text: 'analyzer·사전·동의어·랭킹 재설정, 골든셋으로 before/after 측정.' },
         ],
         deliverH: '결과물',
@@ -110,24 +110,10 @@ export const content = {
         ],
         optionH: '옵션',
         options: ['하이브리드(BM25 + kNN) 설계 — 별도 견적'],
-        proofH: '근거',
-        // 근거 점검(2026-09-06): 운영 항목(템플릿·스냅샷·동기화)은 검색 품질 근거가 아니라
-        // 뺐다(대표 소개에 남음). 대신 이 서비스의 약속(골든셋 before/after)을 실제로 해 본
-        // 증거인 미리보아 벤치마크(정답지 동결·재측정 73.5→87.4)를 넣는다.
-        proofLines: [
-          proof.careerFull,
-          '골든셋을 동결하고 재측정하는 방법은 미리보아 벤치마크에 공개돼 있습니다 — 같은 잣대로 요구조건 추출 재현율 73.5% → 87.4%.',
-        ],
-        proofDetail: [
-          '커스텀 토크나이저',
-          'Nori · Mecab 형태소 분석기 커스터마이징',
-          '신규 단어 추출로 사용자 사전 자동 갱신',
-          'script · aggregation 포함 Query DSL',
-        ],
-        proofLinks: [
-          { label: '골든 벤치마크 — 측정 방법·실패 사례·한계', href: 'https://miriboa.sizlon.io/benchmark/' },
-          { label: '대표 소개', href: '/founder' },
-        ],
+        // 근거는 절이 아니라 문장이다(2026-09-06 오너 결정): 누가 하는가는 히어로 가격 아래
+        // 한 줄, 방법의 증거는 그 방법을 쓰는 진행 1주 항목에. ES 세부 태그는 대표 소개로.
+        heroProof: [proof.careerShort + ' — 그 엔지니어가 직접 합니다.'],
+        heroProofLink: { label: '대표 소개', href: '/founder' },
         faqH: '자주 묻는 것',
         faq: [
           { q: '데이터를 반출해야 하나요?', a: '아닙니다. 읽기 계정과 화면 공유로 진행합니다. 로그·설정 파일이 밖으로 나가지 않습니다.' },
@@ -170,17 +156,14 @@ export const content = {
         ],
         optionH: '',
         options: [],
-        proofH: '근거',
-        // 근거 점검(2026-09-06): 이 수치는 입찰 공고 문서에서 잰 것이다. RTM(RFP·산출물)은
-        // 문서 종류와 조건 어휘가 달라 그대로 RTM 정확도로 읽히면 안 된다 — 출처를 밝히고
-        // 감리 산출물 기준 측정치는 첫 프로젝트에서 만든다고 적는다(ENGINE_BOUNDARY.md).
-        proofLines: [
-          '같은 엔진을 입찰 공고 문서에서 측정한 수치 — 요구조건 추출 recall 87.4%, "확실" 판정 precision 96.5% (미리보아 골든 벤치마크).',
+        // 근거는 히어로 아래 두 문장(2026-09-06). 수치는 입찰 공고 문서에서 잰 것 — RTM
+        // 정확도로 읽히지 않게 출처를 밝히고, 감리 산출물 측정치는 첫 프로젝트에서 만든다
+        // (ENGINE_BOUNDARY.md: 도메인마다 골든셋을 새로 잡는다).
+        heroProof: [
+          '같은 엔진을 입찰 공고 문서에서 측정한 수치 — 요구조건 추출 recall 87.4%, "확실" 판정 precision 96.5%.',
           '감리 산출물(RFP·요구사항정의서·설계서·테스트결과서) 기준 측정치는 아직 없습니다. 첫 프로젝트에서 골든셋을 만들어 같은 방식으로 공개합니다.',
         ],
-        proofLinks: [
-          { label: '골든 벤치마크 — 측정 방법·실패 사례·한계', href: 'https://miriboa.sizlon.io/benchmark/' },
-        ],
+        heroProofLink: { label: '벤치마크 보기', href: 'https://miriboa.sizlon.io/benchmark/' },
         termsH: '조건',
         terms: ['NDA 체결 후 자료 수령', '자료는 납품 후 15일 내 파기', '대표가 직접 수행, 외부 인력 없음'],
         faqH: '',
@@ -217,8 +200,12 @@ export const content = {
         ],
         optionH: '',
         options: [],
-        proofH: '근거',
-        proofLines: [proof.careerFull, proof.current],
+        // 근거는 히어로 아래 두 줄(2026-09-06): 이 방식으로 실제로 한 것 → 만든 것들.
+        heroProof: [
+          '나라장터 개찰 데이터 6개월분을 이 방식으로 수집·파싱·집계했습니다 — 협상에 의한 계약 응찰 73,373건·업체 13,220곳.',
+          proof.careerShort + ' — 그 엔지니어가 직접 합니다.',
+        ],
+        heroProofLink: { label: '만든 것들', href: '/work#pipeline' },
         principlesH: '데이터 수집 원칙',
         principles: [
           '로그인 뒤의 데이터, 개인정보, 약관상 수집 금지 사이트, 저작권 있는 본문 전문은 금액과 무관하게 받지 않습니다.',

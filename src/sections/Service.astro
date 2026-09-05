@@ -15,8 +15,8 @@ const toolLine = 'toolLine' in c ? c.toolLine : '';
 const principles = 'principles' in c ? c.principles : [];
 const principlesH = 'principlesH' in c ? c.principlesH : '';
 const minLine = 'minLine' in c ? c.minLine : '';
-const proofDetail = 'proofDetail' in c ? c.proofDetail : [];
-const proofLinks = 'proofLinks' in c ? c.proofLinks : [];
+const heroProof = 'heroProof' in c ? c.heroProof : [];
+const heroProofLink = 'heroProofLink' in c ? c.heroProofLink : null;
 const termsH = 'termsH' in c ? c.termsH : '';
 const terms = 'terms' in c ? c.terms : [];
 ---
@@ -29,6 +29,13 @@ const terms = 'terms' in c ? c.terms : [];
       <p class="lede">{c.sub}</p>
       <p class="price">{c.price}</p>
       {c.priceNote && <p class="price-note">{c.priceNote}</p>}
+      {heroProof.length > 0 && (
+        <div class="proof">
+          {heroProof.map((l) => <p>{l}</p>)}
+          {heroProofLink && <a href={heroProofLink.href}>{heroProofLink.label} &rarr;</a>}
+        </div>
+      )}
+      <p class="vat eyebrow">{tr.common.vatNote}</p>
       <div class="cta-row">
         <a class="btn btn-primary" href={bookingHref(topic)}>{tr.common.book} <span class="arrow">&rarr;</span></a>
         <a class="btn btn-ghost" href={`tel:${site.contactPhoneIntl}`}>{tr.common.call} {site.contactPhone}</a>
@@ -51,6 +58,7 @@ const terms = 'terms' in c ? c.terms : [];
           <li>
             <span class="eyebrow">{s.name}</span>
             <p>{s.text}</p>
+            {'note' in s && <p class="note">{s.note} {'link' in s && <a href={s.link.href}>{s.link.label} &rarr;</a>}</p>}
           </li>
         ))}
       </ol>
@@ -70,14 +78,6 @@ const terms = 'terms' in c ? c.terms : [];
       )}
     </section>
   )}
-
-  <section class="section wrap block proof">
-    <h2>{c.proofH}</h2>
-    <ul class="plain">{c.proofLines.map((p) => <li>{p}</li>)}</ul>
-    {proofDetail.length > 0 && <ul class="detail">{proofDetail.map((d) => <li>{d}</li>)}</ul>}
-    {proofLinks.length > 0 && <p class="links">{proofLinks.map((l) => <a class="more" href={l.href}>{l.label} &rarr;</a>)}</p>}
-    <p class="vat eyebrow">{tr.common.vatNote}</p>
-  </section>
 
   {terms.length > 0 && (
     <section class="section wrap block">
@@ -133,13 +133,14 @@ const terms = 'terms' in c ? c.terms : [];
   .steps { margin: 0; padding: 0; list-style: none; display: grid; gap: 1px; background: var(--hairline); border: 1px solid var(--hairline); border-radius: var(--radius); overflow: hidden; }
   .steps li { background: var(--color-vellum); padding: 1.25rem 1.5rem; display: flex; flex-direction: column; gap: 0.4rem; }
   .tool { color: var(--color-slate); }
+  .steps .note { color: var(--color-slate); font-size: var(--step--1); }
+  .steps .note a { color: var(--color-ink); text-decoration: none; border-bottom: 1px solid var(--color-recovered); }
+  .proof { display: flex; flex-direction: column; gap: 0.35rem; margin-top: 0.25rem; max-width: 60ch; }
+  .proof p { color: var(--slate-on-dark); font-size: var(--step--1); line-height: 1.6; }
+  .proof a { color: var(--color-mist); text-decoration: none; border-bottom: 1px solid var(--color-recovered); font-size: var(--step--1); align-self: flex-start; }
   .options { margin-top: 0.75rem; display: flex; flex-direction: column; gap: 0.5rem; }
   .proof .plain li { font-family: var(--font-body); }
-  .detail { margin: 0.25rem 0 0; padding: 0; list-style: none; display: flex; flex-wrap: wrap; gap: 0.4rem; }
-  .detail li { font-family: var(--font-mono); font-size: var(--step--1); padding: 0.2rem 0.55rem; border: 1px solid var(--hairline); border-radius: var(--radius); color: var(--color-slate); }
-  .links { display: flex; flex-wrap: wrap; gap: 0.5rem 1.5rem; }
-  .more { color: var(--color-ink); text-decoration: none; border-bottom: 1px solid var(--color-recovered); font-weight: 600; }
-  .vat { margin-top: 0.75rem; }
+  .vat { margin-top: 0.25rem; }
   .min { color: var(--color-slate); }
   .faq { margin: 0; display: flex; flex-direction: column; gap: 1rem; }
   .qa { display: flex; flex-direction: column; gap: 0.3rem; padding-bottom: 1rem; border-bottom: 1px solid var(--hairline); }

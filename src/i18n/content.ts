@@ -530,11 +530,12 @@ export const content = {
       ],
       backgroundH: 'Background',
       background: 'Twenty years as a software engineer. At Korea Newswire (2013–2025, principal engineer) I designed and ran the Elasticsearch architecture behind a media-monitoring service: index and component templates, a custom tokenizer, Nori and Mecab customisation, automatic user-dictionary updates from new-term extraction, monthly index rollover with snapshot policies, and DB-to-index consistency checks. The ingestion side was a crawling platform generating per-source instances for about 7,000 news sources, ~200K new articles a day, on Python, scrapy and playwright, run on-prem, on Docker Compose and on Kubernetes.',
-      caseH: 'Case study',
-      caseTitle: 'Why Korean RAG fails: start with the tokenizer',
-      // 케이스 스터디 본문이 생기면 href 를 채운다 — 비어 있으면 En.astro 가 절을 렌더하지 않는다
-      // (제목만 있는 빈 절은 thin 신호, 2026-09-06 SEO 리뷰). 글의 조건은 메모리 restructure-v3 3번.
-      caseHref: '/en/notes/korean-tokenizer/',
+      caseH: 'Case studies',
+      // 영문 노트 목록(/en/notes/*). 비어 있으면 En.astro 가 절을 렌더하지 않는다.
+      cases: [
+        { title: 'Why Korean RAG fails: start with the tokenizer', href: '/en/notes/korean-tokenizer/' },
+        { title: 'When the table disappears, RAG states a wrong number with confidence', href: '/en/notes/korean-tables/' },
+      ],
       miriboaLine: 'Miriboa — a bid-document verification service I build and run: requirement extraction and matching over Korean and U.S. federal tenders, with a published benchmark.',
       miriboaHref: 'https://miriboa.sizlon.io/en/',
       upworkLabel: 'Upwork profile',

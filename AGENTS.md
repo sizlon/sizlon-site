@@ -120,7 +120,7 @@ same slug in both makes a translation pair and `Note.astro` emits the hreflang
 pair through Base's `hreflang` prop (the only pages besides `/`↔`/en/` that
 carry one). Add both URLs to `lastmod.ts`. The first note is `korean-tokenizer`
 (experiment record in `~/Projects/docs/tokenizer-experiment-2026-09.md`); its
-English twin is what `content.en.page.caseHref` points at.
+English twin is listed in `content.en.page.cases` (the /en/ "Case studies" block; every English note goes there).
 
 ## URLs and redirects
 

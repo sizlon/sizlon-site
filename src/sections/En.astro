@@ -35,10 +35,10 @@ const c = content.en.page;
       <h2>{c.backgroundH}</h2>
       <p>{c.background}</p>
     </div>
-    {c.caseHref && (
+    {c.cases.length > 0 && (
       <div class="block">
         <span class="eyebrow">{c.caseH}</span>
-        <h2><a href={c.caseHref}>{c.caseTitle} &rarr;</a></h2>
+        {c.cases.map((k) => <h2><a href={k.href}>{k.title} &rarr;</a></h2>)}
       </div>
     )}
     <div class="block">

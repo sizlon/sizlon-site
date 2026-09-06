@@ -100,6 +100,8 @@ decompound 모드만 바꾸는 것은 아무 효과가 없었습니다. 사전�
 
 ## 실험 파일
 
+GitHub 저장소 [sizlon/nori-user-dictionary-eval](https://github.com/sizlon/nori-user-dictionary-eval) 에 코퍼스·Dockerfile·스크립트·사전·결과가 한 벌로 있습니다(영문 README, 10분 재현). 아래는 같은 파일의 사본입니다.
+
 전부 그대로 올립니다. Elasticsearch 9.5.2 에 analysis-nori 를 붙인 단일 노드면 같은 숫자가 나옵니다. 코퍼스(공고명 183,240건)는 나라장터 개찰 공개 데이터에서 만든 것이라 올리지 않았고, 만드는 코드는 `common.py` 의 주석에 있습니다.
 
 - [common.py](/notes/korean-tokenizer/common.py) — 인덱스 설정(분석기·사전), 색인, 질의. 실행 순서는 make_indices → diagnose → build_rules → make_indices → eval2

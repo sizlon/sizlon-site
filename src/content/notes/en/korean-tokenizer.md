@@ -102,6 +102,8 @@ The [search-quality diagnostic](/services/search/) on the Korean site is this pr
 
 ## Files
 
+The whole thing — corpus, Dockerfile, scripts, dictionary, results — is on GitHub as [sizlon/nori-user-dictionary-eval](https://github.com/sizlon/nori-user-dictionary-eval), reproducible in about ten minutes. The files below are the same set.
+
 Everything is published as used. A single Elasticsearch 9.5.2 node with analysis-nori reproduces the numbers. The corpus (183,240 titles) is derived from public KONEPS bid-opening data and is not uploaded; the code that builds it is in the header comment of `common.py`.
 
 - [common.py](/notes/korean-tokenizer/common.py) — index settings (analyzers, dictionary), indexing, querying. Run order: make_indices → diagnose → build_rules → make_indices → eval2

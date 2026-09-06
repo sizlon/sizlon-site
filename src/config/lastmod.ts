@@ -10,7 +10,7 @@ export const LASTMOD: Record<string, string> = {
   '/': '2026-09-06',
   '/en/': '2026-09-06',
   '/services/search/': '2026-09-06',
-  '/notes/korean-tokenizer/': '2026-09-06',
+  '/notes/korean-tokenizer/': '2026-09-06',   // 09-06 GitHub 링크 추가(같은 날)
   '/en/notes/korean-tokenizer/': '2026-09-06',
   '/notes/korean-tables/': '2026-09-06',
   '/en/notes/korean-tables/': '2026-09-06',

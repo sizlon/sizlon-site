@@ -104,8 +104,11 @@ The [search-quality diagnostic](/services/search/) on the Korean site is this pr
 
 Everything is published as used. A single Elasticsearch 9.5.2 node with analysis-nori reproduces the numbers. The corpus (183,240 titles) is derived from public KONEPS bid-opening data and is not uploaded; the code that builds it is in the header comment of `common.py`.
 
-- [common.py](/notes/korean-tokenizer/common.py) — index settings (analyzers, dictionary, search analyzer), indexing, querying
-- [eval.py](/notes/korean-tokenizer/eval.py) — both relevance rules and P@10 · R@50 · MRR
+- [common.py](/notes/korean-tokenizer/common.py) — index settings (analyzers, dictionary), indexing, querying. Run order: make_indices → diagnose → build_rules → make_indices → eval2
+- [make_indices.py](/notes/korean-tokenizer/make_indices.py) — builds the four indices (base · mixed · tuned2 · tuned2s)
+- [diagnose.py](/notes/korean-tokenizer/diagnose.py) — Findings 1 and 2, and dictionary-candidate extraction
+- [build_rules.py](/notes/korean-tokenizer/build_rules.py) — candidates → user dictionary (including the 19 manual entries)
+- [eval2.py](/notes/korean-tokenizer/eval2.py) — both relevance rules and P@10 · R@50 · MRR
 - [queries.json](/notes/korean-tokenizer/queries.json) — the 50 queries and their groups
 - [user_rules2.json](/notes/korean-tokenizer/user_rules2.json) — the user dictionary, 2,155 rules (2,147 automatic + 19 manual; manual segmentation replaces an automatic entry for the same surface form)
 - [dict_candidates.json](/notes/korean-tokenizer/dict_candidates.json) — dictionary candidates (word, frequency, default segmentation, characters lost)

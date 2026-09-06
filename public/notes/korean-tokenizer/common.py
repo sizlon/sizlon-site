@@ -1,7 +1,7 @@
 """토크나이저 실험 공통 코드 (sizlon.io/notes/korean-tokenizer/, 2026-09).
 
-ES = Elasticsearch 9.5.2 + analysis-nori 단일 노드 (es-nori.Dockerfile):
-  docker build -t es-nori:9.5.2 -f es-nori.Dockerfile .
+ES = Elasticsearch 9.5.2 + analysis-nori 단일 노드 (Dockerfile.es-nori):
+  docker build -t es-nori:9.5.2 -f Dockerfile.es-nori .
   docker run -d -p 127.0.0.1:9201:9200 -e discovery.type=single-node -e xpack.security.enabled=false es-nori:9.5.2
 
 CORPUS = corpus.jsonl, 한 줄에 {"id","title","div","agency","date","method"}.
@@ -16,11 +16,12 @@ CORPUS = corpus.jsonl, 한 줄에 {"id","title","div","agency","date","method"}.
     # → 183,240건 (용역 111,756 · 공사 71,484)
 
 인덱스 4벌: base(discard) · mixed · tuned2(사전, 색인=검색) · tuned2s(사전, 색인 mixed·검색 none).
-tuned2s 는 analyzer_settings() 결과에 검색 분석기를 덧붙인다 — eval.py 상단 주석 참조.
+tuned2s 는 analyzer_settings() 결과에 검색 분석기를 덧붙인다 — make_indices.py 의 tuned2s_body().
 """
 import json, requests
 ES='http://localhost:9201'
-CORPUS='corpus.jsonl'
+import os
+CORPUS=os.environ.get('CORPUS', os.path.join(os.path.dirname(os.path.abspath(__file__)), 'corpus.jsonl'))
 def docs():
     with open(CORPUS,encoding='utf8') as f:
         for line in f: yield json.loads(line)

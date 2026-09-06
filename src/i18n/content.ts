@@ -57,7 +57,8 @@ export const content = {
     // ── 홈 (v3 §3.1) ───────────────────────────────────────────────────
     home: {
       title: '시즐론 | 검색 진단·감리 대응·데이터 피드',
-      description: '매체 7,000곳에서 하루 20만 건을 수집·색인하던 검색 엔지니어가 검색 품질(Elasticsearch·OpenSearch)을 진단하고, 공공 SI 감리 문서를 만들고, 필요한 데이터를 매달 납품합니다. 고정가, 결과물 명시, 대표가 직접 수행.',
+      // 메타 설명은 서비스명이 앞 80자(모바일 스니펫) 안에 오도록 — 경력은 뒤로 (2026-09-06).
+      description: '검색 품질 진단(Elasticsearch·OpenSearch), 공공 SI 감리 대응 문서, 월정액 데이터 피드 — 매체 7,000곳에서 하루 20만 건을 수집·색인하던 검색 엔지니어가 직접 합니다. 고정가, 결과물 명시.',
       h1: '검색 시스템, RAG, 데이터 추출 — 실제로 운영해 본 사람이 합니다.',
       lede: '매체 7,000곳에서 하루 20만 건을 수집·색인하던 검색 엔지니어입니다. 검색 품질을 진단하고, 공공 SI 감리 문서를 만들고, 필요한 데이터를 매달 납품합니다.',
       servicesEyebrow: '서비스',
@@ -84,7 +85,8 @@ export const content = {
     // ── 서비스 3종 (v3 §3.2~3.4) ───────────────────────────────────────
     services: {
       search: {
-        title: '검색 품질 진단 — Elasticsearch · OpenSearch',
+        // <title> 은 접미 "— 시즐론" 이 붙으니 대시 없이 짧게(모바일 SERP ~30자). h1 은 별도.
+        title: 'Elasticsearch·OpenSearch 검색 품질 진단',
         description: 'Elasticsearch/OpenSearch·Nori 검색 품질 진단 — 2주, 250만원 고정가. 실패 쿼리 골든셋 100건으로 before/after 를 측정하고, 바로 적용 가능한 analyzer·사전·동의어·랭킹 설정을 드립니다.',
         eyebrow: '서비스 · 검색 품질 진단',
         h1: '검색 품질 진단 — Elasticsearch · OpenSearch',
@@ -176,7 +178,7 @@ export const content = {
         cta: 'RFP 와 산출물 목록만 주시면 하루 안에 범위와 견적을 드립니다',
       },
       data: {
-        title: '데이터 피드 — 필요한 데이터를 매달 정제해서 납품합니다',
+        title: '데이터 피드, 매달 정제해서 납품',
         description: '공공 공고·HWP 첨부·PDF 표처럼 남들이 못 뽑는 한국어 데이터를 매달 정제해 CSV/JSON/API 로 납품합니다. 구축 100~300만원 + 월정액 30~80만원.',
         eyebrow: '서비스 · 데이터 피드',
         h1: '데이터 피드 — 필요한 데이터를 매달 정제해서 납품합니다',
@@ -509,7 +511,9 @@ export const content = {
       background: 'Twenty years as a software engineer. At Korea Newswire (2013–2025, principal engineer) I designed and ran the Elasticsearch architecture behind a media-monitoring service: index and component templates, a custom tokenizer, Nori and Mecab customisation, automatic user-dictionary updates from new-term extraction, monthly index rollover with snapshot policies, and DB-to-index consistency checks. The ingestion side was a crawling platform generating per-source instances for about 7,000 news sources, ~200K new articles a day, on Python, scrapy and playwright, run on-prem, on Docker Compose and on Kubernetes.',
       caseH: 'Case study',
       caseTitle: 'Why Korean RAG fails: start with the tokenizer',
-      caseNote: 'Coming shortly.',
+      // 케이스 스터디 본문이 생기면 href 를 채운다 — 비어 있으면 En.astro 가 절을 렌더하지 않는다
+      // (제목만 있는 빈 절은 thin 신호, 2026-09-06 SEO 리뷰). 글의 조건은 메모리 restructure-v3 3번.
+      caseHref: '',
       miriboaLine: 'Miriboa — a bid-document verification service I build and run: requirement extraction and matching over Korean and U.S. federal tenders, with a published benchmark.',
       miriboaHref: 'https://miriboa.sizlon.io/en/',
       upworkLabel: 'Upwork profile',

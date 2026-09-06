@@ -65,6 +65,14 @@ URL 301 with the expected `Location` (those 301s come from Cloudflare, see
   the owner intends to productize Crawler Platform once data-feed engagements
   have repeated and stabilized; when that happens, revive `/products/crawler-platform/`
   (drop its stub and the `SITEMAP_EXCLUDE` entry) rather than minting a new URL.
+- **When you change a page's copy, bump its date in `src/config/lastmod.ts`** in
+  the same commit — that map feeds the sitemap `<lastmod>`. Hand-written on
+  purpose: stamping the build time on every page at every deploy makes Google
+  ignore lastmod entirely. Markup/design-only changes do not bump it. Legal pages
+  must match the visible `content.ko.legal.updated`.
+- **`<title>` stays short and dash-free** — Base.astro appends "— 시즐론", and a
+  mobile SERP shows ~30 Korean characters, so a title that is itself "A — B"
+  loses the brand. Titles and `h1`s are separate strings; a long h1 is fine.
 - **Never restate Miriboa prices, credit rules, or SLA here** — the 2026-07-29
   audit found this site advertising a paid tier that had become free because the
   copy was duplicated and drifted. Link to miriboa.sizlon.io instead.

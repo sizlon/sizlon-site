@@ -1,6 +1,7 @@
 // @ts-check
 import { defineConfig } from 'astro/config';
 import sitemap from '@astrojs/sitemap';
+import { LASTMOD } from './src/config/lastmod';
 
 // 시즐론 회사 사이트. 정적 출력, 한국어 기본(루트) + 영어 /en/ 한 장 (2026-09-05 개편 v3).
 // https://astro.build/config
@@ -28,6 +29,11 @@ export default defineConfig({
   server: { port: 4322, host: true },
   integrations: [sitemap({
     filter: (page) => !SITEMAP_EXCLUDE.some((re) => re.test(new URL(page).pathname)),
+    // lastmod 는 src/config/lastmod.ts 의 손으로 적은 카피 수정일 — 빌드 시각이 아니다.
+    serialize: (item) => {
+      const d = LASTMOD[new URL(item.url).pathname];
+      return d ? { ...item, lastmod: d } : item;
+    },
     // sitemap 의 i18n 옵션은 쓰지 않는다 — 모든 페이지에 en 짝이 있다고 가정해
     // 존재하지 않는 /en/about 같은 alternate 를 만든다. hreflang 은 Base.astro 가
     // 홈(/ ↔ /en/) 한 쌍에만 단다.

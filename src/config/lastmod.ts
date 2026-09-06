@@ -15,7 +15,7 @@ export const LASTMOD: Record<string, string> = {
   '/notes/korean-tables/': '2026-09-06',
   '/en/notes/korean-tables/': '2026-09-06',
   '/services/rtm/': '2026-09-06',
-  '/services/data/': '2026-09-06',   // 09-06 실측 노트 링크 추가
+  '/services/data/': '2026-09-06',   // 09-06 실측 노트 링크·수집 원칙(품질 고지) 추가
   '/work/': '2026-09-06',
   '/about/': '2026-09-06',
   '/founder/': '2026-09-06',

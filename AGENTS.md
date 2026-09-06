@@ -59,6 +59,12 @@ URL 301 with the expected `Location` (those 301s come from Cloudflare, see
   language only; the footer tagline is the one allowed exception). Site-wide —
   "크롤러 플랫폼", "에디션", "셀프호스팅/매니지드", "외주 없이" (the last one was
   removed 2026-08-06 because it reads as a ban on partners; say "대표가 직접 수행").
+  Scope of the "크롤러 플랫폼" ban (clarified 2026-09-06): *selling it as a product*
+  on any sales page. The name stays in the legal trademark line, and the legal
+  pages describe the license model generically ("소프트웨어를 납품하는 경우") —
+  the owner intends to productize Crawler Platform once data-feed engagements
+  have repeated and stabilized; when that happens, revive `/products/crawler-platform/`
+  (drop its stub and the `SITEMAP_EXCLUDE` entry) rather than minting a new URL.
 - **Never restate Miriboa prices, credit rules, or SLA here** — the 2026-07-29
   audit found this site advertising a paid tier that had become free because the
   copy was duplicated and drifted. Link to miriboa.sizlon.io instead.

@@ -100,18 +100,4 @@ decompound 모드만 바꾸는 것은 아무 효과가 없었습니다. 사전�
 
 ## 실험 파일
 
-GitHub 저장소 [sizlon/nori-user-dictionary-eval](https://github.com/sizlon/nori-user-dictionary-eval) 에 코퍼스·Dockerfile·스크립트·사전·결과가 한 벌로 있습니다(영문 README, 10분 재현). 아래는 같은 파일의 사본입니다.
-
-전부 그대로 올립니다. Elasticsearch 9.5.2 에 analysis-nori 를 붙인 단일 노드면 같은 숫자가 나옵니다. 코퍼스(공고명 183,240건)는 나라장터 개찰 공개 데이터에서 만든 것이라 올리지 않았고, 만드는 코드는 `common.py` 의 주석에 있습니다.
-
-- [common.py](/notes/korean-tokenizer/common.py) — 인덱스 설정(분석기·사전), 색인, 질의. 실행 순서는 make_indices → diagnose → build_rules → make_indices → eval2
-- [make_indices.py](/notes/korean-tokenizer/make_indices.py) — 인덱스 4벌 생성(base·mixed·tuned2·tuned2s)
-- [diagnose.py](/notes/korean-tokenizer/diagnose.py) — 진단 1·2 와 사전 후보 추출
-- [build_rules.py](/notes/korean-tokenizer/build_rules.py) — 후보 → 사용자 사전(수동 19항 포함)
-- [eval2.py](/notes/korean-tokenizer/eval2.py) — 정답 판정 두 기준과 P@10·R@50·MRR
-- [queries.json](/notes/korean-tokenizer/queries.json) — 질의 50개와 묶음
-- [user_rules2.json](/notes/korean-tokenizer/user_rules2.json) — 사용자 사전 2,155항(자동 2,147 + 수동 19, 겹치는 표면형은 수동 분절이 대체)
-- [dict_candidates.json](/notes/korean-tokenizer/dict_candidates.json) — 사전 후보 추출 결과(어절·빈도·기본 분절·탈락 글자 수)
-- [seg_inconsistency.json](/notes/korean-tokenizer/seg_inconsistency.json) — 어절별 분절 불일치 통계
-- [results.json](/notes/korean-tokenizer/results.json) — 설정 4벌 × 질의 50 × 기준 2 의 지표
-- [es-nori.Dockerfile](/notes/korean-tokenizer/es-nori.Dockerfile) — ES + nori 이미지
+코퍼스(공고명 183,240건)·Dockerfile·스크립트 5개·사전 2,155항·질의 50개·결과·인덱스 설정 원문이 GitHub 저장소 [sizlon/nori-user-dictionary-eval](https://github.com/sizlon/nori-user-dictionary-eval) 에 한 벌로 있습니다. Elasticsearch 와 Docker 가 있으면 10분 안에 같은 숫자가 나옵니다. 영문 README 에 실행 절차와 예상 출력이, README.ko.md 에 이 글이 그대로 있습니다. 측정 스냅샷이라 저장소는 보관(읽기 전용) 상태입니다.

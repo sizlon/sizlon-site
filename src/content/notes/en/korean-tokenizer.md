@@ -102,18 +102,4 @@ The [search-quality diagnostic](/services/search/) on the Korean site is this pr
 
 ## Files
 
-The whole thing — corpus, Dockerfile, scripts, dictionary, results — is on GitHub as [sizlon/nori-user-dictionary-eval](https://github.com/sizlon/nori-user-dictionary-eval), reproducible in about ten minutes. The files below are the same set.
-
-Everything is published as used. A single Elasticsearch 9.5.2 node with analysis-nori reproduces the numbers. The corpus (183,240 titles) is derived from public KONEPS bid-opening data and is not uploaded; the code that builds it is in the header comment of `common.py`.
-
-- [common.py](/notes/korean-tokenizer/common.py) — index settings (analyzers, dictionary), indexing, querying. Run order: make_indices → diagnose → build_rules → make_indices → eval2
-- [make_indices.py](/notes/korean-tokenizer/make_indices.py) — builds the four indices (base · mixed · tuned2 · tuned2s)
-- [diagnose.py](/notes/korean-tokenizer/diagnose.py) — Findings 1 and 2, and dictionary-candidate extraction
-- [build_rules.py](/notes/korean-tokenizer/build_rules.py) — candidates → user dictionary (including the 19 manual entries)
-- [eval2.py](/notes/korean-tokenizer/eval2.py) — both relevance rules and P@10 · R@50 · MRR
-- [queries.json](/notes/korean-tokenizer/queries.json) — the 50 queries and their groups
-- [user_rules2.json](/notes/korean-tokenizer/user_rules2.json) — the user dictionary, 2,155 rules (2,147 automatic + 19 manual; manual segmentation replaces an automatic entry for the same surface form)
-- [dict_candidates.json](/notes/korean-tokenizer/dict_candidates.json) — dictionary candidates (word, frequency, default segmentation, characters lost)
-- [seg_inconsistency.json](/notes/korean-tokenizer/seg_inconsistency.json) — per-word segmentation inconsistency statistics
-- [results.json](/notes/korean-tokenizer/results.json) — metrics for 4 configurations × 50 queries × 2 relevance rules
-- [es-nori.Dockerfile](/notes/korean-tokenizer/es-nori.Dockerfile) — the ES + nori image
+The corpus (183,240 titles), the Dockerfile, the five scripts, the 2,155-rule dictionary, the 50 queries, the results and the exact index settings are in one place: [sizlon/nori-user-dictionary-eval](https://github.com/sizlon/nori-user-dictionary-eval) on GitHub. With Docker and Elasticsearch it reproduces the numbers above in about ten minutes; the README has the run steps and expected output. It is a measurement snapshot, so the repository is archived (read-only).

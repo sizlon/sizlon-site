@@ -112,9 +112,12 @@ evidence articles hung off a service page. Body is Markdown in
 renders it with a `TechArticle` JSON-LD node (author = founder, publisher =
 org). Rules: only write a note when there is a measurement to publish (the
 2026-07-26 criterion — no generic guides); link it from its service page via
-`content.ko.services.<key>.notes`; add the URL to `lastmod.ts`; put any
-published experiment files under `public/notes/<slug>/` and link them from
-the note. Language is decided by path: `notes/<slug>.md` is Korean
+`content.ko.services.<key>.notes`; add the URL to `lastmod.ts`. Experiment
+files go in **one** place: if there is a public GitHub repository for the
+experiment, link it and keep no copies here (`korean-tokenizer` →
+sizlon/nori-user-dictionary-eval); only when there is no repository yet do
+the files live under `public/notes/<slug>/` (`korean-tables`, until its
+repository exists — see the 30-day gate in memory). Two copies drift. Language is decided by path: `notes/<slug>.md` is Korean
 (`/notes/<slug>/`), `notes/en/<slug>.md` is English (`/en/notes/<slug>/`); the
 same slug in both makes a translation pair and `Note.astro` emits the hreflang
 pair through Base's `hreflang` prop (the only pages besides `/`↔`/en/` that

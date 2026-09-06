@@ -26,8 +26,10 @@ interface Props {
   rawTitle?: boolean;
   /** 페이지 고유 JSON-LD 노드(Service·Person 등). 회사 노드·BreadcrumbList 는 여기서 붙인다. */
   schema?: Record<string, unknown>[];
+  /** 번역 짝이 있는 페이지의 hreflang(경로). 홈은 자동, 그 외엔 노트처럼 짝이 있는 페이지만 넘긴다. */
+  hreflang?: { ko: string; en: string };
 }
-const { title, description, lang = 'ko', noindex = false, rawTitle = false, schema = [] } = Astro.props;
+const { title, description, lang = 'ko', noindex = false, rawTitle = false, schema = [], hreflang } = Astro.props;
 const fullTitle = rawTitle ? title : `${title} — ${lang === 'en' ? 'Sizlon' : '시즐론'}`;
 const tr = t(lang);
 // hreflang 은 홈 한 쌍(/ ↔ /en/)에만. 다른 페이지는 한국어만 있다. x-default 는 ko.
@@ -36,6 +38,8 @@ const isHome = logical === '/';
 const canonical = new URL(Astro.url.pathname, Astro.site);
 const homeKo = new URL('/', Astro.site);
 const homeEn = new URL('/en/', Astro.site);
+// hreflang 쌍: 홈(/ ↔ /en/)은 자동, 나머지는 페이지가 넘긴 짝만. x-default 는 ko.
+const pair = isHome ? { ko: homeKo.href, en: homeEn.href } : hreflang ? { ko: new URL(hreflang.ko, Astro.site).href, en: new URL(hreflang.en, Astro.site).href } : null;
 const ogImage = new URL('/og-v3.png', Astro.site).href;
 
 // JSON-LD — 회사 노드 하나를 모든 페이지가 공유하고(@id 로 참조), 홈이 아닌 페이지에는
@@ -104,9 +108,9 @@ const graph = [org, ...breadcrumb, ...schema];
     <meta property="og:image:alt" content="시즐론 — 검색 시스템, RAG, 데이터 추출. 실제로 운영해 본 사람이 합니다." />
     <meta name="twitter:card" content="summary_large_image" />
     <link rel="canonical" href={canonical.href} />
-    {isHome && !noindex && <link rel="alternate" hreflang="ko" href={homeKo.href} />}
-    {isHome && !noindex && <link rel="alternate" hreflang="en" href={homeEn.href} />}
-    {isHome && !noindex && <link rel="alternate" hreflang="x-default" href={homeKo.href} />}
+    {pair && !noindex && <link rel="alternate" hreflang="ko" href={pair.ko} />}
+    {pair && !noindex && <link rel="alternate" hreflang="en" href={pair.en} />}
+    {pair && !noindex && <link rel="alternate" hreflang="x-default" href={pair.ko} />}
     <script type="application/ld+json" set:html={JSON.stringify({ '@context': 'https://schema.org', '@graph': graph })} />
   </head>
   <body>

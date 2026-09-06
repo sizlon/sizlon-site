@@ -1,0 +1,14 @@
+---
+// 영문 증거 글 라우트 — /en/notes/<slug>/ (2026-09-06). 본문은 src/content/notes/en/<slug>.md.
+// /en/ 이 한 장이던 규칙의 유일한 예외: 노트는 실측 글이라 Upwork 고객에게도 같은 증거가 된다.
+import { getCollection } from 'astro:content';
+import Note from '../../../sections/Note.astro';
+
+export async function getStaticPaths() {
+  const entries = await getCollection('notes');
+  const ids = new Set(entries.map((e) => e.id));
+  return entries.filter((e) => e.id.startsWith('en/')).map((entry) => ({ params: { slug: entry.id.slice(3) }, props: { entry, twin: ids.has(entry.id.slice(3)) } }));
+}
+const { entry, twin } = Astro.props;
+---
+<Note entry={entry} twin={twin} />

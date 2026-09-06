@@ -489,6 +489,12 @@ export const content = {
       business: 'Sizlon Inc. (주식회사 시즐론) · CEO Kwangyeon Lee · Biz. Reg. 420-86-03864 · Tel: +82-2-702-5795 · 302, 189-7 Wonhyo-ro, Yongsan-gu, Seoul, Republic of Korea · hello@sizlon.io',
     },
     legalNav: { Terms: 'Terms', Privacy: 'Privacy', Licenses: 'Licenses' },
+    // ── 증거 글 공통 문구 (/en/notes/*, 2026-09-06) ─────────────────────
+    notes: {
+      byline: 'Kwangyeon Lee, Sizlon',
+      tailLine: 'Want this run on your corpus? Email',
+    },
+
     notFound: {
       title: 'Page not found',
       description: 'That page does not exist on sizlon.io.',
@@ -524,7 +530,7 @@ export const content = {
       caseTitle: 'Why Korean RAG fails: start with the tokenizer',
       // 케이스 스터디 본문이 생기면 href 를 채운다 — 비어 있으면 En.astro 가 절을 렌더하지 않는다
       // (제목만 있는 빈 절은 thin 신호, 2026-09-06 SEO 리뷰). 글의 조건은 메모리 restructure-v3 3번.
-      caseHref: '',
+      caseHref: '/en/notes/korean-tokenizer/',
       miriboaLine: 'Miriboa — a bid-document verification service I build and run: requirement extraction and matching over Korean and U.S. federal tenders, with a published benchmark.',
       miriboaHref: 'https://miriboa.sizlon.io/en/',
       upworkLabel: 'Upwork profile',

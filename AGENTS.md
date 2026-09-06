@@ -44,8 +44,10 @@ URL 301 with the expected `Location` (those 301s come from Cloudflare, see
 
 - **Page bodies are Korean-only and read `content.ko.*` directly** (Home,
   Service, Work, About, Contact, Legal). Do not add English twins of these
-  pages — the English surface is exactly one page, `/en/` (`En.astro`, reading
-  `content.en.page`), written for Upwork clients.
+  pages — the English surface is `/en/` (`En.astro`, reading
+  `content.en.page`), written for Upwork clients, plus English **notes**
+  (`/en/notes/<slug>/`, see below) — evidence articles are the one thing worth
+  translating because the numbers are the same in both markets.
 - **Chrome (Nav/Footer/Base) reads `t(lang)`** and needs the same key shape in
   both locales: `common`, `nav`, `footer`, `legalNav`, `notFound`. Add a chrome
   key to both or the typed `as const` object fails the build. Page keys exist in
@@ -112,8 +114,13 @@ org). Rules: only write a note when there is a measurement to publish (the
 2026-07-26 criterion — no generic guides); link it from its service page via
 `content.ko.services.<key>.notes`; add the URL to `lastmod.ts`; put any
 published experiment files under `public/notes/<slug>/` and link them from
-the note. The first note is `korean-tokenizer` (experiment record in
-`~/Projects/docs/tokenizer-experiment-2026-09.md`).
+the note. Language is decided by path: `notes/<slug>.md` is Korean
+(`/notes/<slug>/`), `notes/en/<slug>.md` is English (`/en/notes/<slug>/`); the
+same slug in both makes a translation pair and `Note.astro` emits the hreflang
+pair through Base's `hreflang` prop (the only pages besides `/`↔`/en/` that
+carry one). Add both URLs to `lastmod.ts`. The first note is `korean-tokenizer`
+(experiment record in `~/Projects/docs/tokenizer-experiment-2026-09.md`); its
+English twin is what `content.en.page.caseHref` points at.
 
 ## URLs and redirects
 
@@ -142,7 +149,8 @@ the note. The first note is `korean-tokenizer` (experiment record in
   page and you cannot turn it off (the conflict above).
 - **No two-hop redirects.** `/ko/*` variants of old product URLs go straight to
   the final destination (rules 1–4 before rule 6; same in `src/pages/ko/[...slug]`).
-- **hreflang** exists for one pair only, `/` ↔ `/en/` (Base.astro). The sitemap
+- **hreflang** exists for `/` ↔ `/en/` (automatic in Base.astro) and for note
+  translation pairs (passed in by Note.astro); nothing else. The sitemap
   integration's `i18n` option is intentionally off — it would fabricate `/en/…`
   alternates for Korean-only pages.
 - **Cloudflare caches static files for 4h.** After a deploy, purge the changed

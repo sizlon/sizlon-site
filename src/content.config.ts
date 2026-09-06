@@ -1,4 +1,6 @@
-// 콘텐츠 컬렉션 (2026-09-06). `notes` = 서비스 페이지에 매달린 증거 글 — 실측이 있을 때만 쓴다
+// 콘텐츠 컬렉션 (2026-09-06). `notes` = 서비스 페이지에 매달린 증거 글 — 실측이 있을 때만 쓴다.
+// 언어는 경로가 정한다: notes/<slug>.md 는 한국어(/notes/<slug>/), notes/en/<slug>.md 는 영어
+// (/en/notes/<slug>/). 같은 slug 면 번역 짝이고 Note.astro 가 hreflang 으로 묶는다.
 // (일반 가이드 글은 안 쓴다, 07-26 기준). 본문은 마크다운, 메타는 아래 스키마. 카피 규약은
 // content.ts 와 같다(숫자는 실험 기록에서만, 금칙어 동일). 글을 추가하면 lastmod.ts 에도 한 줄.
 import { defineCollection, z } from 'astro:content';

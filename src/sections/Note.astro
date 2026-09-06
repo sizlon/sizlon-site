@@ -2,25 +2,28 @@
 // 증거 글 본문 (2026-09-06). 마크다운은 콘텐츠 컬렉션 `notes` 에서 온다. 표는 자기 컨테이너
 // 안에서 가로 스크롤(본문이 가로로 넘치면 안 된다). JSON-LD 는 TechArticle — 저자는 대표 노드.
 import Base from '../layouts/Base.astro';
-import { bookingHref, servicePages, ORG_ID, FOUNDER_ID } from '../config/site';
+import { site, bookingHref, servicePages, ORG_ID, FOUNDER_ID } from '../config/site';
 import { content } from '../i18n/content';
 import type { CollectionEntry } from 'astro:content';
 import { render } from 'astro:content';
 
-interface Props { entry: CollectionEntry<'notes'> }
-const { entry } = Astro.props;
+interface Props { entry: CollectionEntry<'notes'>; twin?: boolean }
+const { entry, twin = false } = Astro.props;
 const { Content } = await render(entry);
 const d = entry.data;
-const tr = content.ko;
+const lang = entry.id.startsWith('en/') ? 'en' : 'ko';
+const slug = lang === 'en' ? entry.id.slice(3) : entry.id;
+const tr = content[lang];
 const svc = servicePages.find((s) => s.key === d.service)!;
 const url = new URL(Astro.url.pathname, Astro.site).href;
+const hreflang = twin ? { ko: `/notes/${slug}/`, en: `/en/notes/${slug}/` } : undefined;
 const article = {
   '@type': 'TechArticle',
   '@id': `${url}#article`,
   headline: d.title,
   description: d.description,
   datePublished: d.date,
-  inLanguage: 'ko',
+  inLanguage: lang,
   url,
   author: { '@id': FOUNDER_ID },
   publisher: { '@id': ORG_ID },
@@ -29,7 +32,7 @@ const article = {
 };
 ---
 
-<Base title={d.title} description={d.description} lang="ko" rawTitle schema={[article]}>
+<Base title={d.title} description={d.description} lang={lang} rawTitle schema={[article]} hreflang={hreflang}>
   <section class="hero band-ink section">
     <div class="wrap head">
       <span class="eyebrow">{d.eyebrow} · {tr.nav[d.service]}</span>
@@ -43,7 +46,9 @@ const article = {
   </article>
 
   <section class="section wrap tail">
-    <p>{tr.notes.tailLine} <a href={svc.href}>{tr.nav[d.service]} &rarr;</a></p>
+    {lang === 'ko'
+      ? <p>{tr.notes.tailLine} <a href={svc.href}>{tr.nav[d.service]} &rarr;</a></p>
+      : <p>{tr.notes.tailLine} <a href={`mailto:${site.contactEmail}`}>{site.contactEmail}</a></p>}
     <a class="btn btn-primary" href={bookingHref(svc.topic)}>{tr.common.book} <span class="arrow">&rarr;</span></a>
   </section>
 </Base>

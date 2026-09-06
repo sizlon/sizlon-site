@@ -5,8 +5,9 @@ import Note from '../../sections/Note.astro';
 
 export async function getStaticPaths() {
   const entries = await getCollection('notes');
-  return entries.map((entry) => ({ params: { slug: entry.id }, props: { entry } }));
+  const ids = new Set(entries.map((e) => e.id));
+  return entries.filter((e) => !e.id.startsWith('en/')).map((entry) => ({ params: { slug: entry.id }, props: { entry, twin: ids.has(`en/${entry.id}`) } }));
 }
-const { entry } = Astro.props;
+const { entry, twin } = Astro.props;
 ---
-<Note entry={entry} />
+<Note entry={entry} twin={twin} />

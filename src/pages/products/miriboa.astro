@@ -6,15 +6,6 @@
 // 모순돼 구글이 noindex 를 canonical **대상**에 적용할 수 있다. 그 대상이
 // 여기서는 미리보아 홈과 Crawler Platform 페이지 — 둘 다 주력이다.
 const target = 'https://miriboa.sizlon.io/';
+import RedirectStub from '../../components/RedirectStub.astro';
 ---
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <title>Redirecting…</title>
-    <script is:inline define:vars={{ target }}>location.replace(target + location.search);</script>
-    <meta http-equiv="refresh" content={`1;url=${target}`} />
-    <link rel="canonical" href={target} />
-  </head>
-  <body><p>Moved: <a href={target}>{target}</a></p></body>
-</html>
+<RedirectStub target={target} lang="en" />

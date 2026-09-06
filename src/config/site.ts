@@ -51,27 +51,32 @@ export const site = devRemap({
 /** 20분 통화 예약 CTA 의 목적지 — 예약 링크가 없으면 폼으로. */
 export function bookingHref(service?: string): string {
   if (site.bookingUrl) return site.bookingUrl;
-  return service ? `/contact?service=${service}#form` : '/contact#form';
+  return service ? `/contact/?service=${service}#form` : '/contact/#form';
 }
 
+// 내부 경로는 항상 `/…/` (astro.config trailingSlash 'always', 슬래시 없으면 GitHub Pages 가 301).
 // 전역 내비 — 서비스 셋이 먼저, 근거(만든 것들)·회사·문의 순. 라벨은 content[lang].nav.
 export const nav = [
-  { href: '/services/search', key: 'search' },
-  { href: '/services/rtm', key: 'rtm' },
-  { href: '/services/data', key: 'data' },
-  { href: '/work', key: 'work' },
-  { href: '/about', key: 'about' },
-  { href: '/contact', key: 'contact' },
+  { href: '/services/search/', key: 'search' },
+  { href: '/services/rtm/', key: 'rtm' },
+  { href: '/services/data/', key: 'data' },
+  { href: '/work/', key: 'work' },
+  { href: '/about/', key: 'about' },
+  { href: '/contact/', key: 'contact' },
 ] as const;
 
 export const servicePages = [
-  { href: '/services/search', key: 'search', topic: 'search' },
-  { href: '/services/rtm', key: 'rtm', topic: 'rtm' },
-  { href: '/services/data', key: 'data', topic: 'datafeed' },
+  { href: '/services/search/', key: 'search', topic: 'search' },
+  { href: '/services/rtm/', key: 'rtm', topic: 'rtm' },
+  { href: '/services/data/', key: 'data', topic: 'datafeed' },
 ] as const;
 
 export const legalLinks = [
-  { href: '/legal/terms', key: 'Terms' },
-  { href: '/legal/privacy', key: 'Privacy' },
-  { href: '/legal/licenses', key: 'Licenses' },
+  { href: '/legal/terms/', key: 'Terms' },
+  { href: '/legal/privacy/', key: 'Privacy' },
+  { href: '/legal/licenses/', key: 'Licenses' },
 ] as const;
+
+// JSON-LD @id — 회사 노드(Base.astro)와 대표 노드(/founder)가 페이지를 넘어 같은 개체로 묶이는 열쇠.
+export const ORG_ID = 'https://sizlon.io/#org';
+export const FOUNDER_ID = 'https://sizlon.io/founder/#person';

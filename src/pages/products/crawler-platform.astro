@@ -6,17 +6,6 @@
 // 모순돼 구글이 noindex 를 canonical **대상**에 적용할 수 있다. 그 대상이
 // 여기서는 미리보아 홈과 Crawler Platform 페이지 — 둘 다 주력이다.
 const target = '/services/data/'; // v3(2026-09-06): 2단 리다이렉트 방지 — 목적지로 직접
+import RedirectStub from '../../components/RedirectStub.astro';
 ---
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <title>Redirecting…</title>
-    <script is:inline define:vars={{ target }}>location.replace(target + location.search);</script>
-    <meta http-equiv="refresh" content={`1;url=${target}`} />
-    <!-- canonical 은 **절대 URL** 이어야 한다 — 상대경로도 규격상 허용이지만
-         구글이 절대 URL 을 권장하고, 종전 Astro 생성분도 절대였다. -->
-    <link rel="canonical" href={new URL(target, Astro.site).href} />
-  </head>
-  <body><p>Moved: <a href={target}>{target}</a></p></body>
-</html>
+<RedirectStub target={target} lang="en" />

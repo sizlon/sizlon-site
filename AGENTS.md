@@ -21,7 +21,7 @@ product pages (`/bid-verification`, `/web-crawling`, `/how-it-works`,
 ## Dev / build / verify
 
 ```
-npm run build    # static build to ./dist/  (74 routes today, incl. redirect stubs)
+npm run build    # static build to ./dist/ (75 routes incl. redirect stubs) + internal-link check
 npm run preview  # serve the built ./dist/ locally
 ```
 
@@ -69,22 +69,44 @@ URL 301 with the expected `Location` (those 301s come from Cloudflare, see
 ## Structure & where things go
 
 - `src/config/site.ts` — nav, `servicePages` (service → contact topic key),
-  phone/email, `bookingUrl` (empty → CTAs fall back to `/contact#form`),
+  phone/email, `bookingUrl` (empty → CTAs fall back to `/contact/#form`),
   `upworkUrl` (empty → hidden on `/en/`), contact endpoint + Turnstile key.
 - `src/pages/**` — thin route files (Korean at root, `en/index.astro`, and the
   redirect stubs). `src/sections/**` — page bodies. `src/components/**` — Nav,
-  Footer. `src/layouts/Base.astro` — html shell, `<head>`, JSON-LD.
+  Footer, RedirectStub. `src/layouts/Base.astro` — html shell, `<head>`, JSON-LD.
+- **JSON-LD is one `@graph` per page** (Base.astro): the company node
+  (`ProfessionalService`, `@id` = `ORG_ID` in site.ts) on every page, a
+  `BreadcrumbList` on every non-home page, plus whatever a page passes through
+  the `schema` prop — `/founder` passes `Person` + `ProfilePage` (`FOUNDER_ID`),
+  the service pages pass `Service` + `Offer` whose numbers come from
+  `content.ko.services.*.offer` (keep them equal to the displayed `price` line).
+- **OG image is `public/og-v3.png`** (1200×630, Korean v3 hero line). The old
+  `og.png` carried the pre-v3 English "AI proposes… human-in-the-loop" card and
+  was removed 2026-09-06; a new filename was chosen on purpose so KakaoTalk/Slack
+  scrapers don't keep serving the cached old card. Source: an HTML mock rendered
+  in Chrome at 1200×630 — redo the same way if the hero line changes.
 
 **Adding a page:** section + one route file; copy in `content.ko`; nav entry in
 `site.ts` if it belongs in the nav.
 
 ## URLs and redirects
 
+- **Internal links always end in `/`** (`/services/search/`, `/work/#pipeline`,
+  `/contact/?service=rtm#form`) — `trailingSlash: 'always'` in astro.config, and
+  `scripts/check-dist-links.mjs` (runs as part of `npm run build`) fails the build
+  on any internal `href` without one. GitHub Pages 301s `/about` → `/about/`, so a
+  slash-less link costs a redirect on every click and crawl (found 2026-09-06:
+  every nav/footer link on the site did this). Paths live in `src/config/site.ts`
+  (nav, servicePages, legalLinks) and `content.ts` hrefs.
 - **GitHub Pages cannot 301.** Real redirects are **Cloudflare Single Redirects
   rules** on the sizlon.io zone (six rules, listed in plan v3 §1). The hand-written
   stubs in `src/pages/**` (`meta refresh` + JS + canonical) are only the fallback
   for when a rule is missing — keep them until `scripts/smoke-live.sh` shows the
   301s, then they can go.
+- **Stubs are `<RedirectStub target=… />`** (`src/components/RedirectStub.astro`):
+  meta refresh + JS keep the fragment, the canonical is emitted **absolute and
+  without the fragment** (Google ignores a canonical with `#…`, so
+  `/services/data/#how` as a canonical was no canonical at all until 2026-09-06).
 - **Stubs carry `canonical` + sitemap exclusion, never `noindex`** (2026-08-08,
   GSC-verified): `noindex` plus a canonical pointing elsewhere is a conflicting
   signal and Google may apply the `noindex` to the *target*. `SITEMAP_EXCLUDE`

@@ -6,7 +6,7 @@ import { content } from '../i18n/content';
 
 const tr = content.ko;
 const c = tr.home;
-const hrefOf = (key: string) => servicePages.find((s) => s.key === key)?.href ?? '/contact';
+const hrefOf = (key: string) => servicePages.find((s) => s.key === key)?.href ?? '/contact/';
 ---
 
 <Base title={c.title} description={c.description} lang="ko" rawTitle>
@@ -56,7 +56,7 @@ const hrefOf = (key: string) => servicePages.find((s) => s.key === key)?.href ??
         </div>
       ))}
     </dl>
-    <a class="btn btn-ghost" href="/work">{c.workLink} <span class="arrow">&rarr;</span></a>
+    <a class="btn btn-ghost" href="/work/">{c.workLink} <span class="arrow">&rarr;</span></a>
   </section>
 
   <section class="cta-band band-ink">

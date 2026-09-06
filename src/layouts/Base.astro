@@ -12,7 +12,7 @@ import '@fontsource/pretendard/700.css';
 import '../styles/global.css';
 import Nav from '../components/Nav.astro';
 import Footer from '../components/Footer.astro';
-import { site } from '../config/site';
+import { site, ORG_ID, FOUNDER_ID } from '../config/site';
 import type { Lang } from '../i18n/content';
 import { t, logicalPath } from '../i18n/utils';
 
@@ -24,8 +24,10 @@ interface Props {
   noindex?: boolean;
   /** 제목을 그대로 쓴다(홈처럼 이미 브랜드가 들어간 제목). */
   rawTitle?: boolean;
+  /** 페이지 고유 JSON-LD 노드(Service·Person 등). 회사 노드·BreadcrumbList 는 여기서 붙인다. */
+  schema?: Record<string, unknown>[];
 }
-const { title, description, lang = 'ko', noindex = false, rawTitle = false } = Astro.props;
+const { title, description, lang = 'ko', noindex = false, rawTitle = false, schema = [] } = Astro.props;
 const fullTitle = rawTitle ? title : `${title} — ${lang === 'en' ? 'Sizlon' : '시즐론'}`;
 const tr = t(lang);
 // hreflang 은 홈 한 쌍(/ ↔ /en/)에만. 다른 페이지는 한국어만 있다. x-default 는 ko.
@@ -34,6 +36,49 @@ const isHome = logical === '/';
 const canonical = new URL(Astro.url.pathname, Astro.site);
 const homeKo = new URL('/', Astro.site);
 const homeEn = new URL('/en/', Astro.site);
+const ogImage = new URL('/og-v3.png', Astro.site).href;
+
+// JSON-LD — 회사 노드 하나를 모든 페이지가 공유하고(@id 로 참조), 홈이 아닌 페이지에는
+// BreadcrumbList, 페이지 고유 노드(Service·Person)는 `schema` prop 으로 받는다 (2026-09-06).
+const org = {
+  '@type': 'ProfessionalService',
+  '@id': ORG_ID,
+  name: '시즐론',
+  alternateName: 'Sizlon Inc.',
+  url: 'https://sizlon.io/',
+  logo: 'https://sizlon.io/logo/sizlon-logo.svg',
+  image: ogImage,
+  description: '검색 품질 진단(Elasticsearch·OpenSearch), 공공 SI 감리 대응 요구사항 추적표, 월정액 데이터 피드. 매체 7,000곳·일 20만 건 수집·색인 인프라를 구축·운영한 검색 엔지니어가 직접 수행합니다.',
+  founder: { '@type': 'Person', '@id': FOUNDER_ID, name: '이광연', alternateName: 'Kwangyeon Lee' },
+  // 2026-09-05 전화 규칙 철회(v3 §3.7): 검색 결과의 통화 버튼이 원하는 신호다.
+  telephone: site.contactPhoneIntl,
+  email: site.contactEmail,
+  openingHours: 'Mo-Fr 09:00-18:00',
+  areaServed: 'KR',
+  address: {
+    '@type': 'PostalAddress',
+    streetAddress: '원효로 189-7, 302호',
+    addressLocality: '용산구',
+    addressRegion: '서울특별시',
+    addressCountry: 'KR',
+  },
+  contactPoint: {
+    '@type': 'ContactPoint',
+    telephone: site.contactPhoneIntl,
+    email: site.contactEmail,
+    contactType: 'sales',
+    availableLanguage: ['ko', 'en'],
+  },
+  subOrganization: { '@type': 'Organization', name: 'Miriboa', url: 'https://miriboa.sizlon.io' },
+};
+const breadcrumb = !isHome && !noindex ? [{
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: lang === 'en' ? 'Sizlon' : '시즐론', item: (lang === 'en' ? homeEn : homeKo).href },
+    { '@type': 'ListItem', position: 2, name: title, item: canonical.href },
+  ],
+}] : [];
+const graph = [org, ...breadcrumb, ...schema];
 ---
 
 <!doctype html>
@@ -52,45 +97,17 @@ const homeEn = new URL('/en/', Astro.site);
     <meta property="og:site_name" content="시즐론 Sizlon" />
     <meta property="og:locale" content={lang === 'ko' ? 'ko_KR' : 'en_US'} />
     <meta property="og:url" content={canonical.href} />
-    <meta property="og:image" content={new URL('/og.png', Astro.site).href} />
+    <meta property="og:image" content={ogImage} />
+    <meta property="og:image:type" content="image/png" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
-    <meta property="og:image:alt" content="시즐론 — 검색 진단 · 감리 대응 · 데이터 피드" />
+    <meta property="og:image:alt" content="시즐론 — 검색 시스템, RAG, 데이터 추출. 실제로 운영해 본 사람이 합니다." />
     <meta name="twitter:card" content="summary_large_image" />
     <link rel="canonical" href={canonical.href} />
     {isHome && !noindex && <link rel="alternate" hreflang="ko" href={homeKo.href} />}
     {isHome && !noindex && <link rel="alternate" hreflang="en" href={homeEn.href} />}
     {isHome && !noindex && <link rel="alternate" hreflang="x-default" href={homeKo.href} />}
-    <script type="application/ld+json" set:html={JSON.stringify({
-      '@context': 'https://schema.org',
-      '@type': 'ProfessionalService',
-      name: '시즐론',
-      alternateName: 'Sizlon Inc.',
-      url: 'https://sizlon.io',
-      logo: 'https://sizlon.io/logo/sizlon-logo.svg',
-      description: '한국어 검색 품질 진단, 공공 SI 감리 대응 요구사항 추적표, 월정액 데이터 피드. 매체 7,000곳·일 20만 건 수집·색인 인프라를 구축·운영한 검색 엔지니어가 직접 수행합니다.',
-      founder: { '@type': 'Person', name: '이광연', alternateName: 'Kwangyeon Lee' },
-      // 2026-09-05 전화 규칙 철회(v3 §3.7): 검색 결과의 통화 버튼이 원하는 신호다.
-      telephone: site.contactPhoneIntl,
-      email: site.contactEmail,
-      openingHours: 'Mo-Fr 09:00-18:00',
-      areaServed: 'KR',
-      address: {
-        '@type': 'PostalAddress',
-        streetAddress: '원효로 189-7, 302호',
-        addressLocality: '용산구',
-        addressRegion: '서울특별시',
-        addressCountry: 'KR',
-      },
-      contactPoint: {
-        '@type': 'ContactPoint',
-        telephone: site.contactPhoneIntl,
-        email: site.contactEmail,
-        contactType: 'sales',
-        availableLanguage: ['ko', 'en'],
-      },
-      subOrganization: { '@type': 'Organization', name: 'Miriboa', url: 'https://miriboa.sizlon.io' },
-    })} />
+    <script type="application/ld+json" set:html={JSON.stringify({ '@context': 'https://schema.org', '@graph': graph })} />
   </head>
   <body>
     <a class="skip" href="#main">{tr.common.skip}</a>

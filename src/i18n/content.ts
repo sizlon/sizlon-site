@@ -46,8 +46,8 @@ export const content = {
       legal: '법적 고지',
       principles: '데이터 수집 원칙',
       workItems: [
-        { href: '/work#miriboa', label: '미리보아' },
-        { href: '/work#pipeline', label: '개찰 데이터 파이프라인' },
+        { href: '/work/#miriboa', label: '미리보아' },
+        { href: '/work/#pipeline', label: '개찰 데이터 파이프라인' },
       ],
       baseline: '고정가 · 결과물 명시 · 대표가 직접 수행',
       business: '주식회사 시즐론 · 대표 이광연 · 사업자등록번호 420-86-03864 · 전화 02-702-5795 · 서울특별시 용산구 원효로 189-7, 302호 · hello@sizlon.io',
@@ -74,8 +74,8 @@ export const content = {
       workEyebrow: '만든 것들',
       workLine: '시즐론 명의로 만들고 실제로 쓰이는 것들입니다.',
       workItems: [
-        { name: '미리보아', proof: '골든셋 기준 recall 87.4% · "확실" 판정 precision 96.5%', href: '/work#miriboa' },
-        { name: '나라장터 개찰 데이터 파이프라인', proof: '협상에 의한 계약 응찰 73,373건 · 업체 13,220곳 (6개월분)', href: '/work#pipeline' },
+        { name: '미리보아', proof: '골든셋 기준 recall 87.4% · "확실" 판정 precision 96.5%', href: '/work/#miriboa' },
+        { name: '나라장터 개찰 데이터 파이프라인', proof: '협상에 의한 계약 응찰 73,373건 · 업체 13,220곳 (6개월분)', href: '/work/#pipeline' },
       ],
       workLink: '만든 것들 보기',
       closingH2: '어느 쪽이든 먼저 20분 통화로 범위를 잡습니다.',
@@ -90,6 +90,8 @@ export const content = {
         h1: '검색 품질 진단 — Elasticsearch · OpenSearch',
         sub: '"검색이 이상하다"를 수치로 바꾸고, 2주 안에 고친 설정을 드립니다.',
         price: '250만원 · 2주 · 고정가',
+        // JSON-LD Offer 용 숫자(KRW, 부가세 별도) — 위 price 문구와 같은 값이어야 한다.
+        offer: { minPrice: 2500000, maxPrice: 2500000 },
         priceNote: '골든셋 수치가 개선되지 않으면 2주차 비용은 청구하지 않습니다.',
         whoH: '이런 팀을 위해',
         who: [
@@ -113,7 +115,7 @@ export const content = {
         // 근거는 절이 아니라 문장이다(2026-09-06 오너 결정): 누가 하는가는 히어로 가격 아래
         // 한 줄, 방법의 증거는 그 방법을 쓰는 진행 1주 항목에. ES 세부 태그는 대표 소개로.
         heroProof: [proof.careerShort + ' — 그 엔지니어가 직접 합니다.'],
-        heroProofLink: { label: '대표 소개', href: '/founder' },
+        heroProofLink: { label: '대표 소개', href: '/founder/' },
         faqH: '자주 묻는 것',
         faq: [
           { q: '데이터를 반출해야 하나요?', a: '아닙니다. 읽기 계정과 화면 공유로 진행합니다. 로그·설정 파일이 밖으로 나가지 않습니다.' },
@@ -121,7 +123,7 @@ export const content = {
           { q: '무엇을 보장하나요?', a: '수치로 보장합니다. 1주차에 확정한 골든셋 100건의 before/after 가 개선되지 않으면 2주차 비용을 청구하지 않습니다.' },
         ],
         crossLine: '색인할 외부 데이터가 필요하면 데이터 피드로 함께',
-        crossHref: '/services/data',
+        crossHref: '/services/data/',
         cta: '20분 통화 예약',
       },
       rtm: {
@@ -135,6 +137,7 @@ export const content = {
         h1: '감리 대응 요구사항 추적표(RTM) 패키지',
         sub: 'RFP 요구사항 전부를 산출물과 대조해, 감리 전에 빠진 것을 찾습니다.',
         price: '감리 1회분 150~200만원 · 착수·중간·종료 전체 400~500만원',
+        offer: { minPrice: 1500000, maxPrice: 2000000, unitText: '감리 1회분' },
         priceNote: '범위 확정 후 고정가.',
         whoH: 'PM 이 겪는 문제',
         who: [
@@ -169,7 +172,7 @@ export const content = {
         faqH: '',
         faq: [],
         crossLine: '경쟁 입찰·낙찰 동향은 데이터 피드로 매달',
-        crossHref: '/services/data',
+        crossHref: '/services/data/',
         cta: 'RFP 와 산출물 목록만 주시면 하루 안에 범위와 견적을 드립니다',
       },
       data: {
@@ -179,6 +182,7 @@ export const content = {
         h1: '데이터 피드 — 필요한 데이터를 매달 정제해서 납품합니다',
         sub: '공공 공고·HWP 첨부·PDF 표처럼 남들이 못 뽑는 한국어 데이터가 전문입니다.',
         price: '구축 100~300만원 + 월 30~80만원',
+        offer: { minPrice: 300000, maxPrice: 800000, unitCode: 'MON', unitText: '월정액(구축비 별도)' },
         priceNote: '처음 한 번 세팅하는 비용과, 이후 매달 데이터가 끊기지 않고 오는 비용입니다.',
         whoH: '이런 팀을 위해',
         who: [
@@ -205,7 +209,7 @@ export const content = {
           '나라장터 개찰 데이터 6개월분을 이 방식으로 수집·파싱·집계했습니다 — 협상에 의한 계약 응찰 73,373건·업체 13,220곳.',
           proof.careerShort + ' — 그 엔지니어가 직접 합니다.',
         ],
-        heroProofLink: { label: '만든 것들', href: '/work#pipeline' },
+        heroProofLink: { label: '만든 것들', href: '/work/#pipeline' },
         principlesH: '데이터 수집 원칙',
         principles: [
           '로그인 뒤의 데이터, 개인정보, 약관상 수집 금지 사이트, 저작권 있는 본문 전문은 금액과 무관하게 받지 않습니다.',
@@ -465,8 +469,8 @@ export const content = {
       legal: 'Legal',
       principles: 'Data collection principles',
       workItems: [
-        { href: '/work#miriboa', label: 'Miriboa' },
-        { href: '/work#pipeline', label: 'Bid-opening data pipeline' },
+        { href: '/work/#miriboa', label: 'Miriboa' },
+        { href: '/work/#pipeline', label: 'Bid-opening data pipeline' },
       ],
       baseline: 'Fixed price · deliverables named up front · done by the founder',
       business: 'Sizlon Inc. (주식회사 시즐론) · CEO Kwangyeon Lee · Biz. Reg. 420-86-03864 · Tel: +82-2-702-5795 · 302, 189-7 Wonhyo-ro, Yongsan-gu, Seoul, Republic of Korea · hello@sizlon.io',

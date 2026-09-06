@@ -3,15 +3,6 @@
 // 손으로 쓴 스텁(2026-08-08 규약): noindex 를 달지 않고 canonical + sitemap 제외로
 // 색인에서 뺀다. 진짜 301 은 앞단 Cloudflare 규칙이 낸다(v3 §1) — 이 파일은 폴백.
 const target = '/services/data/#how';
+import RedirectStub from '../components/RedirectStub.astro';
 ---
-<!doctype html>
-<html lang="ko">
-  <head>
-    <meta charset="utf-8" />
-    <title>이동 중…</title>
-    <script is:inline define:vars={{ target }}>location.replace(target + location.search);</script>
-    <meta http-equiv="refresh" content={`1;url=${target}`} />
-    <link rel="canonical" href={target} />
-  </head>
-  <body><p>이동했습니다: <a href={target}>{target}</a></p></body>
-</html>
+<RedirectStub target={target} />

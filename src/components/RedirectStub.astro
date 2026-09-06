@@ -1,0 +1,30 @@
+---
+// 리다이렉트 스텁 공통 골격 (2026-09-06). GitHub Pages 는 301 을 못 내므로 구 URL 은
+// meta refresh + JS 로 보내고, 색인은 canonical + sitemap 제외(astro.config.mjs)로 뺀다.
+// noindex 는 달지 않는다 — canonical 과 함께 쓰면 신호가 모순돼 구글이 noindex 를
+// canonical **대상**에 적용할 수 있다(2026-08-08, GSC 로 확인). 진짜 301 은 앞단
+// Cloudflare 규칙(v3 §1)이 낼 몫이고 이 스텁은 폴백이다.
+//
+// canonical 은 **절대 URL, 프래그먼트 없이**. 구글은 `#…` 가 붙은 canonical 을 무시하므로
+// `/services/data/#how` 같은 목적지는 canonical 에서 프래그먼트를 떼고, 이동(refresh·JS)만
+// 프래그먼트를 그대로 가져간다. 상대경로도 규격상 허용이지만 절대 URL 이 권장이다.
+import type { Lang } from '../i18n/content';
+
+interface Props { target: string; lang?: Lang }
+const { target, lang = 'ko' } = Astro.props;
+const canonical = new URL(target, Astro.site);
+canonical.hash = '';
+const title = lang === 'en' ? 'Redirecting…' : '이동 중…';
+const moved = lang === 'en' ? 'Moved:' : '이동했습니다:';
+---
+<!doctype html>
+<html lang={lang}>
+  <head>
+    <meta charset="utf-8" />
+    <title>{title}</title>
+    <script is:inline define:vars={{ target }}>location.replace(target + location.search);</script>
+    <meta http-equiv="refresh" content={`1;url=${target}`} />
+    <link rel="canonical" href={canonical.href} />
+  </head>
+  <body><p>{moved} <a href={target}>{target}</a></p></body>
+</html>

@@ -49,9 +49,9 @@ const tr = t(lang);
 
     <nav class="col" aria-label={tr.footer.company}>
       <span class="eyebrow">{tr.footer.company}</span>
-      <a href="/about">{tr.nav.about}</a>
-      <a href="/founder">{tr.nav.founder}</a>
-      <a href="/contact">{tr.nav.contact}</a>
+      <a href="/about/">{tr.nav.about}</a>
+      <a href="/founder/">{tr.nav.founder}</a>
+      <a href="/contact/">{tr.nav.contact}</a>
       <a href={`tel:${site.contactPhoneIntl}`}>{site.contactPhone}</a>
       <a href={`mailto:${site.contactEmail}`}>{site.contactEmail}</a>
     </nav>
@@ -59,7 +59,7 @@ const tr = t(lang);
     <nav class="col" aria-label={tr.footer.legal}>
       <span class="eyebrow">{tr.footer.legal}</span>
       {legalLinks.map((item) => <a href={item.href}>{tr.legalNav[item.key]}</a>)}
-      <a href="/services/data#principles">{tr.footer.principles}</a>
+      <a href="/services/data/#principles">{tr.footer.principles}</a>
     </nav>
   </div>
   )}

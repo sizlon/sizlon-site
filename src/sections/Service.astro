@@ -2,7 +2,7 @@
 // 서비스 페이지 공통 본문 (v3 §3.2~3.4). 세 서비스가 같은 뼈대를 쓰고 블록은
 // 내용이 비면 렌더하지 않는다. rtm 은 `brief` 로 짧은 판(제목·부제·가격·근거·CTA).
 import Base from '../layouts/Base.astro';
-import { site, servicePages, bookingHref } from '../config/site';
+import { site, servicePages, bookingHref, ORG_ID } from '../config/site';
 import { content, type ServiceKey } from '../i18n/content';
 
 interface Props { service: ServiceKey }
@@ -19,9 +19,37 @@ const heroProof = 'heroProof' in c ? c.heroProof : [];
 const heroProofLink = 'heroProofLink' in c ? c.heroProofLink : null;
 const termsH = 'termsH' in c ? c.termsH : '';
 const terms = 'terms' in c ? c.terms : [];
+
+// Service + Offer JSON-LD (2026-09-06). 숫자는 content 의 offer(표시 price 와 같은 값) 에서만.
+const url = new URL(Astro.url.pathname, Astro.site).href;
+const offer = c.offer;
+const serviceSchema = {
+  '@type': 'Service',
+  '@id': `${url}#service`,
+  name: c.title,
+  serviceType: c.title,
+  description: c.description,
+  url,
+  provider: { '@id': ORG_ID },
+  areaServed: 'KR',
+  offers: {
+    '@type': 'Offer',
+    url,
+    priceCurrency: 'KRW',
+    priceSpecification: {
+      '@type': 'UnitPriceSpecification',
+      priceCurrency: 'KRW',
+      minPrice: offer.minPrice,
+      maxPrice: offer.maxPrice,
+      valueAddedTaxIncluded: false,
+      ...('unitCode' in offer ? { unitCode: offer.unitCode } : {}),
+      ...('unitText' in offer ? { unitText: offer.unitText } : {}),
+    },
+  },
+};
 ---
 
-<Base title={c.title} description={c.description} lang="ko">
+<Base title={c.title} description={c.description} lang="ko" schema={[serviceSchema]}>
   <section class="hero band-ink">
     <div class="wrap head">
       <span class="eyebrow">{c.eyebrow}</span>

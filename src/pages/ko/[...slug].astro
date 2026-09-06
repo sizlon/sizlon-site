@@ -24,15 +24,6 @@ export function getStaticPaths() {
   return Object.entries(MAP).map(([s, target]) => ({ params: { slug: s || undefined }, props: { target } }));
 }
 const { target } = Astro.props as { target: string };
+import RedirectStub from '../../components/RedirectStub.astro';
 ---
-<!doctype html>
-<html lang="ko">
-  <head>
-    <meta charset="utf-8" />
-    <title>이동 중…</title>
-    <script is:inline define:vars={{ target }}>location.replace(target + location.search);</script>
-    <meta http-equiv="refresh" content={`1;url=${target}`} />
-    <link rel="canonical" href={target} />
-  </head>
-  <body><p>이동했습니다: <a href={target}>{target}</a></p></body>
-</html>
+<RedirectStub target={target} />

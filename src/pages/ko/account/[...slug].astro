@@ -6,18 +6,6 @@ export function getStaticPaths() {
 }
 const { slug } = Astro.params;
 const target = `https://miriboa.sizlon.io/account${slug ? `/${slug}` : ''}`;
+import RedirectStub from '../../../components/RedirectStub.astro';
 ---
-<!doctype html>
-<html lang="ko">
-  <head>
-    <meta charset="utf-8" />
-    <title>Redirecting…</title>
-    <!-- noindex 를 달지 않는다 (2026-08-08): canonical 과 함께 쓰면 신호가 모순돼
-         구글이 noindex 를 canonical **대상**(miriboa 의 실제 페이지)에까지 적용할
-         수 있다. 색인에서 빼는 일은 canonical 이 이미 한다. GSC 통지로 드러났다. -->
-    <script is:inline define:vars={{ target }}>location.replace(target + location.search);</script>
-    <meta http-equiv="refresh" content={`1;url=${target}`} />
-    <link rel="canonical" href={target} />
-  </head>
-  <body><p>Moved: <a href={target}>{target}</a></p></body>
-</html>
+<RedirectStub target={target} />

@@ -19,6 +19,10 @@ const SITEMAP_EXCLUDE = [
 
 export default defineConfig({
   site: 'https://sizlon.io',
+  // 내부 링크·canonical·sitemap 이 전부 `/path/` 꼴이어야 한다 (2026-09-06). GitHub Pages 는
+  // `/about` 을 `/about/` 로 301 하므로 슬래시 없는 내부 링크는 클릭·크롤마다 리다이렉트를
+  // 한 번씩 먹는다. 빌드 뒤 scripts/check-dist-links.mjs 가 dist 를 훑어 위반을 잡는다.
+  trailingSlash: 'always',
   // dev 포트 고정: miriboa-site(4321)와 동시에 뜰 수 있게 4322 — 로컬 Caddy가
   // sizlon.localhost → 4322 로 프록시한다 (sizlon-dev-harness README 주소표).
   server: { port: 4322, host: true },

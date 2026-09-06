@@ -1,0 +1,10010 @@
+[
+{
+"doc": "꿈빛나래(서식).hwp",
+"format": "hwp",
+"declared_ext": "hwp",
+"truth_from": "꿈빛나래(서식).hwp",
+"n_tables": 21,
+"scores": {
+"hwp5txt": {
+"cell_retention": 0.1417910447761194,
+"row_integrity": 0.058823529411764705,
+"kv_association": 0.0,
+"n_cells": 134,
+"n_rows": 51,
+"n_kv": 1,
+"chars": 4693,
+"seconds": 0.4
+},
+"hwp_naive": {
+"cell_retention": 1.0,
+"row_integrity": 0.058823529411764705,
+"kv_association": 0.0,
+"n_cells": 134,
+"n_rows": 51,
+"n_kv": 1,
+"chars": 8089,
+"seconds": 0.0
+},
+"dpurix": {
+"cell_retention": 1.0,
+"row_integrity": 1.0,
+"kv_association": 1.0,
+"n_cells": 134,
+"n_rows": 51,
+"n_kv": 1,
+"chars": 10795,
+"seconds": 1.3,
+"meta_status": "ok",
+"meta_extractor": "hwp5html",
+"meta_table_loss": false,
+"meta_note": ""
+}
+}
+},
+{
+"doc": "입찰공고문(양산우체국 아파트전담 소포우편물 위탁배달 용역).hwp",
+"format": "hwp",
+"declared_ext": "hwp",
+"truth_from": "입찰공고문(양산우체국 아파트전담 소포우편물 위탁배달 용역).hwp",
+"n_tables": 6,
+"scores": {
+"hwp5txt": {
+"cell_retention": 0.0,
+"row_integrity": null,
+"kv_association": null,
+"n_cells": 9,
+"n_rows": 0,
+"n_kv": 0,
+"chars": 6993,
+"seconds": 0.2
+},
+"hwp_naive": {
+"cell_retention": 1.0,
+"row_integrity": null,
+"kv_association": null,
+"n_cells": 9,
+"n_rows": 0,
+"n_kv": 0,
+"chars": 8845,
+"seconds": 0.0
+},
+"dpurix": {
+"cell_retention": 1.0,
+"row_integrity": null,
+"kv_association": null,
+"n_cells": 9,
+"n_rows": 0,
+"n_kv": 0,
+"chars": 10578,
+"seconds": 0.5,
+"meta_status": "ok",
+"meta_extractor": "hwp5html",
+"meta_table_loss": false,
+"meta_note": ""
+}
+}
+},
+{
+"doc": "입찰공고문(양산우체국 아파트전담 소포우편물 위탁배달 용역).pdf",
+"format": "pdf",
+"declared_ext": "pdf",
+"truth_from": "과업지시서(양산우체국 아파트전담 소포우편물 위탁배달 용역).hwp",
+"n_tables": 15,
+"scores": {
+"pdftotext": {
+"cell_retention": 0.046875,
+"row_integrity": 0.0,
+"kv_association": 0.0,
+"n_cells": 64,
+"n_rows": 32,
+"n_kv": 9,
+"chars": 8531,
+"seconds": 0.1
+},
+"pdftotext_layout": {
+"cell_retention": 0.046875,
+"row_integrity": 0.0,
+"kv_association": 0.0,
+"n_cells": 64,
+"n_rows": 32,
+"n_kv": 9,
+"chars": 13340,
+"seconds": 0.1
+},
+"pymupdf": {
+"cell_retention": 0.046875,
+"row_integrity": 0.0,
+"kv_association": 0.0,
+"n_cells": 64,
+"n_rows": 32,
+"n_kv": 9,
+"chars": 8727,
+"seconds": 0.0
+},
+"pdfplumber": {
+"cell_retention": 0.046875,
+"row_integrity": 0.0,
+"kv_association": 0.0,
+"n_cells": 64,
+"n_rows": 32,
+"n_kv": 9,
+"chars": 8402,
+"seconds": 0.8
+},
+"pdfplumber_tables": {
+"cell_retention": 0.046875,
+"row_integrity": 0.0,
+"kv_association": 0.0,
+"n_cells": 64,
+"n_rows": 32,
+"n_kv": 9,
+"chars": 8402,
+"seconds": 0.8
+},
+"dpurix": {
+"cell_retention": 0.046875,
+"row_integrity": 0.0,
+"kv_association": 0.0,
+"n_cells": 64,
+"n_rows": 32,
+"n_kv": 9,
+"chars": 8405,
+"seconds": 0.8,
+"meta_status": "ok",
+"meta_extractor": "pdfplumber-read",
+"meta_table_loss": false,
+"meta_note": ""
+}
+}
+},
+{
+"doc": "제안요청서(양산우체국 아파트전담 소포우편물 위탁배달 용역).hwp",
+"format": "hwp",
+"declared_ext": "hwp",
+"truth_from": "제안요청서(양산우체국 아파트전담 소포우편물 위탁배달 용역).hwp",
+"n_tables": 26,
+"scores": {
+"hwp5txt": {
+"cell_retention": 0.19927536231884058,
+"row_integrity": 0.03296703296703297,
+"kv_association": 0.02040816326530612,
+"n_cells": 276,
+"n_rows": 91,
+"n_kv": 49,
+"chars": 12672,
+"seconds": 0.5
+},
+"hwp_naive": {
+"cell_retention": 0.9963768115942029,
+"row_integrity": 0.04395604395604396,
+"kv_association": 0.04081632653061224,
+"n_cells": 276,
+"n_rows": 91,
+"n_kv": 49,
+"chars": 21738,
+"seconds": 0.0
+},
+"dpurix": {
+"cell_retention": 1.0,
+"row_integrity": 1.0,
+"kv_association": 1.0,
+"n_cells": 276,
+"n_rows": 91,
+"n_kv": 49,
+"chars": 26946,
+"seconds": 3.6,
+"meta_status": "ok",
+"meta_extractor": "hwp5html",
+"meta_table_loss": false,
+"meta_note": ""
+}
+}
+},
+{
+"doc": "과업지시서(양산우체국 아파트전담 소포우편물 위탁배달 용역).hwp",
+"format": "hwp",
+"declared_ext": "hwp",
+"truth_from": "과업지시서(양산우체국 아파트전담 소포우편물 위탁배달 용역).hwp",
+"n_tables": 15,
+"scores": {
+"hwp5txt": {
+"cell_retention": 0.21875,
+"row_integrity": 0.09375,
+"kv_association": 0.0,
+"n_cells": 64,
+"n_rows": 32,
+"n_kv": 9,
+"chars": 16269,
+"seconds": 0.3
+},
+"hwp_naive": {
+"cell_retention": 0.984375,
+"row_integrity": 0.09375,
+"kv_association": 0.0,
+"n_cells": 64,
+"n_rows": 32,
+"n_kv": 9,
+"chars": 22100,
+"seconds": 0.0
+},
+"dpurix": {
+"cell_retention": 1.0,
+"row_integrity": 1.0,
+"kv_association": 1.0,
+"n_cells": 64,
+"n_rows": 32,
+"n_kv": 9,
+"chars": 25107,
+"seconds": 1.5,
+"meta_status": "ok",
+"meta_extractor": "hwp5html",
+"meta_table_loss": false,
+"meta_note": ""
+}
+}
+},
+{
+"doc": "1. 용역입찰공고.hwp",
+"format": "hwp",
+"declared_ext": "hwp",
+"truth_from": "1. 용역입찰공고.hwp",
+"n_tables": 8,
+"scores": {
+"hwp5txt": {
+"cell_retention": 0.17857142857142858,
+"row_integrity": 0.0,
+"kv_association": 0.0,
+"n_cells": 28,
+"n_rows": 7,
+"n_kv": 1,
+"chars": 12858,
+"seconds": 0.2
+},
+"hwp_naive": {
+"cell_retention": 1.0,
+"row_integrity": 0.0,
+"kv_association": 0.0,
+"n_cells": 28,
+"n_rows": 7,
+"n_kv": 1,
+"chars": 15922,
+"seconds": 0.0
+},
+"dpurix": {
+"cell_retention": 1.0,
+"row_integrity": 1.0,
+"kv_association": 1.0,
+"n_cells": 28,
+"n_rows": 7,
+"n_kv": 1,
+"chars": 17866,
+"seconds": 0.7,
+"meta_status": "ok",
+"meta_extractor": "hwp5html",
+"meta_table_loss": false,
+"meta_note": ""
+}
+}
+},
+{
+"doc": "1. 용역입찰공고.pdf",
+"format": "pdf",
+"declared_ext": "pdf",
+"truth_from": "1. 용역입찰공고.hwp",
+"n_tables": 8,
+"scores": {
+"pdftotext": {
+"cell_retention": 0.6785714285714286,
+"row_integrity": 0.0,
+"kv_association": 0.0,
+"n_cells": 28,
+"n_rows": 7,
+"n_kv": 1,
+"chars": 15383,
+"seconds": 0.2
+},
+"pdftotext_layout": {
+"cell_retention": 0.5714285714285714,
+"row_integrity": 0.14285714285714285,
+"kv_association": 1.0,
+"n_cells": 28,
+"n_rows": 7,
+"n_kv": 1,
+"chars": 18258,
+"seconds": 0.1
+},
+"pymupdf": {
+"cell_retention": 0.9642857142857143,
+"row_integrity": 0.0,
+"kv_association": 0.0,
+"n_cells": 28,
+"n_rows": 7,
+"n_kv": 1,
+"chars": 15504,
+"seconds": 0.0
+},
+"pdfplumber": {
+"cell_retention": 0.6428571428571429,
+"row_integrity": 0.14285714285714285,
+"kv_association": 1.0,
+"n_cells": 28,
+"n_rows": 7,
+"n_kv": 1,
+"chars": 15035,
+"seconds": 0.8
+},
+"pdfplumber_tables": {
+"cell_retention": 0.8928571428571429,
+"row_integrity": 0.8571428571428571,
+"kv_association": 1.0,
+"n_cells": 28,
+"n_rows": 7,
+"n_kv": 1,
+"chars": 16325,
+"seconds": 0.8
+},
+"dpurix": {
+"cell_retention": 0.9285714285714286,
+"row_integrity": 0.8571428571428571,
+"kv_association": 1.0,
+"n_cells": 28,
+"n_rows": 7,
+"n_kv": 1,
+"chars": 15134,
+"seconds": 0.8,
+"meta_status": "ok",
+"meta_extractor": "pdfplumber-read",
+"meta_table_loss": false,
+"meta_note": ""
+}
+}
+},
+{
+"doc": "2. 과업 및 제안요청서.hwp",
+"format": "hwp",
+"declared_ext": "hwp",
+"truth_from": "2. 과업 및 제안요청서.hwp",
+"n_tables": 139,
+"scores": {
+"hwp5txt": {
+"cell_retention": 0.1002921129503408,
+"row_integrity": 0.0029411764705882353,
+"kv_association": 0.020833333333333332,
+"n_cells": 1027,
+"n_rows": 680,
+"n_kv": 48,
+"chars": 20906,
+"seconds": 1.9
+},
+"hwp_naive": {
+"cell_retention": 0.9951314508276533,
+"row_integrity": 0.013235294117647059,
+"kv_association": 0.0625,
+"n_cells": 1027,
+"n_rows": 680,
+"n_kv": 48,
+"chars": 96224,
+"seconds": 0.4
+},
+"dpurix": {
+"cell_retention": 1.0,
+"row_integrity": 1.0,
+"kv_association": 1.0,
+"n_cells": 1027,
+"n_rows": 680,
+"n_kv": 48,
+"chars": 145224,
+"seconds": 46.9,
+"meta_status": "ok",
+"meta_extractor": "hwp5html",
+"meta_table_loss": false,
+"meta_note": ""
+}
+}
+},
+{
+"doc": "3. 용역계약 일반조건.hwp",
+"format": "hwp",
+"declared_ext": "hwp",
+"truth_from": "3. 용역계약 일반조건.hwp",
+"n_tables": 0,
+"scores": {
+"hwp5txt": {
+"cell_retention": null,
+"row_integrity": null,
+"kv_association": null,
+"n_cells": 0,
+"n_rows": 0,
+"n_kv": 0,
+"chars": 5945,
+"seconds": 0.1
+},
+"hwp_naive": {
+"cell_retention": null,
+"row_integrity": null,
+"kv_association": null,
+"n_cells": 0,
+"n_rows": 0,
+"n_kv": 0,
+"chars": 6027,
+"seconds": 0.0
+},
+"dpurix": {
+"cell_retention": null,
+"row_integrity": null,
+"kv_association": null,
+"n_cells": 0,
+"n_rows": 0,
+"n_kv": 0,
+"chars": 6049,
+"seconds": 0.2,
+"meta_status": "ok",
+"meta_extractor": "hwp5html",
+"meta_table_loss": false,
+"meta_note": ""
+}
+}
+},
+{
+"doc": "8-2. 용역(입찰)공고문_텐씨엘_생성형 AI 기반 신규 서비스 개발.hwp",
+"format": "hwp",
+"declared_ext": "hwp",
+"truth_from": "8-2. 용역(입찰)공고문_텐씨엘_생성형 AI 기반 신규 서비스 개발.hwp",
+"n_tables": 3,
+"scores": {
+"hwp5txt": {
+"cell_retention": 0.038461538461538464,
+"row_integrity": 0.0,
+"kv_association": null,
+"n_cells": 26,
+"n_rows": 11,
+"n_kv": 0,
+"chars": 3457,
+"seconds": 0.1
+},
+"hwp_naive": {
+"cell_retention": 0.9615384615384616,
+"row_integrity": 0.0,
+"kv_association": null,
+"n_cells": 26,
+"n_rows": 11,
+"n_kv": 0,
+"chars": 5389,
+"seconds": 0.0
+},
+"dpurix": {
+"cell_retention": 1.0,
+"row_integrity": 1.0,
+"kv_association": null,
+"n_cells": 26,
+"n_rows": 11,
+"n_kv": 0,
+"chars": 7112,
+"seconds": 0.3,
+"meta_status": "ok",
+"meta_extractor": "hwp5html",
+"meta_table_loss": false,
+"meta_note": ""
+}
+}
+},
+{
+"doc": "8-2. 용역(입찰)공고문_텐씨엘_생성형 AI 기반 신규 서비스 개발.pdf",
+"format": "pdf",
+"declared_ext": "pdf",
+"truth_from": "8-2. 용역(입찰)공고문_텐씨엘_생성형 AI 기반 신규 서비스 개발.hwp",
+"n_tables": 3,
+"scores": {
+"pdftotext": {
+"cell_retention": 0.9615384615384616,
+"row_integrity": 0.09090909090909091,
+"kv_association": null,
+"n_cells": 26,
+"n_rows": 11,
+"n_kv": 0,
+"chars": 5139,
+"seconds": 0.1
+},
+"pdftotext_layout": {
+"cell_retention": 0.8076923076923077,
+"row_integrity": 0.5454545454545454,
+"kv_association": null,
+"n_cells": 26,
+"n_rows": 11,
+"n_kv": 0,
+"chars": 5941,
+"seconds": 0.1
+},
+"pymupdf": {
+"cell_retention": 0.9615384615384616,
+"row_integrity": 0.09090909090909091,
+"kv_association": null,
+"n_cells": 26,
+"n_rows": 11,
+"n_kv": 0,
+"chars": 5262,
+"seconds": 0.0
+},
+"pdfplumber": {
+"cell_retention": 0.8076923076923077,
+"row_integrity": 0.5454545454545454,
+"kv_association": null,
+"n_cells": 26,
+"n_rows": 11,
+"n_kv": 0,
+"chars": 5095,
+"seconds": 0.4
+},
+"pdfplumber_tables": {
+"cell_retention": 0.9615384615384616,
+"row_integrity": 1.0,
+"kv_association": null,
+"n_cells": 26,
+"n_rows": 11,
+"n_kv": 0,
+"chars": 5646,
+"seconds": 0.4
+},
+"dpurix": {
+"cell_retention": 0.9615384615384616,
+"row_integrity": 1.0,
+"kv_association": null,
+"n_cells": 26,
+"n_rows": 11,
+"n_kv": 0,
+"chars": 5185,
+"seconds": 0.5,
+"meta_status": "ok",
+"meta_extractor": "pdfplumber-read",
+"meta_table_loss": false,
+"meta_note": ""
+}
+}
+},
+{
+"doc": "8-2. 용역(입찰)제안요청서_텐씨엘_생성형 AI 기반 신규 서비스 개발.hwp",
+"format": "hwp",
+"declared_ext": "hwp",
+"truth_from": "8-2. 용역(입찰)제안요청서_텐씨엘_생성형 AI 기반 신규 서비스 개발.hwp",
+"n_tables": 19,
+"scores": {
+"hwp5txt": {
+"cell_retention": 0.22935779816513763,
+"row_integrity": 0.038461538461538464,
+"kv_association": 0.07894736842105263,
+"n_cells": 218,
+"n_rows": 78,
+"n_kv": 38,
+"chars": 11532,
+"seconds": 0.4
+},
+"hwp_naive": {
+"cell_retention": 0.9954128440366973,
+"row_integrity": 0.08974358974358974,
+"kv_association": 0.07894736842105263,
+"n_cells": 218,
+"n_rows": 78,
+"n_kv": 38,
+"chars": 17633,
+"seconds": 0.0
+},
+"dpurix": {
+"cell_retention": 1.0,
+"row_integrity": 1.0,
+"kv_association": 1.0,
+"n_cells": 218,
+"n_rows": 78,
+"n_kv": 38,
+"chars": 21883,
+"seconds": 1.9,
+"meta_status": "ok",
+"meta_extractor": "hwp5html",
+"meta_table_loss": false,
+"meta_note": ""
+}
+}
+},
+{
+"doc": "붙임2. 제안요청서.hwp",
+"format": "hwp",
+"declared_ext": "hwp",
+"truth_from": "붙임2. 제안요청서.hwp",
+"n_tables": 38,
+"scores": {
+"hwp5txt": {
+"cell_retention": 0.18396226415094338,
+"row_integrity": 0.03278688524590164,
+"kv_association": 0.0,
+"n_cells": 212,
+"n_rows": 61,
+"n_kv": 4,
+"chars": 8680,
+"seconds": 0.6
+},
+"hwp_naive": {
+"cell_retention": 0.9811320754716981,
+"row_integrity": 0.06557377049180328,
+"kv_association": 0.0,
+"n_cells": 212,
+"n_rows": 61,
+"n_kv": 4,
+"chars": 19644,
+"seconds": 0.0
+},
+"dpurix": {
+"cell_retention": 1.0,
+"row_integrity": 1.0,
+"kv_association": 1.0,
+"n_cells": 212,
+"n_rows": 61,
+"n_kv": 4,
+"chars": 26106,
+"seconds": 3.7,
+"meta_status": "ok",
+"meta_extractor": "hwp5html",
+"meta_table_loss": false,
+"meta_note": ""
+}
+}
+},
+{
+"doc": "(공고서) 2026년 국가 기후변화 표준 시나리오 산출체계 구축_기상청 국립기상과학원.hwp",
+"format": "hwp",
+"declared_ext": "hwp",
+"truth_from": "(공고서) 2026년 국가 기후변화 표준 시나리오 산출체계 구축_기상청 국립기상과학원.hwp",
+"n_tables": 2,
+"scores": {
+"hwp5txt": {
+"cell_retention": 0.0,
+"row_integrity": 0.0,
+"kv_association": 0.0,
+"n_cells": 162,
+"n_rows": 35,
+"n_kv": 5,
+"chars": 13,
+"seconds": 0.3
+},
+"hwp_naive": {
+"cell_retention": 1.0,
+"row_integrity": 0.0,
+"kv_association": 0.0,
+"n_cells": 162,
+"n_rows": 35,
+"n_kv": 5,
+"chars": 21331,
+"seconds": 0.0
+},
+"dpurix": {
+"cell_retention": 1.0,
+"row_integrity": 1.0,
+"kv_association": 1.0,
+"n_cells": 162,
+"n_rows": 35,
+"n_kv": 5,
+"chars": 22051,
+"seconds": 1.0,
+"meta_status": "ok",
+"meta_extractor": "hwp5html",
+"meta_table_loss": false,
+"meta_note": ""
+}
+}
+},
+{
+"doc": "(공고서) 2026년 국가 기후변화 표준 시나리오 산출체계 구축_기상청 국립기상과학원.pdf",
+"format": "pdf",
+"declared_ext": "pdf",
+"truth_from": "(공고서) 2026년 국가 기후변화 표준 시나리오 산출체계 구축_기상청 국립기상과학원.hwp",
+"n_tables": 2,
+"scores": {
+"pdftotext": {
+"cell_retention": 0.9938271604938271,
+"row_integrity": 0.08571428571428572,
+"kv_association": 0.0,
+"n_cells": 162,
+"n_rows": 35,
+"n_kv": 5,
+"chars": 20735,
+"seconds": 0.1
+},
+"pdftotext_layout": {
+"cell_retention": 1.0,
+"row_integrity": 0.8285714285714286,
+"kv_association": 0.4,
+"n_cells": 162,
+"n_rows": 35,
+"n_kv": 5,
+"chars": 23642,
+"seconds": 0.1
+},
+"pymupdf": {
+"cell_retention": 0.2839506172839506,
+"row_integrity": 0.0,
+"kv_association": 0.0,
+"n_cells": 162,
+"n_rows": 35,
+"n_kv": 5,
+"chars": 24009,
+"seconds": 0.0
+},
+"pdfplumber": {
+"cell_retention": 0.2839506172839506,
+"row_integrity": 0.3142857142857143,
+"kv_association": 0.4,
+"n_cells": 162,
+"n_rows": 35,
+"n_kv": 5,
+"chars": 20806,
+"seconds": 1.2
+},
+"pdfplumber_tables": {
+"cell_retention": 0.2839506172839506,
+"row_integrity": 0.3142857142857143,
+"kv_association": 0.4,
+"n_cells": 162,
+"n_rows": 35,
+"n_kv": 5,
+"chars": 24914,
+"seconds": 1.2
+},
+"dpurix": {
+"cell_retention": 0.2777777777777778,
+"row_integrity": 0.2857142857142857,
+"kv_association": 0.4,
+"n_cells": 162,
+"n_rows": 35,
+"n_kv": 5,
+"chars": 21769,
+"seconds": 1.2,
+"meta_status": "ok",
+"meta_extractor": "pdfplumber-read",
+"meta_table_loss": false,
+"meta_note": ""
+}
+}
+},
+{
+"doc": "0.(입찰공고서)2026세계유산축전-가야고분군 교육체험 프로그램 운영 대행.hwp",
+"format": "hwp",
+"declared_ext": "hwp",
+"truth_from": "0.(입찰공고서)2026세계유산축전-가야고분군 교육체험 프로그램 운영 대행.hwp",
+"n_tables": 3,
+"scores": {
+"hwp5txt": {
+"cell_retention": 0.0,
+"row_integrity": null,
+"kv_association": null,
+"n_cells": 4,
+"n_rows": 0,
+"n_kv": 0,
+"chars": 5324,
+"seconds": 0.1
+},
+"hwp_naive": {
+"cell_retention": 0.75,
+"row_integrity": null,
+"kv_association": null,
+"n_cells": 4,
+"n_rows": 0,
+"n_kv": 0,
+"chars": 6395,
+"seconds": 0.0
+},
+"dpurix": {
+"cell_retention": 1.0,
+"row_integrity": null,
+"kv_association": null,
+"n_cells": 4,
+"n_rows": 0,
+"n_kv": 0,
+"chars": 7288,
+"seconds": 0.3,
+"meta_status": "ok",
+"meta_extractor": "hwp5html",
+"meta_table_loss": false,
+"meta_note": ""
+}
+}
+},
+{
+"doc": "0.(입찰공고서)2026세계유산축전-가야고분군 교육체험 프로그램 운영 대행.pdf",
+"format": "pdf",
+"declared_ext": "pdf",
+"truth_from": "0.(입찰공고서)2026세계유산축전-가야고분군 교육체험 프로그램 운영 대행.hwp",
+"n_tables": 3,
+"scores": {
+"pdftotext": {
+"cell_retention": 0.75,
+"row_integrity": null,
+"kv_association": null,
+"n_cells": 4,
+"n_rows": 0,
+"n_kv": 0,
+"chars": 6142,
+"seconds": 0.1
+},
+"pdftotext_layout": {
+"cell_retention": 0.75,
+"row_integrity": null,
+"kv_association": null,
+"n_cells": 4,
+"n_rows": 0,
+"n_kv": 0,
+"chars": 6631,
+"seconds": 0.1
+},
+"pymupdf": {
+"cell_retention": 0.75,
+"row_integrity": null,
+"kv_association": null,
+"n_cells": 4,
+"n_rows": 0,
+"n_kv": 0,
+"chars": 6336,
+"seconds": 0.0
+},
+"pdfplumber": {
+"cell_retention": 0.75,
+"row_integrity": null,
+"kv_association": null,
+"n_cells": 4,
+"n_rows": 0,
+"n_kv": 0,
+"chars": 6102,
+"seconds": 0.5
+},
+"pdfplumber_tables": {
+"cell_retention": 0.75,
+"row_integrity": null,
+"kv_association": null,
+"n_cells": 4,
+"n_rows": 0,
+"n_kv": 0,
+"chars": 6677,
+"seconds": 0.5
+},
+"dpurix": {
+"cell_retention": 0.5,
+"row_integrity": null,
+"kv_association": null,
+"n_cells": 4,
+"n_rows": 0,
+"n_kv": 0,
+"chars": 6133,
+"seconds": 0.5,
+"meta_status": "ok",
+"meta_extractor": "pdfplumber-read",
+"meta_table_loss": false,
+"meta_note": ""
+}
+}
+},
+{
+"doc": "1.(과업지시서)2026세계유산축전-가야고분군 교육·체험 프로그램 운영 대행.hwpx",
+"format": "hwpx",
+"declared_ext": "hwpx",
+"truth_from": "1.(과업지시서)2026세계유산축전-가야고분군 교육·체험 프로그램 운영 대행.hwpx",
+"n_tables": 16,
+"scores": {
+"hwpx_strip": {
+"cell_retention": 1.0,
+"row_integrity": 0.03508771929824561,
+"kv_association": null,
+"n_cells": 149,
+"n_rows": 57,
+"n_kv": 0,
+"chars": 24406,
+"seconds": 0.0
+},
+"dpurix": {
+"cell_retention": 1.0,
+"row_integrity": 1.0,
+"kv_association": null,
+"n_cells": 149,
+"n_rows": 57,
+"n_kv": 0,
+"chars": 15211,
+"seconds": 0.0,
+"meta_status": "ok",
+"meta_extractor": "hwpx",
+"meta_table_loss": false,
+"meta_note": ""
+}
+}
+},
+{
+"doc": "2.(제안요청서)2026세계유산축전-가야고분군 교육·체험 프로그램 운영 대행.hwpx",
+"format": "hwpx",
+"declared_ext": "hwpx",
+"truth_from": "2.(제안요청서)2026세계유산축전-가야고분군 교육·체험 프로그램 운영 대행.hwpx",
+"n_tables": 51,
+"scores": {
+"hwpx_strip": {
+"cell_retention": 1.0,
+"row_integrity": 0.09859154929577464,
+"kv_association": 0.25,
+"n_cells": 369,
+"n_rows": 142,
+"n_kv": 20,
+"chars": 54233,
+"seconds": 0.0
+},
+"dpurix": {
+"cell_retention": 1.0,
+"row_integrity": 0.9577464788732394,
+"kv_association": 1.0,
+"n_cells": 369,
+"n_rows": 142,
+"n_kv": 20,
+"chars": 27962,
+"seconds": 0.0,
+"meta_status": "ok",
+"meta_extractor": "hwpx",
+"meta_table_loss": false,
+"meta_note": ""
+}
+}
+},
+{
+"doc": "1-1. 입찰공고문[2026년 서울시 누리집(앱) 접근성 및 웹호환성 진단 용역].hwpx",
+"format": "hwpx",
+"declared_ext": "hwpx",
+"truth_from": "1-1. 입찰공고문[2026년 서울시 누리집(앱) 접근성 및 웹호환성 진단 용역].hwpx",
+"n_tables": 4,
+"scores": {
+"hwpx_strip": {
+"cell_retention": 0.75,
+"row_integrity": null,
+"kv_association": null,
+"n_cells": 4,
+"n_rows": 0,
+"n_kv": 0,
+"chars": 9250,
+"seconds": 0.0
+},
+"dpurix": {
+"cell_retention": 1.0,
+"row_integrity": null,
+"kv_association": null,
+"n_cells": 4,
+"n_rows": 0,
+"n_kv": 0,
+"chars": 6599,
+"seconds": 0.0,
+"meta_status": "ok",
+"meta_extractor": "hwpx",
+"meta_table_loss": false,
+"meta_note": ""
+}
+}
+},
+{
+"doc": "2. 제안요청서[2026년 서울시 누리집(앱) 접근성 및 웹호환성 진단 용역].hwpx",
+"format": "hwpx",
+"declared_ext": "hwpx",
+"truth_from": "2. 제안요청서[2026년 서울시 누리집(앱) 접근성 및 웹호환성 진단 용역].hwpx",
+"n_tables": 96,
+"scores": {
+"hwpx_strip": {
+"cell_retention": 0.9983235540653814,
+"row_integrity": 0.03195488721804511,
+"kv_association": 0.022058823529411766,
+"n_cells": 1193,
+"n_rows": 532,
+"n_kv": 272,
+"chars": 129698,
+"seconds": 0.3
+},
+"dpurix": {
+"cell_retention": 1.0,
+"row_integrity": 0.981203007518797,
+"kv_association": 1.0,
+"n_cells": 1193,
+"n_rows": 532,
+"n_kv": 272,
+"chars": 66579,
+"seconds": 0.2,
+"meta_status": "ok",
+"meta_extractor": "hwpx",
+"meta_table_loss": false,
+"meta_note": ""
+}
+}
+},
+{
+"doc": "[과업지시서]2026 천안시민한마음체육대회 기획 및 대행 용역.hwp",
+"format": "hwp",
+"declared_ext": "hwp",
+"truth_from": "[과업지시서]2026 천안시민한마음체육대회 기획 및 대행 용역.hwp",
+"n_tables": 9,
+"scores": {
+"hwp5txt": {
+"cell_retention": 0.1896551724137931,
+"row_integrity": 0.0,
+"kv_association": null,
+"n_cells": 116,
+"n_rows": 45,
+"n_kv": 0,
+"chars": 9688,
+"seconds": 0.3
+},
+"hwp_naive": {
+"cell_retention": 1.0,
+"row_integrity": 0.022222222222222223,
+"kv_association": null,
+"n_cells": 116,
+"n_rows": 45,
+"n_kv": 0,
+"chars": 17008,
+"seconds": 0.0
+},
+"dpurix": {
+"cell_retention": 1.0,
+"row_integrity": 1.0,
+"kv_association": null,
+"n_cells": 116,
+"n_rows": 45,
+"n_kv": 0,
+"chars": 16423,
+"seconds": 1.0,
+"meta_status": "ok",
+"meta_extractor": "hwp5html",
+"meta_table_loss": false,
+"meta_note": ""
+}
+}
+},
+{
+"doc": "[제안요청서]2026 천안시민한마음체육대회 기획 및 대행 용역.hwp",
+"format": "hwp",
+"declared_ext": "hwp",
+"truth_from": "[제안요청서]2026 천안시민한마음체육대회 기획 및 대행 용역.hwp",
+"n_tables": 51,
+"scores": {
+"hwp5txt": {
+"cell_retention": 0.240990990990991,
+"row_integrity": 0.03125,
+"kv_association": 0.13333333333333333,
+"n_cells": 444,
+"n_rows": 160,
+"n_kv": 60,
+"chars": 19585,
+"seconds": 1.1
+},
+"hwp_naive": {
+"cell_retention": 0.9932432432432432,
+"row_integrity": 0.04375,
+"kv_association": 0.13333333333333333,
+"n_cells": 444,
+"n_rows": 160,
+"n_kv": 60,
+"chars": 36826,
+"seconds": 0.0
+},
+"dpurix": {
+"cell_retention": 1.0,
+"row_integrity": 1.0,
+"kv_association": 1.0,
+"n_cells": 444,
+"n_rows": 160,
+"n_kv": 60,
+"chars": 45710,
+"seconds": 12.7,
+"meta_status": "ok",
+"meta_extractor": "hwp5html",
+"meta_table_loss": false,
+"meta_note": ""
+}
+}
+},
+{
+"doc": "1. [입찰공고문_20260518] 2026년 특허기반 사업화 R&D 지원사업 용역_제안발표일시 추가.hwp",
+"format": "hwp",
+"declared_ext": "hwp",
+"truth_from": "1. [입찰공고문_20260518] 2026년 특허기반 사업화 R&D 지원사업 용역_제안발표일시 추가.hwp",
+"n_tables": 20,
+"scores": {
+"hwp5txt": {
+"cell_retention": 0.02877697841726619,
+"row_integrity": 0.0,
+"kv_association": 0.0,
+"n_cells": 139,
+"n_rows": 53,
+"n_kv": 51,
+"chars": 15599,
+"seconds": 0.4
+},
+"hwp_naive": {
+"cell_retention": 0.9928057553956835,
+"row_integrity": 0.0,
+"kv_association": 0.0,
+"n_cells": 139,
+"n_rows": 53,
+"n_kv": 51,
+"chars": 24652,
+"seconds": 0.0
+},
+"dpurix": {
+"cell_retention": 1.0,
+"row_integrity": 1.0,
+"kv_association": 1.0,
+"n_cells": 139,
+"n_rows": 53,
+"n_kv": 51,
+"chars": 30200,
+"seconds": 1.8,
+"meta_status": "ok",
+"meta_extractor": "hwp5html",
+"meta_table_loss": false,
+"meta_note": ""
+}
+}
+},
+{
+"doc": "2. [제안요청서-일반사항_20260518] 2026년 특허기반 사업화 R&D 지원사업 용역(1차 1~25과제)_f.hwp",
+"format": "hwp",
+"declared_ext": "hwp",
+"truth_from": "2. [제안요청서-일반사항_20260518] 2026년 특허기반 사업화 R&D 지원사업 용역(1차 1~25과제)_f.hwp",
+"n_tables": 44,
+"scores": {
+"hwp5txt": {
+"cell_retention": 0.14824120603015076,
+"row_integrity": 0.01764705882352941,
+"kv_association": 0.011904761904761904,
+"n_cells": 398,
+"n_rows": 170,
+"n_kv": 84,
+"chars": 16406,
+"seconds": 0.7
+},
+"hwp_naive": {
+"cell_retention": 0.992462311557789,
+"row_integrity": 0.041176470588235294,
+"kv_association": 0.011904761904761904,
+"n_cells": 398,
+"n_rows": 170,
+"n_kv": 84,
+"chars": 30478,
+"seconds": 0.0
+},
+"dpurix": {
+"cell_retention": 1.0,
+"row_integrity": 1.0,
+"kv_association": 1.0,
+"n_cells": 398,
+"n_rows": 170,
+"n_kv": 84,
+"chars": 40149,
+"seconds": 5.5,
+"meta_status": "ok",
+"meta_extractor": "hwp5html",
+"meta_table_loss": false,
+"meta_note": ""
+}
+}
+},
+{
+"doc": "5. [긴급입찰사유서] 2026년 특허기반 사업화 R&D 지원사업 용역(1차 1~25과제).hwp",
+"format": "hwp",
+"declared_ext": "hwp",
+"truth_from": "5. [긴급입찰사유서] 2026년 특허기반 사업화 R&D 지원사업 용역(1차 1~25과제).hwp",
+"n_tables": 2,
+"scores": {
+"hwp5txt": {
+"cell_retention": 0.0,
+"row_integrity": 0.0,
+"kv_association": null,
+"n_cells": 34,
+"n_rows": 26,
+"n_kv": 0,
+"chars": 421,
+"seconds": 0.1
+},
+"hwp_naive": {
+"cell_retention": 1.0,
+"row_integrity": 0.0,
+"kv_association": null,
+"n_cells": 34,
+"n_rows": 26,
+"n_kv": 0,
+"chars": 1502,
+"seconds": 0.0
+},
+"dpurix": {
+"cell_retention": 1.0,
+"row_integrity": 1.0,
+"kv_association": null,
+"n_cells": 34,
+"n_rows": 26,
+"n_kv": 0,
+"chars": 2457,
+"seconds": 0.2,
+"meta_status": "ok",
+"meta_extractor": "hwp5html",
+"meta_table_loss": false,
+"meta_note": ""
+}
+}
+},
+{
+"doc": "입찰공고문_ICT폴리텍대학 종합정보시스템 안정화.hwp",
+"format": "hwp",
+"declared_ext": "hwp",
+"truth_from": "입찰공고문_ICT폴리텍대학 종합정보시스템 안정화.hwp",
+"n_tables": 2,
+"scores": {
+"hwp5txt": {
+"cell_retention": 0.1111111111111111,
+"row_integrity": 0.0,
+"kv_association": null,
+"n_cells": 9,
+"n_rows": 2,
+"n_kv": 0,
+"chars": 3233,
+"seconds": 0.1
+},
+"hwp_naive": {
+"cell_retention": 1.0,
+"row_integrity": 0.0,
+"kv_association": null,
+"n_cells": 9,
+"n_rows": 2,
+"n_kv": 0,
+"chars": 3540,
+"seconds": 0.0
+},
+"dpurix": {
+"cell_retention": 1.0,
+"row_integrity": 1.0,
+"kv_association": null,
+"n_cells": 9,
+"n_rows": 2,
+"n_kv": 0,
+"chars": 3644,
+"seconds": 0.2,
+"meta_status": "ok",
+"meta_extractor": "hwp5html",
+"meta_table_loss": false,
+"meta_note": ""
+}
+}
+},
+{
+"doc": "입찰공고문_ICT폴리텍대학 종합정보시스템 안정화.pdf",
+"format": "pdf",
+"declared_ext": "pdf",
+"truth_from": "입찰공고문_ICT폴리텍대학 종합정보시스템 안정화.hwp",
+"n_tables": 2,
+"scores": {
+"pdftotext": {
+"cell_retention": 1.0,
+"row_integrity": 0.0,
+"kv_association": null,
+"n_cells": 9,
+"n_rows": 2,
+"n_kv": 0,
+"chars": 3317,
+"seconds": 0.0
+},
+"pdftotext_layout": {
+"cell_retention": 1.0,
+"row_integrity": 1.0,
+"kv_association": null,
+"n_cells": 9,
+"n_rows": 2,
+"n_kv": 0,
+"chars": 3822,
+"seconds": 0.0
+},
+"pymupdf": {
+"cell_retention": 1.0,
+"row_integrity": 0.0,
+"kv_association": null,
+"n_cells": 9,
+"n_rows": 2,
+"n_kv": 0,
+"chars": 3432,
+"seconds": 0.0
+},
+"pdfplumber": {
+"cell_retention": 1.0,
+"row_integrity": 1.0,
+"kv_association": null,
+"n_cells": 9,
+"n_rows": 2,
+"n_kv": 0,
+"chars": 3290,
+"seconds": 0.2
+},
+"pdfplumber_tables": {
+"cell_retention": 1.0,
+"row_integrity": 1.0,
+"kv_association": null,
+"n_cells": 9,
+"n_rows": 2,
+"n_kv": 0,
+"chars": 3404,
+"seconds": 0.3
+},
+"dpurix": {
+"cell_retention": 1.0,
+"row_integrity": 1.0,
+"kv_association": null,
+"n_cells": 9,
+"n_rows": 2,
+"n_kv": 0,
+"chars": 3330,
+"seconds": 0.2,
+"meta_status": "ok",
+"meta_extractor": "pdfplumber-read",
+"meta_table_loss": false,
+"meta_note": ""
+}
+}
+},
+{
+"doc": "종합정보시스템 안정화 제안요청서.hwp",
+"format": "hwp",
+"declared_ext": "hwp",
+"truth_from": "종합정보시스템 안정화 제안요청서.hwp",
+"n_tables": 113,
+"scores": {
+"hwp5txt": {
+"cell_retention": 0.11935953420669577,
+"row_integrity": 0.0064516129032258064,
+"kv_association": 0.05,
+"n_cells": 687,
+"n_rows": 465,
+"n_kv": 80,
+"chars": 13305,
+"seconds": 1.0
+},
+"hwp_naive": {
+"cell_retention": 0.9956331877729258,
+"row_integrity": 0.015053763440860216,
+"kv_association": 0.3875,
+"n_cells": 687,
+"n_rows": 465,
+"n_kv": 80,
+"chars": 44759,
+"seconds": 0.1
+},
+"dpurix": {
+"cell_retention": 1.0,
+"row_integrity": 1.0,
+"kv_association": 1.0,
+"n_cells": 687,
+"n_rows": 465,
+"n_kv": 80,
+"chars": 65916,
+"seconds": 10.3,
+"meta_status": "ok",
+"meta_extractor": "hwp5html",
+"meta_table_loss": false,
+"meta_note": ""
+}
+}
+},
+{
+"doc": "공고문(포천시 가축분뇨 처리 및 온실가스 감축 계획 수립 용역).hwpx",
+"format": "hwpx",
+"declared_ext": "hwpx",
+"truth_from": "공고문(포천시 가축분뇨 처리 및 온실가스 감축 계획 수립 용역).hwpx",
+"n_tables": 3,
+"scores": {
+"hwpx_strip": {
+"cell_retention": 0.6666666666666666,
+"row_integrity": null,
+"kv_association": null,
+"n_cells": 3,
+"n_rows": 0,
+"n_kv": 0,
+"chars": 7847,
+"seconds": 0.0
+},
+"dpurix": {
+"cell_retention": 1.0,
+"row_integrity": null,
+"kv_association": null,
+"n_cells": 3,
+"n_rows": 0,
+"n_kv": 0,
+"chars": 5699,
+"seconds": 0.0,
+"meta_status": "ok",
+"meta_extractor": "hwpx",
+"meta_table_loss": false,
+"meta_note": ""
+}
+}
+},
+{
+"doc": "공고문(포천시 가축분뇨 처리 및 온실가스 감축 계획 수립 용역).pdf",
+"format": "pdf",
+"declared_ext": "pdf",
+"truth_from": "공고문(포천시 가축분뇨 처리 및 온실가스 감축 계획 수립 용역).hwpx",
+"n_tables": 3,
+"scores": {
+"pdftotext": {
+"cell_retention": 1.0,
+"row_integrity": null,
+"kv_association": null,
+"n_cells": 3,
+"n_rows": 0,
+"n_kv": 0,
+"chars": 5548,
+"seconds": 0.1
+},
+"pdftotext_layout": {
+"cell_retention": 1.0,
+"row_integrity": null,
+"kv_association": null,
+"n_cells": 3,
+"n_rows": 0,
+"n_kv": 0,
+"chars": 5969,
+"seconds": 0.1
+},
+"pymupdf": {
+"cell_retention": 1.0,
+"row_integrity": null,
+"kv_association": null,
+"n_cells": 3,
+"n_rows": 0,
+"n_kv": 0,
+"chars": 5706,
+"seconds": 0.0
+},
+"pdfplumber": {
+"cell_retention": 1.0,
+"row_integrity": null,
+"kv_association": null,
+"n_cells": 3,
+"n_rows": 0,
+"n_kv": 0,
+"chars": 5515,
+"seconds": 0.6
+},
+"pdfplumber_tables": {
+"cell_retention": 1.0,
+"row_integrity": null,
+"kv_association": null,
+"n_cells": 3,
+"n_rows": 0,
+"n_kv": 0,
+"chars": 5515,
+"seconds": 0.6
+},
+"dpurix": {
+"cell_retention": 1.0,
+"row_integrity": null,
+"kv_association": null,
+"n_cells": 3,
+"n_rows": 0,
+"n_kv": 0,
+"chars": 5520,
+"seconds": 0.6,
+"meta_status": "ok",
+"meta_extractor": "pdfplumber-read",
+"meta_table_loss": false,
+"meta_note": ""
+}
+}
+},
+{
+"doc": "과업지시서(포천시 가축분뇨 처리 및 온실가스 감축 계획 수립 연구 용역).hwpx",
+"format": "hwp",
+"declared_ext": "hwpx",
+"truth_from": "과업지시서(포천시 가축분뇨 처리 및 온실가스 감축 계획 수립 연구 용역).hwpx",
+"n_tables": 2,
+"scores": {
+"hwp5txt": {
+"cell_retention": 0.0,
+"row_integrity": null,
+"kv_association": null,
+"n_cells": 2,
+"n_rows": 0,
+"n_kv": 0,
+"chars": 5615,
+"seconds": 0.1
+},
+"hwp_naive": {
+"cell_retention": 0.5,
+"row_integrity": null,
+"kv_association": null,
+"n_cells": 2,
+"n_rows": 0,
+"n_kv": 0,
+"chars": 5990,
+"seconds": 0.0
+},
+"dpurix": {
+"cell_retention": 0.0,
+"row_integrity": null,
+"kv_association": null,
+"n_cells": 2,
+"n_rows": 0,
+"n_kv": 0,
+"chars": 0,
+"seconds": 0.0,
+"meta_status": "failed",
+"meta_extractor": null,
+"meta_table_loss": null,
+"meta_note": "파싱 실패(HWPX_INVALID_ARCHIVE) — File is not a zip file"
+}
+}
+},
+{
+"doc": "제안요청서(포천시 가축분뇨 처리 및 온실가스 감축 계획 수립 연구 용역).hwpx",
+"format": "hwp",
+"declared_ext": "hwpx",
+"truth_from": "제안요청서(포천시 가축분뇨 처리 및 온실가스 감축 계획 수립 연구 용역).hwpx",
+"n_tables": 31,
+"scores": {
+"hwp5txt": {
+"cell_retention": 0.2747603833865815,
+"row_integrity": 0.03816793893129771,
+"kv_association": 0.39285714285714285,
+"n_cells": 313,
+"n_rows": 131,
+"n_kv": 28,
+"chars": 13029,
+"seconds": 0.6
+},
+"hwp_naive": {
+"cell_retention": 0.9584664536741214,
+"row_integrity": 0.05343511450381679,
+"kv_association": 0.39285714285714285,
+"n_cells": 313,
+"n_rows": 131,
+"n_kv": 28,
+"chars": 22619,
+"seconds": 0.0
+},
+"dpurix": {
+"cell_retention": 0.0,
+"row_integrity": 0.0,
+"kv_association": 0.0,
+"n_cells": 313,
+"n_rows": 131,
+"n_kv": 28,
+"chars": 0,
+"seconds": 0.0,
+"meta_status": "failed",
+"meta_extractor": null,
+"meta_table_loss": null,
+"meta_note": "파싱 실패(HWPX_INVALID_ARCHIVE) — File is not a zip file"
+}
+}
+},
+{
+"doc": "(용역)전자입찰공고서.hwpx",
+"format": "hwpx",
+"declared_ext": "hwpx",
+"truth_from": "(용역)전자입찰공고서.hwpx",
+"n_tables": 7,
+"scores": {
+"hwpx_strip": {
+"cell_retention": 0.9642857142857143,
+"row_integrity": null,
+"kv_association": null,
+"n_cells": 28,
+"n_rows": 0,
+"n_kv": 0,
+"chars": 16571,
+"seconds": 0.0
+},
+"dpurix": {
+"cell_retention": 1.0,
+"row_integrity": null,
+"kv_association": null,
+"n_cells": 28,
+"n_rows": 0,
+"n_kv": 0,
+"chars": 11919,
+"seconds": 0.0,
+"meta_status": "ok",
+"meta_extractor": "hwpx",
+"meta_table_loss": false,
+"meta_note": ""
+}
+}
+},
+{
+"doc": "(용역)전자입찰공고서.pdf",
+"format": "pdf",
+"declared_ext": "pdf",
+"truth_from": "(용역)전자입찰공고서.hwpx",
+"n_tables": 7,
+"scores": {
+"pdftotext": {
+"cell_retention": 0.9642857142857143,
+"row_integrity": null,
+"kv_association": null,
+"n_cells": 28,
+"n_rows": 0,
+"n_kv": 0,
+"chars": 11756,
+"seconds": 0.1
+},
+"pdftotext_layout": {
+"cell_retention": 0.9642857142857143,
+"row_integrity": null,
+"kv_association": null,
+"n_cells": 28,
+"n_rows": 0,
+"n_kv": 0,
+"chars": 12785,
+"seconds": 0.1
+},
+"pymupdf": {
+"cell_retention": 0.21428571428571427,
+"row_integrity": null,
+"kv_association": null,
+"n_cells": 28,
+"n_rows": 0,
+"n_kv": 0,
+"chars": 12571,
+"seconds": 0.0
+},
+"pdfplumber": {
+"cell_retention": 0.21428571428571427,
+"row_integrity": null,
+"kv_association": null,
+"n_cells": 28,
+"n_rows": 0,
+"n_kv": 0,
+"chars": 11726,
+"seconds": 1.1
+},
+"pdfplumber_tables": {
+"cell_retention": 0.21428571428571427,
+"row_integrity": null,
+"kv_association": null,
+"n_cells": 28,
+"n_rows": 0,
+"n_kv": 0,
+"chars": 12405,
+"seconds": 1.1
+},
+"dpurix": {
+"cell_retention": 0.21428571428571427,
+"row_integrity": null,
+"kv_association": null,
+"n_cells": 28,
+"n_rows": 0,
+"n_kv": 0,
+"chars": 11779,
+"seconds": 1.1,
+"meta_status": "ok",
+"meta_extractor": "pdfplumber-read",
+"meta_table_loss": false,
+"meta_note": ""
+}
+}
+},
+{
+"doc": "긴급입찰공고 사유서.hwpx",
+"format": "hwpx",
+"declared_ext": "hwpx",
+"truth_from": "긴급입찰공고 사유서.hwpx",
+"n_tables": 1,
+"scores": {
+"hwpx_strip": {
+"cell_retention": 1.0,
+"row_integrity": null,
+"kv_association": null,
+"n_cells": 2,
+"n_rows": 0,
+"n_kv": 0,
+"chars": 1312,
+"seconds": 0.0
+},
+"dpurix": {
+"cell_retention": 1.0,
+"row_integrity": null,
+"kv_association": null,
+"n_cells": 2,
+"n_rows": 0,
+"n_kv": 0,
+"chars": 981,
+"seconds": 0.0,
+"meta_status": "ok",
+"meta_extractor": "hwpx",
+"meta_table_loss": false,
+"meta_note": ""
+}
+}
+},
+{
+"doc": "공고문_춘천초 교실 및 급식소 증축 전기공사 감리 용역.hwpx",
+"format": "hwpx",
+"declared_ext": "hwpx",
+"truth_from": "공고문_춘천초 교실 및 급식소 증축 전기공사 감리 용역.hwpx",
+"n_tables": 12,
+"scores": {
+"hwpx_strip": {
+"cell_retention": 0.9722222222222222,
+"row_integrity": 0.0,
+"kv_association": null,
+"n_cells": 36,
+"n_rows": 27,
+"n_kv": 0,
+"chars": 8827,
+"seconds": 0.0
+},
+"dpurix": {
+"cell_retention": 1.0,
+"row_integrity": 0.9629629629629629,
+"kv_association": null,
+"n_cells": 36,
+"n_rows": 27,
+"n_kv": 0,
+"chars": 5669,
+"seconds": 0.0,
+"meta_status": "ok",
+"meta_extractor": "hwpx",
+"meta_table_loss": false,
+"meta_note": ""
+}
+}
+},
+{
+"doc": "공고문_춘천초 교실 및 급식소 증축 전기공사 감리 용역.pdf",
+"format": "pdf",
+"declared_ext": "pdf",
+"truth_from": "공고문_춘천초 교실 및 급식소 증축 전기공사 감리 용역.hwpx",
+"n_tables": 12,
+"scores": {
+"pdftotext": {
+"cell_retention": 0.9722222222222222,
+"row_integrity": 0.0,
+"kv_association": null,
+"n_cells": 36,
+"n_rows": 27,
+"n_kv": 0,
+"chars": 5508,
+"seconds": 0.1
+},
+"pdftotext_layout": {
+"cell_retention": 0.9444444444444444,
+"row_integrity": 0.7777777777777778,
+"kv_association": null,
+"n_cells": 36,
+"n_rows": 27,
+"n_kv": 0,
+"chars": 6349,
+"seconds": 0.1
+},
+"pymupdf": {
+"cell_retention": 0.9722222222222222,
+"row_integrity": 0.0,
+"kv_association": null,
+"n_cells": 36,
+"n_rows": 27,
+"n_kv": 0,
+"chars": 5649,
+"seconds": 0.0
+},
+"pdfplumber": {
+"cell_retention": 0.9444444444444444,
+"row_integrity": 0.7777777777777778,
+"kv_association": null,
+"n_cells": 36,
+"n_rows": 27,
+"n_kv": 0,
+"chars": 5450,
+"seconds": 0.6
+},
+"pdfplumber_tables": {
+"cell_retention": 0.9722222222222222,
+"row_integrity": 0.8518518518518519,
+"kv_association": null,
+"n_cells": 36,
+"n_rows": 27,
+"n_kv": 0,
+"chars": 6277,
+"seconds": 0.5
+},
+"dpurix": {
+"cell_retention": 0.9166666666666666,
+"row_integrity": 0.8518518518518519,
+"kv_association": null,
+"n_cells": 36,
+"n_rows": 27,
+"n_kv": 0,
+"chars": 5594,
+"seconds": 0.6,
+"meta_status": "ok",
+"meta_extractor": "pdfplumber-read",
+"meta_table_loss": false,
+"meta_note": ""
+}
+}
+},
+{
+"doc": "감리용역 과업지시서(춘천초 전기).hwp",
+"format": "hwp",
+"declared_ext": "hwp",
+"truth_from": "감리용역 과업지시서(춘천초 전기).hwp",
+"n_tables": 18,
+"scores": {
+"hwp5txt": {
+"cell_retention": 0.2803030303030303,
+"row_integrity": 0.0,
+"kv_association": null,
+"n_cells": 132,
+"n_rows": 43,
+"n_kv": 0,
+"chars": 13218,
+"seconds": 0.5
+},
+"hwp_naive": {
+"cell_retention": 1.0,
+"row_integrity": 0.023255813953488372,
+"kv_association": null,
+"n_cells": 132,
+"n_rows": 43,
+"n_kv": 0,
+"chars": 17153,
+"seconds": 0.0
+},
+"dpurix": {
+"cell_retention": 1.0,
+"row_integrity": 1.0,
+"kv_association": null,
+"n_cells": 132,
+"n_rows": 43,
+"n_kv": 0,
+"chars": 19583,
+"seconds": 1.7,
+"meta_status": "ok",
+"meta_extractor": "hwp5html",
+"meta_table_loss": false,
+"meta_note": ""
+}
+}
+},
+{
+"doc": "18. 입찰공고문(영등포정수센터 기전설비 정보시스템 구축용역).hwpx",
+"format": "hwpx",
+"declared_ext": "hwpx",
+"truth_from": "18. 입찰공고문(영등포정수센터 기전설비 정보시스템 구축용역).hwpx",
+"n_tables": 2,
+"scores": {
+"hwpx_strip": {
+"cell_retention": 0.5,
+"row_integrity": null,
+"kv_association": null,
+"n_cells": 2,
+"n_rows": 0,
+"n_kv": 0,
+"chars": 7152,
+"seconds": 0.0
+},
+"dpurix": {
+"cell_retention": 1.0,
+"row_integrity": null,
+"kv_association": null,
+"n_cells": 2,
+"n_rows": 0,
+"n_kv": 0,
+"chars": 5488,
+"seconds": 0.0,
+"meta_status": "ok",
+"meta_extractor": "hwpx",
+"meta_table_loss": false,
+"meta_note": ""
+}
+}
+},
+{
+"doc": "18. 입찰공고문(영등포정수센터 기전설비 정보시스템 구축용역).pdf",
+"format": "pdf",
+"declared_ext": "pdf",
+"truth_from": "18. 입찰공고문(영등포정수센터 기전설비 정보시스템 구축용역).hwpx",
+"n_tables": 2,
+"scores": {
+"pdftotext": {
+"cell_retention": 0.5,
+"row_integrity": null,
+"kv_association": null,
+"n_cells": 2,
+"n_rows": 0,
+"n_kv": 0,
+"chars": 5452,
+"seconds": 0.1
+},
+"pdftotext_layout": {
+"cell_retention": 0.0,
+"row_integrity": null,
+"kv_association": null,
+"n_cells": 2,
+"n_rows": 0,
+"n_kv": 0,
+"chars": 7896,
+"seconds": 0.1
+},
+"pymupdf": {
+"cell_retention": 0.5,
+"row_integrity": null,
+"kv_association": null,
+"n_cells": 2,
+"n_rows": 0,
+"n_kv": 0,
+"chars": 4532,
+"seconds": 0.0
+},
+"pdfplumber": {
+"cell_retention": 0.0,
+"row_integrity": null,
+"kv_association": null,
+"n_cells": 2,
+"n_rows": 0,
+"n_kv": 0,
+"chars": 5410,
+"seconds": 0.3
+},
+"pdfplumber_tables": {
+"cell_retention": 0.0,
+"row_integrity": null,
+"kv_association": null,
+"n_cells": 2,
+"n_rows": 0,
+"n_kv": 0,
+"chars": 5410,
+"seconds": 0.3
+},
+"dpurix": {
+"cell_retention": 0.5,
+"row_integrity": null,
+"kv_association": null,
+"n_cells": 2,
+"n_rows": 0,
+"n_kv": 0,
+"chars": 5413,
+"seconds": 0.4,
+"meta_status": "ok",
+"meta_extractor": "pdfplumber-read",
+"meta_table_loss": false,
+"meta_note": ""
+}
+}
+},
+{
+"doc": "3. 제안요청서(영등포정수센터 기전설비 정보시스템 구축).hwpx",
+"format": "hwpx",
+"declared_ext": "hwpx",
+"truth_from": "3. 제안요청서(영등포정수센터 기전설비 정보시스템 구축).hwpx",
+"n_tables": 166,
+"scores": {
+"hwpx_strip": {
+"cell_retention": 0.9925249169435216,
+"row_integrity": 0.02334152334152334,
+"kv_association": 0.19117647058823528,
+"n_cells": 1204,
+"n_rows": 814,
+"n_kv": 68,
+"chars": 220600,
+"seconds": 0.6
+},
+"dpurix": {
+"cell_retention": 1.0,
+"row_integrity": 0.9926289926289926,
+"kv_association": 1.0,
+"n_cells": 1204,
+"n_rows": 814,
+"n_kv": 68,
+"chars": 121472,
+"seconds": 0.3,
+"meta_status": "ok",
+"meta_extractor": "hwpx",
+"meta_table_loss": false,
+"meta_note": ""
+}
+}
+},
+{
+"doc": "1. 입찰공고서(원본).hwp",
+"format": "hwp",
+"declared_ext": "hwp",
+"truth_from": "1. 입찰공고서(원본).hwp",
+"n_tables": 3,
+"scores": {
+"hwp5txt": {
+"cell_retention": 0.3,
+"row_integrity": 0.0,
+"kv_association": null,
+"n_cells": 20,
+"n_rows": 7,
+"n_kv": 0,
+"chars": 4415,
+"seconds": 0.1
+},
+"hwp_naive": {
+"cell_retention": 0.95,
+"row_integrity": 0.0,
+"kv_association": null,
+"n_cells": 20,
+"n_rows": 7,
+"n_kv": 0,
+"chars": 5275,
+"seconds": 0.0
+},
+"dpurix": {
+"cell_retention": 1.0,
+"row_integrity": 1.0,
+"kv_association": null,
+"n_cells": 20,
+"n_rows": 7,
+"n_kv": 0,
+"chars": 5541,
+"seconds": 0.3,
+"meta_status": "ok",
+"meta_extractor": "hwp5html",
+"meta_table_loss": false,
+"meta_note": ""
+}
+}
+},
+{
+"doc": "4. 용역계약특수조건 및 청렴, 인권보호 등 서약서.hwp",
+"format": "hwp",
+"declared_ext": "hwp",
+"truth_from": "4. 용역계약특수조건 및 청렴, 인권보호 등 서약서.hwp",
+"n_tables": 7,
+"scores": {
+"hwp5txt": {
+"cell_retention": 0.0,
+"row_integrity": 0.0,
+"kv_association": 0.0,
+"n_cells": 27,
+"n_rows": 5,
+"n_kv": 6,
+"chars": 13426,
+"seconds": 0.2
+},
+"hwp_naive": {
+"cell_retention": 1.0,
+"row_integrity": 0.0,
+"kv_association": 0.0,
+"n_cells": 27,
+"n_rows": 5,
+"n_kv": 6,
+"chars": 16177,
+"seconds": 0.0
+},
+"dpurix": {
+"cell_retention": 1.0,
+"row_integrity": 1.0,
+"kv_association": 1.0,
+"n_cells": 27,
+"n_rows": 5,
+"n_kv": 6,
+"chars": 17383,
+"seconds": 0.6,
+"meta_status": "ok",
+"meta_extractor": "hwp5html",
+"meta_table_loss": false,
+"meta_note": ""
+}
+}
+},
+{
+"doc": "5. 청소용역 과업지시서.hwp",
+"format": "hwp",
+"declared_ext": "hwp",
+"truth_from": "5. 청소용역 과업지시서.hwp",
+"n_tables": 13,
+"scores": {
+"hwp5txt": {
+"cell_retention": 0.24680851063829787,
+"row_integrity": 0.0,
+"kv_association": 0.02857142857142857,
+"n_cells": 235,
+"n_rows": 109,
+"n_kv": 35,
+"chars": 20560,
+"seconds": 0.4
+},
+"hwp_naive": {
+"cell_retention": 1.0,
+"row_integrity": 0.0,
+"kv_association": 0.02857142857142857,
+"n_cells": 235,
+"n_rows": 109,
+"n_kv": 35,
+"chars": 25088,
+"seconds": 0.0
+},
+"dpurix": {
+"cell_retention": 1.0,
+"row_integrity": 1.0,
+"kv_association": 1.0,
+"n_cells": 235,
+"n_rows": 109,
+"n_kv": 35,
+"chars": 27226,
+"seconds": 1.8,
+"meta_status": "ok",
+"meta_extractor": "hwp5html",
+"meta_table_loss": false,
+"meta_note": ""
+}
+}
+},
+{
+"doc": "6. 경비용역 과업지시서.hwp",
+"format": "hwp",
+"declared_ext": "hwp",
+"truth_from": "6. 경비용역 과업지시서.hwp",
+"n_tables": 8,
+"scores": {
+"hwp5txt": {
+"cell_retention": 0.16216216216216217,
+"row_integrity": 0.0,
+"kv_association": null,
+"n_cells": 37,
+"n_rows": 11,
+"n_kv": 0,
+"chars": 8406,
+"seconds": 0.2
+},
+"hwp_naive": {
+"cell_retention": 1.0,
+"row_integrity": 0.0,
+"kv_association": null,
+"n_cells": 37,
+"n_rows": 11,
+"n_kv": 0,
+"chars": 9357,
+"seconds": 0.0
+},
+"dpurix": {
+"cell_retention": 1.0,
+"row_integrity": 1.0,
+"kv_association": null,
+"n_cells": 37,
+"n_rows": 11,
+"n_kv": 0,
+"chars": 9206,
+"seconds": 0.3,
+"meta_status": "ok",
+"meta_extractor": "hwp5html",
+"meta_table_loss": false,
+"meta_note": ""
+}
+}
+},
+{
+"doc": "7. 근로조건 이행확약서.hwp",
+"format": "hwp",
+"declared_ext": "hwp",
+"truth_from": "7. 근로조건 이행확약서.hwp",
+"n_tables": 0,
+"scores": {
+"hwp5txt": {
+"cell_retention": null,
+"row_integrity": null,
+"kv_association": null,
+"n_cells": 0,
+"n_rows": 0,
+"n_kv": 0,
+"chars": 781,
+"seconds": 0.1
+},
+"hwp_naive": {
+"cell_retention": null,
+"row_integrity": null,
+"kv_association": null,
+"n_cells": 0,
+"n_rows": 0,
+"n_kv": 0,
+"chars": 804,
+"seconds": 0.0
+},
+"dpurix": {
+"cell_retention": null,
+"row_integrity": null,
+"kv_association": null,
+"n_cells": 0,
+"n_rows": 0,
+"n_kv": 0,
+"chars": 635,
+"seconds": 0.1,
+"meta_status": "ok",
+"meta_extractor": "hwp5html",
+"meta_table_loss": false,
+"meta_note": ""
+}
+}
+},
+{
+"doc": "8. 입찰참가신청서 및 실적증명서.hwp",
+"format": "hwp",
+"declared_ext": "hwp",
+"truth_from": "8. 입찰참가신청서 및 실적증명서.hwp",
+"n_tables": 3,
+"scores": {
+"hwp5txt": {
+"cell_retention": 0.13636363636363635,
+"row_integrity": 0.0,
+"kv_association": null,
+"n_cells": 44,
+"n_rows": 12,
+"n_kv": 0,
+"chars": 312,
+"seconds": 0.1
+},
+"hwp_naive": {
+"cell_retention": 1.0,
+"row_integrity": 0.08333333333333333,
+"kv_association": null,
+"n_cells": 44,
+"n_rows": 12,
+"n_kv": 0,
+"chars": 1596,
+"seconds": 0.0
+},
+"dpurix": {
+"cell_retention": 1.0,
+"row_integrity": 1.0,
+"kv_association": null,
+"n_cells": 44,
+"n_rows": 12,
+"n_kv": 0,
+"chars": 2372,
+"seconds": 0.2,
+"meta_status": "ok",
+"meta_extractor": "hwp5html",
+"meta_table_loss": false,
+"meta_note": ""
+}
+}
+},
+{
+"doc": "[붙임1]입찰공고문.hwp",
+"format": "hwp",
+"declared_ext": "hwp",
+"truth_from": "[붙임1]입찰공고문.hwp",
+"n_tables": 7,
+"scores": {
+"hwp5txt": {
+"cell_retention": 0.18518518518518517,
+"row_integrity": 0.0,
+"kv_association": null,
+"n_cells": 27,
+"n_rows": 11,
+"n_kv": 0,
+"chars": 7173,
+"seconds": 0.2
+},
+"hwp_naive": {
+"cell_retention": 0.9259259259259259,
+"row_integrity": 0.0,
+"kv_association": null,
+"n_cells": 27,
+"n_rows": 11,
+"n_kv": 0,
+"chars": 9899,
+"seconds": 0.0
+},
+"dpurix": {
+"cell_retention": 1.0,
+"row_integrity": 1.0,
+"kv_association": null,
+"n_cells": 27,
+"n_rows": 11,
+"n_kv": 0,
+"chars": 10697,
+"seconds": 0.4,
+"meta_status": "ok",
+"meta_extractor": "hwp5html",
+"meta_table_loss": false,
+"meta_note": ""
+}
+}
+},
+{
+"doc": "[붙임2]입찰공고문.pdf",
+"format": "pdf",
+"declared_ext": "pdf",
+"truth_from": "[붙임1]입찰공고문.hwp",
+"n_tables": 7,
+"scores": {
+"pdftotext": {
+"cell_retention": 0.7777777777777778,
+"row_integrity": 0.0,
+"kv_association": null,
+"n_cells": 27,
+"n_rows": 11,
+"n_kv": 0,
+"chars": 9564,
+"seconds": 0.1
+},
+"pdftotext_layout": {
+"cell_retention": 0.8148148148148148,
+"row_integrity": 0.8181818181818182,
+"kv_association": null,
+"n_cells": 27,
+"n_rows": 11,
+"n_kv": 0,
+"chars": 10621,
+"seconds": 0.1
+},
+"pymupdf": {
+"cell_retention": 0.8888888888888888,
+"row_integrity": 0.0,
+"kv_association": null,
+"n_cells": 27,
+"n_rows": 11,
+"n_kv": 0,
+"chars": 9712,
+"seconds": 0.0
+},
+"pdfplumber": {
+"cell_retention": 0.8148148148148148,
+"row_integrity": 0.8181818181818182,
+"kv_association": null,
+"n_cells": 27,
+"n_rows": 11,
+"n_kv": 0,
+"chars": 9482,
+"seconds": 1.3
+},
+"pdfplumber_tables": {
+"cell_retention": 0.8148148148148148,
+"row_integrity": 0.8181818181818182,
+"kv_association": null,
+"n_cells": 27,
+"n_rows": 11,
+"n_kv": 0,
+"chars": 9498,
+"seconds": 1.3
+},
+"dpurix": {
+"cell_retention": 0.8888888888888888,
+"row_integrity": 0.36363636363636365,
+"kv_association": null,
+"n_cells": 27,
+"n_rows": 11,
+"n_kv": 0,
+"chars": 9520,
+"seconds": 1.4,
+"meta_status": "ok",
+"meta_extractor": "pdfplumber-read",
+"meta_table_loss": false,
+"meta_note": ""
+}
+}
+},
+{
+"doc": "[붙임3]과업지시서.hwp",
+"format": "hwp",
+"declared_ext": "hwp",
+"truth_from": "[붙임3]과업지시서.hwp",
+"n_tables": 8,
+"scores": {
+"hwp5txt": {
+"cell_retention": 0.034482758620689655,
+"row_integrity": 0.0,
+"kv_association": null,
+"n_cells": 29,
+"n_rows": 9,
+"n_kv": 0,
+"chars": 5262,
+"seconds": 0.2
+},
+"hwp_naive": {
+"cell_retention": 1.0,
+"row_integrity": 0.0,
+"kv_association": null,
+"n_cells": 29,
+"n_rows": 9,
+"n_kv": 0,
+"chars": 6127,
+"seconds": 0.0
+},
+"dpurix": {
+"cell_retention": 1.0,
+"row_integrity": 1.0,
+"kv_association": null,
+"n_cells": 29,
+"n_rows": 9,
+"n_kv": 0,
+"chars": 6434,
+"seconds": 0.5,
+"meta_status": "ok",
+"meta_extractor": "hwp5html",
+"meta_table_loss": false,
+"meta_note": ""
+}
+}
+},
+{
+"doc": "[붙임4]제안요청서.hwp",
+"format": "hwp",
+"declared_ext": "hwp",
+"truth_from": "[붙임4]제안요청서.hwp",
+"n_tables": 40,
+"scores": {
+"hwp5txt": {
+"cell_retention": 0.20915032679738563,
+"row_integrity": 0.0547945205479452,
+"kv_association": 1.0,
+"n_cells": 153,
+"n_rows": 73,
+"n_kv": 6,
+"chars": 16235,
+"seconds": 0.6
+},
+"hwp_naive": {
+"cell_retention": 0.9869281045751634,
+"row_integrity": 0.0684931506849315,
+"kv_association": 1.0,
+"n_cells": 153,
+"n_rows": 73,
+"n_kv": 6,
+"chars": 22685,
+"seconds": 0.0
+},
+"dpurix": {
+"cell_retention": 1.0,
+"row_integrity": 1.0,
+"kv_association": 1.0,
+"n_cells": 153,
+"n_rows": 73,
+"n_kv": 6,
+"chars": 27214,
+"seconds": 4.1,
+"meta_status": "ok",
+"meta_extractor": "hwp5html",
+"meta_table_loss": false,
+"meta_note": ""
+}
+}
+},
+{
+"doc": "[붙임5]산출내역서.hwp",
+"format": "hwp",
+"declared_ext": "hwp",
+"truth_from": "[붙임5]산출내역서.hwp",
+"n_tables": 3,
+"scores": {
+"hwp5txt": {
+"cell_retention": 0.0,
+"row_integrity": 0.0,
+"kv_association": 0.0,
+"n_cells": 57,
+"n_rows": 25,
+"n_kv": 1,
+"chars": 85,
+"seconds": 0.1
+},
+"hwp_naive": {
+"cell_retention": 1.0,
+"row_integrity": 0.0,
+"kv_association": 0.0,
+"n_cells": 57,
+"n_rows": 25,
+"n_kv": 1,
+"chars": 1205,
+"seconds": 0.0
+},
+"dpurix": {
+"cell_retention": 1.0,
+"row_integrity": 1.0,
+"kv_association": 1.0,
+"n_cells": 57,
+"n_rows": 25,
+"n_kv": 1,
+"chars": 2381,
+"seconds": 0.2,
+"meta_status": "ok",
+"meta_extractor": "hwp5html",
+"meta_table_loss": false,
+"meta_note": ""
+}
+}
+},
+{
+"doc": "공고서(지방, 협상, SW, 조달청평가, 정보시스템개발서비스).hwpx",
+"format": "hwpx",
+"declared_ext": "hwpx",
+"truth_from": "공고서(지방, 협상, SW, 조달청평가, 정보시스템개발서비스).hwpx",
+"n_tables": 2,
+"scores": {
+"hwpx_strip": {
+"cell_retention": 1.0,
+"row_integrity": 0.0,
+"kv_association": 0.0,
+"n_cells": 307,
+"n_rows": 76,
+"n_kv": 6,
+"chars": 32480,
+"seconds": 0.0
+},
+"dpurix": {
+"cell_retention": 1.0,
+"row_integrity": 0.9868421052631579,
+"kv_association": 1.0,
+"n_cells": 307,
+"n_rows": 76,
+"n_kv": 6,
+"chars": 21791,
+"seconds": 0.0,
+"meta_status": "ok",
+"meta_extractor": "hwpx",
+"meta_table_loss": false,
+"meta_note": ""
+}
+}
+},
+{
+"doc": "공고서(지방, 협상, SW, 조달청평가, 정보시스템개발서비스).pdf",
+"format": "pdf",
+"declared_ext": "pdf",
+"truth_from": "공고서(지방, 협상, SW, 조달청평가, 정보시스템개발서비스).hwpx",
+"n_tables": 2,
+"scores": {
+"pdftotext": {
+"cell_retention": 0.9837133550488599,
+"row_integrity": 0.17105263157894737,
+"kv_association": 0.5,
+"n_cells": 307,
+"n_rows": 76,
+"n_kv": 6,
+"chars": 21316,
+"seconds": 0.1
+},
+"pdftotext_layout": {
+"cell_retention": 0.9837133550488599,
+"row_integrity": 0.5263157894736842,
+"kv_association": 0.5,
+"n_cells": 307,
+"n_rows": 76,
+"n_kv": 6,
+"chars": 24314,
+"seconds": 0.1
+},
+"pymupdf": {
+"cell_retention": 0.20846905537459284,
+"row_integrity": 0.0,
+"kv_association": 0.0,
+"n_cells": 307,
+"n_rows": 76,
+"n_kv": 6,
+"chars": 24768,
+"seconds": 0.0
+},
+"pdfplumber": {
+"cell_retention": 0.20846905537459284,
+"row_integrity": 0.15789473684210525,
+"kv_association": 0.0,
+"n_cells": 307,
+"n_rows": 76,
+"n_kv": 6,
+"chars": 21379,
+"seconds": 1.1
+},
+"pdfplumber_tables": {
+"cell_retention": 0.20846905537459284,
+"row_integrity": 0.15789473684210525,
+"kv_association": 0.0,
+"n_cells": 307,
+"n_rows": 76,
+"n_kv": 6,
+"chars": 27057,
+"seconds": 1.1
+},
+"dpurix": {
+"cell_retention": 0.20195439739413681,
+"row_integrity": 0.13157894736842105,
+"kv_association": 0.0,
+"n_cells": 307,
+"n_rows": 76,
+"n_kv": 6,
+"chars": 23242,
+"seconds": 1.2,
+"meta_status": "ok",
+"meta_extractor": "pdfplumber-read",
+"meta_table_loss": false,
+"meta_note": ""
+}
+}
+},
+{
+"doc": "공고서_R26BK01509540 - 000.hwp",
+"format": "hwp",
+"declared_ext": "hwp",
+"truth_from": "공고서_R26BK01509540 - 000.hwp",
+"n_tables": 1,
+"scores": {
+"hwp5txt": {
+"cell_retention": 0.0,
+"row_integrity": 0.0,
+"kv_association": 0.0,
+"n_cells": 244,
+"n_rows": 62,
+"n_kv": 7,
+"chars": 6,
+"seconds": 0.3
+},
+"hwp_naive": {
+"cell_retention": 0.9959016393442623,
+"row_integrity": 0.0,
+"kv_association": 0.0,
+"n_cells": 244,
+"n_rows": 62,
+"n_kv": 7,
+"chars": 16595,
+"seconds": 0.0
+},
+"dpurix": {
+"cell_retention": 1.0,
+"row_integrity": 1.0,
+"kv_association": 1.0,
+"n_cells": 244,
+"n_rows": 62,
+"n_kv": 7,
+"chars": 16538,
+"seconds": 0.7,
+"meta_status": "ok",
+"meta_extractor": "hwp5html",
+"meta_table_loss": false,
+"meta_note": ""
+}
+}
+},
+{
+"doc": "공고서_R26BK01509540 - 000.pdf",
+"format": "pdf",
+"declared_ext": "pdf",
+"truth_from": "공고서_R26BK01509540 - 000.hwp",
+"n_tables": 1,
+"scores": {
+"pdftotext": {
+"cell_retention": 0.8524590163934426,
+"row_integrity": 0.12903225806451613,
+"kv_association": 0.42857142857142855,
+"n_cells": 244,
+"n_rows": 62,
+"n_kv": 7,
+"chars": 15944,
+"seconds": 0.1
+},
+"pdftotext_layout": {
+"cell_retention": 0.6721311475409836,
+"row_integrity": 0.41935483870967744,
+"kv_association": 0.42857142857142855,
+"n_cells": 244,
+"n_rows": 62,
+"n_kv": 7,
+"chars": 19157,
+"seconds": 0.1
+},
+"pymupdf": {
+"cell_retention": 0.46311475409836067,
+"row_integrity": 0.06451612903225806,
+"kv_association": 0.2857142857142857,
+"n_cells": 244,
+"n_rows": 62,
+"n_kv": 7,
+"chars": 13905,
+"seconds": 0.0
+},
+"pdfplumber": {
+"cell_retention": 0.4180327868852459,
+"row_integrity": 0.3225806451612903,
+"kv_association": 0.2857142857142857,
+"n_cells": 244,
+"n_rows": 62,
+"n_kv": 7,
+"chars": 15949,
+"seconds": 0.9
+},
+"pdfplumber_tables": {
+"cell_retention": 0.42213114754098363,
+"row_integrity": 0.3225806451612903,
+"kv_association": 0.2857142857142857,
+"n_cells": 244,
+"n_rows": 62,
+"n_kv": 7,
+"chars": 19012,
+"seconds": 0.9
+},
+"dpurix": {
+"cell_retention": 0.4180327868852459,
+"row_integrity": 0.3225806451612903,
+"kv_association": 0.2857142857142857,
+"n_cells": 244,
+"n_rows": 62,
+"n_kv": 7,
+"chars": 16599,
+"seconds": 0.9,
+"meta_status": "ok",
+"meta_extractor": "pdfplumber-read",
+"meta_table_loss": false,
+"meta_note": ""
+}
+}
+},
+{
+"doc": "계약일반조건(2025.7.8)개정.hwpx",
+"format": "hwpx",
+"declared_ext": "hwpx",
+"truth_from": "계약일반조건(2025.7.8)개정.hwpx",
+"n_tables": 2,
+"scores": {
+"hwpx_strip": {
+"cell_retention": 1.0,
+"row_integrity": null,
+"kv_association": null,
+"n_cells": 15,
+"n_rows": 0,
+"n_kv": 0,
+"chars": 85709,
+"seconds": 0.0
+},
+"dpurix": {
+"cell_retention": 1.0,
+"row_integrity": null,
+"kv_association": null,
+"n_cells": 15,
+"n_rows": 0,
+"n_kv": 0,
+"chars": 66653,
+"seconds": 0.0,
+"meta_status": "ok",
+"meta_extractor": "hwpx",
+"meta_table_loss": false,
+"meta_note": ""
+}
+}
+},
+{
+"doc": "청렴계약 특수조건_울산광역시교육청.hwp",
+"format": "hwp",
+"declared_ext": "hwp",
+"truth_from": "청렴계약 특수조건_울산광역시교육청.hwp",
+"n_tables": 0,
+"scores": {
+"hwp5txt": {
+"cell_retention": null,
+"row_integrity": null,
+"kv_association": null,
+"n_cells": 0,
+"n_rows": 0,
+"n_kv": 0,
+"chars": 1857,
+"seconds": 0.1
+},
+"hwp_naive": {
+"cell_retention": null,
+"row_integrity": null,
+"kv_association": null,
+"n_cells": 0,
+"n_rows": 0,
+"n_kv": 0,
+"chars": 1893,
+"seconds": 0.0
+},
+"dpurix": {
+"cell_retention": null,
+"row_integrity": null,
+"kv_association": null,
+"n_cells": 0,
+"n_rows": 0,
+"n_kv": 0,
+"chars": 1915,
+"seconds": 0.1,
+"meta_status": "ok",
+"meta_extractor": "hwp5html",
+"meta_table_loss": false,
+"meta_note": ""
+}
+}
+},
+{
+"doc": "(재)입찰공고문_2026 드론교육 위탁운영_울산공고.hwp",
+"format": "hwp",
+"declared_ext": "hwp",
+"truth_from": "(재)입찰공고문_2026 드론교육 위탁운영_울산공고.hwp",
+"n_tables": 4,
+"scores": {
+"hwp5txt": {
+"cell_retention": 0.06896551724137931,
+"row_integrity": 0.0,
+"kv_association": null,
+"n_cells": 29,
+"n_rows": 10,
+"n_kv": 0,
+"chars": 6902,
+"seconds": 0.2
+},
+"hwp_naive": {
+"cell_retention": 0.9655172413793104,
+"row_integrity": 0.0,
+"kv_association": null,
+"n_cells": 29,
+"n_rows": 10,
+"n_kv": 0,
+"chars": 8876,
+"seconds": 0.0
+},
+"dpurix": {
+"cell_retention": 1.0,
+"row_integrity": 1.0,
+"kv_association": null,
+"n_cells": 29,
+"n_rows": 10,
+"n_kv": 0,
+"chars": 10485,
+"seconds": 0.4,
+"meta_status": "ok",
+"meta_extractor": "hwp5html",
+"meta_table_loss": false,
+"meta_note": ""
+}
+}
+},
+{
+"doc": "(재)입찰공고문_2026 드론교육 위탁운영_울산공고.pdf",
+"format": "pdf",
+"declared_ext": "pdf",
+"truth_from": "(재)입찰공고문_2026 드론교육 위탁운영_울산공고.hwp",
+"n_tables": 4,
+"scores": {
+"pdftotext": {
+"cell_retention": 0.896551724137931,
+"row_integrity": 0.0,
+"kv_association": null,
+"n_cells": 29,
+"n_rows": 10,
+"n_kv": 0,
+"chars": 8446,
+"seconds": 0.1
+},
+"pdftotext_layout": {
+"cell_retention": 0.5517241379310345,
+"row_integrity": 0.5,
+"kv_association": null,
+"n_cells": 29,
+"n_rows": 10,
+"n_kv": 0,
+"chars": 9374,
+"seconds": 0.1
+},
+"pymupdf": {
+"cell_retention": 0.9310344827586207,
+"row_integrity": 0.0,
+"kv_association": null,
+"n_cells": 29,
+"n_rows": 10,
+"n_kv": 0,
+"chars": 8669,
+"seconds": 0.0
+},
+"pdfplumber": {
+"cell_retention": 0.5517241379310345,
+"row_integrity": 0.5,
+"kv_association": null,
+"n_cells": 29,
+"n_rows": 10,
+"n_kv": 0,
+"chars": 8400,
+"seconds": 0.4
+},
+"pdfplumber_tables": {
+"cell_retention": 0.9310344827586207,
+"row_integrity": 0.9,
+"kv_association": null,
+"n_cells": 29,
+"n_rows": 10,
+"n_kv": 0,
+"chars": 9348,
+"seconds": 0.3
+},
+"dpurix": {
+"cell_retention": 0.8620689655172413,
+"row_integrity": 0.9,
+"kv_association": null,
+"n_cells": 29,
+"n_rows": 10,
+"n_kv": 0,
+"chars": 8596,
+"seconds": 0.4,
+"meta_status": "ok",
+"meta_extractor": "pdfplumber-read",
+"meta_table_loss": false,
+"meta_note": ""
+}
+}
+},
+{
+"doc": "1. 제안요청서_드론교육.hwp",
+"format": "hwp",
+"declared_ext": "hwp",
+"truth_from": "1. 제안요청서_드론교육.hwp",
+"n_tables": 9,
+"scores": {
+"hwp5txt": {
+"cell_retention": 0.0,
+"row_integrity": 0.0,
+"kv_association": 0.0,
+"n_cells": 159,
+"n_rows": 50,
+"n_kv": 6,
+"chars": 6,
+"seconds": 0.2
+},
+"hwp_naive": {
+"cell_retention": 0.9937106918238994,
+"row_integrity": 0.04,
+"kv_association": 0.0,
+"n_cells": 159,
+"n_rows": 50,
+"n_kv": 6,
+"chars": 8466,
+"seconds": 0.0
+},
+"dpurix": {
+"cell_retention": 1.0,
+"row_integrity": 1.0,
+"kv_association": 1.0,
+"n_cells": 159,
+"n_rows": 50,
+"n_kv": 6,
+"chars": 16347,
+"seconds": 0.6,
+"meta_status": "ok",
+"meta_extractor": "hwp5html",
+"meta_table_loss": false,
+"meta_note": ""
+}
+}
+},
+{
+"doc": "2. 과업지시서_드론교육.hwp",
+"format": "hwp",
+"declared_ext": "hwp",
+"truth_from": "2. 과업지시서_드론교육.hwp",
+"n_tables": 7,
+"scores": {
+"hwp5txt": {
+"cell_retention": 0.027777777777777776,
+"row_integrity": 0.0,
+"kv_association": 0.0,
+"n_cells": 36,
+"n_rows": 11,
+"n_kv": 1,
+"chars": 98,
+"seconds": 0.2
+},
+"hwp_naive": {
+"cell_retention": 0.9722222222222222,
+"row_integrity": 0.0,
+"kv_association": 0.0,
+"n_cells": 36,
+"n_rows": 11,
+"n_kv": 1,
+"chars": 8192,
+"seconds": 0.0
+},
+"dpurix": {
+"cell_retention": 1.0,
+"row_integrity": 1.0,
+"kv_association": 1.0,
+"n_cells": 36,
+"n_rows": 11,
+"n_kv": 1,
+"chars": 8414,
+"seconds": 0.4,
+"meta_status": "ok",
+"meta_extractor": "hwp5html",
+"meta_table_loss": false,
+"meta_note": ""
+}
+}
+},
+{
+"doc": "3. 참고서식_드론교육.hwp",
+"format": "hwp",
+"declared_ext": "hwp",
+"truth_from": "3. 참고서식_드론교육.hwp",
+"n_tables": 34,
+"scores": {
+"hwp5txt": {
+"cell_retention": 0.04790419161676647,
+"row_integrity": 0.0,
+"kv_association": 0.25,
+"n_cells": 167,
+"n_rows": 61,
+"n_kv": 12,
+"chars": 2544,
+"seconds": 0.4
+},
+"hwp_naive": {
+"cell_retention": 0.9640718562874252,
+"row_integrity": 0.04918032786885246,
+"kv_association": 0.25,
+"n_cells": 167,
+"n_rows": 61,
+"n_kv": 12,
+"chars": 16322,
+"seconds": 0.0
+},
+"dpurix": {
+"cell_retention": 1.0,
+"row_integrity": 1.0,
+"kv_association": 1.0,
+"n_cells": 167,
+"n_rows": 61,
+"n_kv": 12,
+"chars": 26965,
+"seconds": 1.9,
+"meta_status": "ok",
+"meta_extractor": "hwp5html",
+"meta_table_loss": false,
+"meta_note": ""
+}
+}
+},
+{
+"doc": "과업지시서 1부.hwp",
+"format": "hwp",
+"declared_ext": "hwp",
+"truth_from": "과업지시서 1부.hwp",
+"n_tables": 3,
+"scores": {
+"hwp5txt": {
+"cell_retention": 0.19230769230769232,
+"row_integrity": 0.0,
+"kv_association": 0.1,
+"n_cells": 26,
+"n_rows": 13,
+"n_kv": 10,
+"chars": 5900,
+"seconds": 0.2
+},
+"hwp_naive": {
+"cell_retention": 1.0,
+"row_integrity": 0.0,
+"kv_association": 0.2,
+"n_cells": 26,
+"n_rows": 13,
+"n_kv": 10,
+"chars": 6597,
+"seconds": 0.0
+},
+"dpurix": {
+"cell_retention": 1.0,
+"row_integrity": 1.0,
+"kv_association": 1.0,
+"n_cells": 26,
+"n_rows": 13,
+"n_kv": 10,
+"chars": 6829,
+"seconds": 0.3,
+"meta_status": "ok",
+"meta_extractor": "hwp5html",
+"meta_table_loss": false,
+"meta_note": ""
+}
+}
+},
+{
+"doc": "제안요청서 1부.hwp",
+"format": "hwp",
+"declared_ext": "hwp",
+"truth_from": "제안요청서 1부.hwp",
+"n_tables": 30,
+"scores": {
+"hwp5txt": {
+"cell_retention": 0.11170212765957446,
+"row_integrity": 0.01639344262295082,
+"kv_association": 0.0,
+"n_cells": 188,
+"n_rows": 61,
+"n_kv": 12,
+"chars": 7165,
+"seconds": 0.4
+},
+"hwp_naive": {
+"cell_retention": 0.9893617021276596,
+"row_integrity": 0.04918032786885246,
+"kv_association": 0.0,
+"n_cells": 188,
+"n_rows": 61,
+"n_kv": 12,
+"chars": 15261,
+"seconds": 0.0
+},
+"dpurix": {
+"cell_retention": 1.0,
+"row_integrity": 1.0,
+"kv_association": 1.0,
+"n_cells": 188,
+"n_rows": 61,
+"n_kv": 12,
+"chars": 22156,
+"seconds": 1.7,
+"meta_status": "ok",
+"meta_extractor": "hwp5html",
+"meta_table_loss": false,
+"meta_note": ""
+}
+}
+},
+{
+"doc": "2. 과업내용서(2026년 서울시 주거실태조사 현장조사 및 마이크로데이터 작성).hwpx",
+"format": "hwpx",
+"declared_ext": "hwpx",
+"truth_from": "2. 과업내용서(2026년 서울시 주거실태조사 현장조사 및 마이크로데이터 작성).hwpx",
+"n_tables": 2,
+"scores": {
+"hwpx_strip": {
+"cell_retention": 1.0,
+"row_integrity": 0.0,
+"kv_association": null,
+"n_cells": 17,
+"n_rows": 4,
+"n_kv": 0,
+"chars": 7343,
+"seconds": 0.0
+},
+"dpurix": {
+"cell_retention": 1.0,
+"row_integrity": 1.0,
+"kv_association": null,
+"n_cells": 17,
+"n_rows": 4,
+"n_kv": 0,
+"chars": 5113,
+"seconds": 0.0,
+"meta_status": "ok",
+"meta_extractor": "hwpx",
+"meta_table_loss": false,
+"meta_note": ""
+}
+}
+},
+{
+"doc": "3. 제안요청서(2026년 서울시 주거실태조사 현장조사 및 마이크로데이터 작성).hwpx",
+"format": "hwpx",
+"declared_ext": "hwpx",
+"truth_from": "3. 제안요청서(2026년 서울시 주거실태조사 현장조사 및 마이크로데이터 작성).hwpx",
+"n_tables": 31,
+"scores": {
+"hwpx_strip": {
+"cell_retention": 1.0,
+"row_integrity": 0.04395604395604396,
+"kv_association": 0.1276595744680851,
+"n_cells": 245,
+"n_rows": 91,
+"n_kv": 47,
+"chars": 39851,
+"seconds": 0.0
+},
+"dpurix": {
+"cell_retention": 1.0,
+"row_integrity": 0.989010989010989,
+"kv_association": 1.0,
+"n_cells": 245,
+"n_rows": 91,
+"n_kv": 47,
+"chars": 21060,
+"seconds": 0.0,
+"meta_status": "ok",
+"meta_extractor": "hwpx",
+"meta_table_loss": false,
+"meta_note": ""
+}
+}
+},
+{
+"doc": "5. 입찰공고문(서울특별시 재무공고 제2026-1587호).hwpx",
+"format": "hwpx",
+"declared_ext": "hwpx",
+"truth_from": "5. 입찰공고문(서울특별시 재무공고 제2026-1587호).hwpx",
+"n_tables": 3,
+"scores": {
+"hwpx_strip": {
+"cell_retention": 0.6666666666666666,
+"row_integrity": null,
+"kv_association": null,
+"n_cells": 3,
+"n_rows": 0,
+"n_kv": 0,
+"chars": 7226,
+"seconds": 0.0
+},
+"dpurix": {
+"cell_retention": 1.0,
+"row_integrity": null,
+"kv_association": null,
+"n_cells": 3,
+"n_rows": 0,
+"n_kv": 0,
+"chars": 5165,
+"seconds": 0.0,
+"meta_status": "ok",
+"meta_extractor": "hwpx",
+"meta_table_loss": false,
+"meta_note": ""
+}
+}
+},
+{
+"doc": "5. 입찰공고문(서울특별시 재무공고 제2026-1587호).pdf",
+"format": "pdf",
+"declared_ext": "pdf",
+"truth_from": "5. 입찰공고문(서울특별시 재무공고 제2026-1587호).hwpx",
+"n_tables": 3,
+"scores": {
+"pdftotext": {
+"cell_retention": 0.6666666666666666,
+"row_integrity": null,
+"kv_association": null,
+"n_cells": 3,
+"n_rows": 0,
+"n_kv": 0,
+"chars": 5108,
+"seconds": 0.1
+},
+"pdftotext_layout": {
+"cell_retention": 0.6666666666666666,
+"row_integrity": null,
+"kv_association": null,
+"n_cells": 3,
+"n_rows": 0,
+"n_kv": 0,
+"chars": 5670,
+"seconds": 0.1
+},
+"pymupdf": {
+"cell_retention": 0.6666666666666666,
+"row_integrity": null,
+"kv_association": null,
+"n_cells": 3,
+"n_rows": 0,
+"n_kv": 0,
+"chars": 4348,
+"seconds": 0.0
+},
+"pdfplumber": {
+"cell_retention": 0.6666666666666666,
+"row_integrity": null,
+"kv_association": null,
+"n_cells": 3,
+"n_rows": 0,
+"n_kv": 0,
+"chars": 5013,
+"seconds": 0.5
+},
+"pdfplumber_tables": {
+"cell_retention": 0.6666666666666666,
+"row_integrity": null,
+"kv_association": null,
+"n_cells": 3,
+"n_rows": 0,
+"n_kv": 0,
+"chars": 5013,
+"seconds": 0.5
+},
+"dpurix": {
+"cell_retention": 0.6666666666666666,
+"row_integrity": null,
+"kv_association": null,
+"n_cells": 3,
+"n_rows": 0,
+"n_kv": 0,
+"chars": 5018,
+"seconds": 0.5,
+"meta_status": "ok",
+"meta_extractor": "pdfplumber-read",
+"meta_table_loss": false,
+"meta_note": ""
+}
+}
+},
+{
+"doc": "입찰공고문(안).hwp",
+"format": "hwp",
+"declared_ext": "hwp",
+"truth_from": "입찰공고문(안).hwp",
+"n_tables": 18,
+"scores": {
+"hwp5txt": {
+"cell_retention": 0.125,
+"row_integrity": 0.0,
+"kv_association": 0.05263157894736842,
+"n_cells": 72,
+"n_rows": 16,
+"n_kv": 19,
+"chars": 4583,
+"seconds": 0.2
+},
+"hwp_naive": {
+"cell_retention": 1.0,
+"row_integrity": 0.125,
+"kv_association": 0.05263157894736842,
+"n_cells": 72,
+"n_rows": 16,
+"n_kv": 19,
+"chars": 6303,
+"seconds": 0.0
+},
+"dpurix": {
+"cell_retention": 1.0,
+"row_integrity": 1.0,
+"kv_association": 1.0,
+"n_cells": 72,
+"n_rows": 16,
+"n_kv": 19,
+"chars": 7596,
+"seconds": 0.4,
+"meta_status": "ok",
+"meta_extractor": "hwp5html",
+"meta_table_loss": false,
+"meta_note": ""
+}
+}
+},
+{
+"doc": "입찰공고문(안).pdf",
+"format": "pdf",
+"declared_ext": "pdf",
+"truth_from": "입찰공고문(안).hwp",
+"n_tables": 18,
+"scores": {
+"pdftotext": {
+"cell_retention": 1.0,
+"row_integrity": 0.1875,
+"kv_association": 0.0,
+"n_cells": 72,
+"n_rows": 16,
+"n_kv": 19,
+"chars": 5834,
+"seconds": 0.1
+},
+"pdftotext_layout": {
+"cell_retention": 0.9861111111111112,
+"row_integrity": 0.8125,
+"kv_association": 1.0,
+"n_cells": 72,
+"n_rows": 16,
+"n_kv": 19,
+"chars": 7274,
+"seconds": 0.1
+},
+"pymupdf": {
+"cell_retention": 1.0,
+"row_integrity": 0.125,
+"kv_association": 0.0,
+"n_cells": 72,
+"n_rows": 16,
+"n_kv": 19,
+"chars": 5833,
+"seconds": 0.0
+},
+"pdfplumber": {
+"cell_retention": 0.9861111111111112,
+"row_integrity": 0.8125,
+"kv_association": 1.0,
+"n_cells": 72,
+"n_rows": 16,
+"n_kv": 19,
+"chars": 5672,
+"seconds": 0.8
+},
+"pdfplumber_tables": {
+"cell_retention": 1.0,
+"row_integrity": 1.0,
+"kv_association": 1.0,
+"n_cells": 72,
+"n_rows": 16,
+"n_kv": 19,
+"chars": 6510,
+"seconds": 0.8
+},
+"dpurix": {
+"cell_retention": 1.0,
+"row_integrity": 0.875,
+"kv_association": 1.0,
+"n_cells": 72,
+"n_rows": 16,
+"n_kv": 19,
+"chars": 5889,
+"seconds": 0.8,
+"meta_status": "ok",
+"meta_extractor": "pdfplumber-read",
+"meta_table_loss": false,
+"meta_note": ""
+}
+}
+},
+{
+"doc": "보안서약서.hwp",
+"format": "hwp",
+"declared_ext": "hwp",
+"truth_from": "보안서약서.hwp",
+"n_tables": 1,
+"scores": {
+"hwp5txt": {
+"cell_retention": 0.3333333333333333,
+"row_integrity": 0.0,
+"kv_association": null,
+"n_cells": 6,
+"n_rows": 1,
+"n_kv": 0,
+"chars": 561,
+"seconds": 0.1
+},
+"hwp_naive": {
+"cell_retention": 1.0,
+"row_integrity": 0.0,
+"kv_association": null,
+"n_cells": 6,
+"n_rows": 1,
+"n_kv": 0,
+"chars": 649,
+"seconds": 0.0
+},
+"dpurix": {
+"cell_retention": 1.0,
+"row_integrity": 1.0,
+"kv_association": null,
+"n_cells": 6,
+"n_rows": 1,
+"n_kv": 0,
+"chars": 560,
+"seconds": 0.1,
+"meta_status": "ok",
+"meta_extractor": "hwp5html",
+"meta_table_loss": false,
+"meta_note": ""
+}
+}
+},
+{
+"doc": "조세포탈 관련 확인서약서.hwp",
+"format": "hwp",
+"declared_ext": "hwp",
+"truth_from": "조세포탈 관련 확인서약서.hwp",
+"n_tables": 0,
+"scores": {
+"hwp5txt": {
+"cell_retention": null,
+"row_integrity": null,
+"kv_association": null,
+"n_cells": 0,
+"n_rows": 0,
+"n_kv": 0,
+"chars": 495,
+"seconds": 0.1
+},
+"hwp_naive": {
+"cell_retention": null,
+"row_integrity": null,
+"kv_association": null,
+"n_cells": 0,
+"n_rows": 0,
+"n_kv": 0,
+"chars": 516,
+"seconds": 0.0
+},
+"dpurix": {
+"cell_retention": null,
+"row_integrity": null,
+"kv_association": null,
+"n_cells": 0,
+"n_rows": 0,
+"n_kv": 0,
+"chars": 332,
+"seconds": 0.1,
+"meta_status": "ok",
+"meta_extractor": "hwp5html",
+"meta_table_loss": false,
+"meta_note": ""
+}
+}
+},
+{
+"doc": "청렴계약 입찰특별유의서.hwp",
+"format": "hwp",
+"declared_ext": "hwp",
+"truth_from": "청렴계약 입찰특별유의서.hwp",
+"n_tables": 0,
+"scores": {
+"hwp5txt": {
+"cell_retention": null,
+"row_integrity": null,
+"kv_association": null,
+"n_cells": 0,
+"n_rows": 0,
+"n_kv": 0,
+"chars": 2851,
+"seconds": 0.1
+},
+"hwp_naive": {
+"cell_retention": null,
+"row_integrity": null,
+"kv_association": null,
+"n_cells": 0,
+"n_rows": 0,
+"n_kv": 0,
+"chars": 2893,
+"seconds": 0.0
+},
+"dpurix": {
+"cell_retention": null,
+"row_integrity": null,
+"kv_association": null,
+"n_cells": 0,
+"n_rows": 0,
+"n_kv": 0,
+"chars": 2899,
+"seconds": 0.1,
+"meta_status": "ok",
+"meta_extractor": "hwp5html",
+"meta_table_loss": false,
+"meta_note": ""
+}
+}
+},
+{
+"doc": "청렴공정계약 특수조건 및 이행서약서, 인권경영 및 안전보건확보 이행서약서.hwp",
+"format": "hwp",
+"declared_ext": "hwp",
+"truth_from": "청렴공정계약 특수조건 및 이행서약서, 인권경영 및 안전보건확보 이행서약서.hwp",
+"n_tables": 2,
+"scores": {
+"hwp5txt": {
+"cell_retention": 0.0,
+"row_integrity": null,
+"kv_association": null,
+"n_cells": 2,
+"n_rows": 0,
+"n_kv": 0,
+"chars": 5655,
+"seconds": 0.1
+},
+"hwp_naive": {
+"cell_retention": 1.0,
+"row_integrity": null,
+"kv_association": null,
+"n_cells": 2,
+"n_rows": 0,
+"n_kv": 0,
+"chars": 5859,
+"seconds": 0.0
+},
+"dpurix": {
+"cell_retention": 1.0,
+"row_integrity": null,
+"kv_association": null,
+"n_cells": 2,
+"n_rows": 0,
+"n_kv": 0,
+"chars": 5655,
+"seconds": 0.2,
+"meta_status": "ok",
+"meta_extractor": "hwp5html",
+"meta_table_loss": false,
+"meta_note": ""
+}
+}
+},
+{
+"doc": "1. 입찰공고문(잔향 수조에서의 수중 발생 소음 측정).hwp",
+"format": "hwp",
+"declared_ext": "hwp",
+"truth_from": "1. 입찰공고문(잔향 수조에서의 수중 발생 소음 측정).hwp",
+"n_tables": 4,
+"scores": {
+"hwp5txt": {
+"cell_retention": 0.29545454545454547,
+"row_integrity": 0.0,
+"kv_association": null,
+"n_cells": 44,
+"n_rows": 14,
+"n_kv": 0,
+"chars": 5076,
+"seconds": 0.2
+},
+"hwp_naive": {
+"cell_retention": 1.0,
+"row_integrity": 0.0,
+"kv_association": null,
+"n_cells": 44,
+"n_rows": 14,
+"n_kv": 0,
+"chars": 8305,
+"seconds": 0.0
+},
+"dpurix": {
+"cell_retention": 1.0,
+"row_integrity": 1.0,
+"kv_association": null,
+"n_cells": 44,
+"n_rows": 14,
+"n_kv": 0,
+"chars": 10681,
+"seconds": 0.3,
+"meta_status": "ok",
+"meta_extractor": "hwp5html",
+"meta_table_loss": false,
+"meta_note": ""
+}
+}
+},
+{
+"doc": "1. 입찰공고문(잔향 수조에서의 수중 발생 소음 측정).pdf",
+"format": "pdf",
+"declared_ext": "pdf",
+"truth_from": "1. 입찰공고문(잔향 수조에서의 수중 발생 소음 측정).hwp",
+"n_tables": 4,
+"scores": {
+"pdftotext": {
+"cell_retention": 0.9772727272727273,
+"row_integrity": 0.07142857142857142,
+"kv_association": null,
+"n_cells": 44,
+"n_rows": 14,
+"n_kv": 0,
+"chars": 7959,
+"seconds": 0.1
+},
+"pdftotext_layout": {
+"cell_retention": 0.9318181818181818,
+"row_integrity": 0.7142857142857143,
+"kv_association": null,
+"n_cells": 44,
+"n_rows": 14,
+"n_kv": 0,
+"chars": 8652,
+"seconds": 0.0
+},
+"pymupdf": {
+"cell_retention": 1.0,
+"row_integrity": 0.0,
+"kv_association": null,
+"n_cells": 44,
+"n_rows": 14,
+"n_kv": 0,
+"chars": 8122,
+"seconds": 0.0
+},
+"pdfplumber": {
+"cell_retention": 0.9318181818181818,
+"row_integrity": 0.7142857142857143,
+"kv_association": null,
+"n_cells": 44,
+"n_rows": 14,
+"n_kv": 0,
+"chars": 7928,
+"seconds": 0.3
+},
+"pdfplumber_tables": {
+"cell_retention": 0.9318181818181818,
+"row_integrity": 0.7857142857142857,
+"kv_association": null,
+"n_cells": 44,
+"n_rows": 14,
+"n_kv": 0,
+"chars": 8924,
+"seconds": 0.3
+},
+"dpurix": {
+"cell_retention": 0.9090909090909091,
+"row_integrity": 0.42857142857142855,
+"kv_association": null,
+"n_cells": 44,
+"n_rows": 14,
+"n_kv": 0,
+"chars": 8037,
+"seconds": 0.3,
+"meta_status": "ok",
+"meta_extractor": "pdfplumber-read",
+"meta_table_loss": false,
+"meta_note": ""
+}
+}
+},
+{
+"doc": "2. 제안요청서(잔향 수조에서의 수중 발생 소음 측정).hwp",
+"format": "hwp",
+"declared_ext": "hwp",
+"truth_from": "2. 제안요청서(잔향 수조에서의 수중 발생 소음 측정).hwp",
+"n_tables": 12,
+"scores": {
+"hwp5txt": {
+"cell_retention": 0.1437908496732026,
+"row_integrity": 0.018518518518518517,
+"kv_association": 0.029411764705882353,
+"n_cells": 153,
+"n_rows": 54,
+"n_kv": 34,
+"chars": 6444,
+"seconds": 0.3
+},
+"hwp_naive": {
+"cell_retention": 0.9869281045751634,
+"row_integrity": 0.018518518518518517,
+"kv_association": 0.029411764705882353,
+"n_cells": 153,
+"n_rows": 54,
+"n_kv": 34,
+"chars": 11972,
+"seconds": 0.0
+},
+"dpurix": {
+"cell_retention": 1.0,
+"row_integrity": 1.0,
+"kv_association": 1.0,
+"n_cells": 153,
+"n_rows": 54,
+"n_kv": 34,
+"chars": 15197,
+"seconds": 0.8,
+"meta_status": "ok",
+"meta_extractor": "hwp5html",
+"meta_table_loss": false,
+"meta_note": ""
+}
+}
+},
+{
+"doc": "3. 계약특수조건(잔향 수조에서의 수중 발생 소음 측정).hwp",
+"format": "hwp",
+"declared_ext": "hwp",
+"truth_from": "3. 계약특수조건(잔향 수조에서의 수중 발생 소음 측정).hwp",
+"n_tables": 2,
+"scores": {
+"hwp5txt": {
+"cell_retention": 0.21428571428571427,
+"row_integrity": 0.0,
+"kv_association": null,
+"n_cells": 14,
+"n_rows": 3,
+"n_kv": 0,
+"chars": 5599,
+"seconds": 0.1
+},
+"hwp_naive": {
+"cell_retention": 1.0,
+"row_integrity": 0.0,
+"kv_association": null,
+"n_cells": 14,
+"n_rows": 3,
+"n_kv": 0,
+"chars": 5958,
+"seconds": 0.0
+},
+"dpurix": {
+"cell_retention": 1.0,
+"row_integrity": 1.0,
+"kv_association": null,
+"n_cells": 14,
+"n_rows": 3,
+"n_kv": 0,
+"chars": 6669,
+"seconds": 0.3,
+"meta_status": "ok",
+"meta_extractor": "hwp5html",
+"meta_table_loss": false,
+"meta_note": ""
+}
+}
+},
+{
+"doc": "공고문.hwpx",
+"format": "hwpx",
+"declared_ext": "hwpx",
+"truth_from": "공고문.hwpx",
+"n_tables": 9,
+"scores": {
+"hwpx_strip": {
+"cell_retention": 1.0,
+"row_integrity": 0.0,
+"kv_association": 0.2222222222222222,
+"n_cells": 10,
+"n_rows": 1,
+"n_kv": 9,
+"chars": 4057,
+"seconds": 0.0
+},
+"dpurix": {
+"cell_retention": 1.0,
+"row_integrity": 1.0,
+"kv_association": 1.0,
+"n_cells": 10,
+"n_rows": 1,
+"n_kv": 9,
+"chars": 3009,
+"seconds": 0.0,
+"meta_status": "ok",
+"meta_extractor": "hwpx",
+"meta_table_loss": false,
+"meta_note": ""
+}
+}
+},
+{
+"doc": "공고문.pdf",
+"format": "pdf",
+"declared_ext": "pdf",
+"truth_from": "공고문.hwpx",
+"n_tables": 9,
+"scores": {
+"pdftotext": {
+"cell_retention": 1.0,
+"row_integrity": 1.0,
+"kv_association": 0.2222222222222222,
+"n_cells": 10,
+"n_rows": 1,
+"n_kv": 9,
+"chars": 2713,
+"seconds": 0.0
+},
+"pdftotext_layout": {
+"cell_retention": 1.0,
+"row_integrity": 1.0,
+"kv_association": 1.0,
+"n_cells": 10,
+"n_rows": 1,
+"n_kv": 9,
+"chars": 2980,
+"seconds": 0.0
+},
+"pymupdf": {
+"cell_retention": 1.0,
+"row_integrity": 1.0,
+"kv_association": 1.0,
+"n_cells": 10,
+"n_rows": 1,
+"n_kv": 9,
+"chars": 2784,
+"seconds": 0.0
+},
+"pdfplumber": {
+"cell_retention": 1.0,
+"row_integrity": 1.0,
+"kv_association": 1.0,
+"n_cells": 10,
+"n_rows": 1,
+"n_kv": 9,
+"chars": 2671,
+"seconds": 0.1
+},
+"pdfplumber_tables": {
+"cell_retention": 1.0,
+"row_integrity": 1.0,
+"kv_association": 1.0,
+"n_cells": 10,
+"n_rows": 1,
+"n_kv": 9,
+"chars": 2777,
+"seconds": 0.1
+},
+"dpurix": {
+"cell_retention": 1.0,
+"row_integrity": 1.0,
+"kv_association": 1.0,
+"n_cells": 10,
+"n_rows": 1,
+"n_kv": 9,
+"chars": 2926,
+"seconds": 0.1,
+"meta_status": "ok",
+"meta_extractor": "pdfplumber-read",
+"meta_table_loss": false,
+"meta_note": ""
+}
+}
+},
+{
+"doc": "과업지시서(다중보조주입관정 활용 고효율 계절간 지하수열 냉난방 시스템 사업화 성능평가) - 20260429박경준수정.hwp",
+"format": "hwp",
+"declared_ext": "hwp",
+"truth_from": "과업지시서(다중보조주입관정 활용 고효율 계절간 지하수열 냉난방 시스템 사업화 성능평가) - 20260429박경준수정.hwp",
+"n_tables": 1,
+"scores": {
+"hwp5txt": {
+"cell_retention": 0.0,
+"row_integrity": null,
+"kv_association": null,
+"n_cells": 1,
+"n_rows": 0,
+"n_kv": 0,
+"chars": 4584,
+"seconds": 0.1
+},
+"hwp_naive": {
+"cell_retention": 1.0,
+"row_integrity": null,
+"kv_association": null,
+"n_cells": 1,
+"n_rows": 0,
+"n_kv": 0,
+"chars": 4785,
+"seconds": 0.0
+},
+"dpurix": {
+"cell_retention": 1.0,
+"row_integrity": null,
+"kv_association": null,
+"n_cells": 1,
+"n_rows": 0,
+"n_kv": 0,
+"chars": 4844,
+"seconds": 0.3,
+"meta_status": "ok",
+"meta_extractor": "hwp5html",
+"meta_table_loss": false,
+"meta_note": ""
+}
+}
+},
+{
+"doc": "2. (입찰공고) 2026학년도 부산대학교 우수 연구성과 글로벌 홍보 용역(참가자격확대).hwp",
+"format": "hwp",
+"declared_ext": "hwp",
+"truth_from": "2. (입찰공고) 2026학년도 부산대학교 우수 연구성과 글로벌 홍보 용역(참가자격확대).hwp",
+"n_tables": 9,
+"scores": {
+"hwp5txt": {
+"cell_retention": 0.0,
+"row_integrity": 0.0,
+"kv_association": 0.0,
+"n_cells": 201,
+"n_rows": 12,
+"n_kv": 5,
+"chars": 55,
+"seconds": 0.3
+},
+"hwp_naive": {
+"cell_retention": 0.9502487562189055,
+"row_integrity": 0.0,
+"kv_association": 0.0,
+"n_cells": 201,
+"n_rows": 12,
+"n_kv": 5,
+"chars": 16136,
+"seconds": 0.0
+},
+"dpurix": {
+"cell_retention": 1.0,
+"row_integrity": 1.0,
+"kv_association": 1.0,
+"n_cells": 201,
+"n_rows": 12,
+"n_kv": 5,
+"chars": 32707,
+"seconds": 0.6,
+"meta_status": "ok",
+"meta_extractor": "hwp5html",
+"meta_table_loss": false,
+"meta_note": ""
+}
+}
+},
+{
+"doc": "제안요청서_차세대 통합정보시스템 고도화 사업.hwp",
+"format": "hwp",
+"declared_ext": "hwp",
+"truth_from": "제안요청서_차세대 통합정보시스템 고도화 사업.hwp",
+"n_tables": 121,
+"scores": {
+"hwp5txt": {
+"cell_retention": 0.1053740779768177,
+"row_integrity": 0.004297994269340974,
+"kv_association": 0.015151515151515152,
+"n_cells": 949,
+"n_rows": 698,
+"n_kv": 66,
+"chars": 24986,
+"seconds": 1.7
+},
+"hwp_naive": {
+"cell_retention": 0.9799789251844047,
+"row_integrity": 0.024355300859598854,
+"kv_association": 0.045454545454545456,
+"n_cells": 949,
+"n_rows": 698,
+"n_kv": 66,
+"chars": 91505,
+"seconds": 0.4
+},
+"dpurix": {
+"cell_retention": 1.0,
+"row_integrity": 1.0,
+"kv_association": 1.0,
+"n_cells": 949,
+"n_rows": 698,
+"n_kv": 66,
+"chars": 105730,
+"seconds": 33.8,
+"meta_status": "ok",
+"meta_extractor": "hwp5html",
+"meta_table_loss": false,
+"meta_note": ""
+}
+}
+},
+{
+"doc": "1.입찰공고문(2026 태도국 숙박용역)_재공고 2차.hwp",
+"format": "hwp",
+"declared_ext": "hwp",
+"truth_from": "1.입찰공고문(2026 태도국 숙박용역)_재공고 2차.hwp",
+"n_tables": 11,
+"scores": {
+"hwp5txt": {
+"cell_retention": 0.0,
+"row_integrity": null,
+"kv_association": null,
+"n_cells": 15,
+"n_rows": 0,
+"n_kv": 0,
+"chars": 11256,
+"seconds": 0.3
+},
+"hwp_naive": {
+"cell_retention": 1.0,
+"row_integrity": null,
+"kv_association": null,
+"n_cells": 15,
+"n_rows": 0,
+"n_kv": 0,
+"chars": 15731,
+"seconds": 0.0
+},
+"dpurix": {
+"cell_retention": 1.0,
+"row_integrity": null,
+"kv_association": null,
+"n_cells": 15,
+"n_rows": 0,
+"n_kv": 0,
+"chars": 18868,
+"seconds": 0.9,
+"meta_status": "ok",
+"meta_extractor": "hwp5html",
+"meta_table_loss": false,
+"meta_note": ""
+}
+}
+},
+{
+"doc": "1.입찰공고문(2026 태도국 숙박용역)_재공고 2차.pdf",
+"format": "pdf",
+"declared_ext": "pdf",
+"truth_from": "1.입찰공고문(2026 태도국 숙박용역)_재공고 2차.hwp",
+"n_tables": 11,
+"scores": {
+"pdftotext": {
+"cell_retention": 0.4666666666666667,
+"row_integrity": null,
+"kv_association": null,
+"n_cells": 15,
+"n_rows": 0,
+"n_kv": 0,
+"chars": 15489,
+"seconds": 0.2
+},
+"pdftotext_layout": {
+"cell_retention": 0.6666666666666666,
+"row_integrity": null,
+"kv_association": null,
+"n_cells": 15,
+"n_rows": 0,
+"n_kv": 0,
+"chars": 21965,
+"seconds": 0.1
+},
+"pymupdf": {
+"cell_retention": 1.0,
+"row_integrity": null,
+"kv_association": null,
+"n_cells": 15,
+"n_rows": 0,
+"n_kv": 0,
+"chars": 14991,
+"seconds": 0.0
+},
+"pdfplumber": {
+"cell_retention": 1.0,
+"row_integrity": null,
+"kv_association": null,
+"n_cells": 15,
+"n_rows": 0,
+"n_kv": 0,
+"chars": 14785,
+"seconds": 1.5
+},
+"pdfplumber_tables": {
+"cell_retention": 1.0,
+"row_integrity": null,
+"kv_association": null,
+"n_cells": 15,
+"n_rows": 0,
+"n_kv": 0,
+"chars": 15311,
+"seconds": 1.6
+},
+"dpurix": {
+"cell_retention": 0.4,
+"row_integrity": null,
+"kv_association": null,
+"n_cells": 15,
+"n_rows": 0,
+"n_kv": 0,
+"chars": 14825,
+"seconds": 1.6,
+"meta_status": "ok",
+"meta_extractor": "pdfplumber-read",
+"meta_table_loss": false,
+"meta_note": ""
+}
+}
+},
+{
+"doc": "2.과업지시서 (2026 태도국 숙박용역).hwp",
+"format": "hwp",
+"declared_ext": "hwp",
+"truth_from": "2.과업지시서 (2026 태도국 숙박용역).hwp",
+"n_tables": 6,
+"scores": {
+"hwp5txt": {
+"cell_retention": 0.3181818181818182,
+"row_integrity": 0.0,
+"kv_association": 0.5,
+"n_cells": 22,
+"n_rows": 7,
+"n_kv": 4,
+"chars": 2553,
+"seconds": 0.1
+},
+"hwp_naive": {
+"cell_retention": 1.0,
+"row_integrity": 0.2857142857142857,
+"kv_association": 0.5,
+"n_cells": 22,
+"n_rows": 7,
+"n_kv": 4,
+"chars": 2967,
+"seconds": 0.0
+},
+"dpurix": {
+"cell_retention": 1.0,
+"row_integrity": 1.0,
+"kv_association": 1.0,
+"n_cells": 22,
+"n_rows": 7,
+"n_kv": 4,
+"chars": 3053,
+"seconds": 0.2,
+"meta_status": "ok",
+"meta_extractor": "hwp5html",
+"meta_table_loss": false,
+"meta_note": ""
+}
+}
+},
+{
+"doc": "3.제안요청서 (2026 태도국 숙박용역).hwp",
+"format": "hwp",
+"declared_ext": "hwp",
+"truth_from": "3.제안요청서 (2026 태도국 숙박용역).hwp",
+"n_tables": 13,
+"scores": {
+"hwp5txt": {
+"cell_retention": 0.2032520325203252,
+"row_integrity": 0.05660377358490566,
+"kv_association": 0.0,
+"n_cells": 123,
+"n_rows": 53,
+"n_kv": 18,
+"chars": 5811,
+"seconds": 0.3
+},
+"hwp_naive": {
+"cell_retention": 0.991869918699187,
+"row_integrity": 0.11320754716981132,
+"kv_association": 0.1111111111111111,
+"n_cells": 123,
+"n_rows": 53,
+"n_kv": 18,
+"chars": 12482,
+"seconds": 0.0
+},
+"dpurix": {
+"cell_retention": 1.0,
+"row_integrity": 1.0,
+"kv_association": 1.0,
+"n_cells": 123,
+"n_rows": 53,
+"n_kv": 18,
+"chars": 14574,
+"seconds": 0.9,
+"meta_status": "ok",
+"meta_extractor": "hwp5html",
+"meta_table_loss": false,
+"meta_note": ""
+}
+}
+},
+{
+"doc": "2026학년도 영서고등학교 2학년 테마학습여행 위탁용역 과업설명서 및 특수조건(게시용).hwpx",
+"format": "hwpx",
+"declared_ext": "hwpx",
+"truth_from": "2026학년도 영서고등학교 2학년 테마학습여행 위탁용역 과업설명서 및 특수조건(게시용).hwpx",
+"n_tables": 8,
+"scores": {
+"hwpx_strip": {
+"cell_retention": 1.0,
+"row_integrity": 0.0,
+"kv_association": 0.0,
+"n_cells": 82,
+"n_rows": 22,
+"n_kv": 7,
+"chars": 25233,
+"seconds": 0.0
+},
+"dpurix": {
+"cell_retention": 1.0,
+"row_integrity": 1.0,
+"kv_association": 1.0,
+"n_cells": 82,
+"n_rows": 22,
+"n_kv": 7,
+"chars": 17546,
+"seconds": 0.0,
+"meta_status": "ok",
+"meta_extractor": "hwpx",
+"meta_table_loss": false,
+"meta_note": ""
+}
+}
+},
+{
+"doc": "2026학년도 영서고등학교 2학년 테마학습여행 위탁용역 입찰 공고문(정정공고용).hwp",
+"format": "hwp",
+"declared_ext": "hwp",
+"truth_from": "2026학년도 영서고등학교 2학년 테마학습여행 위탁용역 입찰 공고문(정정공고용).hwp",
+"n_tables": 10,
+"scores": {
+"hwp5txt": {
+"cell_retention": 0.14375,
+"row_integrity": 0.018518518518518517,
+"kv_association": 0.1111111111111111,
+"n_cells": 160,
+"n_rows": 54,
+"n_kv": 9,
+"chars": 7409,
+"seconds": 0.4
+},
+"hwp_naive": {
+"cell_retention": 0.9875,
+"row_integrity": 0.05555555555555555,
+"kv_association": 0.2222222222222222,
+"n_cells": 160,
+"n_rows": 54,
+"n_kv": 9,
+"chars": 16026,
+"seconds": 0.0
+},
+"dpurix": {
+"cell_retention": 1.0,
+"row_integrity": 1.0,
+"kv_association": 1.0,
+"n_cells": 160,
+"n_rows": 54,
+"n_kv": 9,
+"chars": 20310,
+"seconds": 1.6,
+"meta_status": "ok",
+"meta_extractor": "hwp5html",
+"meta_table_loss": false,
+"meta_note": ""
+}
+}
+},
+{
+"doc": "2026학년도 영서고등학교 2학년 테마학습여행 위탁용역 입찰 공고문(정정공고용).pdf",
+"format": "pdf",
+"declared_ext": "pdf",
+"truth_from": "2026학년도 영서고등학교 2학년 테마학습여행 위탁용역 입찰 공고문(정정공고용).hwp",
+"n_tables": 10,
+"scores": {
+"pdftotext": {
+"cell_retention": 0.89375,
+"row_integrity": 0.05555555555555555,
+"kv_association": 0.2222222222222222,
+"n_cells": 160,
+"n_rows": 54,
+"n_kv": 9,
+"chars": 14637,
+"seconds": 0.1
+},
+"pdftotext_layout": {
+"cell_retention": 0.79375,
+"row_integrity": 0.5185185185185185,
+"kv_association": 0.7777777777777778,
+"n_cells": 160,
+"n_rows": 54,
+"n_kv": 9,
+"chars": 20284,
+"seconds": 0.1
+},
+"pymupdf": {
+"cell_retention": 0.98125,
+"row_integrity": 0.05555555555555555,
+"kv_association": 0.2222222222222222,
+"n_cells": 160,
+"n_rows": 54,
+"n_kv": 9,
+"chars": 15477,
+"seconds": 0.0
+},
+"pdfplumber": {
+"cell_retention": 0.79375,
+"row_integrity": 0.5185185185185185,
+"kv_association": 0.7777777777777778,
+"n_cells": 160,
+"n_rows": 54,
+"n_kv": 9,
+"chars": 14353,
+"seconds": 0.7
+},
+"pdfplumber_tables": {
+"cell_retention": 0.96875,
+"row_integrity": 0.9444444444444444,
+"kv_association": 1.0,
+"n_cells": 160,
+"n_rows": 54,
+"n_kv": 9,
+"chars": 19185,
+"seconds": 0.7
+},
+"dpurix": {
+"cell_retention": 0.975,
+"row_integrity": 0.9444444444444444,
+"kv_association": 1.0,
+"n_cells": 160,
+"n_rows": 54,
+"n_kv": 9,
+"chars": 15914,
+"seconds": 0.8,
+"meta_status": "ok",
+"meta_extractor": "pdfplumber-read",
+"meta_table_loss": false,
+"meta_note": ""
+}
+}
+},
+{
+"doc": "2026학년도 영서고등학교 2학년 테마학습여행 위탁용역 제안요청서(게시용).hwp",
+"format": "hwp",
+"declared_ext": "hwp",
+"truth_from": "2026학년도 영서고등학교 2학년 테마학습여행 위탁용역 제안요청서(게시용).hwp",
+"n_tables": 20,
+"scores": {
+"hwp5txt": {
+"cell_retention": 0.1963470319634703,
+"row_integrity": 0.013333333333333334,
+"kv_association": 0.0,
+"n_cells": 219,
+"n_rows": 75,
+"n_kv": 20,
+"chars": 7936,
+"seconds": 0.4
+},
+"hwp_naive": {
+"cell_retention": 0.9954337899543378,
+"row_integrity": 0.013333333333333334,
+"kv_association": 0.0,
+"n_cells": 219,
+"n_rows": 75,
+"n_kv": 20,
+"chars": 13975,
+"seconds": 0.0
+},
+"dpurix": {
+"cell_retention": 1.0,
+"row_integrity": 1.0,
+"kv_association": 1.0,
+"n_cells": 219,
+"n_rows": 75,
+"n_kv": 20,
+"chars": 18417,
+"seconds": 1.8,
+"meta_status": "ok",
+"meta_extractor": "hwp5html",
+"meta_table_loss": false,
+"meta_note": ""
+}
+}
+},
+{
+"doc": "재공고서(대기질 장기예측모델의 고도화 및 장기예보 연구(Ⅳ))_국가,일반,긴급,협상,공동,자체.hwpx",
+"format": "hwpx",
+"declared_ext": "hwpx",
+"truth_from": "재공고서(대기질 장기예측모델의 고도화 및 장기예보 연구(Ⅳ))_국가,일반,긴급,협상,공동,자체.hwpx",
+"n_tables": 2,
+"scores": {
+"hwpx_strip": {
+"cell_retention": 0.9921875,
+"row_integrity": 0.0,
+"kv_association": 0.0,
+"n_cells": 256,
+"n_rows": 70,
+"n_kv": 8,
+"chars": 25758,
+"seconds": 0.0
+},
+"dpurix": {
+"cell_retention": 1.0,
+"row_integrity": 0.9857142857142858,
+"kv_association": 0.875,
+"n_cells": 256,
+"n_rows": 70,
+"n_kv": 8,
+"chars": 16889,
+"seconds": 0.0,
+"meta_status": "ok",
+"meta_extractor": "hwpx",
+"meta_table_loss": false,
+"meta_note": ""
+}
+}
+},
+{
+"doc": "재공고서(대기질 장기예측모델의 고도화 및 장기예보 연구(Ⅳ))_국가,일반,긴급,협상,공동,자체.pdf",
+"format": "pdf",
+"declared_ext": "pdf",
+"truth_from": "재공고서(대기질 장기예측모델의 고도화 및 장기예보 연구(Ⅳ))_국가,일반,긴급,협상,공동,자체.hwpx",
+"n_tables": 2,
+"scores": {
+"pdftotext": {
+"cell_retention": 0.91015625,
+"row_integrity": 0.21428571428571427,
+"kv_association": 0.5,
+"n_cells": 256,
+"n_rows": 70,
+"n_kv": 8,
+"chars": 16869,
+"seconds": 0.1
+},
+"pdftotext_layout": {
+"cell_retention": 0.71875,
+"row_integrity": 0.5285714285714286,
+"kv_association": 0.5,
+"n_cells": 256,
+"n_rows": 70,
+"n_kv": 8,
+"chars": 37876,
+"seconds": 0.1
+},
+"pymupdf": {
+"cell_retention": 0.24609375,
+"row_integrity": 0.0,
+"kv_association": 0.125,
+"n_cells": 256,
+"n_rows": 70,
+"n_kv": 8,
+"chars": 19427,
+"seconds": 0.0
+},
+"pdfplumber": {
+"cell_retention": 0.2421875,
+"row_integrity": 0.11428571428571428,
+"kv_association": 0.125,
+"n_cells": 256,
+"n_rows": 70,
+"n_kv": 8,
+"chars": 16830,
+"seconds": 1.0
+},
+"pdfplumber_tables": {
+"cell_retention": 0.2421875,
+"row_integrity": 0.11428571428571428,
+"kv_association": 0.125,
+"n_cells": 256,
+"n_rows": 70,
+"n_kv": 8,
+"chars": 19792,
+"seconds": 1.0
+},
+"dpurix": {
+"cell_retention": 0.234375,
+"row_integrity": 0.11428571428571428,
+"kv_association": 0.125,
+"n_cells": 256,
+"n_rows": 70,
+"n_kv": 8,
+"chars": 17375,
+"seconds": 1.0,
+"meta_status": "ok",
+"meta_extractor": "pdfplumber-read",
+"meta_table_loss": false,
+"meta_note": ""
+}
+}
+},
+{
+"doc": "붙임 1. 제2026-016호 입찰공고문.hwp",
+"format": "hwp",
+"declared_ext": "hwp",
+"truth_from": "붙임 1. 제2026-016호 입찰공고문.hwp",
+"n_tables": 18,
+"scores": {
+"hwp5txt": {
+"cell_retention": 0.3235294117647059,
+"row_integrity": 0.10526315789473684,
+"kv_association": 0.14285714285714285,
+"n_cells": 68,
+"n_rows": 19,
+"n_kv": 7,
+"chars": 6016,
+"seconds": 0.2
+},
+"hwp_naive": {
+"cell_retention": 0.9852941176470589,
+"row_integrity": 0.10526315789473684,
+"kv_association": 0.14285714285714285,
+"n_cells": 68,
+"n_rows": 19,
+"n_kv": 7,
+"chars": 9712,
+"seconds": 0.0
+},
+"dpurix": {
+"cell_retention": 1.0,
+"row_integrity": 1.0,
+"kv_association": 1.0,
+"n_cells": 68,
+"n_rows": 19,
+"n_kv": 7,
+"chars": 12449,
+"seconds": 0.6,
+"meta_status": "ok",
+"meta_extractor": "hwp5html",
+"meta_table_loss": false,
+"meta_note": ""
+}
+}
+},
+{
+"doc": "붙임 1. 제2026-016호 입찰공고문.pdf",
+"format": "pdf",
+"declared_ext": "pdf",
+"truth_from": "붙임 1. 제2026-016호 입찰공고문.hwp",
+"n_tables": 18,
+"scores": {
+"pdftotext": {
+"cell_retention": 0.8676470588235294,
+"row_integrity": 0.0,
+"kv_association": 0.14285714285714285,
+"n_cells": 68,
+"n_rows": 19,
+"n_kv": 7,
+"chars": 8286,
+"seconds": 0.1
+},
+"pdftotext_layout": {
+"cell_retention": 0.8823529411764706,
+"row_integrity": 0.47368421052631576,
+"kv_association": 1.0,
+"n_cells": 68,
+"n_rows": 19,
+"n_kv": 7,
+"chars": 11066,
+"seconds": 0.1
+},
+"pymupdf": {
+"cell_retention": 0.9852941176470589,
+"row_integrity": 0.10526315789473684,
+"kv_association": 0.14285714285714285,
+"n_cells": 68,
+"n_rows": 19,
+"n_kv": 7,
+"chars": 9245,
+"seconds": 0.0
+},
+"pdfplumber": {
+"cell_retention": 0.8823529411764706,
+"row_integrity": 0.47368421052631576,
+"kv_association": 1.0,
+"n_cells": 68,
+"n_rows": 19,
+"n_kv": 7,
+"chars": 8074,
+"seconds": 0.6
+},
+"pdfplumber_tables": {
+"cell_retention": 0.9852941176470589,
+"row_integrity": 1.0,
+"kv_association": 1.0,
+"n_cells": 68,
+"n_rows": 19,
+"n_kv": 7,
+"chars": 9346,
+"seconds": 0.6
+},
+"dpurix": {
+"cell_retention": 0.9705882352941176,
+"row_integrity": 1.0,
+"kv_association": 0.8571428571428571,
+"n_cells": 68,
+"n_rows": 19,
+"n_kv": 7,
+"chars": 8503,
+"seconds": 0.6,
+"meta_status": "ok",
+"meta_extractor": "pdfplumber-read",
+"meta_table_loss": false,
+"meta_note": ""
+}
+}
+},
+{
+"doc": "붙임 2. 제2026-016호 제안요청서.hwpx",
+"format": "hwpx",
+"declared_ext": "hwpx",
+"truth_from": "붙임 2. 제2026-016호 제안요청서.hwpx",
+"n_tables": 25,
+"scores": {
+"hwpx_strip": {
+"cell_retention": 0.9932432432432432,
+"row_integrity": 0.10204081632653061,
+"kv_association": 0.11764705882352941,
+"n_cells": 148,
+"n_rows": 49,
+"n_kv": 17,
+"chars": 24120,
+"seconds": 0.0
+},
+"dpurix": {
+"cell_retention": 1.0,
+"row_integrity": 1.0,
+"kv_association": 1.0,
+"n_cells": 148,
+"n_rows": 49,
+"n_kv": 17,
+"chars": 14487,
+"seconds": 0.0,
+"meta_status": "ok",
+"meta_extractor": "hwpx",
+"meta_table_loss": false,
+"meta_note": ""
+}
+}
+},
+{
+"doc": "1_입찰공고문.hwp",
+"format": "hwp",
+"declared_ext": "hwp",
+"truth_from": "1_입찰공고문.hwp",
+"n_tables": 2,
+"scores": {
+"hwp5txt": {
+"cell_retention": 0.3076923076923077,
+"row_integrity": 0.0,
+"kv_association": 0.0,
+"n_cells": 13,
+"n_rows": 4,
+"n_kv": 3,
+"chars": 5831,
+"seconds": 0.2
+},
+"hwp_naive": {
+"cell_retention": 1.0,
+"row_integrity": 0.0,
+"kv_association": 0.0,
+"n_cells": 13,
+"n_rows": 4,
+"n_kv": 3,
+"chars": 7493,
+"seconds": 0.0
+},
+"dpurix": {
+"cell_retention": 1.0,
+"row_integrity": 1.0,
+"kv_association": 1.0,
+"n_cells": 13,
+"n_rows": 4,
+"n_kv": 3,
+"chars": 7493,
+"seconds": 0.4,
+"meta_status": "ok",
+"meta_extractor": "hwp5html",
+"meta_table_loss": false,
+"meta_note": ""
+}
+}
+},
+{
+"doc": "1_입찰공고문.pdf",
+"format": "pdf",
+"declared_ext": "pdf",
+"truth_from": "1_입찰공고문.hwp",
+"n_tables": 2,
+"scores": {
+"pdftotext": {
+"cell_retention": 0.9230769230769231,
+"row_integrity": 0.0,
+"kv_association": 0.0,
+"n_cells": 13,
+"n_rows": 4,
+"n_kv": 3,
+"chars": 7237,
+"seconds": 0.1
+},
+"pdftotext_layout": {
+"cell_retention": 0.9230769230769231,
+"row_integrity": 0.0,
+"kv_association": 0.0,
+"n_cells": 13,
+"n_rows": 4,
+"n_kv": 3,
+"chars": 7897,
+"seconds": 0.1
+},
+"pymupdf": {
+"cell_retention": 0.9230769230769231,
+"row_integrity": 0.0,
+"kv_association": 0.0,
+"n_cells": 13,
+"n_rows": 4,
+"n_kv": 3,
+"chars": 7222,
+"seconds": 0.0
+},
+"pdfplumber": {
+"cell_retention": 0.9230769230769231,
+"row_integrity": 0.0,
+"kv_association": 0.0,
+"n_cells": 13,
+"n_rows": 4,
+"n_kv": 3,
+"chars": 7203,
+"seconds": 0.3
+},
+"pdfplumber_tables": {
+"cell_retention": 0.9230769230769231,
+"row_integrity": 0.0,
+"kv_association": 0.0,
+"n_cells": 13,
+"n_rows": 4,
+"n_kv": 3,
+"chars": 7203,
+"seconds": 0.3
+},
+"dpurix": {
+"cell_retention": 0.9230769230769231,
+"row_integrity": 0.0,
+"kv_association": 0.0,
+"n_cells": 13,
+"n_rows": 4,
+"n_kv": 3,
+"chars": 7210,
+"seconds": 0.3,
+"meta_status": "ok",
+"meta_extractor": "pdfplumber-read",
+"meta_table_loss": false,
+"meta_note": ""
+}
+}
+},
+{
+"doc": "2_제안요청서.hwp",
+"format": "hwp",
+"declared_ext": "hwp",
+"truth_from": "2_제안요청서.hwp",
+"n_tables": 30,
+"scores": {
+"hwp5txt": {
+"cell_retention": 0.23383084577114427,
+"row_integrity": 0.046153846153846156,
+"kv_association": 0.0,
+"n_cells": 201,
+"n_rows": 65,
+"n_kv": 13,
+"chars": 14990,
+"seconds": 0.4
+},
+"hwp_naive": {
+"cell_retention": 0.9850746268656716,
+"row_integrity": 0.06153846153846154,
+"kv_association": 0.0,
+"n_cells": 201,
+"n_rows": 65,
+"n_kv": 13,
+"chars": 20775,
+"seconds": 0.0
+},
+"dpurix": {
+"cell_retention": 1.0,
+"row_integrity": 1.0,
+"kv_association": 1.0,
+"n_cells": 201,
+"n_rows": 65,
+"n_kv": 13,
+"chars": 25183,
+"seconds": 2.1,
+"meta_status": "ok",
+"meta_extractor": "hwp5html",
+"meta_table_loss": false,
+"meta_note": ""
+}
+}
+},
+{
+"doc": "3_과업지시서.hwp",
+"format": "hwp",
+"declared_ext": "hwp",
+"truth_from": "3_과업지시서.hwp",
+"n_tables": 15,
+"scores": {
+"hwp5txt": {
+"cell_retention": 0.11363636363636363,
+"row_integrity": 0.0,
+"kv_association": null,
+"n_cells": 44,
+"n_rows": 12,
+"n_kv": 0,
+"chars": 6785,
+"seconds": 0.2
+},
+"hwp_naive": {
+"cell_retention": 1.0,
+"row_integrity": 0.08333333333333333,
+"kv_association": null,
+"n_cells": 44,
+"n_rows": 12,
+"n_kv": 0,
+"chars": 8013,
+"seconds": 0.0
+},
+"dpurix": {
+"cell_retention": 1.0,
+"row_integrity": 1.0,
+"kv_association": null,
+"n_cells": 44,
+"n_rows": 12,
+"n_kv": 0,
+"chars": 9255,
+"seconds": 0.6,
+"meta_status": "ok",
+"meta_extractor": "hwp5html",
+"meta_table_loss": false,
+"meta_note": ""
+}
+}
+},
+{
+"doc": "입찰공고서-1442,1443(국방)(국가+일반+수평+공불).hwp",
+"format": "hwp",
+"declared_ext": "hwp",
+"truth_from": "입찰공고서-1442,1443(국방)(국가+일반+수평+공불).hwp",
+"n_tables": 7,
+"scores": {
+"hwp5txt": {
+"cell_retention": 0.0,
+"row_integrity": null,
+"kv_association": null,
+"n_cells": 9,
+"n_rows": 0,
+"n_kv": 0,
+"chars": 11129,
+"seconds": 0.2
+},
+"hwp_naive": {
+"cell_retention": 1.0,
+"row_integrity": null,
+"kv_association": null,
+"n_cells": 9,
+"n_rows": 0,
+"n_kv": 0,
+"chars": 13575,
+"seconds": 0.0
+},
+"dpurix": {
+"cell_retention": 1.0,
+"row_integrity": null,
+"kv_association": null,
+"n_cells": 9,
+"n_rows": 0,
+"n_kv": 0,
+"chars": 15814,
+"seconds": 0.6,
+"meta_status": "ok",
+"meta_extractor": "hwp5html",
+"meta_table_loss": false,
+"meta_note": ""
+}
+}
+},
+{
+"doc": "입찰공고서-1442,1443(국방)(국가+일반+수평+공불).pdf",
+"format": "pdf",
+"declared_ext": "pdf",
+"truth_from": "입찰공고서-1442,1443(국방)(국가+일반+수평+공불).hwp",
+"n_tables": 7,
+"scores": {
+"pdftotext": {
+"cell_retention": 0.2222222222222222,
+"row_integrity": null,
+"kv_association": null,
+"n_cells": 9,
+"n_rows": 0,
+"n_kv": 0,
+"chars": 13702,
+"seconds": 0.1
+},
+"pdftotext_layout": {
+"cell_retention": 0.1111111111111111,
+"row_integrity": null,
+"kv_association": null,
+"n_cells": 9,
+"n_rows": 0,
+"n_kv": 0,
+"chars": 34769,
+"seconds": 0.1
+},
+"pymupdf": {
+"cell_retention": 1.0,
+"row_integrity": null,
+"kv_association": null,
+"n_cells": 9,
+"n_rows": 0,
+"n_kv": 0,
+"chars": 13114,
+"seconds": 0.0
+},
+"pdfplumber": {
+"cell_retention": 0.1111111111111111,
+"row_integrity": null,
+"kv_association": null,
+"n_cells": 9,
+"n_rows": 0,
+"n_kv": 0,
+"chars": 12727,
+"seconds": 1.5
+},
+"pdfplumber_tables": {
+"cell_retention": 0.3333333333333333,
+"row_integrity": null,
+"kv_association": null,
+"n_cells": 9,
+"n_rows": 0,
+"n_kv": 0,
+"chars": 13417,
+"seconds": 1.5
+},
+"dpurix": {
+"cell_retention": 1.0,
+"row_integrity": null,
+"kv_association": null,
+"n_cells": 9,
+"n_rows": 0,
+"n_kv": 0,
+"chars": 12717,
+"seconds": 1.5,
+"meta_status": "ok",
+"meta_extractor": "pdfplumber-read",
+"meta_table_loss": false,
+"meta_note": ""
+}
+}
+},
+{
+"doc": "공고문.hwpx",
+"format": "hwpx",
+"declared_ext": "hwpx",
+"truth_from": "공고문.hwpx",
+"n_tables": 1,
+"scores": {
+"hwpx_strip": {
+"cell_retention": 1.0,
+"row_integrity": null,
+"kv_association": null,
+"n_cells": 1,
+"n_rows": 0,
+"n_kv": 0,
+"chars": 4657,
+"seconds": 0.0
+},
+"dpurix": {
+"cell_retention": 1.0,
+"row_integrity": null,
+"kv_association": null,
+"n_cells": 1,
+"n_rows": 0,
+"n_kv": 0,
+"chars": 3599,
+"seconds": 0.0,
+"meta_status": "ok",
+"meta_extractor": "hwpx",
+"meta_table_loss": false,
+"meta_note": ""
+}
+}
+},
+{
+"doc": "공고문.pdf",
+"format": "pdf",
+"declared_ext": "pdf",
+"truth_from": "과업지시서.hwpx",
+"n_tables": 6,
+"scores": {
+"pdftotext": {
+"cell_retention": 0.21428571428571427,
+"row_integrity": 0.0,
+"kv_association": null,
+"n_cells": 14,
+"n_rows": 2,
+"n_kv": 0,
+"chars": 3655,
+"seconds": 0.0
+},
+"pdftotext_layout": {
+"cell_retention": 0.21428571428571427,
+"row_integrity": 0.0,
+"kv_association": null,
+"n_cells": 14,
+"n_rows": 2,
+"n_kv": 0,
+"chars": 3984,
+"seconds": 0.0
+},
+"pymupdf": {
+"cell_retention": 0.21428571428571427,
+"row_integrity": 0.0,
+"kv_association": null,
+"n_cells": 14,
+"n_rows": 2,
+"n_kv": 0,
+"chars": 3778,
+"seconds": 0.0
+},
+"pdfplumber": {
+"cell_retention": 0.21428571428571427,
+"row_integrity": 0.0,
+"kv_association": null,
+"n_cells": 14,
+"n_rows": 2,
+"n_kv": 0,
+"chars": 3627,
+"seconds": 0.3
+},
+"pdfplumber_tables": {
+"cell_retention": 0.21428571428571427,
+"row_integrity": 0.0,
+"kv_association": null,
+"n_cells": 14,
+"n_rows": 2,
+"n_kv": 0,
+"chars": 3627,
+"seconds": 0.3
+},
+"dpurix": {
+"cell_retention": 0.21428571428571427,
+"row_integrity": 0.0,
+"kv_association": null,
+"n_cells": 14,
+"n_rows": 2,
+"n_kv": 0,
+"chars": 3630,
+"seconds": 0.3,
+"meta_status": "ok",
+"meta_extractor": "pdfplumber-read",
+"meta_table_loss": false,
+"meta_note": ""
+}
+}
+},
+{
+"doc": "과업지시서.hwpx",
+"format": "hwpx",
+"declared_ext": "hwpx",
+"truth_from": "과업지시서.hwpx",
+"n_tables": 6,
+"scores": {
+"hwpx_strip": {
+"cell_retention": 1.0,
+"row_integrity": 0.0,
+"kv_association": null,
+"n_cells": 14,
+"n_rows": 2,
+"n_kv": 0,
+"chars": 18840,
+"seconds": 0.0
+},
+"dpurix": {
+"cell_retention": 1.0,
+"row_integrity": 1.0,
+"kv_association": null,
+"n_cells": 14,
+"n_rows": 2,
+"n_kv": 0,
+"chars": 13900,
+"seconds": 0.0,
+"meta_status": "ok",
+"meta_extractor": "hwpx",
+"meta_table_loss": false,
+"meta_note": ""
+}
+}
+},
+{
+"doc": "에듀의왕 어울림축제_제안요청서(2026).hwpx",
+"format": "hwpx",
+"declared_ext": "hwpx",
+"truth_from": "에듀의왕 어울림축제_제안요청서(2026).hwpx",
+"n_tables": 35,
+"scores": {
+"hwpx_strip": {
+"cell_retention": 0.9965034965034965,
+"row_integrity": 0.07964601769911504,
+"kv_association": 0.0,
+"n_cells": 286,
+"n_rows": 113,
+"n_kv": 19,
+"chars": 36758,
+"seconds": 0.0
+},
+"dpurix": {
+"cell_retention": 1.0,
+"row_integrity": 1.0,
+"kv_association": 1.0,
+"n_cells": 286,
+"n_rows": 113,
+"n_kv": 19,
+"chars": 20227,
+"seconds": 0.0,
+"meta_status": "ok",
+"meta_extractor": "hwpx",
+"meta_table_loss": false,
+"meta_note": ""
+}
+}
+},
+{
+"doc": "수의견적제출 공고문[석산~대포간 도로개량공사 임목폐기물처리용역].pdf",
+"format": "pdf",
+"declared_ext": "pdf",
+"truth_from": "수의견적제출 공고문[석산~대포간 도로개량공사 임목폐기물처리용역].hwpx",
+"n_tables": 10,
+"scores": {
+"pdftotext": {
+"cell_retention": 0.7708333333333334,
+"row_integrity": 0.0,
+"kv_association": 0.0,
+"n_cells": 48,
+"n_rows": 15,
+"n_kv": 1,
+"chars": 9254,
+"seconds": 0.0
+},
+"pdftotext_layout": {
+"cell_retention": 0.5833333333333334,
+"row_integrity": 0.13333333333333333,
+"kv_association": 0.0,
+"n_cells": 48,
+"n_rows": 15,
+"n_kv": 1,
+"chars": 18687,
+"seconds": 0.0
+},
+"pymupdf": {
+"cell_retention": 0.8958333333333334,
+"row_integrity": 0.0,
+"kv_association": 0.0,
+"n_cells": 48,
+"n_rows": 15,
+"n_kv": 1,
+"chars": 9726,
+"seconds": 0.0
+},
+"pdfplumber": {
+"cell_retention": 0.5625,
+"row_integrity": 0.13333333333333333,
+"kv_association": 0.0,
+"n_cells": 48,
+"n_rows": 15,
+"n_kv": 1,
+"chars": 9581,
+"seconds": 0.6
+},
+"pdfplumber_tables": {
+"cell_retention": 0.7291666666666666,
+"row_integrity": 0.13333333333333333,
+"kv_association": 0.0,
+"n_cells": 48,
+"n_rows": 15,
+"n_kv": 1,
+"chars": 11023,
+"seconds": 0.6
+},
+"dpurix": {
+"cell_retention": 0.7916666666666666,
+"row_integrity": 0.06666666666666667,
+"kv_association": 0.0,
+"n_cells": 48,
+"n_rows": 15,
+"n_kv": 1,
+"chars": 9254,
+"seconds": 0.6,
+"meta_status": "ok",
+"meta_extractor": "pdfplumber-read",
+"meta_table_loss": false,
+"meta_note": ""
+}
+}
+},
+{
+"doc": "수의견적제출 공고문[석산~대포간 도로개량공사 임목폐기물처리용역].hwpx",
+"format": "hwpx",
+"declared_ext": "hwpx",
+"truth_from": "수의견적제출 공고문[석산~대포간 도로개량공사 임목폐기물처리용역].hwpx",
+"n_tables": 10,
+"scores": {
+"hwpx_strip": {
+"cell_retention": 0.9375,
+"row_integrity": 0.0,
+"kv_association": 0.0,
+"n_cells": 48,
+"n_rows": 15,
+"n_kv": 1,
+"chars": 14859,
+"seconds": 0.0
+},
+"dpurix": {
+"cell_retention": 1.0,
+"row_integrity": 1.0,
+"kv_association": 1.0,
+"n_cells": 48,
+"n_rows": 15,
+"n_kv": 1,
+"chars": 9205,
+"seconds": 0.0,
+"meta_status": "ok",
+"meta_extractor": "hwpx",
+"meta_table_loss": false,
+"meta_note": ""
+}
+}
+},
+{
+"doc": "임목폐기물 시방서(석산~대포).hwpx",
+"format": "hwpx",
+"declared_ext": "hwpx",
+"truth_from": "임목폐기물 시방서(석산~대포).hwpx",
+"n_tables": 0,
+"scores": {
+"hwpx_strip": {
+"cell_retention": null,
+"row_integrity": null,
+"kv_association": null,
+"n_cells": 0,
+"n_rows": 0,
+"n_kv": 0,
+"chars": 2720,
+"seconds": 0.0
+},
+"dpurix": {
+"cell_retention": null,
+"row_integrity": null,
+"kv_association": null,
+"n_cells": 0,
+"n_rows": 0,
+"n_kv": 0,
+"chars": 2088,
+"seconds": 0.0,
+"meta_status": "ok",
+"meta_extractor": "hwpx",
+"meta_table_loss": false,
+"meta_note": ""
+}
+}
+},
+{
+"doc": "(붙임) 입찰공고문.hwp",
+"format": "hwp",
+"declared_ext": "hwp",
+"truth_from": "(붙임) 입찰공고문.hwp",
+"n_tables": 13,
+"scores": {
+"hwp5txt": {
+"cell_retention": 0.06896551724137931,
+"row_integrity": 0.0,
+"kv_association": null,
+"n_cells": 58,
+"n_rows": 20,
+"n_kv": 0,
+"chars": 3168,
+"seconds": 0.2
+},
+"hwp_naive": {
+"cell_retention": 1.0,
+"row_integrity": 0.0,
+"kv_association": null,
+"n_cells": 58,
+"n_rows": 20,
+"n_kv": 0,
+"chars": 5221,
+"seconds": 0.0
+},
+"dpurix": {
+"cell_retention": 1.0,
+"row_integrity": 1.0,
+"kv_association": null,
+"n_cells": 58,
+"n_rows": 20,
+"n_kv": 0,
+"chars": 6344,
+"seconds": 0.3,
+"meta_status": "ok",
+"meta_extractor": "hwp5html",
+"meta_table_loss": false,
+"meta_note": ""
+}
+}
+},
+{
+"doc": "(붙임) 입찰공고문.pdf",
+"format": "pdf",
+"declared_ext": "pdf",
+"truth_from": "(붙임) 입찰공고문.hwp",
+"n_tables": 13,
+"scores": {
+"pdftotext": {
+"cell_retention": 0.7586206896551724,
+"row_integrity": 0.0,
+"kv_association": null,
+"n_cells": 58,
+"n_rows": 20,
+"n_kv": 0,
+"chars": 5181,
+"seconds": 0.1
+},
+"pdftotext_layout": {
+"cell_retention": 0.8275862068965517,
+"row_integrity": 0.45,
+"kv_association": null,
+"n_cells": 58,
+"n_rows": 20,
+"n_kv": 0,
+"chars": 8759,
+"seconds": 0.1
+},
+"pymupdf": {
+"cell_retention": 1.0,
+"row_integrity": 0.0,
+"kv_association": null,
+"n_cells": 58,
+"n_rows": 20,
+"n_kv": 0,
+"chars": 4240,
+"seconds": 0.0
+},
+"pdfplumber": {
+"cell_retention": 0.8793103448275862,
+"row_integrity": 0.65,
+"kv_association": null,
+"n_cells": 58,
+"n_rows": 20,
+"n_kv": 0,
+"chars": 4846,
+"seconds": 0.5
+},
+"pdfplumber_tables": {
+"cell_retention": 0.9655172413793104,
+"row_integrity": 0.85,
+"kv_association": null,
+"n_cells": 58,
+"n_rows": 20,
+"n_kv": 0,
+"chars": 7124,
+"seconds": 0.5
+},
+"dpurix": {
+"cell_retention": 0.896551724137931,
+"row_integrity": 0.6,
+"kv_association": null,
+"n_cells": 58,
+"n_rows": 20,
+"n_kv": 0,
+"chars": 5152,
+"seconds": 0.6,
+"meta_status": "ok",
+"meta_extractor": "pdfplumber-read",
+"meta_table_loss": false,
+"meta_note": ""
+}
+}
+},
+{
+"doc": "(붙임) 제안요청서.hwp",
+"format": "hwp",
+"declared_ext": "hwp",
+"truth_from": "(붙임) 제안요청서.hwp",
+"n_tables": 34,
+"scores": {
+"hwp5txt": {
+"cell_retention": 0.2084942084942085,
+"row_integrity": 0.024096385542168676,
+"kv_association": 0.0,
+"n_cells": 259,
+"n_rows": 83,
+"n_kv": 9,
+"chars": 16078,
+"seconds": 0.7
+},
+"hwp_naive": {
+"cell_retention": 0.9961389961389961,
+"row_integrity": 0.0963855421686747,
+"kv_association": 0.0,
+"n_cells": 259,
+"n_rows": 83,
+"n_kv": 9,
+"chars": 23462,
+"seconds": 0.0
+},
+"dpurix": {
+"cell_retention": 1.0,
+"row_integrity": 1.0,
+"kv_association": 1.0,
+"n_cells": 259,
+"n_rows": 83,
+"n_kv": 9,
+"chars": 29190,
+"seconds": 5.3,
+"meta_status": "ok",
+"meta_extractor": "hwp5html",
+"meta_table_loss": false,
+"meta_note": ""
+}
+}
+},
+{
+"doc": "입찰공고문(평택, 아산 저수지).hwpx",
+"format": "hwpx",
+"declared_ext": "hwpx",
+"truth_from": "입찰공고문(평택, 아산 저수지).hwpx",
+"n_tables": 5,
+"scores": {
+"hwpx_strip": {
+"cell_retention": 0.9487179487179487,
+"row_integrity": 0.0,
+"kv_association": null,
+"n_cells": 39,
+"n_rows": 18,
+"n_kv": 0,
+"chars": 11886,
+"seconds": 0.0
+},
+"dpurix": {
+"cell_retention": 1.0,
+"row_integrity": 1.0,
+"kv_association": null,
+"n_cells": 39,
+"n_rows": 18,
+"n_kv": 0,
+"chars": 8634,
+"seconds": 0.0,
+"meta_status": "ok",
+"meta_extractor": "hwpx",
+"meta_table_loss": false,
+"meta_note": ""
+}
+}
+},
+{
+"doc": "입찰공고문(평택, 아산 저수지).pdf",
+"format": "pdf",
+"declared_ext": "pdf",
+"truth_from": "입찰공고문(평택, 아산 저수지).hwpx",
+"n_tables": 5,
+"scores": {
+"pdftotext": {
+"cell_retention": 0.9230769230769231,
+"row_integrity": 0.0,
+"kv_association": null,
+"n_cells": 39,
+"n_rows": 18,
+"n_kv": 0,
+"chars": 8565,
+"seconds": 0.1
+},
+"pdftotext_layout": {
+"cell_retention": 0.8717948717948718,
+"row_integrity": 0.8888888888888888,
+"kv_association": null,
+"n_cells": 39,
+"n_rows": 18,
+"n_kv": 0,
+"chars": 14713,
+"seconds": 0.1
+},
+"pymupdf": {
+"cell_retention": 0.9743589743589743,
+"row_integrity": 0.0,
+"kv_association": null,
+"n_cells": 39,
+"n_rows": 18,
+"n_kv": 0,
+"chars": 8865,
+"seconds": 0.0
+},
+"pdfplumber": {
+"cell_retention": 0.8717948717948718,
+"row_integrity": 0.8888888888888888,
+"kv_association": null,
+"n_cells": 39,
+"n_rows": 18,
+"n_kv": 0,
+"chars": 8399,
+"seconds": 1.2
+},
+"pdfplumber_tables": {
+"cell_retention": 0.8974358974358975,
+"row_integrity": 1.0,
+"kv_association": null,
+"n_cells": 39,
+"n_rows": 18,
+"n_kv": 0,
+"chars": 8920,
+"seconds": 1.2
+},
+"dpurix": {
+"cell_retention": 0.9487179487179487,
+"row_integrity": 1.0,
+"kv_association": null,
+"n_cells": 39,
+"n_rows": 18,
+"n_kv": 0,
+"chars": 8455,
+"seconds": 1.2,
+"meta_status": "ok",
+"meta_extractor": "pdfplumber-read",
+"meta_table_loss": false,
+"meta_note": ""
+}
+}
+},
+{
+"doc": "제안요청서_중점관리저수지(평택 아산유역).hwpx",
+"format": "hwpx",
+"declared_ext": "hwpx",
+"truth_from": "제안요청서_중점관리저수지(평택 아산유역).hwpx",
+"n_tables": 71,
+"scores": {
+"hwpx_strip": {
+"cell_retention": 0.997624703087886,
+"row_integrity": 0.0718562874251497,
+"kv_association": 0.08620689655172414,
+"n_cells": 421,
+"n_rows": 167,
+"n_kv": 58,
+"chars": 51638,
+"seconds": 0.0
+},
+"dpurix": {
+"cell_retention": 1.0,
+"row_integrity": 1.0,
+"kv_association": 1.0,
+"n_cells": 421,
+"n_rows": 167,
+"n_kv": 58,
+"chars": 27139,
+"seconds": 0.1,
+"meta_status": "ok",
+"meta_extractor": "hwpx",
+"meta_table_loss": false,
+"meta_note": ""
+}
+}
+},
+{
+"doc": "과업지시서_중점관리저수지(평택 아산유역).hwpx",
+"format": "hwpx",
+"declared_ext": "hwpx",
+"truth_from": "과업지시서_중점관리저수지(평택 아산유역).hwpx",
+"n_tables": 7,
+"scores": {
+"hwpx_strip": {
+"cell_retention": 0.9230769230769231,
+"row_integrity": 0.0,
+"kv_association": null,
+"n_cells": 13,
+"n_rows": 1,
+"n_kv": 0,
+"chars": 15354,
+"seconds": 0.0
+},
+"dpurix": {
+"cell_retention": 1.0,
+"row_integrity": 1.0,
+"kv_association": null,
+"n_cells": 13,
+"n_rows": 1,
+"n_kv": 0,
+"chars": 10448,
+"seconds": 0.0,
+"meta_status": "ok",
+"meta_extractor": "hwpx",
+"meta_table_loss": false,
+"meta_note": ""
+}
+}
+},
+{
+"doc": "공고문.hwp",
+"format": "hwp",
+"declared_ext": "hwp",
+"truth_from": "공고문.hwp",
+"n_tables": 1,
+"scores": {
+"hwp5txt": {
+"cell_retention": 0.0,
+"row_integrity": null,
+"kv_association": null,
+"n_cells": 2,
+"n_rows": 0,
+"n_kv": 0,
+"chars": 5848,
+"seconds": 0.1
+},
+"hwp_naive": {
+"cell_retention": 1.0,
+"row_integrity": null,
+"kv_association": null,
+"n_cells": 2,
+"n_rows": 0,
+"n_kv": 0,
+"chars": 6210,
+"seconds": 0.0
+},
+"dpurix": {
+"cell_retention": 1.0,
+"row_integrity": null,
+"kv_association": null,
+"n_cells": 2,
+"n_rows": 0,
+"n_kv": 0,
+"chars": 6223,
+"seconds": 0.2,
+"meta_status": "ok",
+"meta_extractor": "hwp5html",
+"meta_table_loss": false,
+"meta_note": ""
+}
+}
+},
+{
+"doc": "공고문.pdf",
+"format": "pdf",
+"declared_ext": "pdf",
+"truth_from": "제안요청서.hwp",
+"n_tables": 61,
+"scores": {
+"pdftotext": {
+"cell_retention": 0.08113207547169811,
+"row_integrity": 0.037383177570093455,
+"kv_association": 0.02857142857142857,
+"n_cells": 530,
+"n_rows": 214,
+"n_kv": 35,
+"chars": 5741,
+"seconds": 0.0
+},
+"pdftotext_layout": {
+"cell_retention": 0.08113207547169811,
+"row_integrity": 0.037383177570093455,
+"kv_association": 0.05714285714285714,
+"n_cells": 530,
+"n_rows": 214,
+"n_kv": 35,
+"chars": 8711,
+"seconds": 0.0
+},
+"pymupdf": {
+"cell_retention": 0.08113207547169811,
+"row_integrity": 0.037383177570093455,
+"kv_association": 0.02857142857142857,
+"n_cells": 530,
+"n_rows": 214,
+"n_kv": 35,
+"chars": 6414,
+"seconds": 0.0
+},
+"pdfplumber": {
+"error": "Invalid dictionary construct: [/'Type', /'Font', /'Subtype', /'Type0', /'Name', /'F2', /'BaseFont', /b'\\xb3\\xaa\\xb4\\xae\\"
+},
+"pdfplumber_tables": {
+"error": "Invalid dictionary construct: [/'Type', /'Font', /'Subtype', /'Type0', /'Name', /'F2', /'BaseFont', /b'\\xb3\\xaa\\xb4\\xae\\"
+},
+"dpurix": {
+"cell_retention": 0.08113207547169811,
+"row_integrity": 0.037383177570093455,
+"kv_association": 0.05714285714285714,
+"n_cells": 530,
+"n_rows": 214,
+"n_kv": 35,
+"chars": 8711,
+"seconds": 0.1,
+"meta_status": "ok",
+"meta_extractor": "pdftotext",
+"meta_table_loss": true,
+"meta_note": "표 내용이 유실된 추출 경로입니다 (fast 모드 또는 폴백 추출기)"
+}
+}
+},
+{
+"doc": "제안요청서.hwp",
+"format": "hwp",
+"declared_ext": "hwp",
+"truth_from": "제안요청서.hwp",
+"n_tables": 61,
+"scores": {
+"hwp5txt": {
+"cell_retention": 0.20754716981132076,
+"row_integrity": 0.06074766355140187,
+"kv_association": 0.14285714285714285,
+"n_cells": 530,
+"n_rows": 214,
+"n_kv": 35,
+"chars": 16017,
+"seconds": 0.9
+},
+"hwp_naive": {
+"cell_retention": 0.9811320754716981,
+"row_integrity": 0.14018691588785046,
+"kv_association": 0.2,
+"n_cells": 530,
+"n_rows": 214,
+"n_kv": 35,
+"chars": 43021,
+"seconds": 0.1
+},
+"dpurix": {
+"cell_retention": 1.0,
+"row_integrity": 1.0,
+"kv_association": 1.0,
+"n_cells": 530,
+"n_rows": 214,
+"n_kv": 35,
+"chars": 59029,
+"seconds": 11.2,
+"meta_status": "ok",
+"meta_extractor": "hwp5html",
+"meta_table_loss": false,
+"meta_note": ""
+}
+}
+},
+{
+"doc": "제8장 입찰유의서.hwpx",
+"format": "hwpx",
+"declared_ext": "hwpx",
+"truth_from": "제8장 입찰유의서.hwpx",
+"n_tables": 3,
+"scores": {
+"hwpx_strip": {
+"cell_retention": 1.0,
+"row_integrity": 0.0,
+"kv_association": null,
+"n_cells": 12,
+"n_rows": 3,
+"n_kv": 0,
+"chars": 19034,
+"seconds": 0.0
+},
+"dpurix": {
+"cell_retention": 1.0,
+"row_integrity": 1.0,
+"kv_association": null,
+"n_cells": 12,
+"n_rows": 3,
+"n_kv": 0,
+"chars": 13024,
+"seconds": 0.0,
+"meta_status": "ok",
+"meta_extractor": "hwpx",
+"meta_table_loss": false,
+"meta_note": ""
+}
+}
+},
+{
+"doc": "군산시 누리집 전면 개편 사업 제안요청서_260408.hwpx",
+"format": "hwpx",
+"declared_ext": "hwpx",
+"truth_from": "군산시 누리집 전면 개편 사업 제안요청서_260408.hwpx",
+"n_tables": 168,
+"scores": {
+"hwpx_strip": {
+"cell_retention": 0.989351403678606,
+"row_integrity": 0.044753086419753084,
+"kv_association": 0.10256410256410256,
+"n_cells": 1033,
+"n_rows": 648,
+"n_kv": 78,
+"chars": 160717,
+"seconds": 0.3
+},
+"dpurix": {
+"cell_retention": 1.0,
+"row_integrity": 0.9953703703703703,
+"kv_association": 1.0,
+"n_cells": 1033,
+"n_rows": 648,
+"n_kv": 78,
+"chars": 91504,
+"seconds": 0.2,
+"meta_status": "ok",
+"meta_extractor": "hwpx",
+"meta_table_loss": false,
+"meta_note": ""
+}
+}
+},
+{
+"doc": "1-1. 입찰공고서(최종).hwp",
+"format": "hwp",
+"declared_ext": "hwp",
+"truth_from": "1-1. 입찰공고서(최종).hwp",
+"n_tables": 18,
+"scores": {
+"hwp5txt": {
+"cell_retention": 0.1509433962264151,
+"row_integrity": 0.0,
+"kv_association": 0.0,
+"n_cells": 53,
+"n_rows": 16,
+"n_kv": 14,
+"chars": 7119,
+"seconds": 0.2
+},
+"hwp_naive": {
+"cell_retention": 0.9622641509433962,
+"row_integrity": 0.0,
+"kv_association": 0.0,
+"n_cells": 53,
+"n_rows": 16,
+"n_kv": 14,
+"chars": 10268,
+"seconds": 0.0
+},
+"dpurix": {
+"cell_retention": 1.0,
+"row_integrity": 1.0,
+"kv_association": 1.0,
+"n_cells": 53,
+"n_rows": 16,
+"n_kv": 14,
+"chars": 13713,
+"seconds": 0.6,
+"meta_status": "ok",
+"meta_extractor": "hwp5html",
+"meta_table_loss": false,
+"meta_note": ""
+}
+}
+},
+{
+"doc": "1-1. 입찰공고서(최종).pdf",
+"format": "pdf",
+"declared_ext": "pdf",
+"truth_from": "1-1. 입찰공고서(최종).hwp",
+"n_tables": 18,
+"scores": {
+"pdftotext": {
+"cell_retention": 0.9056603773584906,
+"row_integrity": 0.75,
+"kv_association": 0.8571428571428571,
+"n_cells": 53,
+"n_rows": 16,
+"n_kv": 14,
+"chars": 9584,
+"seconds": 0.1
+},
+"pdftotext_layout": {
+"cell_retention": 0.8679245283018868,
+"row_integrity": 0.875,
+"kv_association": 0.9285714285714286,
+"n_cells": 53,
+"n_rows": 16,
+"n_kv": 14,
+"chars": 11410,
+"seconds": 0.1
+},
+"pymupdf": {
+"cell_retention": 0.9811320754716981,
+"row_integrity": 0.0625,
+"kv_association": 0.07142857142857142,
+"n_cells": 53,
+"n_rows": 16,
+"n_kv": 14,
+"chars": 9706,
+"seconds": 0.0
+},
+"pdfplumber": {
+"cell_retention": 0.9245283018867925,
+"row_integrity": 0.875,
+"kv_association": 0.9285714285714286,
+"n_cells": 53,
+"n_rows": 16,
+"n_kv": 14,
+"chars": 9434,
+"seconds": 0.7
+},
+"pdfplumber_tables": {
+"cell_retention": 0.9811320754716981,
+"row_integrity": 1.0,
+"kv_association": 1.0,
+"n_cells": 53,
+"n_rows": 16,
+"n_kv": 14,
+"chars": 9943,
+"seconds": 0.6
+},
+"dpurix": {
+"cell_retention": 0.9622641509433962,
+"row_integrity": 1.0,
+"kv_association": 1.0,
+"n_cells": 53,
+"n_rows": 16,
+"n_kv": 14,
+"chars": 9938,
+"seconds": 0.6,
+"meta_status": "ok",
+"meta_extractor": "pdfplumber-read",
+"meta_table_loss": false,
+"meta_note": ""
+}
+}
+},
+{
+"doc": "1-1-1. 안전관리계약 특수조건 시행지침.hwp",
+"format": "hwp",
+"declared_ext": "hwp",
+"truth_from": "1-1-1. 안전관리계약 특수조건 시행지침.hwp",
+"n_tables": 22,
+"scores": {
+"hwp5txt": {
+"cell_retention": 0.09411764705882353,
+"row_integrity": 0.0,
+"kv_association": 0.0,
+"n_cells": 85,
+"n_rows": 49,
+"n_kv": 31,
+"chars": 2330,
+"seconds": 0.3
+},
+"hwp_naive": {
+"cell_retention": 0.9882352941176471,
+"row_integrity": 0.04081632653061224,
+"kv_association": 0.03225806451612903,
+"n_cells": 85,
+"n_rows": 49,
+"n_kv": 31,
+"chars": 16977,
+"seconds": 0.0
+},
+"dpurix": {
+"cell_retention": 1.0,
+"row_integrity": 1.0,
+"kv_association": 1.0,
+"n_cells": 85,
+"n_rows": 49,
+"n_kv": 31,
+"chars": 21761,
+"seconds": 1.1,
+"meta_status": "ok",
+"meta_extractor": "hwp5html",
+"meta_table_loss": false,
+"meta_note": ""
+}
+}
+},
+{
+"doc": "1-1-2. (개정) [별표 9] 수요기관 지정형 적격심사(조달청 일반용역 적격심사 세부기준).hwpx",
+"format": "hwpx",
+"declared_ext": "hwpx",
+"truth_from": "1-1-2. (개정) [별표 9] 수요기관 지정형 적격심사(조달청 일반용역 적격심사 세부기준).hwpx",
+"n_tables": 8,
+"scores": {
+"hwpx_strip": {
+"cell_retention": 0.9918032786885246,
+"row_integrity": 0.0,
+"kv_association": 0.0,
+"n_cells": 122,
+"n_rows": 47,
+"n_kv": 4,
+"chars": 10622,
+"seconds": 0.0
+},
+"dpurix": {
+"cell_retention": 1.0,
+"row_integrity": 0.9574468085106383,
+"kv_association": 0.75,
+"n_cells": 122,
+"n_rows": 47,
+"n_kv": 4,
+"chars": 6249,
+"seconds": 0.0,
+"meta_status": "ok",
+"meta_extractor": "hwpx",
+"meta_table_loss": false,
+"meta_note": ""
+}
+}
+},
+{
+"doc": "입찰공고_협상_중기간비경쟁_소기업소상공인_공동_기상장비관리산업기사 국가기술자격 종목 개발 연구용역.hwp",
+"format": "hwp",
+"declared_ext": "hwp",
+"truth_from": "입찰공고_협상_중기간비경쟁_소기업소상공인_공동_기상장비관리산업기사 국가기술자격 종목 개발 연구용역.hwp",
+"n_tables": 14,
+"scores": {
+"hwp5txt": {
+"cell_retention": 0.28888888888888886,
+"row_integrity": 0.0,
+"kv_association": 0.0,
+"n_cells": 45,
+"n_rows": 14,
+"n_kv": 1,
+"chars": 7370,
+"seconds": 0.3
+},
+"hwp_naive": {
+"cell_retention": 0.9111111111111111,
+"row_integrity": 0.07142857142857142,
+"kv_association": 0.0,
+"n_cells": 45,
+"n_rows": 14,
+"n_kv": 1,
+"chars": 14885,
+"seconds": 0.0
+},
+"dpurix": {
+"cell_retention": 1.0,
+"row_integrity": 1.0,
+"kv_association": 1.0,
+"n_cells": 45,
+"n_rows": 14,
+"n_kv": 1,
+"chars": 21160,
+"seconds": 0.9,
+"meta_status": "ok",
+"meta_extractor": "hwp5html",
+"meta_table_loss": false,
+"meta_note": ""
+}
+}
+},
+{
+"doc": "입찰공고_협상_중기간비경쟁_소기업소상공인_공동_기상장비관리산업기사 국가기술자격 종목 개발 연구용역.pdf",
+"format": "pdf",
+"declared_ext": "pdf",
+"truth_from": "입찰공고_협상_중기간비경쟁_소기업소상공인_공동_기상장비관리산업기사 국가기술자격 종목 개발 연구용역.hwp",
+"n_tables": 14,
+"scores": {
+"pdftotext": {
+"cell_retention": 0.9111111111111111,
+"row_integrity": 0.14285714285714285,
+"kv_association": 0.0,
+"n_cells": 45,
+"n_rows": 14,
+"n_kv": 1,
+"chars": 13951,
+"seconds": 0.2
+},
+"pdftotext_layout": {
+"cell_retention": 0.9333333333333333,
+"row_integrity": 0.8571428571428571,
+"kv_association": 1.0,
+"n_cells": 45,
+"n_rows": 14,
+"n_kv": 1,
+"chars": 15872,
+"seconds": 0.2
+},
+"pymupdf": {
+"cell_retention": 0.9555555555555556,
+"row_integrity": 0.07142857142857142,
+"kv_association": 0.0,
+"n_cells": 45,
+"n_rows": 14,
+"n_kv": 1,
+"chars": 14321,
+"seconds": 0.0
+},
+"pdfplumber": {
+"cell_retention": 0.9555555555555556,
+"row_integrity": 0.8571428571428571,
+"kv_association": 1.0,
+"n_cells": 45,
+"n_rows": 14,
+"n_kv": 1,
+"chars": 13885,
+"seconds": 2.0
+},
+"pdfplumber_tables": {
+"cell_retention": 0.9555555555555556,
+"row_integrity": 1.0,
+"kv_association": 1.0,
+"n_cells": 45,
+"n_rows": 14,
+"n_kv": 1,
+"chars": 15440,
+"seconds": 2.1
+},
+"dpurix": {
+"cell_retention": 0.9111111111111111,
+"row_integrity": 1.0,
+"kv_association": 1.0,
+"n_cells": 45,
+"n_rows": 14,
+"n_kv": 1,
+"chars": 14156,
+"seconds": 2.0,
+"meta_status": "ok",
+"meta_extractor": "pdfplumber-read",
+"meta_table_loss": false,
+"meta_note": ""
+}
+}
+},
+{
+"doc": "예비선도29. 용역(입찰)공고문_에이아이태권도_생성형 AI기반 AI품새 심사 서비스 개발.hwp",
+"format": "hwp",
+"declared_ext": "hwp",
+"truth_from": "예비선도29. 용역(입찰)공고문_에이아이태권도_생성형 AI기반 AI품새 심사 서비스 개발.hwp",
+"n_tables": 3,
+"scores": {
+"hwp5txt": {
+"cell_retention": 0.038461538461538464,
+"row_integrity": 0.0,
+"kv_association": null,
+"n_cells": 26,
+"n_rows": 11,
+"n_kv": 0,
+"chars": 3456,
+"seconds": 0.1
+},
+"hwp_naive": {
+"cell_retention": 0.9615384615384616,
+"row_integrity": 0.0,
+"kv_association": null,
+"n_cells": 26,
+"n_rows": 11,
+"n_kv": 0,
+"chars": 5402,
+"seconds": 0.0
+},
+"dpurix": {
+"cell_retention": 1.0,
+"row_integrity": 1.0,
+"kv_association": null,
+"n_cells": 26,
+"n_rows": 11,
+"n_kv": 0,
+"chars": 7144,
+"seconds": 0.3,
+"meta_status": "ok",
+"meta_extractor": "hwp5html",
+"meta_table_loss": false,
+"meta_note": ""
+}
+}
+},
+{
+"doc": "예비선도29. 용역(입찰)공고문_에이아이태권도_생성형 AI기반 AI품새 심사 서비스 개발.pdf",
+"format": "pdf",
+"declared_ext": "pdf",
+"truth_from": "예비선도29. 용역(입찰)공고문_에이아이태권도_생성형 AI기반 AI품새 심사 서비스 개발.hwp",
+"n_tables": 3,
+"scores": {
+"pdftotext": {
+"cell_retention": 0.9615384615384616,
+"row_integrity": 0.09090909090909091,
+"kv_association": null,
+"n_cells": 26,
+"n_rows": 11,
+"n_kv": 0,
+"chars": 5152,
+"seconds": 0.1
+},
+"pdftotext_layout": {
+"cell_retention": 0.8076923076923077,
+"row_integrity": 0.5454545454545454,
+"kv_association": null,
+"n_cells": 26,
+"n_rows": 11,
+"n_kv": 0,
+"chars": 5968,
+"seconds": 0.1
+},
+"pymupdf": {
+"cell_retention": 0.9615384615384616,
+"row_integrity": 0.09090909090909091,
+"kv_association": null,
+"n_cells": 26,
+"n_rows": 11,
+"n_kv": 0,
+"chars": 5275,
+"seconds": 0.0
+},
+"pdfplumber": {
+"cell_retention": 0.8076923076923077,
+"row_integrity": 0.5454545454545454,
+"kv_association": null,
+"n_cells": 26,
+"n_rows": 11,
+"n_kv": 0,
+"chars": 5108,
+"seconds": 0.5
+},
+"pdfplumber_tables": {
+"cell_retention": 0.9615384615384616,
+"row_integrity": 1.0,
+"kv_association": null,
+"n_cells": 26,
+"n_rows": 11,
+"n_kv": 0,
+"chars": 5672,
+"seconds": 0.4
+},
+"dpurix": {
+"cell_retention": 0.9615384615384616,
+"row_integrity": 1.0,
+"kv_association": null,
+"n_cells": 26,
+"n_rows": 11,
+"n_kv": 0,
+"chars": 5198,
+"seconds": 0.5,
+"meta_status": "ok",
+"meta_extractor": "pdfplumber-read",
+"meta_table_loss": false,
+"meta_note": ""
+}
+}
+},
+{
+"doc": "예비선도29. 용역(입찰)제안요청서_에이아이태권도_생성형 AI기반 AI품새 심사 서비스 개발.hwp",
+"format": "hwp",
+"declared_ext": "hwp",
+"truth_from": "예비선도29. 용역(입찰)제안요청서_에이아이태권도_생성형 AI기반 AI품새 심사 서비스 개발.hwp",
+"n_tables": 20,
+"scores": {
+"hwp5txt": {
+"cell_retention": 0.23113207547169812,
+"row_integrity": 0.04,
+"kv_association": 0.08571428571428572,
+"n_cells": 212,
+"n_rows": 75,
+"n_kv": 35,
+"chars": 12025,
+"seconds": 0.4
+},
+"hwp_naive": {
+"cell_retention": 0.9905660377358491,
+"row_integrity": 0.09333333333333334,
+"kv_association": 0.08571428571428572,
+"n_cells": 212,
+"n_rows": 75,
+"n_kv": 35,
+"chars": 18286,
+"seconds": 0.0
+},
+"dpurix": {
+"cell_retention": 1.0,
+"row_integrity": 1.0,
+"kv_association": 1.0,
+"n_cells": 212,
+"n_rows": 75,
+"n_kv": 35,
+"chars": 22237,
+"seconds": 2.1,
+"meta_status": "ok",
+"meta_extractor": "hwp5html",
+"meta_table_loss": false,
+"meta_note": ""
+}
+}
+},
+{
+"doc": "공고서_국가_제한_학술연구_1169_공동이행_수요기관평가_R26BK01637586-000.hwpx",
+"format": "hwpx",
+"declared_ext": "hwpx",
+"truth_from": "공고서_국가_제한_학술연구_1169_공동이행_수요기관평가_R26BK01637586-000.hwpx",
+"n_tables": 1,
+"scores": {
+"hwpx_strip": {
+"cell_retention": 1.0,
+"row_integrity": 0.0,
+"kv_association": 0.0,
+"n_cells": 272,
+"n_rows": 67,
+"n_kv": 8,
+"chars": 28576,
+"seconds": 0.0
+},
+"dpurix": {
+"cell_retention": 1.0,
+"row_integrity": 1.0,
+"kv_association": 1.0,
+"n_cells": 272,
+"n_rows": 67,
+"n_kv": 8,
+"chars": 18777,
+"seconds": 0.1,
+"meta_status": "ok",
+"meta_extractor": "hwpx",
+"meta_table_loss": false,
+"meta_note": ""
+}
+}
+},
+{
+"doc": "공고서_국가_제한_학술연구_1169_공동이행_수요기관평가_R26BK01637586-000.pdf",
+"format": "pdf",
+"declared_ext": "pdf",
+"truth_from": "공고서_국가_제한_학술연구_1169_공동이행_수요기관평가_R26BK01637586-000.hwpx",
+"n_tables": 1,
+"scores": {
+"pdftotext": {
+"cell_retention": 0.9816176470588235,
+"row_integrity": 0.5223880597014925,
+"kv_association": 0.625,
+"n_cells": 272,
+"n_rows": 67,
+"n_kv": 8,
+"chars": 18570,
+"seconds": 0.0
+},
+"pdftotext_layout": {
+"cell_retention": 0.9889705882352942,
+"row_integrity": 0.5373134328358209,
+"kv_association": 0.625,
+"n_cells": 272,
+"n_rows": 67,
+"n_kv": 8,
+"chars": 20475,
+"seconds": 0.0
+},
+"pymupdf": {
+"cell_retention": 0.9926470588235294,
+"row_integrity": 0.2835820895522388,
+"kv_association": 0.25,
+"n_cells": 272,
+"n_rows": 67,
+"n_kv": 8,
+"chars": 18634,
+"seconds": 0.0
+},
+"pdfplumber": {
+"cell_retention": 0.9889705882352942,
+"row_integrity": 0.5373134328358209,
+"kv_association": 0.625,
+"n_cells": 272,
+"n_rows": 67,
+"n_kv": 8,
+"chars": 18442,
+"seconds": 0.6
+},
+"pdfplumber_tables": {
+"cell_retention": 0.9889705882352942,
+"row_integrity": 0.5373134328358209,
+"kv_association": 0.625,
+"n_cells": 272,
+"n_rows": 67,
+"n_kv": 8,
+"chars": 21548,
+"seconds": 0.7
+},
+"dpurix": {
+"cell_retention": 0.8786764705882353,
+"row_integrity": 0.3582089552238806,
+"kv_association": 0.25,
+"n_cells": 272,
+"n_rows": 67,
+"n_kv": 8,
+"chars": 19443,
+"seconds": 0.6,
+"meta_status": "ok",
+"meta_extractor": "pdfplumber-read",
+"meta_table_loss": false,
+"meta_note": ""
+}
+}
+},
+{
+"doc": "붙임 3. 용역설명서[월곡(소)배수지 배수관로 부설공사 건설폐기물 운반,처리용역].hwpx",
+"format": "hwpx",
+"declared_ext": "hwpx",
+"truth_from": "붙임 3. 용역설명서[월곡(소)배수지 배수관로 부설공사 건설폐기물 운반,처리용역].hwpx",
+"n_tables": 1,
+"scores": {
+"hwpx_strip": {
+"cell_retention": null,
+"row_integrity": null,
+"kv_association": null,
+"n_cells": 0,
+"n_rows": 0,
+"n_kv": 0,
+"chars": 724,
+"seconds": 0.0
+},
+"dpurix": {
+"cell_retention": null,
+"row_integrity": null,
+"kv_association": null,
+"n_cells": 0,
+"n_rows": 0,
+"n_kv": 0,
+"chars": 362,
+"seconds": 0.0,
+"meta_status": "ok",
+"meta_extractor": "hwpx",
+"meta_table_loss": false,
+"meta_note": ""
+}
+}
+},
+{
+"doc": "붙임 4. 과업내용서[월곡(소)배수지 배수관로 부설공사 건설폐기물 운반,처리용역] 보완.hwpx",
+"format": "hwpx",
+"declared_ext": "hwpx",
+"truth_from": "붙임 4. 과업내용서[월곡(소)배수지 배수관로 부설공사 건설폐기물 운반,처리용역] 보완.hwpx",
+"n_tables": 5,
+"scores": {
+"hwpx_strip": {
+"cell_retention": 1.0,
+"row_integrity": 0.0,
+"kv_association": null,
+"n_cells": 24,
+"n_rows": 8,
+"n_kv": 0,
+"chars": 12695,
+"seconds": 0.0
+},
+"dpurix": {
+"cell_retention": 1.0,
+"row_integrity": 1.0,
+"kv_association": null,
+"n_cells": 24,
+"n_rows": 8,
+"n_kv": 0,
+"chars": 8738,
+"seconds": 0.0,
+"meta_status": "ok",
+"meta_extractor": "hwpx",
+"meta_table_loss": false,
+"meta_note": ""
+}
+}
+},
+{
+"doc": "붙임 1. 입찰공고문[월곡(소)배수지 배수관로 부설공사 건설폐기물 운반·처리용역](서울특별시 재무공고 제2026-1641호).hwpx",
+"format": "hwpx",
+"declared_ext": "hwpx",
+"truth_from": "붙임 1. 입찰공고문[월곡(소)배수지 배수관로 부설공사 건설폐기물 운반·처리용역](서울특별시 재무공고 제2026-1641호).hwpx",
+"n_tables": 7,
+"scores": {
+"hwpx_strip": {
+"cell_retention": 0.9615384615384616,
+"row_integrity": 0.0,
+"kv_association": 0.0,
+"n_cells": 26,
+"n_rows": 8,
+"n_kv": 6,
+"chars": 12925,
+"seconds": 0.0
+},
+"dpurix": {
+"cell_retention": 1.0,
+"row_integrity": 1.0,
+"kv_association": 1.0,
+"n_cells": 26,
+"n_rows": 8,
+"n_kv": 6,
+"chars": 9147,
+"seconds": 0.0,
+"meta_status": "ok",
+"meta_extractor": "hwpx",
+"meta_table_loss": false,
+"meta_note": ""
+}
+}
+},
+{
+"doc": "붙임 1. 입찰공고문[월곡(소)배수지 배수관로 부설공사 건설폐기물 운반·처리용역](서울특별시 재무공고 제2026-1641호).pdf",
+"format": "pdf",
+"declared_ext": "pdf",
+"truth_from": "붙임 1. 입찰공고문[월곡(소)배수지 배수관로 부설공사 건설폐기물 운반·처리용역](서울특별시 재무공고 제2026-1641호).hwpx",
+"n_tables": 7,
+"scores": {
+"pdftotext": {
+"cell_retention": 0.8461538461538461,
+"row_integrity": 0.375,
+"kv_association": 0.5,
+"n_cells": 26,
+"n_rows": 8,
+"n_kv": 6,
+"chars": 9321,
+"seconds": 0.1
+},
+"pdftotext_layout": {
+"cell_retention": 0.7692307692307693,
+"row_integrity": 0.875,
+"kv_association": 0.8333333333333334,
+"n_cells": 26,
+"n_rows": 8,
+"n_kv": 6,
+"chars": 14051,
+"seconds": 0.1
+},
+"pymupdf": {
+"cell_retention": 0.9615384615384616,
+"row_integrity": 0.0,
+"kv_association": 0.0,
+"n_cells": 26,
+"n_rows": 8,
+"n_kv": 6,
+"chars": 8040,
+"seconds": 0.0
+},
+"pdfplumber": {
+"cell_retention": 0.6923076923076923,
+"row_integrity": 0.875,
+"kv_association": 0.8333333333333334,
+"n_cells": 26,
+"n_rows": 8,
+"n_kv": 6,
+"chars": 9231,
+"seconds": 0.6
+},
+"pdfplumber_tables": {
+"cell_retention": 0.8076923076923077,
+"row_integrity": 1.0,
+"kv_association": 1.0,
+"n_cells": 26,
+"n_rows": 8,
+"n_kv": 6,
+"chars": 9539,
+"seconds": 0.6
+},
+"dpurix": {
+"cell_retention": 0.9615384615384616,
+"row_integrity": 1.0,
+"kv_association": 1.0,
+"n_cells": 26,
+"n_rows": 8,
+"n_kv": 6,
+"chars": 9324,
+"seconds": 0.7,
+"meta_status": "ok",
+"meta_extractor": "pdfplumber-read",
+"meta_table_loss": false,
+"meta_note": ""
+}
+}
+},
+{
+"doc": "1. 입찰공고문_NIA2026-055호(재공고).hwp",
+"format": "hwp",
+"declared_ext": "hwp",
+"truth_from": "1. 입찰공고문_NIA2026-055호(재공고).hwp",
+"n_tables": 8,
+"scores": {
+"hwp5txt": {
+"cell_retention": 0.075,
+"row_integrity": 0.0,
+"kv_association": null,
+"n_cells": 40,
+"n_rows": 11,
+"n_kv": 0,
+"chars": 7728,
+"seconds": 0.2
+},
+"hwp_naive": {
+"cell_retention": 0.975,
+"row_integrity": 0.0,
+"kv_association": null,
+"n_cells": 40,
+"n_rows": 11,
+"n_kv": 0,
+"chars": 12783,
+"seconds": 0.0
+},
+"dpurix": {
+"cell_retention": 1.0,
+"row_integrity": 1.0,
+"kv_association": null,
+"n_cells": 40,
+"n_rows": 11,
+"n_kv": 0,
+"chars": 15759,
+"seconds": 0.7,
+"meta_status": "ok",
+"meta_extractor": "hwp5html",
+"meta_table_loss": false,
+"meta_note": ""
+}
+}
+},
+{
+"doc": "1. 입찰공고문_NIA2026-055호(재공고).pdf",
+"format": "pdf",
+"declared_ext": "pdf",
+"truth_from": "1. 입찰공고문_NIA2026-055호(재공고).hwp",
+"n_tables": 8,
+"scores": {
+"pdftotext": {
+"cell_retention": 0.925,
+"row_integrity": 0.0,
+"kv_association": null,
+"n_cells": 40,
+"n_rows": 11,
+"n_kv": 0,
+"chars": 12198,
+"seconds": 0.1
+},
+"pdftotext_layout": {
+"cell_retention": 0.85,
+"row_integrity": 0.8181818181818182,
+"kv_association": null,
+"n_cells": 40,
+"n_rows": 11,
+"n_kv": 0,
+"chars": 14588,
+"seconds": 0.1
+},
+"pymupdf": {
+"cell_retention": 0.925,
+"row_integrity": 0.0,
+"kv_association": null,
+"n_cells": 40,
+"n_rows": 11,
+"n_kv": 0,
+"chars": 12551,
+"seconds": 0.0
+},
+"pdfplumber": {
+"cell_retention": 0.85,
+"row_integrity": 0.8181818181818182,
+"kv_association": null,
+"n_cells": 40,
+"n_rows": 11,
+"n_kv": 0,
+"chars": 12016,
+"seconds": 1.1
+},
+"pdfplumber_tables": {
+"cell_retention": 0.95,
+"row_integrity": 1.0,
+"kv_association": null,
+"n_cells": 40,
+"n_rows": 11,
+"n_kv": 0,
+"chars": 12262,
+"seconds": 1.1
+},
+"dpurix": {
+"cell_retention": 0.9,
+"row_integrity": 1.0,
+"kv_association": null,
+"n_cells": 40,
+"n_rows": 11,
+"n_kv": 0,
+"chars": 12085,
+"seconds": 1.2,
+"meta_status": "ok",
+"meta_extractor": "pdfplumber-read",
+"meta_table_loss": false,
+"meta_note": ""
+}
+}
+},
+{
+"doc": "1.공고문(2026-8).hwp",
+"format": "hwp",
+"declared_ext": "hwp",
+"truth_from": "1.공고문(2026-8).hwp",
+"n_tables": 7,
+"scores": {
+"hwp5txt": {
+"cell_retention": 0.05263157894736842,
+"row_integrity": 0.0,
+"kv_association": null,
+"n_cells": 19,
+"n_rows": 3,
+"n_kv": 0,
+"chars": 6836,
+"seconds": 0.2
+},
+"hwp_naive": {
+"cell_retention": 0.8947368421052632,
+"row_integrity": 0.0,
+"kv_association": null,
+"n_cells": 19,
+"n_rows": 3,
+"n_kv": 0,
+"chars": 9474,
+"seconds": 0.0
+},
+"dpurix": {
+"cell_retention": 1.0,
+"row_integrity": 1.0,
+"kv_association": null,
+"n_cells": 19,
+"n_rows": 3,
+"n_kv": 0,
+"chars": 11682,
+"seconds": 0.4,
+"meta_status": "ok",
+"meta_extractor": "hwp5html",
+"meta_table_loss": false,
+"meta_note": ""
+}
+}
+},
+{
+"doc": "1.공고문(2026-8).pdf",
+"format": "pdf",
+"declared_ext": "pdf",
+"truth_from": "1.공고문(2026-8).hwp",
+"n_tables": 7,
+"scores": {
+"pdftotext": {
+"cell_retention": 0.6842105263157895,
+"row_integrity": 0.3333333333333333,
+"kv_association": null,
+"n_cells": 19,
+"n_rows": 3,
+"n_kv": 0,
+"chars": 9051,
+"seconds": 0.1
+},
+"pdftotext_layout": {
+"cell_retention": 0.42105263157894735,
+"row_integrity": 0.3333333333333333,
+"kv_association": null,
+"n_cells": 19,
+"n_rows": 3,
+"n_kv": 0,
+"chars": 15361,
+"seconds": 0.1
+},
+"pymupdf": {
+"cell_retention": 0.9473684210526315,
+"row_integrity": 0.3333333333333333,
+"kv_association": null,
+"n_cells": 19,
+"n_rows": 3,
+"n_kv": 0,
+"chars": 8826,
+"seconds": 0.0
+},
+"pdfplumber": {
+"cell_retention": 0.42105263157894735,
+"row_integrity": 0.3333333333333333,
+"kv_association": null,
+"n_cells": 19,
+"n_rows": 3,
+"n_kv": 0,
+"chars": 8864,
+"seconds": 0.8
+},
+"pdfplumber_tables": {
+"cell_retention": 0.7368421052631579,
+"row_integrity": 1.0,
+"kv_association": null,
+"n_cells": 19,
+"n_rows": 3,
+"n_kv": 0,
+"chars": 9116,
+"seconds": 0.8
+},
+"dpurix": {
+"cell_retention": 0.8947368421052632,
+"row_integrity": 1.0,
+"kv_association": null,
+"n_cells": 19,
+"n_rows": 3,
+"n_kv": 0,
+"chars": 8922,
+"seconds": 0.8,
+"meta_status": "ok",
+"meta_extractor": "pdfplumber-read",
+"meta_table_loss": false,
+"meta_note": ""
+}
+}
+},
+{
+"doc": "입찰공고문(2026-4353-2, 규가동시)_제한경쟁.hwp",
+"format": "hwp",
+"declared_ext": "hwp",
+"truth_from": "입찰공고문(2026-4353-2, 규가동시)_제한경쟁.hwp",
+"n_tables": 4,
+"scores": {
+"hwp5txt": {
+"cell_retention": 0.2127659574468085,
+"row_integrity": 0.0,
+"kv_association": null,
+"n_cells": 47,
+"n_rows": 15,
+"n_kv": 0,
+"chars": 5575,
+"seconds": 0.1
+},
+"hwp_naive": {
+"cell_retention": 1.0,
+"row_integrity": 0.0,
+"kv_association": null,
+"n_cells": 47,
+"n_rows": 15,
+"n_kv": 0,
+"chars": 6552,
+"seconds": 0.0
+},
+"dpurix": {
+"cell_retention": 1.0,
+"row_integrity": 1.0,
+"kv_association": null,
+"n_cells": 47,
+"n_rows": 15,
+"n_kv": 0,
+"chars": 7122,
+"seconds": 0.3,
+"meta_status": "ok",
+"meta_extractor": "hwp5html",
+"meta_table_loss": false,
+"meta_note": ""
+}
+}
+},
+{
+"doc": "입찰공고문(2026-4353-2, 규가동시)_제한경쟁.pdf",
+"format": "pdf",
+"declared_ext": "pdf",
+"truth_from": "입찰공고문(2026-4353-2, 규가동시)_제한경쟁.hwp",
+"n_tables": 4,
+"scores": {
+"pdftotext": {
+"cell_retention": 1.0,
+"row_integrity": 0.0,
+"kv_association": null,
+"n_cells": 47,
+"n_rows": 15,
+"n_kv": 0,
+"chars": 6234,
+"seconds": 0.0
+},
+"pdftotext_layout": {
+"cell_retention": 0.8936170212765957,
+"row_integrity": 0.6666666666666666,
+"kv_association": null,
+"n_cells": 47,
+"n_rows": 15,
+"n_kv": 0,
+"chars": 7490,
+"seconds": 0.1
+},
+"pymupdf": {
+"cell_retention": 1.0,
+"row_integrity": 0.0,
+"kv_association": null,
+"n_cells": 47,
+"n_rows": 15,
+"n_kv": 0,
+"chars": 6413,
+"seconds": 0.0
+},
+"pdfplumber": {
+"cell_retention": 0.8936170212765957,
+"row_integrity": 0.6666666666666666,
+"kv_association": null,
+"n_cells": 47,
+"n_rows": 15,
+"n_kv": 0,
+"chars": 6164,
+"seconds": 0.3
+},
+"pdfplumber_tables": {
+"cell_retention": 0.9574468085106383,
+"row_integrity": 0.8666666666666667,
+"kv_association": null,
+"n_cells": 47,
+"n_rows": 15,
+"n_kv": 0,
+"chars": 6750,
+"seconds": 0.3
+},
+"dpurix": {
+"cell_retention": 0.8936170212765957,
+"row_integrity": 0.6666666666666666,
+"kv_association": null,
+"n_cells": 47,
+"n_rows": 15,
+"n_kv": 0,
+"chars": 6236,
+"seconds": 0.3,
+"meta_status": "ok",
+"meta_extractor": "pdfplumber-read",
+"meta_table_loss": false,
+"meta_note": ""
+}
+}
+},
+{
+"doc": "붙임1. CNS 헬륨이중배관 진공배기 라인 수리 과업지시서(도면포함).hwp",
+"format": "hwp",
+"declared_ext": "hwp",
+"truth_from": "붙임1. CNS 헬륨이중배관 진공배기 라인 수리 과업지시서(도면포함).hwp",
+"n_tables": 0,
+"scores": {
+"hwp5txt": {
+"cell_retention": null,
+"row_integrity": null,
+"kv_association": null,
+"n_cells": 0,
+"n_rows": 0,
+"n_kv": 0,
+"chars": 2301,
+"seconds": 0.1
+},
+"hwp_naive": {
+"cell_retention": null,
+"row_integrity": null,
+"kv_association": null,
+"n_cells": 0,
+"n_rows": 0,
+"n_kv": 0,
+"chars": 2833,
+"seconds": 0.0
+},
+"dpurix": {
+"cell_retention": null,
+"row_integrity": null,
+"kv_association": null,
+"n_cells": 0,
+"n_rows": 0,
+"n_kv": 0,
+"chars": 2385,
+"seconds": 0.1,
+"meta_status": "ok",
+"meta_extractor": "hwp5html",
+"meta_table_loss": false,
+"meta_note": ""
+}
+}
+},
+{
+"doc": "붙임3. 입찰방법 및 제안서평가기준(CNS 헬륨이중배관 진공배기 라인 수리)R0.hwp",
+"format": "hwp",
+"declared_ext": "hwp",
+"truth_from": "붙임3. 입찰방법 및 제안서평가기준(CNS 헬륨이중배관 진공배기 라인 수리)R0.hwp",
+"n_tables": 7,
+"scores": {
+"hwp5txt": {
+"cell_retention": 0.18666666666666668,
+"row_integrity": 0.0,
+"kv_association": 0.0,
+"n_cells": 75,
+"n_rows": 38,
+"n_kv": 26,
+"chars": 2033,
+"seconds": 0.2
+},
+"hwp_naive": {
+"cell_retention": 0.9466666666666667,
+"row_integrity": 0.0,
+"kv_association": 0.0,
+"n_cells": 75,
+"n_rows": 38,
+"n_kv": 26,
+"chars": 4026,
+"seconds": 0.0
+},
+"dpurix": {
+"cell_retention": 1.0,
+"row_integrity": 1.0,
+"kv_association": 1.0,
+"n_cells": 75,
+"n_rows": 38,
+"n_kv": 26,
+"chars": 5191,
+"seconds": 0.4,
+"meta_status": "ok",
+"meta_extractor": "hwp5html",
+"meta_table_loss": false,
+"meta_note": ""
+}
+}
+},
+{
+"doc": "(제안요청서) 축방향 영구자석 동기 전동기의 가우시안 프로세스 기반 성능 개선 최적화 연구 용역.hwp",
+"format": "hwp",
+"declared_ext": "hwp",
+"truth_from": "(제안요청서) 축방향 영구자석 동기 전동기의 가우시안 프로세스 기반 성능 개선 최적화 연구 용역.hwp",
+"n_tables": 9,
+"scores": {
+"hwp5txt": {
+"cell_retention": 0.19540229885057472,
+"row_integrity": 0.043478260869565216,
+"kv_association": 0.0,
+"n_cells": 87,
+"n_rows": 23,
+"n_kv": 6,
+"chars": 7834,
+"seconds": 0.2
+},
+"hwp_naive": {
+"cell_retention": 1.0,
+"row_integrity": 0.08695652173913043,
+"kv_association": 0.0,
+"n_cells": 87,
+"n_rows": 23,
+"n_kv": 6,
+"chars": 9135,
+"seconds": 0.0
+},
+"dpurix": {
+"cell_retention": 1.0,
+"row_integrity": 1.0,
+"kv_association": 1.0,
+"n_cells": 87,
+"n_rows": 23,
+"n_kv": 6,
+"chars": 10016,
+"seconds": 0.5,
+"meta_status": "ok",
+"meta_extractor": "hwp5html",
+"meta_table_loss": false,
+"meta_note": ""
+}
+}
+},
+{
+"doc": "(구매사양서) 축방향 영구자석 동기 전동기의 가우시안 프로세스 기반 성능 개선 최적화 연구 용역.hwp",
+"format": "hwp",
+"declared_ext": "hwp",
+"truth_from": "(구매사양서) 축방향 영구자석 동기 전동기의 가우시안 프로세스 기반 성능 개선 최적화 연구 용역.hwp",
+"n_tables": 1,
+"scores": {
+"hwp5txt": {
+"cell_retention": 0.0,
+"row_integrity": 0.0,
+"kv_association": null,
+"n_cells": 8,
+"n_rows": 3,
+"n_kv": 0,
+"chars": 4275,
+"seconds": 0.1
+},
+"hwp_naive": {
+"cell_retention": 1.0,
+"row_integrity": 0.0,
+"kv_association": null,
+"n_cells": 8,
+"n_rows": 3,
+"n_kv": 0,
+"chars": 4595,
+"seconds": 0.0
+},
+"dpurix": {
+"cell_retention": 1.0,
+"row_integrity": 1.0,
+"kv_association": null,
+"n_cells": 8,
+"n_rows": 3,
+"n_kv": 0,
+"chars": 4769,
+"seconds": 0.2,
+"meta_status": "ok",
+"meta_extractor": "hwp5html",
+"meta_table_loss": false,
+"meta_note": ""
+}
+}
+},
+{
+"doc": "(공고서)국립농업과학원 공고 제2026-117호.hwpx",
+"format": "hwpx",
+"declared_ext": "hwpx",
+"truth_from": "(공고서)국립농업과학원 공고 제2026-117호.hwpx",
+"n_tables": 5,
+"scores": {
+"hwpx_strip": {
+"cell_retention": 1.0,
+"row_integrity": 0.0,
+"kv_association": 0.0,
+"n_cells": 39,
+"n_rows": 6,
+"n_kv": 3,
+"chars": 12470,
+"seconds": 0.0
+},
+"dpurix": {
+"cell_retention": 1.0,
+"row_integrity": 1.0,
+"kv_association": 1.0,
+"n_cells": 39,
+"n_rows": 6,
+"n_kv": 3,
+"chars": 8661,
+"seconds": 0.0,
+"meta_status": "ok",
+"meta_extractor": "hwpx",
+"meta_table_loss": false,
+"meta_note": ""
+}
+}
+},
+{
+"doc": "(공고서)국립농업과학원 공고 제2026-117호.pdf",
+"format": "pdf",
+"declared_ext": "pdf",
+"truth_from": "(공고서)국립농업과학원 공고 제2026-117호.hwpx",
+"n_tables": 5,
+"scores": {
+"pdftotext": {
+"cell_retention": 1.0,
+"row_integrity": 0.3333333333333333,
+"kv_association": 0.0,
+"n_cells": 39,
+"n_rows": 6,
+"n_kv": 3,
+"chars": 8317,
+"seconds": 0.1
+},
+"pdftotext_layout": {
+"cell_retention": 0.8974358974358975,
+"row_integrity": 0.3333333333333333,
+"kv_association": 0.0,
+"n_cells": 39,
+"n_rows": 6,
+"n_kv": 3,
+"chars": 9129,
+"seconds": 0.1
+},
+"pymupdf": {
+"cell_retention": 0.15384615384615385,
+"row_integrity": 0.0,
+"kv_association": 0.0,
+"n_cells": 39,
+"n_rows": 6,
+"n_kv": 3,
+"chars": 10687,
+"seconds": 0.0
+},
+"pdfplumber": {
+"cell_retention": 0.15384615384615385,
+"row_integrity": 0.0,
+"kv_association": 0.0,
+"n_cells": 39,
+"n_rows": 6,
+"n_kv": 3,
+"chars": 9003,
+"seconds": 0.5
+},
+"pdfplumber_tables": {
+"cell_retention": 0.15384615384615385,
+"row_integrity": 0.0,
+"kv_association": 0.0,
+"n_cells": 39,
+"n_rows": 6,
+"n_kv": 3,
+"chars": 9585,
+"seconds": 0.5
+},
+"dpurix": {
+"cell_retention": 0.15384615384615385,
+"row_integrity": 0.0,
+"kv_association": 0.0,
+"n_cells": 39,
+"n_rows": 6,
+"n_kv": 3,
+"chars": 9036,
+"seconds": 0.5,
+"meta_status": "ok",
+"meta_extractor": "pdfplumber-read",
+"meta_table_loss": false,
+"meta_note": ""
+}
+}
+},
+{
+"doc": "(제안요청서)  밤꿀 섭취에 따른 혈당 안전성 임상시험(수정).hwpx",
+"format": "hwpx",
+"declared_ext": "hwpx",
+"truth_from": "(제안요청서)  밤꿀 섭취에 따른 혈당 안전성 임상시험(수정).hwpx",
+"n_tables": 14,
+"scores": {
+"hwpx_strip": {
+"cell_retention": 1.0,
+"row_integrity": 0.0425531914893617,
+"kv_association": 0.07692307692307693,
+"n_cells": 132,
+"n_rows": 47,
+"n_kv": 13,
+"chars": 19290,
+"seconds": 0.0
+},
+"dpurix": {
+"cell_retention": 1.0,
+"row_integrity": 1.0,
+"kv_association": 1.0,
+"n_cells": 132,
+"n_rows": 47,
+"n_kv": 13,
+"chars": 10733,
+"seconds": 0.0,
+"meta_status": "ok",
+"meta_extractor": "hwpx",
+"meta_table_loss": false,
+"meta_note": ""
+}
+}
+},
+{
+"doc": "공고서(지방SW, 중기간, 고시금액 미만, 온라인평가(서면).hwpx",
+"format": "hwpx",
+"declared_ext": "hwpx",
+"truth_from": "공고서(지방SW, 중기간, 고시금액 미만, 온라인평가(서면).hwpx",
+"n_tables": 1,
+"scores": {
+"hwpx_strip": {
+"cell_retention": 0.99644128113879,
+"row_integrity": 0.0,
+"kv_association": 0.0,
+"n_cells": 281,
+"n_rows": 66,
+"n_kv": 8,
+"chars": 29729,
+"seconds": 0.0
+},
+"dpurix": {
+"cell_retention": 1.0,
+"row_integrity": 1.0,
+"kv_association": 1.0,
+"n_cells": 281,
+"n_rows": 66,
+"n_kv": 8,
+"chars": 19544,
+"seconds": 0.0,
+"meta_status": "ok",
+"meta_extractor": "hwpx",
+"meta_table_loss": false,
+"meta_note": ""
+}
+}
+},
+{
+"doc": "공고서(지방SW, 중기간, 고시금액 미만, 온라인평가(서면).pdf",
+"format": "pdf",
+"declared_ext": "pdf",
+"truth_from": "공고서(지방SW, 중기간, 고시금액 미만, 온라인평가(서면).hwpx",
+"n_tables": 1,
+"scores": {
+"pdftotext": {
+"cell_retention": 0.9644128113879004,
+"row_integrity": 0.21212121212121213,
+"kv_association": 0.625,
+"n_cells": 281,
+"n_rows": 66,
+"n_kv": 8,
+"chars": 19351,
+"seconds": 0.1
+},
+"pdftotext_layout": {
+"cell_retention": 0.7402135231316725,
+"row_integrity": 0.6060606060606061,
+"kv_association": 0.625,
+"n_cells": 281,
+"n_rows": 66,
+"n_kv": 8,
+"chars": 45317,
+"seconds": 0.1
+},
+"pymupdf": {
+"cell_retention": 0.21708185053380782,
+"row_integrity": 0.015151515151515152,
+"kv_association": 0.25,
+"n_cells": 281,
+"n_rows": 66,
+"n_kv": 8,
+"chars": 22511,
+"seconds": 0.0
+},
+"pdfplumber": {
+"cell_retention": 0.21708185053380782,
+"row_integrity": 0.15151515151515152,
+"kv_association": 0.25,
+"n_cells": 281,
+"n_rows": 66,
+"n_kv": 8,
+"chars": 19302,
+"seconds": 1.0
+},
+"pdfplumber_tables": {
+"cell_retention": 0.21708185053380782,
+"row_integrity": 0.15151515151515152,
+"kv_association": 0.25,
+"n_cells": 281,
+"n_rows": 66,
+"n_kv": 8,
+"chars": 23439,
+"seconds": 1.1
+},
+"dpurix": {
+"cell_retention": 0.21352313167259787,
+"row_integrity": 0.13636363636363635,
+"kv_association": 0.25,
+"n_cells": 281,
+"n_rows": 66,
+"n_kv": 8,
+"chars": 20314,
+"seconds": 1.1,
+"meta_status": "ok",
+"meta_extractor": "pdfplumber-read",
+"meta_table_loss": false,
+"meta_note": ""
+}
+}
+},
+{
+"doc": "1-1. 입찰공고문.hwp",
+"format": "hwp",
+"declared_ext": "hwp",
+"truth_from": "1-1. 입찰공고문.hwp",
+"n_tables": 20,
+"scores": {
+"hwp5txt": {
+"cell_retention": 0.16363636363636364,
+"row_integrity": 0.0,
+"kv_association": 0.0,
+"n_cells": 55,
+"n_rows": 16,
+"n_kv": 14,
+"chars": 8015,
+"seconds": 0.2
+},
+"hwp_naive": {
+"cell_retention": 0.9818181818181818,
+"row_integrity": 0.0,
+"kv_association": 0.0,
+"n_cells": 55,
+"n_rows": 16,
+"n_kv": 14,
+"chars": 12067,
+"seconds": 0.0
+},
+"dpurix": {
+"cell_retention": 1.0,
+"row_integrity": 1.0,
+"kv_association": 1.0,
+"n_cells": 55,
+"n_rows": 16,
+"n_kv": 14,
+"chars": 15243,
+"seconds": 0.7,
+"meta_status": "ok",
+"meta_extractor": "hwp5html",
+"meta_table_loss": false,
+"meta_note": ""
+}
+}
+},
+{
+"doc": "1-1. 입찰공고문.pdf",
+"format": "pdf",
+"declared_ext": "pdf",
+"truth_from": "1-1. 입찰공고문.hwp",
+"n_tables": 20,
+"scores": {
+"pdftotext": {
+"cell_retention": 0.8909090909090909,
+"row_integrity": 0.8125,
+"kv_association": 0.9285714285714286,
+"n_cells": 55,
+"n_rows": 16,
+"n_kv": 14,
+"chars": 11134,
+"seconds": 0.1
+},
+"pdftotext_layout": {
+"cell_retention": 0.8545454545454545,
+"row_integrity": 0.875,
+"kv_association": 0.9285714285714286,
+"n_cells": 55,
+"n_rows": 16,
+"n_kv": 14,
+"chars": 12874,
+"seconds": 0.1
+},
+"pymupdf": {
+"cell_retention": 0.9636363636363636,
+"row_integrity": 0.0,
+"kv_association": 0.0,
+"n_cells": 55,
+"n_rows": 16,
+"n_kv": 14,
+"chars": 11548,
+"seconds": 0.0
+},
+"pdfplumber": {
+"cell_retention": 0.9090909090909091,
+"row_integrity": 0.875,
+"kv_association": 0.9285714285714286,
+"n_cells": 55,
+"n_rows": 16,
+"n_kv": 14,
+"chars": 11005,
+"seconds": 1.1
+},
+"pdfplumber_tables": {
+"cell_retention": 0.9636363636363636,
+"row_integrity": 1.0,
+"kv_association": 1.0,
+"n_cells": 55,
+"n_rows": 16,
+"n_kv": 14,
+"chars": 11513,
+"seconds": 1.1
+},
+"dpurix": {
+"cell_retention": 0.9272727272727272,
+"row_integrity": 1.0,
+"kv_association": 1.0,
+"n_cells": 55,
+"n_rows": 16,
+"n_kv": 14,
+"chars": 11510,
+"seconds": 1.1,
+"meta_status": "ok",
+"meta_extractor": "pdfplumber-read",
+"meta_table_loss": false,
+"meta_note": ""
+}
+}
+},
+{
+"doc": "3.과업지시서.hwp",
+"format": "hwp",
+"declared_ext": "hwp",
+"truth_from": "3.과업지시서.hwp",
+"n_tables": 14,
+"scores": {
+"hwp5txt": {
+"cell_retention": 0.12690355329949238,
+"row_integrity": 0.0,
+"kv_association": 0.08333333333333333,
+"n_cells": 197,
+"n_rows": 64,
+"n_kv": 24,
+"chars": 13261,
+"seconds": 0.4
+},
+"hwp_naive": {
+"cell_retention": 1.0,
+"row_integrity": 0.03125,
+"kv_association": 0.25,
+"n_cells": 197,
+"n_rows": 64,
+"n_kv": 24,
+"chars": 17115,
+"seconds": 0.0
+},
+"dpurix": {
+"cell_retention": 1.0,
+"row_integrity": 1.0,
+"kv_association": 1.0,
+"n_cells": 197,
+"n_rows": 64,
+"n_kv": 24,
+"chars": 20136,
+"seconds": 1.1,
+"meta_status": "ok",
+"meta_extractor": "hwp5html",
+"meta_table_loss": false,
+"meta_note": ""
+}
+}
+},
+{
+"doc": "1. 용역 입찰공고 - 회야강(회야지구) 지방하천 정비사업 건설폐기물처리 용역(폐콘크리트 및 혼합건설폐기물).hwpx",
+"format": "hwpx",
+"declared_ext": "hwpx",
+"truth_from": "1. 용역 입찰공고 - 회야강(회야지구) 지방하천 정비사업 건설폐기물처리 용역(폐콘크리트 및 혼합건설폐기물).hwpx",
+"n_tables": 4,
+"scores": {
+"hwpx_strip": {
+"cell_retention": 1.0,
+"row_integrity": 0.0,
+"kv_association": 0.0,
+"n_cells": 11,
+"n_rows": 2,
+"n_kv": 1,
+"chars": 8395,
+"seconds": 0.0
+},
+"dpurix": {
+"cell_retention": 1.0,
+"row_integrity": 1.0,
+"kv_association": 1.0,
+"n_cells": 11,
+"n_rows": 2,
+"n_kv": 1,
+"chars": 6419,
+"seconds": 0.0,
+"meta_status": "ok",
+"meta_extractor": "hwpx",
+"meta_table_loss": false,
+"meta_note": ""
+}
+}
+},
+{
+"doc": "1. 용역 입찰공고 - 회야강(회야지구) 지방하천 정비사업 건설폐기물처리 용역(폐콘크리트 및 혼합건설폐기물).pdf",
+"format": "pdf",
+"declared_ext": "pdf",
+"truth_from": "1. 용역 입찰공고 - 회야강(회야지구) 지방하천 정비사업 건설폐기물처리 용역(폐콘크리트 및 혼합건설폐기물).hwpx",
+"n_tables": 4,
+"scores": {
+"pdftotext": {
+"cell_retention": 0.9090909090909091,
+"row_integrity": 0.0,
+"kv_association": 0.0,
+"n_cells": 11,
+"n_rows": 2,
+"n_kv": 1,
+"chars": 6452,
+"seconds": 0.1
+},
+"pdftotext_layout": {
+"cell_retention": 1.0,
+"row_integrity": 1.0,
+"kv_association": 1.0,
+"n_cells": 11,
+"n_rows": 2,
+"n_kv": 1,
+"chars": 7400,
+"seconds": 0.1
+},
+"pymupdf": {
+"cell_retention": 1.0,
+"row_integrity": 0.0,
+"kv_association": 0.0,
+"n_cells": 11,
+"n_rows": 2,
+"n_kv": 1,
+"chars": 6365,
+"seconds": 0.0
+},
+"pdfplumber": {
+"cell_retention": 1.0,
+"row_integrity": 1.0,
+"kv_association": 1.0,
+"n_cells": 11,
+"n_rows": 2,
+"n_kv": 1,
+"chars": 6334,
+"seconds": 0.3
+},
+"pdfplumber_tables": {
+"cell_retention": 1.0,
+"row_integrity": 1.0,
+"kv_association": 1.0,
+"n_cells": 11,
+"n_rows": 2,
+"n_kv": 1,
+"chars": 6408,
+"seconds": 0.2
+},
+"dpurix": {
+"cell_retention": 1.0,
+"row_integrity": 1.0,
+"kv_association": 1.0,
+"n_cells": 11,
+"n_rows": 2,
+"n_kv": 1,
+"chars": 6377,
+"seconds": 0.3,
+"meta_status": "ok",
+"meta_extractor": "pdfplumber-read",
+"meta_table_loss": false,
+"meta_note": ""
+}
+}
+},
+{
+"doc": "2. 설계설명서 - 회야강(회야지구) 지방하천 정비사업 건설폐기물처리용역(폐콘크리트 및 혼합건설폐기물).hwpx",
+"format": "hwpx",
+"declared_ext": "hwpx",
+"truth_from": "2. 설계설명서 - 회야강(회야지구) 지방하천 정비사업 건설폐기물처리용역(폐콘크리트 및 혼합건설폐기물).hwpx",
+"n_tables": 4,
+"scores": {
+"hwpx_strip": {
+"cell_retention": 1.0,
+"row_integrity": 0.0,
+"kv_association": null,
+"n_cells": 43,
+"n_rows": 15,
+"n_kv": 0,
+"chars": 14568,
+"seconds": 0.0
+},
+"dpurix": {
+"cell_retention": 1.0,
+"row_integrity": 1.0,
+"kv_association": null,
+"n_cells": 43,
+"n_rows": 15,
+"n_kv": 0,
+"chars": 6955,
+"seconds": 0.0,
+"meta_status": "ok",
+"meta_extractor": "hwpx",
+"meta_table_loss": false,
+"meta_note": ""
+}
+}
+},
+{
+"doc": "입찰공고문_2026년 OTT 글로벌 유통 활성화 지원 위탁용역.hwpx",
+"format": "hwpx",
+"declared_ext": "hwpx",
+"truth_from": "입찰공고문_2026년 OTT 글로벌 유통 활성화 지원 위탁용역.hwpx",
+"n_tables": 4,
+"scores": {
+"hwpx_strip": {
+"cell_retention": 1.0,
+"row_integrity": 0.0,
+"kv_association": null,
+"n_cells": 39,
+"n_rows": 14,
+"n_kv": 0,
+"chars": 10739,
+"seconds": 0.0
+},
+"dpurix": {
+"cell_retention": 1.0,
+"row_integrity": 1.0,
+"kv_association": null,
+"n_cells": 39,
+"n_rows": 14,
+"n_kv": 0,
+"chars": 7438,
+"seconds": 0.0,
+"meta_status": "ok",
+"meta_extractor": "hwpx",
+"meta_table_loss": false,
+"meta_note": ""
+}
+}
+},
+{
+"doc": "입찰공고문_2026년 OTT 글로벌 유통 활성화 지원 위탁용역.pdf",
+"format": "pdf",
+"declared_ext": "pdf",
+"truth_from": "입찰공고문_2026년 OTT 글로벌 유통 활성화 지원 위탁용역.hwpx",
+"n_tables": 4,
+"scores": {
+"pdftotext": {
+"cell_retention": 0.8205128205128205,
+"row_integrity": 0.0,
+"kv_association": null,
+"n_cells": 39,
+"n_rows": 14,
+"n_kv": 0,
+"chars": 7353,
+"seconds": 0.1
+},
+"pdftotext_layout": {
+"cell_retention": 0.6153846153846154,
+"row_integrity": 0.21428571428571427,
+"kv_association": null,
+"n_cells": 39,
+"n_rows": 14,
+"n_kv": 0,
+"chars": 9079,
+"seconds": 0.1
+},
+"pymupdf": {
+"cell_retention": 1.0,
+"row_integrity": 0.0,
+"kv_association": null,
+"n_cells": 39,
+"n_rows": 14,
+"n_kv": 0,
+"chars": 6387,
+"seconds": 0.0
+},
+"pdfplumber": {
+"cell_retention": 0.6153846153846154,
+"row_integrity": 0.21428571428571427,
+"kv_association": null,
+"n_cells": 39,
+"n_rows": 14,
+"n_kv": 0,
+"chars": 7248,
+"seconds": 0.7
+},
+"pdfplumber_tables": {
+"cell_retention": 0.8974358974358975,
+"row_integrity": 0.7857142857142857,
+"kv_association": null,
+"n_cells": 39,
+"n_rows": 14,
+"n_kv": 0,
+"chars": 8137,
+"seconds": 0.7
+},
+"dpurix": {
+"cell_retention": 0.8717948717948718,
+"row_integrity": 0.7857142857142857,
+"kv_association": null,
+"n_cells": 39,
+"n_rows": 14,
+"n_kv": 0,
+"chars": 7423,
+"seconds": 0.7,
+"meta_status": "ok",
+"meta_extractor": "pdfplumber-read",
+"meta_table_loss": false,
+"meta_note": ""
+}
+}
+},
+{
+"doc": "제안요청서_2026년 OTT 글로벌 유통 활성화 지원.hwpx",
+"format": "hwpx",
+"declared_ext": "hwpx",
+"truth_from": "제안요청서_2026년 OTT 글로벌 유통 활성화 지원.hwpx",
+"n_tables": 49,
+"scores": {
+"hwpx_strip": {
+"cell_retention": 0.9923076923076923,
+"row_integrity": 0.16822429906542055,
+"kv_association": 0.0,
+"n_cells": 260,
+"n_rows": 107,
+"n_kv": 29,
+"chars": 32842,
+"seconds": 0.0
+},
+"dpurix": {
+"cell_retention": 1.0,
+"row_integrity": 0.9813084112149533,
+"kv_association": 1.0,
+"n_cells": 260,
+"n_rows": 107,
+"n_kv": 29,
+"chars": 17636,
+"seconds": 0.1,
+"meta_status": "ok",
+"meta_extractor": "hwpx",
+"meta_table_loss": false,
+"meta_note": ""
+}
+}
+},
+{
+"doc": "공고문_2027년 부산항 기계시설 유지보수공사 실시설계용역_게시.pdf",
+"format": "pdf",
+"declared_ext": "pdf",
+"truth_from": "공고문_2027년 부산항 기계시설 유지보수공사 실시설계용역_게시.hwp",
+"n_tables": 3,
+"scores": {
+"pdftotext": {
+"cell_retention": 0.75,
+"row_integrity": null,
+"kv_association": null,
+"n_cells": 4,
+"n_rows": 0,
+"n_kv": 0,
+"chars": 8102,
+"seconds": 0.1
+},
+"pdftotext_layout": {
+"cell_retention": 0.75,
+"row_integrity": null,
+"kv_association": null,
+"n_cells": 4,
+"n_rows": 0,
+"n_kv": 0,
+"chars": 9644,
+"seconds": 0.1
+},
+"pymupdf": {
+"cell_retention": 0.75,
+"row_integrity": null,
+"kv_association": null,
+"n_cells": 4,
+"n_rows": 0,
+"n_kv": 0,
+"chars": 7889,
+"seconds": 0.0
+},
+"pdfplumber": {
+"cell_retention": 0.75,
+"row_integrity": null,
+"kv_association": null,
+"n_cells": 4,
+"n_rows": 0,
+"n_kv": 0,
+"chars": 7946,
+"seconds": 0.7
+},
+"pdfplumber_tables": {
+"cell_retention": 0.75,
+"row_integrity": null,
+"kv_association": null,
+"n_cells": 4,
+"n_rows": 0,
+"n_kv": 0,
+"chars": 7946,
+"seconds": 0.7
+},
+"dpurix": {
+"cell_retention": 0.75,
+"row_integrity": null,
+"kv_association": null,
+"n_cells": 4,
+"n_rows": 0,
+"n_kv": 0,
+"chars": 7955,
+"seconds": 0.7,
+"meta_status": "ok",
+"meta_extractor": "pdfplumber-read",
+"meta_table_loss": false,
+"meta_note": ""
+}
+}
+},
+{
+"doc": "공고문_2027년 부산항 기계시설 유지보수공사 실시설계용역_게시.hwp",
+"format": "hwp",
+"declared_ext": "hwp",
+"truth_from": "공고문_2027년 부산항 기계시설 유지보수공사 실시설계용역_게시.hwp",
+"n_tables": 3,
+"scores": {
+"hwp5txt": {
+"cell_retention": 0.0,
+"row_integrity": null,
+"kv_association": null,
+"n_cells": 4,
+"n_rows": 0,
+"n_kv": 0,
+"chars": 6421,
+"seconds": 0.2
+},
+"hwp_naive": {
+"cell_retention": 0.75,
+"row_integrity": null,
+"kv_association": null,
+"n_cells": 4,
+"n_rows": 0,
+"n_kv": 0,
+"chars": 8280,
+"seconds": 0.0
+},
+"dpurix": {
+"cell_retention": 1.0,
+"row_integrity": null,
+"kv_association": null,
+"n_cells": 4,
+"n_rows": 0,
+"n_kv": 0,
+"chars": 8653,
+"seconds": 0.3,
+"meta_status": "ok",
+"meta_extractor": "hwp5html",
+"meta_table_loss": false,
+"meta_note": ""
+}
+}
+},
+{
+"doc": "1. 과업지시서_온정-원남 교통영향.hwp",
+"format": "hwp",
+"declared_ext": "hwp",
+"truth_from": "1. 과업지시서_온정-원남 교통영향.hwp",
+"n_tables": 16,
+"scores": {
+"hwp5txt": {
+"cell_retention": 0.27927927927927926,
+"row_integrity": 0.2222222222222222,
+"kv_association": 0.0,
+"n_cells": 111,
+"n_rows": 27,
+"n_kv": 10,
+"chars": 9368,
+"seconds": 0.3
+},
+"hwp_naive": {
+"cell_retention": 1.0,
+"row_integrity": 0.25925925925925924,
+"kv_association": 0.0,
+"n_cells": 111,
+"n_rows": 27,
+"n_kv": 10,
+"chars": 11043,
+"seconds": 0.0
+},
+"dpurix": {
+"cell_retention": 1.0,
+"row_integrity": 1.0,
+"kv_association": 1.0,
+"n_cells": 111,
+"n_rows": 27,
+"n_kv": 10,
+"chars": 12577,
+"seconds": 0.5,
+"meta_status": "ok",
+"meta_extractor": "hwp5html",
+"meta_table_loss": false,
+"meta_note": ""
+}
+}
+},
+{
+"doc": "2..입찰공고문_온정-원남 교통영향(수정).hwpx",
+"format": "hwpx",
+"declared_ext": "hwpx",
+"truth_from": "2..입찰공고문_온정-원남 교통영향(수정).hwpx",
+"n_tables": 2,
+"scores": {
+"hwpx_strip": {
+"cell_retention": 1.0,
+"row_integrity": 0.0,
+"kv_association": null,
+"n_cells": 21,
+"n_rows": 5,
+"n_kv": 0,
+"chars": 6683,
+"seconds": 0.0
+},
+"dpurix": {
+"cell_retention": 1.0,
+"row_integrity": 1.0,
+"kv_association": null,
+"n_cells": 21,
+"n_rows": 5,
+"n_kv": 0,
+"chars": 4538,
+"seconds": 0.0,
+"meta_status": "ok",
+"meta_extractor": "hwpx",
+"meta_table_loss": false,
+"meta_note": ""
+}
+}
+},
+{
+"doc": "2..입찰공고문_온정-원남 교통영향(수정).pdf",
+"format": "pdf",
+"declared_ext": "pdf",
+"truth_from": "2..입찰공고문_온정-원남 교통영향(수정).hwpx",
+"n_tables": 2,
+"scores": {
+"pdftotext": {
+"cell_retention": 0.8571428571428571,
+"row_integrity": 0.0,
+"kv_association": null,
+"n_cells": 21,
+"n_rows": 5,
+"n_kv": 0,
+"chars": 4397,
+"seconds": 0.0
+},
+"pdftotext_layout": {
+"cell_retention": 0.5714285714285714,
+"row_integrity": 0.4,
+"kv_association": null,
+"n_cells": 21,
+"n_rows": 5,
+"n_kv": 0,
+"chars": 5439,
+"seconds": 0.0
+},
+"pymupdf": {
+"cell_retention": 1.0,
+"row_integrity": 0.0,
+"kv_association": null,
+"n_cells": 21,
+"n_rows": 5,
+"n_kv": 0,
+"chars": 4605,
+"seconds": 0.0
+},
+"pdfplumber": {
+"cell_retention": 0.5714285714285714,
+"row_integrity": 0.4,
+"kv_association": null,
+"n_cells": 21,
+"n_rows": 5,
+"n_kv": 0,
+"chars": 4353,
+"seconds": 0.2
+},
+"pdfplumber_tables": {
+"cell_retention": 1.0,
+"row_integrity": 1.0,
+"kv_association": null,
+"n_cells": 21,
+"n_rows": 5,
+"n_kv": 0,
+"chars": 4721,
+"seconds": 0.2
+},
+"dpurix": {
+"cell_retention": 1.0,
+"row_integrity": 1.0,
+"kv_association": null,
+"n_cells": 21,
+"n_rows": 5,
+"n_kv": 0,
+"chars": 4466,
+"seconds": 0.2,
+"meta_status": "ok",
+"meta_extractor": "pdfplumber-read",
+"meta_table_loss": false,
+"meta_note": ""
+}
+}
+},
+{
+"doc": "3. 적격심사 세부평가기준(교통영향)(수정).hwpx",
+"format": "hwpx",
+"declared_ext": "hwpx",
+"truth_from": "3. 적격심사 세부평가기준(교통영향)(수정).hwpx",
+"n_tables": 20,
+"scores": {
+"hwpx_strip": {
+"cell_retention": 1.0,
+"row_integrity": 0.011764705882352941,
+"kv_association": 0.11538461538461539,
+"n_cells": 239,
+"n_rows": 85,
+"n_kv": 26,
+"chars": 27637,
+"seconds": 0.0
+},
+"dpurix": {
+"cell_retention": 1.0,
+"row_integrity": 1.0,
+"kv_association": 1.0,
+"n_cells": 239,
+"n_rows": 85,
+"n_kv": 26,
+"chars": 13158,
+"seconds": 0.0,
+"meta_status": "ok",
+"meta_extractor": "hwpx",
+"meta_table_loss": false,
+"meta_note": ""
+}
+}
+},
+{
+"doc": "(공고) 과업지시서(2027년 김포, 광주, 이천 지방도 도로구조물 보수공사 실시설계 용역).hwpx",
+"format": "hwpx",
+"declared_ext": "hwpx",
+"truth_from": "(공고) 과업지시서(2027년 김포, 광주, 이천 지방도 도로구조물 보수공사 실시설계 용역).hwpx",
+"n_tables": 1,
+"scores": {
+"hwpx_strip": {
+"cell_retention": 1.0,
+"row_integrity": 0.0,
+"kv_association": null,
+"n_cells": 33,
+"n_rows": 14,
+"n_kv": 0,
+"chars": 10449,
+"seconds": 0.0
+},
+"dpurix": {
+"cell_retention": 1.0,
+"row_integrity": 1.0,
+"kv_association": null,
+"n_cells": 33,
+"n_rows": 14,
+"n_kv": 0,
+"chars": 7728,
+"seconds": 0.0,
+"meta_status": "ok",
+"meta_extractor": "hwpx",
+"meta_table_loss": false,
+"meta_note": ""
+}
+}
+},
+{
+"doc": "계약조건붙임물_국가계약법(용역).hwpx",
+"format": "hwp",
+"declared_ext": "hwpx",
+"truth_from": "계약조건붙임물_국가계약법(용역).hwpx",
+"n_tables": 1,
+"scores": {
+"hwp5txt": {
+"cell_retention": 0.0,
+"row_integrity": null,
+"kv_association": null,
+"n_cells": 1,
+"n_rows": 0,
+"n_kv": 0,
+"chars": 514,
+"seconds": 0.1
+},
+"hwp_naive": {
+"cell_retention": 1.0,
+"row_integrity": null,
+"kv_association": null,
+"n_cells": 1,
+"n_rows": 0,
+"n_kv": 0,
+"chars": 556,
+"seconds": 0.0
+},
+"dpurix": {
+"cell_retention": 0.0,
+"row_integrity": null,
+"kv_association": null,
+"n_cells": 1,
+"n_rows": 0,
+"n_kv": 0,
+"chars": 0,
+"seconds": 0.0,
+"meta_status": "failed",
+"meta_extractor": null,
+"meta_table_loss": null,
+"meta_note": "파싱 실패(HWPX_INVALID_ARCHIVE) — File is not a zip file"
+}
+}
+},
+{
+"doc": "일반용역입찰공고서_R26BK01626486_000.pdf",
+"format": "pdf",
+"declared_ext": "pdf",
+"truth_from": "일반용역입찰공고서_R26BK01626486_000.hwpx",
+"n_tables": 37,
+"scores": {
+"pdftotext": {
+"cell_retention": 0.9783783783783784,
+"row_integrity": 0.04411764705882353,
+"kv_association": 0.3076923076923077,
+"n_cells": 185,
+"n_rows": 68,
+"n_kv": 13,
+"chars": 13206,
+"seconds": 0.1
+},
+"pdftotext_layout": {
+"cell_retention": 0.9621621621621622,
+"row_integrity": 0.8088235294117647,
+"kv_association": 0.9230769230769231,
+"n_cells": 185,
+"n_rows": 68,
+"n_kv": 13,
+"chars": 16508,
+"seconds": 0.1
+},
+"pymupdf": {
+"cell_retention": 0.6378378378378379,
+"row_integrity": 0.014705882352941176,
+"kv_association": 0.15384615384615385,
+"n_cells": 185,
+"n_rows": 68,
+"n_kv": 13,
+"chars": 15498,
+"seconds": 0.0
+},
+"pdfplumber": {
+"cell_retention": 0.6216216216216216,
+"row_integrity": 0.2647058823529412,
+"kv_association": 0.46153846153846156,
+"n_cells": 185,
+"n_rows": 68,
+"n_kv": 13,
+"chars": 13209,
+"seconds": 1.1
+},
+"pdfplumber_tables": {
+"cell_retention": 0.6216216216216216,
+"row_integrity": 0.2647058823529412,
+"kv_association": 0.46153846153846156,
+"n_cells": 185,
+"n_rows": 68,
+"n_kv": 13,
+"chars": 13574,
+"seconds": 1.1
+},
+"dpurix": {
+"cell_retention": 0.6324324324324324,
+"row_integrity": 0.058823529411764705,
+"kv_association": 0.3076923076923077,
+"n_cells": 185,
+"n_rows": 68,
+"n_kv": 13,
+"chars": 13287,
+"seconds": 1.2,
+"meta_status": "ok",
+"meta_extractor": "pdfplumber-read",
+"meta_table_loss": false,
+"meta_note": ""
+}
+}
+},
+{
+"doc": "일반용역입찰공고서_R26BK01626486_000.hwpx",
+"format": "hwp",
+"declared_ext": "hwpx",
+"truth_from": "일반용역입찰공고서_R26BK01626486_000.hwpx",
+"n_tables": 37,
+"scores": {
+"hwp5txt": {
+"cell_retention": 0.0,
+"row_integrity": 0.0,
+"kv_association": 0.0,
+"n_cells": 185,
+"n_rows": 68,
+"n_kv": 13,
+"chars": 341,
+"seconds": 0.2
+},
+"hwp_naive": {
+"cell_retention": 1.0,
+"row_integrity": 0.029411764705882353,
+"kv_association": 0.3076923076923077,
+"n_cells": 185,
+"n_rows": 68,
+"n_kv": 13,
+"chars": 14358,
+"seconds": 0.0
+},
+"dpurix": {
+"cell_retention": 0.0,
+"row_integrity": 0.0,
+"kv_association": 0.0,
+"n_cells": 185,
+"n_rows": 68,
+"n_kv": 13,
+"chars": 0,
+"seconds": 0.0,
+"meta_status": "failed",
+"meta_extractor": null,
+"meta_table_loss": null,
+"meta_note": "파싱 실패(HWPX_INVALID_ARCHIVE) — File is not a zip file"
+}
+}
+},
+{
+"doc": "폐기물처리용역 설계설명서rev.1.hwpx",
+"format": "hwp",
+"declared_ext": "hwpx",
+"truth_from": "폐기물처리용역 설계설명서rev.1.hwpx",
+"n_tables": 3,
+"scores": {
+"hwp5txt": {
+"cell_retention": 0.1590909090909091,
+"row_integrity": 0.0,
+"kv_association": 0.0,
+"n_cells": 44,
+"n_rows": 10,
+"n_kv": 4,
+"chars": 17695,
+"seconds": 0.2
+},
+"hwp_naive": {
+"cell_retention": 1.0,
+"row_integrity": 0.0,
+"kv_association": 0.0,
+"n_cells": 44,
+"n_rows": 10,
+"n_kv": 4,
+"chars": 18460,
+"seconds": 0.0
+},
+"dpurix": {
+"cell_retention": 0.0,
+"row_integrity": 0.0,
+"kv_association": 0.0,
+"n_cells": 44,
+"n_rows": 10,
+"n_kv": 4,
+"chars": 0,
+"seconds": 0.0,
+"meta_status": "failed",
+"meta_extractor": null,
+"meta_table_loss": null,
+"meta_note": "파싱 실패(HWPX_INVALID_ARCHIVE) — File is not a zip file"
+}
+}
+},
+{
+"doc": "(붙임1)2026년 전자금융기반시설 취약점 분석평가 입찰공고.hwp",
+"format": "hwp",
+"declared_ext": "hwp",
+"truth_from": "(붙임1)2026년 전자금융기반시설 취약점 분석평가 입찰공고.hwp",
+"n_tables": 25,
+"scores": {
+"hwp5txt": {
+"cell_retention": 0.18627450980392157,
+"row_integrity": 0.046511627906976744,
+"kv_association": 0.0,
+"n_cells": 102,
+"n_rows": 43,
+"n_kv": 11,
+"chars": 3868,
+"seconds": 0.3
+},
+"hwp_naive": {
+"cell_retention": 0.9901960784313726,
+"row_integrity": 0.046511627906976744,
+"kv_association": 0.0,
+"n_cells": 102,
+"n_rows": 43,
+"n_kv": 11,
+"chars": 8659,
+"seconds": 0.0
+},
+"dpurix": {
+"cell_retention": 1.0,
+"row_integrity": 1.0,
+"kv_association": 1.0,
+"n_cells": 102,
+"n_rows": 43,
+"n_kv": 11,
+"chars": 13115,
+"seconds": 1.3,
+"meta_status": "ok",
+"meta_extractor": "hwp5html",
+"meta_table_loss": false,
+"meta_note": ""
+}
+}
+},
+{
+"doc": "(붙임1)2026년 전자금융기반시설 취약점 분석평가 입찰공고.pdf",
+"format": "pdf",
+"declared_ext": "pdf",
+"truth_from": "(붙임1)2026년 전자금융기반시설 취약점 분석평가 입찰공고.hwp",
+"n_tables": 25,
+"scores": {
+"pdftotext": {
+"cell_retention": 0.8431372549019608,
+"row_integrity": 0.16279069767441862,
+"kv_association": 0.0,
+"n_cells": 102,
+"n_rows": 43,
+"n_kv": 11,
+"chars": 7987,
+"seconds": 0.1
+},
+"pdftotext_layout": {
+"cell_retention": 0.8627450980392157,
+"row_integrity": 0.6511627906976745,
+"kv_association": 1.0,
+"n_cells": 102,
+"n_rows": 43,
+"n_kv": 11,
+"chars": 10868,
+"seconds": 0.1
+},
+"pymupdf": {
+"cell_retention": 0.9901960784313726,
+"row_integrity": 0.09302325581395349,
+"kv_association": 1.0,
+"n_cells": 102,
+"n_rows": 43,
+"n_kv": 11,
+"chars": 7913,
+"seconds": 0.0
+},
+"pdfplumber": {
+"cell_retention": 0.8627450980392157,
+"row_integrity": 0.6511627906976745,
+"kv_association": 1.0,
+"n_cells": 102,
+"n_rows": 43,
+"n_kv": 11,
+"chars": 7827,
+"seconds": 0.7
+},
+"pdfplumber_tables": {
+"cell_retention": 0.9313725490196079,
+"row_integrity": 0.8837209302325582,
+"kv_association": 1.0,
+"n_cells": 102,
+"n_rows": 43,
+"n_kv": 11,
+"chars": 28976,
+"seconds": 0.8
+},
+"dpurix": {
+"cell_retention": 0.7254901960784313,
+"row_integrity": 0.4883720930232558,
+"kv_association": 0.09090909090909091,
+"n_cells": 102,
+"n_rows": 43,
+"n_kv": 11,
+"chars": 17441,
+"seconds": 0.9,
+"meta_status": "ok",
+"meta_extractor": "pdfplumber-read",
+"meta_table_loss": false,
+"meta_note": ""
+}
+}
+},
+{
+"doc": "(붙임2)2026년전자금융기반시설 취약점 분석평가 과업내역서.hwp",
+"format": "hwp",
+"declared_ext": "hwp",
+"truth_from": "(붙임2)2026년전자금융기반시설 취약점 분석평가 과업내역서.hwp",
+"n_tables": 38,
+"scores": {
+"hwp5txt": {
+"cell_retention": 0.1256544502617801,
+"row_integrity": 0.0,
+"kv_association": 0.038461538461538464,
+"n_cells": 191,
+"n_rows": 171,
+"n_kv": 26,
+"chars": 3496,
+"seconds": 0.6
+},
+"hwp_naive": {
+"cell_retention": 0.9581151832460733,
+"row_integrity": 0.0,
+"kv_association": 0.038461538461538464,
+"n_cells": 191,
+"n_rows": 171,
+"n_kv": 26,
+"chars": 21566,
+"seconds": 0.0
+},
+"dpurix": {
+"cell_retention": 1.0,
+"row_integrity": 1.0,
+"kv_association": 1.0,
+"n_cells": 191,
+"n_rows": 171,
+"n_kv": 26,
+"chars": 36787,
+"seconds": 5.0,
+"meta_status": "ok",
+"meta_extractor": "hwp5html",
+"meta_table_loss": false,
+"meta_note": ""
+}
+}
+},
+{
+"doc": "입찰공고문(제3차 경관정책기본계획 수립에 따른 제도개선안 도출).hwpx",
+"format": "hwpx",
+"declared_ext": "hwpx",
+"truth_from": "입찰공고문(제3차 경관정책기본계획 수립에 따른 제도개선안 도출).hwpx",
+"n_tables": 3,
+"scores": {
+"hwpx_strip": {
+"cell_retention": 1.0,
+"row_integrity": 0.0,
+"kv_association": null,
+"n_cells": 24,
+"n_rows": 7,
+"n_kv": 0,
+"chars": 7957,
+"seconds": 0.0
+},
+"dpurix": {
+"cell_retention": 1.0,
+"row_integrity": 1.0,
+"kv_association": null,
+"n_cells": 24,
+"n_rows": 7,
+"n_kv": 0,
+"chars": 5713,
+"seconds": 0.0,
+"meta_status": "ok",
+"meta_extractor": "hwpx",
+"meta_table_loss": false,
+"meta_note": ""
+}
+}
+},
+{
+"doc": "입찰공고문(제3차 경관정책기본계획 수립에 따른 제도개선안 도출).pdf",
+"format": "pdf",
+"declared_ext": "pdf",
+"truth_from": "제안요청서(제3차 경관정책기본계획 수립에 따른 제도개선안 도출).hwpx",
+"n_tables": 25,
+"scores": {
+"pdftotext": {
+"cell_retention": 0.10833333333333334,
+"row_integrity": 0.0,
+"kv_association": 0.0,
+"n_cells": 120,
+"n_rows": 28,
+"n_kv": 7,
+"chars": 6241,
+"seconds": 0.1
+},
+"pdftotext_layout": {
+"cell_retention": 0.10833333333333334,
+"row_integrity": 0.0,
+"kv_association": 0.0,
+"n_cells": 120,
+"n_rows": 28,
+"n_kv": 7,
+"chars": 11441,
+"seconds": 0.1
+},
+"pymupdf": {
+"cell_retention": 0.11666666666666667,
+"row_integrity": 0.0,
+"kv_association": 0.0,
+"n_cells": 120,
+"n_rows": 28,
+"n_kv": 7,
+"chars": 4910,
+"seconds": 0.0
+},
+"pdfplumber": {
+"cell_retention": 0.11666666666666667,
+"row_integrity": 0.0,
+"kv_association": 0.0,
+"n_cells": 120,
+"n_rows": 28,
+"n_kv": 7,
+"chars": 5739,
+"seconds": 0.4
+},
+"pdfplumber_tables": {
+"cell_retention": 0.11666666666666667,
+"row_integrity": 0.0,
+"kv_association": 0.0,
+"n_cells": 120,
+"n_rows": 28,
+"n_kv": 7,
+"chars": 5850,
+"seconds": 0.4
+},
+"dpurix": {
+"cell_retention": 0.11666666666666667,
+"row_integrity": 0.0,
+"kv_association": 0.0,
+"n_cells": 120,
+"n_rows": 28,
+"n_kv": 7,
+"chars": 5794,
+"seconds": 0.4,
+"meta_status": "ok",
+"meta_extractor": "pdfplumber-read",
+"meta_table_loss": false,
+"meta_note": ""
+}
+}
+},
+{
+"doc": "제안요청서(제3차 경관정책기본계획 수립에 따른 제도개선안 도출).hwpx",
+"format": "hwpx",
+"declared_ext": "hwpx",
+"truth_from": "제안요청서(제3차 경관정책기본계획 수립에 따른 제도개선안 도출).hwpx",
+"n_tables": 25,
+"scores": {
+"hwpx_strip": {
+"cell_retention": 0.975,
+"row_integrity": 0.0,
+"kv_association": 0.14285714285714285,
+"n_cells": 120,
+"n_rows": 28,
+"n_kv": 7,
+"chars": 21844,
+"seconds": 0.0
+},
+"dpurix": {
+"cell_retention": 1.0,
+"row_integrity": 1.0,
+"kv_association": 1.0,
+"n_cells": 120,
+"n_rows": 28,
+"n_kv": 7,
+"chars": 12415,
+"seconds": 0.0,
+"meta_status": "ok",
+"meta_extractor": "hwpx",
+"meta_table_loss": false,
+"meta_note": ""
+}
+}
+},
+{
+"doc": "과업내용서(2025).hwpx",
+"format": "hwpx",
+"declared_ext": "hwpx",
+"truth_from": "과업내용서(2025).hwpx",
+"n_tables": 2,
+"scores": {
+"hwpx_strip": {
+"cell_retention": 1.0,
+"row_integrity": 0.0,
+"kv_association": 0.0,
+"n_cells": 19,
+"n_rows": 8,
+"n_kv": 7,
+"chars": 1961,
+"seconds": 0.0
+},
+"dpurix": {
+"cell_retention": 1.0,
+"row_integrity": 1.0,
+"kv_association": 1.0,
+"n_cells": 19,
+"n_rows": 8,
+"n_kv": 7,
+"chars": 993,
+"seconds": 0.0,
+"meta_status": "ok",
+"meta_extractor": "hwpx",
+"meta_table_loss": false,
+"meta_note": ""
+}
+}
+},
+{
+"doc": "제안요청서(2025).hwpx",
+"format": "hwpx",
+"declared_ext": "hwpx",
+"truth_from": "제안요청서(2025).hwpx",
+"n_tables": 22,
+"scores": {
+"hwpx_strip": {
+"cell_retention": 0.9949748743718593,
+"row_integrity": 0.05263157894736842,
+"kv_association": 0.06666666666666667,
+"n_cells": 199,
+"n_rows": 57,
+"n_kv": 15,
+"chars": 20087,
+"seconds": 0.0
+},
+"dpurix": {
+"cell_retention": 1.0,
+"row_integrity": 1.0,
+"kv_association": 1.0,
+"n_cells": 199,
+"n_rows": 57,
+"n_kv": 15,
+"chars": 10184,
+"seconds": 0.0,
+"meta_status": "ok",
+"meta_extractor": "hwpx",
+"meta_table_loss": false,
+"meta_note": ""
+}
+}
+},
+{
+"doc": "공고문_2025년 인권상황실태조사.hwpx",
+"format": "hwpx",
+"declared_ext": "hwpx",
+"truth_from": "공고문_2025년 인권상황실태조사.hwpx",
+"n_tables": 7,
+"scores": {
+"hwpx_strip": {
+"cell_retention": 1.0,
+"row_integrity": 0.0,
+"kv_association": 0.0,
+"n_cells": 23,
+"n_rows": 6,
+"n_kv": 5,
+"chars": 9852,
+"seconds": 0.0
+},
+"dpurix": {
+"cell_retention": 1.0,
+"row_integrity": 1.0,
+"kv_association": 1.0,
+"n_cells": 23,
+"n_rows": 6,
+"n_kv": 5,
+"chars": 7319,
+"seconds": 0.0,
+"meta_status": "ok",
+"meta_extractor": "hwpx",
+"meta_table_loss": false,
+"meta_note": ""
+}
+}
+},
+{
+"doc": "공고문_2025년 뉴미디어 홍보 용역.hwpx",
+"format": "hwpx",
+"declared_ext": "hwpx",
+"truth_from": "공고문_2025년 뉴미디어 홍보 용역.hwpx",
+"n_tables": 5,
+"scores": {
+"hwpx_strip": {
+"cell_retention": 1.0,
+"row_integrity": null,
+"kv_association": null,
+"n_cells": 7,
+"n_rows": 0,
+"n_kv": 0,
+"chars": 7896,
+"seconds": 0.0
+},
+"dpurix": {
+"cell_retention": 1.0,
+"row_integrity": null,
+"kv_association": null,
+"n_cells": 7,
+"n_rows": 0,
+"n_kv": 0,
+"chars": 5984,
+"seconds": 0.0,
+"meta_status": "ok",
+"meta_extractor": "hwpx",
+"meta_table_loss": false,
+"meta_note": ""
+}
+}
+},
+{
+"doc": "공고문_2025년 인권상황실태조사.hwpx",
+"format": "hwpx",
+"declared_ext": "hwpx",
+"truth_from": "공고문_2025년 인권상황실태조사.hwpx",
+"n_tables": 7,
+"scores": {
+"hwpx_strip": {
+"cell_retention": 1.0,
+"row_integrity": 0.0,
+"kv_association": 0.0,
+"n_cells": 23,
+"n_rows": 6,
+"n_kv": 5,
+"chars": 9852,
+"seconds": 0.0
+},
+"dpurix": {
+"cell_retention": 1.0,
+"row_integrity": 1.0,
+"kv_association": 1.0,
+"n_cells": 23,
+"n_rows": 6,
+"n_kv": 5,
+"chars": 7319,
+"seconds": 0.0,
+"meta_status": "ok",
+"meta_extractor": "hwpx",
+"meta_table_loss": false,
+"meta_note": ""
+}
+}
+},
+{
+"doc": "연구용역계약특수조건.hwpx",
+"format": "hwpx",
+"declared_ext": "hwpx",
+"truth_from": "연구용역계약특수조건.hwpx",
+"n_tables": 2,
+"scores": {
+"hwpx_strip": {
+"cell_retention": 1.0,
+"row_integrity": 0.0,
+"kv_association": null,
+"n_cells": 25,
+"n_rows": 7,
+"n_kv": 0,
+"chars": 6382,
+"seconds": 0.0
+},
+"dpurix": {
+"cell_retention": 1.0,
+"row_integrity": 1.0,
+"kv_association": null,
+"n_cells": 25,
+"n_rows": 7,
+"n_kv": 0,
+"chars": 4891,
+"seconds": 0.0,
+"meta_status": "ok",
+"meta_extractor": "hwpx",
+"meta_table_loss": false,
+"meta_note": ""
+}
+}
+},
+{
+"doc": "제안서 양식.hwpx",
+"format": "hwpx",
+"declared_ext": "hwpx",
+"truth_from": "제안서 양식.hwpx",
+"n_tables": 19,
+"scores": {
+"hwpx_strip": {
+"cell_retention": 0.9895833333333334,
+"row_integrity": 0.038461538461538464,
+"kv_association": null,
+"n_cells": 96,
+"n_rows": 26,
+"n_kv": 0,
+"chars": 8503,
+"seconds": 0.0
+},
+"dpurix": {
+"cell_retention": 1.0,
+"row_integrity": 1.0,
+"kv_association": null,
+"n_cells": 96,
+"n_rows": 26,
+"n_kv": 0,
+"chars": 2791,
+"seconds": 0.0,
+"meta_status": "ok",
+"meta_extractor": "hwpx",
+"meta_table_loss": false,
+"meta_note": ""
+}
+}
+},
+{
+"doc": "제안요청서(5건).hwpx",
+"format": "hwpx",
+"declared_ext": "hwpx",
+"truth_from": "제안요청서(5건).hwpx",
+"n_tables": 5,
+"scores": {
+"hwpx_strip": {
+"cell_retention": 1.0,
+"row_integrity": 0.0,
+"kv_association": 0.0,
+"n_cells": 55,
+"n_rows": 45,
+"n_kv": 5,
+"chars": 13617,
+"seconds": 0.0
+},
+"dpurix": {
+"cell_retention": 1.0,
+"row_integrity": 1.0,
+"kv_association": 1.0,
+"n_cells": 55,
+"n_rows": 45,
+"n_kv": 5,
+"chars": 10478,
+"seconds": 0.0,
+"meta_status": "ok",
+"meta_extractor": "hwpx",
+"meta_table_loss": false,
+"meta_note": ""
+}
+}
+},
+{
+"doc": "연구용역계약특수조건.hwpx",
+"format": "hwpx",
+"declared_ext": "hwpx",
+"truth_from": "연구용역계약특수조건.hwpx",
+"n_tables": 2,
+"scores": {
+"hwpx_strip": {
+"cell_retention": 1.0,
+"row_integrity": 0.0,
+"kv_association": null,
+"n_cells": 25,
+"n_rows": 7,
+"n_kv": 0,
+"chars": 6382,
+"seconds": 0.0
+},
+"dpurix": {
+"cell_retention": 1.0,
+"row_integrity": 1.0,
+"kv_association": null,
+"n_cells": 25,
+"n_rows": 7,
+"n_kv": 0,
+"chars": 4891,
+"seconds": 0.0,
+"meta_status": "ok",
+"meta_extractor": "hwpx",
+"meta_table_loss": false,
+"meta_note": ""
+}
+}
+},
+{
+"doc": "입찰참가자격확인서_청렴계약서 양식.hwpx",
+"format": "hwpx",
+"declared_ext": "hwpx",
+"truth_from": "입찰참가자격확인서_청렴계약서 양식.hwpx",
+"n_tables": 0,
+"scores": {
+"hwpx_strip": {
+"cell_retention": null,
+"row_integrity": null,
+"kv_association": null,
+"n_cells": 0,
+"n_rows": 0,
+"n_kv": 0,
+"chars": 1278,
+"seconds": 0.0
+},
+"dpurix": {
+"cell_retention": null,
+"row_integrity": null,
+"kv_association": null,
+"n_cells": 0,
+"n_rows": 0,
+"n_kv": 0,
+"chars": 840,
+"seconds": 0.0,
+"meta_status": "ok",
+"meta_extractor": "hwpx",
+"meta_table_loss": false,
+"meta_note": ""
+}
+}
+},
+{
+"doc": "입찰서 양식.hwpx",
+"format": "hwpx",
+"declared_ext": "hwpx",
+"truth_from": "입찰서 양식.hwpx",
+"n_tables": 0,
+"scores": {
+"hwpx_strip": {
+"cell_retention": null,
+"row_integrity": null,
+"kv_association": null,
+"n_cells": 0,
+"n_rows": 0,
+"n_kv": 0,
+"chars": 1277,
+"seconds": 0.0
+},
+"dpurix": {
+"cell_retention": null,
+"row_integrity": null,
+"kv_association": null,
+"n_cells": 0,
+"n_rows": 0,
+"n_kv": 0,
+"chars": 839,
+"seconds": 0.0,
+"meta_status": "ok",
+"meta_extractor": "hwpx",
+"meta_table_loss": false,
+"meta_note": ""
+}
+}
+},
+{
+"doc": "제안서 양식.hwpx",
+"format": "hwpx",
+"declared_ext": "hwpx",
+"truth_from": "제안서 양식.hwpx",
+"n_tables": 19,
+"scores": {
+"hwpx_strip": {
+"cell_retention": 0.9895833333333334,
+"row_integrity": 0.038461538461538464,
+"kv_association": null,
+"n_cells": 96,
+"n_rows": 26,
+"n_kv": 0,
+"chars": 8503,
+"seconds": 0.0
+},
+"dpurix": {
+"cell_retention": 1.0,
+"row_integrity": 1.0,
+"kv_association": null,
+"n_cells": 96,
+"n_rows": 26,
+"n_kv": 0,
+"chars": 2791,
+"seconds": 0.0,
+"meta_status": "ok",
+"meta_extractor": "hwpx",
+"meta_table_loss": false,
+"meta_note": ""
+}
+}
+},
+{
+"doc": "[별표 1] 방송프로그램 제작 표준계약서(방송 분야 표준계약서).hwp",
+"format": "hwp",
+"declared_ext": "hwp",
+"truth_from": "[별표 1] 방송프로그램 제작 표준계약서(방송 분야 표준계약서).hwp",
+"n_tables": 4,
+"scores": {
+"hwp5txt": {
+"cell_retention": 0.2127659574468085,
+"row_integrity": 0.0,
+"kv_association": null,
+"n_cells": 47,
+"n_rows": 13,
+"n_kv": 0,
+"chars": 11061,
+"seconds": 0.2
+},
+"hwp_naive": {
+"cell_retention": 1.0,
+"row_integrity": 0.07692307692307693,
+"kv_association": null,
+"n_cells": 47,
+"n_rows": 13,
+"n_kv": 0,
+"chars": 11837,
+"seconds": 0.0
+},
+"dpurix": {
+"cell_retention": 1.0,
+"row_integrity": 1.0,
+"kv_association": null,
+"n_cells": 47,
+"n_rows": 13,
+"n_kv": 0,
+"chars": 12710,
+"seconds": 0.4,
+"meta_status": "ok",
+"meta_extractor": "hwp5html",
+"meta_table_loss": false,
+"meta_note": ""
+}
+}
+},
+{
+"doc": "[별표 1] 대중문화예술분야 연습생 표준계약서.hwpx",
+"format": "hwpx",
+"declared_ext": "hwpx",
+"truth_from": "[별표 1] 대중문화예술분야 연습생 표준계약서.hwpx",
+"n_tables": 1,
+"scores": {
+"hwpx_strip": {
+"cell_retention": 1.0,
+"row_integrity": null,
+"kv_association": null,
+"n_cells": 2,
+"n_rows": 0,
+"n_kv": 0,
+"chars": 6371,
+"seconds": 0.0
+},
+"dpurix": {
+"cell_retention": 1.0,
+"row_integrity": null,
+"kv_association": null,
+"n_cells": 2,
+"n_rows": 0,
+"n_kv": 0,
+"chars": 4696,
+"seconds": 0.0,
+"meta_status": "ok",
+"meta_extractor": "hwpx",
+"meta_table_loss": false,
+"meta_note": ""
+}
+}
+},
+{
+"doc": "프랜차이즈(기타도소매업) 표준계약서 [2024.12. 개정] (1).hwp",
+"format": "hwp",
+"declared_ext": "hwp",
+"truth_from": "프랜차이즈(기타도소매업) 표준계약서 [2024.12. 개정] (1).hwp",
+"n_tables": 9,
+"scores": {
+"hwp5txt": {
+"cell_retention": 0.3157894736842105,
+"row_integrity": 0.0,
+"kv_association": null,
+"n_cells": 38,
+"n_rows": 8,
+"n_kv": 0,
+"chars": 31893,
+"seconds": 0.4
+},
+"hwp_naive": {
+"cell_retention": 1.0,
+"row_integrity": 0.0,
+"kv_association": null,
+"n_cells": 38,
+"n_rows": 8,
+"n_kv": 0,
+"chars": 33142,
+"seconds": 0.0
+},
+"dpurix": {
+"cell_retention": 1.0,
+"row_integrity": 1.0,
+"kv_association": null,
+"n_cells": 38,
+"n_rows": 8,
+"n_kv": 0,
+"chars": 33265,
+"seconds": 1.3,
+"meta_status": "ok",
+"meta_extractor": "hwp5html",
+"meta_table_loss": false,
+"meta_note": ""
+}
+}
+},
+{
+"doc": "프랜차이즈(기타서비스업) 표준계약서 [2024.12. 개정] (1).hwp",
+"format": "hwp",
+"declared_ext": "hwp",
+"truth_from": "프랜차이즈(기타서비스업) 표준계약서 [2024.12. 개정] (1).hwp",
+"n_tables": 8,
+"scores": {
+"hwp5txt": {
+"cell_retention": 0.26666666666666666,
+"row_integrity": 0.0,
+"kv_association": null,
+"n_cells": 30,
+"n_rows": 6,
+"n_kv": 0,
+"chars": 31310,
+"seconds": 0.4
+},
+"hwp_naive": {
+"cell_retention": 1.0,
+"row_integrity": 0.0,
+"kv_association": null,
+"n_cells": 30,
+"n_rows": 6,
+"n_kv": 0,
+"chars": 32499,
+"seconds": 0.0
+},
+"dpurix": {
+"cell_retention": 1.0,
+"row_integrity": 1.0,
+"kv_association": null,
+"n_cells": 30,
+"n_rows": 6,
+"n_kv": 0,
+"chars": 32344,
+"seconds": 1.2,
+"meta_status": "ok",
+"meta_extractor": "hwp5html",
+"meta_table_loss": false,
+"meta_note": ""
+}
+}
+},
+{
+"doc": "프랜차이즈(기타서비스업) 표준계약서 [2024.12. 개정] (2).hwp",
+"format": "hwp",
+"declared_ext": "hwp",
+"truth_from": "프랜차이즈(기타서비스업) 표준계약서 [2024.12. 개정] (2).hwp",
+"n_tables": 8,
+"scores": {
+"hwp5txt": {
+"cell_retention": 0.26666666666666666,
+"row_integrity": 0.0,
+"kv_association": null,
+"n_cells": 30,
+"n_rows": 6,
+"n_kv": 0,
+"chars": 31310,
+"seconds": 0.4
+},
+"hwp_naive": {
+"cell_retention": 1.0,
+"row_integrity": 0.0,
+"kv_association": null,
+"n_cells": 30,
+"n_rows": 6,
+"n_kv": 0,
+"chars": 32499,
+"seconds": 0.0
+},
+"dpurix": {
+"cell_retention": 1.0,
+"row_integrity": 1.0,
+"kv_association": null,
+"n_cells": 30,
+"n_rows": 6,
+"n_kv": 0,
+"chars": 32344,
+"seconds": 1.3,
+"meta_status": "ok",
+"meta_extractor": "hwp5html",
+"meta_table_loss": false,
+"meta_note": ""
+}
+}
+},
+{
+"doc": "프랜차이즈(건강기능식품업) 표준계약서 [2024.12. 개정].hwp",
+"format": "hwp",
+"declared_ext": "hwp",
+"truth_from": "프랜차이즈(건강기능식품업) 표준계약서 [2024.12. 개정].hwp",
+"n_tables": 9,
+"scores": {
+"hwp5txt": {
+"cell_retention": 0.3157894736842105,
+"row_integrity": 0.0,
+"kv_association": null,
+"n_cells": 38,
+"n_rows": 8,
+"n_kv": 0,
+"chars": 33020,
+"seconds": 0.4
+},
+"hwp_naive": {
+"cell_retention": 1.0,
+"row_integrity": 0.0,
+"kv_association": null,
+"n_cells": 38,
+"n_rows": 8,
+"n_kv": 0,
+"chars": 34266,
+"seconds": 0.0
+},
+"dpurix": {
+"cell_retention": 1.0,
+"row_integrity": 1.0,
+"kv_association": null,
+"n_cells": 38,
+"n_rows": 8,
+"n_kv": 0,
+"chars": 34399,
+"seconds": 1.4,
+"meta_status": "ok",
+"meta_extractor": "hwp5html",
+"meta_table_loss": false,
+"meta_note": ""
+}
+}
+},
+{
+"doc": "프랜차이즈(교육서비스업) 표준계약서 [2024.12. 개정].hwp",
+"format": "hwp",
+"declared_ext": "hwp",
+"truth_from": "프랜차이즈(교육서비스업) 표준계약서 [2024.12. 개정].hwp",
+"n_tables": 8,
+"scores": {
+"hwp5txt": {
+"cell_retention": 0.26666666666666666,
+"row_integrity": 0.0,
+"kv_association": null,
+"n_cells": 30,
+"n_rows": 6,
+"n_kv": 0,
+"chars": 33370,
+"seconds": 0.4
+},
+"hwp_naive": {
+"cell_retention": 1.0,
+"row_integrity": 0.0,
+"kv_association": null,
+"n_cells": 30,
+"n_rows": 6,
+"n_kv": 0,
+"chars": 34572,
+"seconds": 0.0
+},
+"dpurix": {
+"cell_retention": 1.0,
+"row_integrity": 1.0,
+"kv_association": null,
+"n_cells": 30,
+"n_rows": 6,
+"n_kv": 0,
+"chars": 34325,
+"seconds": 1.3,
+"meta_status": "ok",
+"meta_extractor": "hwp5html",
+"meta_table_loss": false,
+"meta_note": ""
+}
+}
+},
+{
+"doc": "프랜차이즈(기타도소매업) 표준계약서 [2024.12. 개정].hwp",
+"format": "hwp",
+"declared_ext": "hwp",
+"truth_from": "프랜차이즈(기타도소매업) 표준계약서 [2024.12. 개정].hwp",
+"n_tables": 9,
+"scores": {
+"hwp5txt": {
+"cell_retention": 0.3157894736842105,
+"row_integrity": 0.0,
+"kv_association": null,
+"n_cells": 38,
+"n_rows": 8,
+"n_kv": 0,
+"chars": 31893,
+"seconds": 0.4
+},
+"hwp_naive": {
+"cell_retention": 1.0,
+"row_integrity": 0.0,
+"kv_association": null,
+"n_cells": 38,
+"n_rows": 8,
+"n_kv": 0,
+"chars": 33142,
+"seconds": 0.0
+},
+"dpurix": {
+"cell_retention": 1.0,
+"row_integrity": 1.0,
+"kv_association": null,
+"n_cells": 38,
+"n_rows": 8,
+"n_kv": 0,
+"chars": 33265,
+"seconds": 1.3,
+"meta_status": "ok",
+"meta_extractor": "hwp5html",
+"meta_table_loss": false,
+"meta_note": ""
+}
+}
+},
+{
+"doc": "프랜차이즈(기타서비스업) 표준계약서 [2024.12. 개정].hwp",
+"format": "hwp",
+"declared_ext": "hwp",
+"truth_from": "프랜차이즈(기타서비스업) 표준계약서 [2024.12. 개정].hwp",
+"n_tables": 8,
+"scores": {
+"hwp5txt": {
+"cell_retention": 0.26666666666666666,
+"row_integrity": 0.0,
+"kv_association": null,
+"n_cells": 30,
+"n_rows": 6,
+"n_kv": 0,
+"chars": 31310,
+"seconds": 0.4
+},
+"hwp_naive": {
+"cell_retention": 1.0,
+"row_integrity": 0.0,
+"kv_association": null,
+"n_cells": 30,
+"n_rows": 6,
+"n_kv": 0,
+"chars": 32499,
+"seconds": 0.0
+},
+"dpurix": {
+"cell_retention": 1.0,
+"row_integrity": 1.0,
+"kv_association": null,
+"n_cells": 30,
+"n_rows": 6,
+"n_kv": 0,
+"chars": 32344,
+"seconds": 1.2,
+"meta_status": "ok",
+"meta_extractor": "hwp5html",
+"meta_table_loss": false,
+"meta_note": ""
+}
+}
+},
+{
+"doc": "프랜차이즈(이미용업) 표준계약서 [2024.12. 개정].hwp",
+"format": "hwp",
+"declared_ext": "hwp",
+"truth_from": "프랜차이즈(이미용업) 표준계약서 [2024.12. 개정].hwp",
+"n_tables": 8,
+"scores": {
+"hwp5txt": {
+"cell_retention": 0.26666666666666666,
+"row_integrity": 0.0,
+"kv_association": null,
+"n_cells": 30,
+"n_rows": 6,
+"n_kv": 0,
+"chars": 32502,
+"seconds": 0.4
+},
+"hwp_naive": {
+"cell_retention": 1.0,
+"row_integrity": 0.0,
+"kv_association": null,
+"n_cells": 30,
+"n_rows": 6,
+"n_kv": 0,
+"chars": 33676,
+"seconds": 0.0
+},
+"dpurix": {
+"cell_retention": 1.0,
+"row_integrity": 1.0,
+"kv_association": null,
+"n_cells": 30,
+"n_rows": 6,
+"n_kv": 0,
+"chars": 33491,
+"seconds": 1.3,
+"meta_status": "ok",
+"meta_extractor": "hwp5html",
+"meta_table_loss": false,
+"meta_note": ""
+}
+}
+},
+{
+"doc": "프랜차이즈(세탁업) 표준계약서 [2024.12. 개정].hwp",
+"format": "hwp",
+"declared_ext": "hwp",
+"truth_from": "프랜차이즈(세탁업) 표준계약서 [2024.12. 개정].hwp",
+"n_tables": 8,
+"scores": {
+"hwp5txt": {
+"cell_retention": 0.29411764705882354,
+"row_integrity": 0.0,
+"kv_association": null,
+"n_cells": 34,
+"n_rows": 7,
+"n_kv": 0,
+"chars": 33791,
+"seconds": 0.4
+},
+"hwp_naive": {
+"cell_retention": 0.9705882352941176,
+"row_integrity": 0.0,
+"kv_association": null,
+"n_cells": 34,
+"n_rows": 7,
+"n_kv": 0,
+"chars": 35061,
+"seconds": 0.0
+},
+"dpurix": {
+"cell_retention": 1.0,
+"row_integrity": 1.0,
+"kv_association": null,
+"n_cells": 34,
+"n_rows": 7,
+"n_kv": 0,
+"chars": 35042,
+"seconds": 1.2,
+"meta_status": "ok",
+"meta_extractor": "hwp5html",
+"meta_table_loss": false,
+"meta_note": ""
+}
+}
+},
+{
+"doc": "화장품업종 표준대리점거래계약서(23.9월 개정).hwp",
+"format": "hwp",
+"declared_ext": "hwp",
+"truth_from": "화장품업종 표준대리점거래계약서(23.9월 개정).hwp",
+"n_tables": 5,
+"scores": {
+"hwp5txt": {
+"cell_retention": 0.375,
+"row_integrity": 0.42857142857142855,
+"kv_association": null,
+"n_cells": 8,
+"n_rows": 7,
+"n_kv": 0,
+"chars": 12522,
+"seconds": 0.2
+},
+"hwp_naive": {
+"cell_retention": 1.0,
+"row_integrity": 0.42857142857142855,
+"kv_association": null,
+"n_cells": 8,
+"n_rows": 7,
+"n_kv": 0,
+"chars": 13592,
+"seconds": 0.0
+},
+"dpurix": {
+"cell_retention": 1.0,
+"row_integrity": 1.0,
+"kv_association": null,
+"n_cells": 8,
+"n_rows": 7,
+"n_kv": 0,
+"chars": 14149,
+"seconds": 0.4,
+"meta_status": "ok",
+"meta_extractor": "hwp5html",
+"meta_table_loss": false,
+"meta_note": ""
+}
+}
+},
+{
+"doc": "화장품업종 표준대리점거래계약서(24.10월 개정).hwp",
+"format": "hwp",
+"declared_ext": "hwp",
+"truth_from": "화장품업종 표준대리점거래계약서(24.10월 개정).hwp",
+"n_tables": 5,
+"scores": {
+"hwp5txt": {
+"cell_retention": 0.375,
+"row_integrity": 0.42857142857142855,
+"kv_association": null,
+"n_cells": 8,
+"n_rows": 7,
+"n_kv": 0,
+"chars": 12678,
+"seconds": 0.2
+},
+"hwp_naive": {
+"cell_retention": 1.0,
+"row_integrity": 0.42857142857142855,
+"kv_association": null,
+"n_cells": 8,
+"n_rows": 7,
+"n_kv": 0,
+"chars": 13753,
+"seconds": 0.0
+},
+"dpurix": {
+"cell_retention": 1.0,
+"row_integrity": 1.0,
+"kv_association": null,
+"n_cells": 8,
+"n_rows": 7,
+"n_kv": 0,
+"chars": 14310,
+"seconds": 0.4,
+"meta_status": "ok",
+"meta_extractor": "hwp5html",
+"meta_table_loss": false,
+"meta_note": ""
+}
+}
+},
+{
+"doc": "24년 개정 온라인쇼핑몰 표준거래계약서(직매입거래).hwp",
+"format": "hwp",
+"declared_ext": "hwp",
+"truth_from": "24년 개정 온라인쇼핑몰 표준거래계약서(직매입거래).hwp",
+"n_tables": 10,
+"scores": {
+"hwp5txt": {
+"cell_retention": 0.17391304347826086,
+"row_integrity": 0.0,
+"kv_association": null,
+"n_cells": 23,
+"n_rows": 3,
+"n_kv": 0,
+"chars": 11202,
+"seconds": 0.2
+},
+"hwp_naive": {
+"cell_retention": 1.0,
+"row_integrity": 0.0,
+"kv_association": null,
+"n_cells": 23,
+"n_rows": 3,
+"n_kv": 0,
+"chars": 12858,
+"seconds": 0.0
+},
+"dpurix": {
+"cell_retention": 1.0,
+"row_integrity": 1.0,
+"kv_association": null,
+"n_cells": 23,
+"n_rows": 3,
+"n_kv": 0,
+"chars": 13548,
+"seconds": 0.5,
+"meta_status": "ok",
+"meta_extractor": "hwp5html",
+"meta_table_loss": false,
+"meta_note": ""
+}
+}
+},
+{
+"doc": "24년 개정 특약매입 표준거래계약서(백화점, 대형마트).hwp",
+"format": "hwp",
+"declared_ext": "hwp",
+"truth_from": "24년 개정 특약매입 표준거래계약서(백화점, 대형마트).hwp",
+"n_tables": 9,
+"scores": {
+"hwp5txt": {
+"cell_retention": 0.1,
+"row_integrity": 0.0,
+"kv_association": null,
+"n_cells": 20,
+"n_rows": 4,
+"n_kv": 0,
+"chars": 13283,
+"seconds": 0.2
+},
+"hwp_naive": {
+"cell_retention": 1.0,
+"row_integrity": 0.0,
+"kv_association": null,
+"n_cells": 20,
+"n_rows": 4,
+"n_kv": 0,
+"chars": 14725,
+"seconds": 0.0
+},
+"dpurix": {
+"cell_retention": 1.0,
+"row_integrity": 1.0,
+"kv_association": null,
+"n_cells": 20,
+"n_rows": 4,
+"n_kv": 0,
+"chars": 15681,
+"seconds": 0.5,
+"meta_status": "ok",
+"meta_extractor": "hwp5html",
+"meta_table_loss": false,
+"meta_note": ""
+}
+}
+},
+{
+"doc": "24년 개정 직매입 표준거래계약서(편의점).hwp",
+"format": "hwp",
+"declared_ext": "hwp",
+"truth_from": "24년 개정 직매입 표준거래계약서(편의점).hwp",
+"n_tables": 10,
+"scores": {
+"hwp5txt": {
+"cell_retention": 0.14705882352941177,
+"row_integrity": 0.0,
+"kv_association": null,
+"n_cells": 34,
+"n_rows": 6,
+"n_kv": 0,
+"chars": 11829,
+"seconds": 0.2
+},
+"hwp_naive": {
+"cell_retention": 1.0,
+"row_integrity": 0.0,
+"kv_association": null,
+"n_cells": 34,
+"n_rows": 6,
+"n_kv": 0,
+"chars": 13593,
+"seconds": 0.0
+},
+"dpurix": {
+"cell_retention": 1.0,
+"row_integrity": 1.0,
+"kv_association": null,
+"n_cells": 34,
+"n_rows": 6,
+"n_kv": 0,
+"chars": 14696,
+"seconds": 0.5,
+"meta_status": "ok",
+"meta_extractor": "hwp5html",
+"meta_table_loss": false,
+"meta_note": ""
+}
+}
+},
+{
+"doc": "24년 개정 직매입 표준거래계약서(백화점, 대형마트).hwp",
+"format": "hwp",
+"declared_ext": "hwp",
+"truth_from": "24년 개정 직매입 표준거래계약서(백화점, 대형마트).hwp",
+"n_tables": 9,
+"scores": {
+"hwp5txt": {
+"cell_retention": 0.17391304347826086,
+"row_integrity": 0.0,
+"kv_association": null,
+"n_cells": 23,
+"n_rows": 3,
+"n_kv": 0,
+"chars": 11200,
+"seconds": 0.2
+},
+"hwp_naive": {
+"cell_retention": 1.0,
+"row_integrity": 0.0,
+"kv_association": null,
+"n_cells": 23,
+"n_rows": 3,
+"n_kv": 0,
+"chars": 12836,
+"seconds": 0.0
+},
+"dpurix": {
+"cell_retention": 1.0,
+"row_integrity": 1.0,
+"kv_association": null,
+"n_cells": 23,
+"n_rows": 3,
+"n_kv": 0,
+"chars": 13649,
+"seconds": 0.5,
+"meta_status": "ok",
+"meta_extractor": "hwp5html",
+"meta_table_loss": false,
+"meta_note": ""
+}
+}
+},
+{
+"doc": "[별표 2] 방송프로그램 방영권 구매 표준계약서(방송 분야 표준계약서).hwp",
+"format": "hwp",
+"declared_ext": "hwp",
+"truth_from": "[별표 2] 방송프로그램 방영권 구매 표준계약서(방송 분야 표준계약서).hwp",
+"n_tables": 0,
+"scores": {
+"hwp5txt": {
+"cell_retention": null,
+"row_integrity": null,
+"kv_association": null,
+"n_cells": 0,
+"n_rows": 0,
+"n_kv": 0,
+"chars": 6499,
+"seconds": 0.1
+},
+"hwp_naive": {
+"cell_retention": null,
+"row_integrity": null,
+"kv_association": null,
+"n_cells": 0,
+"n_rows": 0,
+"n_kv": 0,
+"chars": 6558,
+"seconds": 0.0
+},
+"dpurix": {
+"cell_retention": null,
+"row_integrity": null,
+"kv_association": null,
+"n_cells": 0,
+"n_rows": 0,
+"n_kv": 0,
+"chars": 6497,
+"seconds": 0.2,
+"meta_status": "ok",
+"meta_extractor": "hwp5html",
+"meta_table_loss": false,
+"meta_note": ""
+}
+}
+},
+{
+"doc": "[별표 3] 방송프로그램 제작스태프 표준근로계약서(방송 분야 표준계약서).hwp",
+"format": "hwp",
+"declared_ext": "hwp",
+"truth_from": "[별표 3] 방송프로그램 제작스태프 표준근로계약서(방송 분야 표준계약서).hwp",
+"n_tables": 2,
+"scores": {
+"hwp5txt": {
+"cell_retention": 0.2542372881355932,
+"row_integrity": 0.0,
+"kv_association": 0.0,
+"n_cells": 59,
+"n_rows": 22,
+"n_kv": 2,
+"chars": 8783,
+"seconds": 0.2
+},
+"hwp_naive": {
+"cell_retention": 1.0,
+"row_integrity": 0.09090909090909091,
+"kv_association": 0.0,
+"n_cells": 59,
+"n_rows": 22,
+"n_kv": 2,
+"chars": 9974,
+"seconds": 0.0
+},
+"dpurix": {
+"cell_retention": 1.0,
+"row_integrity": 1.0,
+"kv_association": 1.0,
+"n_cells": 59,
+"n_rows": 22,
+"n_kv": 2,
+"chars": 10924,
+"seconds": 0.4,
+"meta_status": "ok",
+"meta_extractor": "hwp5html",
+"meta_table_loss": false,
+"meta_note": ""
+}
+}
+},
+{
+"doc": "[별표 4] 방송프로그램 제작스태프 표준하도급계약서(방송 분야 표준계약서).hwp",
+"format": "hwp",
+"declared_ext": "hwp",
+"truth_from": "[별표 4] 방송프로그램 제작스태프 표준하도급계약서(방송 분야 표준계약서).hwp",
+"n_tables": 1,
+"scores": {
+"hwp5txt": {
+"cell_retention": 0.25,
+"row_integrity": 0.0,
+"kv_association": null,
+"n_cells": 20,
+"n_rows": 8,
+"n_kv": 0,
+"chars": 12127,
+"seconds": 0.1
+},
+"hwp_naive": {
+"cell_retention": 1.0,
+"row_integrity": 0.125,
+"kv_association": null,
+"n_cells": 20,
+"n_rows": 8,
+"n_kv": 0,
+"chars": 12697,
+"seconds": 0.0
+},
+"dpurix": {
+"cell_retention": 1.0,
+"row_integrity": 1.0,
+"kv_association": null,
+"n_cells": 20,
+"n_rows": 8,
+"n_kv": 0,
+"chars": 13210,
+"seconds": 0.3,
+"meta_status": "ok",
+"meta_extractor": "hwp5html",
+"meta_table_loss": false,
+"meta_note": ""
+}
+}
+},
+{
+"doc": "[별표 5] 방송프로그램 제작스태프 표준업무위탁계약서(방송 분야 표준계약서).hwp",
+"format": "hwp",
+"declared_ext": "hwp",
+"truth_from": "[별표 5] 방송프로그램 제작스태프 표준업무위탁계약서(방송 분야 표준계약서).hwp",
+"n_tables": 1,
+"scores": {
+"hwp5txt": {
+"cell_retention": 0.3,
+"row_integrity": 0.0,
+"kv_association": null,
+"n_cells": 20,
+"n_rows": 8,
+"n_kv": 0,
+"chars": 11552,
+"seconds": 0.2
+},
+"hwp_naive": {
+"cell_retention": 1.0,
+"row_integrity": 0.125,
+"kv_association": null,
+"n_cells": 20,
+"n_rows": 8,
+"n_kv": 0,
+"chars": 12185,
+"seconds": 0.0
+},
+"dpurix": {
+"cell_retention": 1.0,
+"row_integrity": 1.0,
+"kv_association": null,
+"n_cells": 20,
+"n_rows": 8,
+"n_kv": 0,
+"chars": 12737,
+"seconds": 0.3,
+"meta_status": "ok",
+"meta_extractor": "hwp5html",
+"meta_table_loss": false,
+"meta_note": ""
+}
+}
+},
+{
+"doc": "[별표 6] 방송작가 집필 표준계약서(방송 분야 표준계약서).hwp",
+"format": "hwp",
+"declared_ext": "hwp",
+"truth_from": "[별표 6] 방송작가 집필 표준계약서(방송 분야 표준계약서).hwp",
+"n_tables": 1,
+"scores": {
+"hwp5txt": {
+"cell_retention": 0.1,
+"row_integrity": 0.0,
+"kv_association": null,
+"n_cells": 30,
+"n_rows": 10,
+"n_kv": 0,
+"chars": 7882,
+"seconds": 0.1
+},
+"hwp_naive": {
+"cell_retention": 1.0,
+"row_integrity": 0.0,
+"kv_association": null,
+"n_cells": 30,
+"n_rows": 10,
+"n_kv": 0,
+"chars": 8334,
+"seconds": 0.0
+},
+"dpurix": {
+"cell_retention": 1.0,
+"row_integrity": 1.0,
+"kv_association": null,
+"n_cells": 30,
+"n_rows": 10,
+"n_kv": 0,
+"chars": 8911,
+"seconds": 0.3,
+"meta_status": "ok",
+"meta_extractor": "hwp5html",
+"meta_table_loss": false,
+"meta_note": ""
+}
+}
+},
+{
+"doc": "웹소설 분야 표준계약서 고시 제정안.hwp",
+"format": "hwp",
+"declared_ext": "hwp",
+"truth_from": "웹소설 분야 표준계약서 고시 제정안.hwp",
+"n_tables": 3,
+"scores": {
+"hwp5txt": {
+"cell_retention": 0.0,
+"row_integrity": null,
+"kv_association": null,
+"n_cells": 1,
+"n_rows": 0,
+"n_kv": 0,
+"chars": 33298,
+"seconds": 0.3
+},
+"hwp_naive": {
+"cell_retention": 1.0,
+"row_integrity": null,
+"kv_association": null,
+"n_cells": 1,
+"n_rows": 0,
+"n_kv": 0,
+"chars": 34381,
+"seconds": 0.0
+},
+"dpurix": {
+"cell_retention": 1.0,
+"row_integrity": null,
+"kv_association": null,
+"n_cells": 1,
+"n_rows": 0,
+"n_kv": 0,
+"chars": 33754,
+"seconds": 0.7,
+"meta_status": "ok",
+"meta_extractor": "hwp5html",
+"meta_table_loss": false,
+"meta_note": ""
+}
+}
+}
+]

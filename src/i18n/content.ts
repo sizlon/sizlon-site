@@ -217,6 +217,10 @@ export const content = {
           proof.careerShort + ' — 그 엔지니어가 직접 합니다.',
         ],
         heroProofLink: { label: '만든 것들', href: '/work/#pipeline' },
+        notesH: '실측 노트',
+        notes: [
+          { label: '표가 사라지면 RAG 는 틀린 숫자를 자신 있게 말한다 — 공고문 214건으로 잰 HWP·PDF 표 추출', href: '/notes/korean-tables/', line: '범용 추출은 셀 85% 를 버리거나 행 구조 4% 만 남긴다. 같은 문서의 PDF 는 최선 도구도 셀 87%.' },
+        ],
         principlesH: '데이터 수집 원칙',
         principles: [
           '로그인 뒤의 데이터, 개인정보, 약관상 수집 금지 사이트, 저작권 있는 본문 전문은 금액과 무관하게 받지 않습니다.',

@@ -19,6 +19,8 @@ const heroProof = 'heroProof' in c ? c.heroProof : [];
 const heroProofLink = 'heroProofLink' in c ? c.heroProofLink : null;
 const termsH = 'termsH' in c ? c.termsH : '';
 const terms = 'terms' in c ? c.terms : [];
+const notesH = 'notesH' in c ? c.notesH : '';
+const notes = 'notes' in c ? c.notes : [];
 
 // Service + Offer JSON-LD (2026-09-06). 숫자는 content 의 offer(표시 price 와 같은 값) 에서만.
 const url = new URL(Astro.url.pathname, Astro.site).href;
@@ -136,6 +138,20 @@ const serviceSchema = {
     </section>
   )}
 
+  {notes.length > 0 && (
+    <section class="section wrap block">
+      <h2>{notesH}</h2>
+      <ul class="notes">
+        {notes.map((n) => (
+          <li>
+            <a href={n.href}>{n.label} &rarr;</a>
+            <p>{n.line}</p>
+          </li>
+        ))}
+      </ul>
+    </section>
+  )}
+
   <section class="cta-band band-ink">
     <div class="wrap cta-inner">
       <h2>{c.cta}</h2>
@@ -179,4 +195,7 @@ const serviceSchema = {
   .cta-inner h2 { font-size: var(--step-2); max-width: var(--measure); }
   .cross { color: var(--slate-on-dark); }
   .cross a { color: var(--color-mist); text-decoration: none; border-bottom: 1px solid var(--color-recovered); }
+  .notes { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 1rem; }
+  .notes a { color: var(--color-ink); text-decoration: none; border-bottom: 1px solid var(--color-recovered); font-weight: 600; }
+  .notes p { color: var(--color-slate); margin-top: 0.3rem; font-size: var(--step--1); }
 </style>

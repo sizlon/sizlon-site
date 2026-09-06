@@ -126,6 +126,11 @@ export const content = {
         ],
         crossLine: '색인할 외부 데이터가 필요하면 데이터 피드로 함께',
         crossHref: '/services/data/',
+        // 증거 글(/notes/*) — 실측이 있는 글만. 글 본문은 src/content/notes/.
+        notesH: '실측 노트',
+        notes: [
+          { label: '검색이 못 찾으면 RAG 는 답할 수 없다 — 한국어는 토크나이저부터 본다', href: '/notes/korean-tokenizer/', line: '공고명 183,240건, Nori 기본 vs 코퍼스 사전. P@10 0.906→0.986.' },
+        ],
         cta: '20분 통화 예약',
       },
       rtm: {
@@ -349,6 +354,12 @@ export const content = {
       workLine: '만든 것들은 따로 정리해 두었습니다.',
       workLink: '만든 것들 보기',
       cta: '20분 통화 예약',
+    },
+
+    // ── 증거 글 공통 문구 (/notes/*, 2026-09-06) ────────────────────────
+    notes: {
+      byline: '시즐론 이광연',
+      tailLine: '이 절차를 고객 코퍼스에 적용하는 서비스:',
     },
 
     // ── 문의 (v3 §3.7) ─────────────────────────────────────────────────

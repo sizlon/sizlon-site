@@ -103,6 +103,18 @@ URL 301 with the expected `Location` (those 301s come from Cloudflare, see
 **Adding a page:** section + one route file; copy in `content.ko`; nav entry in
 `site.ts` if it belongs in the nav.
 
+**Notes (`/notes/<slug>/`, since 2026-09-06)** are the one long-form surface:
+evidence articles hung off a service page. Body is Markdown in
+`src/content/notes/<slug>.md` (collection `notes`, schema in
+`src/content.config.ts`: title, description, date, service). `Note.astro`
+renders it with a `TechArticle` JSON-LD node (author = founder, publisher =
+org). Rules: only write a note when there is a measurement to publish (the
+2026-07-26 criterion — no generic guides); link it from its service page via
+`content.ko.services.<key>.notes`; add the URL to `lastmod.ts`; put any
+published experiment files under `public/notes/<slug>/` and link them from
+the note. The first note is `korean-tokenizer` (experiment record in
+`~/Projects/docs/tokenizer-experiment-2026-09.md`).
+
 ## URLs and redirects
 
 - **Internal links always end in `/`** (`/services/search/`, `/work/#pipeline`,

@@ -1,0 +1,66 @@
+---
+// 증거 글 본문 (2026-09-06). 마크다운은 콘텐츠 컬렉션 `notes` 에서 온다. 표는 자기 컨테이너
+// 안에서 가로 스크롤(본문이 가로로 넘치면 안 된다). JSON-LD 는 TechArticle — 저자는 대표 노드.
+import Base from '../layouts/Base.astro';
+import { bookingHref, servicePages, ORG_ID, FOUNDER_ID } from '../config/site';
+import { content } from '../i18n/content';
+import type { CollectionEntry } from 'astro:content';
+import { render } from 'astro:content';
+
+interface Props { entry: CollectionEntry<'notes'> }
+const { entry } = Astro.props;
+const { Content } = await render(entry);
+const d = entry.data;
+const tr = content.ko;
+const svc = servicePages.find((s) => s.key === d.service)!;
+const url = new URL(Astro.url.pathname, Astro.site).href;
+const article = {
+  '@type': 'TechArticle',
+  '@id': `${url}#article`,
+  headline: d.title,
+  description: d.description,
+  datePublished: d.date,
+  inLanguage: 'ko',
+  url,
+  author: { '@id': FOUNDER_ID },
+  publisher: { '@id': ORG_ID },
+  isPartOf: { '@id': ORG_ID },
+  about: tr.nav[d.service],
+};
+---
+
+<Base title={d.title} description={d.description} lang="ko" rawTitle schema={[article]}>
+  <section class="hero band-ink section">
+    <div class="wrap head">
+      <span class="eyebrow">{d.eyebrow} · {tr.nav[d.service]}</span>
+      <h1>{d.title}</h1>
+      <p class="meta">{d.date} · {tr.notes.byline}</p>
+    </div>
+  </section>
+
+  <article class="section wrap prose">
+    <Content />
+  </article>
+
+  <section class="section wrap tail">
+    <p>{tr.notes.tailLine} <a href={svc.href}>{tr.nav[d.service]} &rarr;</a></p>
+    <a class="btn btn-primary" href={bookingHref(svc.topic)}>{tr.common.book} <span class="arrow">&rarr;</span></a>
+  </section>
+</Base>
+
+<style>
+  .head { display: flex; flex-direction: column; gap: 1rem; max-width: var(--measure); }
+  .head h1 { font-size: var(--step-3); line-height: 1.2; }
+  .meta { font-family: var(--font-mono); font-size: var(--step--1); color: var(--color-mist); opacity: 0.75; }
+  .prose { max-width: var(--measure); display: flex; flex-direction: column; gap: 1rem; }
+  .prose :global(h2) { font-size: var(--step-1); margin-top: 1.5rem; }
+  .prose :global(p), .prose :global(li) { color: color-mix(in srgb, var(--color-ink) 85%, var(--color-vellum)); line-height: 1.75; }
+  .prose :global(ul), .prose :global(ol) { margin: 0; padding-left: 1.3em; display: flex; flex-direction: column; gap: 0.4rem; }
+  .prose :global(code) { font-family: var(--font-mono); font-size: 0.9em; background: color-mix(in srgb, var(--color-ink) 7%, var(--color-vellum)); padding: 0.05em 0.35em; border-radius: 4px; }
+  .prose :global(table) { display: block; overflow-x: auto; border-collapse: collapse; font-size: var(--step--1); max-width: 100%; }
+  .prose :global(th), .prose :global(td) { text-align: left; padding: 0.45rem 0.7rem; border-bottom: 1px solid color-mix(in srgb, var(--color-ink) 15%, var(--color-vellum)); vertical-align: top; white-space: nowrap; }
+  .prose :global(th) { font-weight: 600; border-bottom-color: var(--color-ink); }
+  .prose :global(a) { color: var(--color-ink); text-decoration: none; border-bottom: 1px solid var(--color-recovered); }
+  .tail { display: flex; flex-direction: column; gap: 1.25rem; align-items: flex-start; padding-top: 0; }
+  .tail a:not(.btn) { color: var(--color-ink); text-decoration: none; border-bottom: 1px solid var(--color-recovered); }
+</style>

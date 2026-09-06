@@ -10,6 +10,7 @@ export const LASTMOD: Record<string, string> = {
   '/': '2026-09-06',
   '/en/': '2026-09-06',
   '/services/search/': '2026-09-06',
+  '/notes/korean-tokenizer/': '2026-09-06',
   '/services/rtm/': '2026-09-06',
   '/services/data/': '2026-09-06',
   '/work/': '2026-09-06',

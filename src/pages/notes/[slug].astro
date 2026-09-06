@@ -1,0 +1,12 @@
+---
+// 증거 글 라우트 — /notes/<slug>/ (2026-09-06). 본문은 src/content/notes/<slug>.md.
+import { getCollection } from 'astro:content';
+import Note from '../../sections/Note.astro';
+
+export async function getStaticPaths() {
+  const entries = await getCollection('notes');
+  return entries.map((entry) => ({ params: { slug: entry.id }, props: { entry } }));
+}
+const { entry } = Astro.props;
+---
+<Note entry={entry} />

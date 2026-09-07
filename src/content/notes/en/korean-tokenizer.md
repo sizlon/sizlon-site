@@ -92,7 +92,15 @@ Not every query improved. 보안관제 (security monitoring) fell from R@50 1.00
 - Titles only. A corpus that indexes bodies and attachments has more tokens per document, and the effect may dilute.
 - Relevance is automatic. It misses paraphrases a human would accept and counts accidental substring hits as relevant. Both configurations were judged by the same rule, so the difference is trustworthy; the absolute numbers should be read down.
 - The golden set is centred on the words the diagnostics flagged. A random 100-query set would move less. The 15 controls are the floor.
-- No synonyms (RFP ↔ 제안요청서 and the like). That is the next experiment.
+- Synonyms were measured separately, on top of this dictionary. See the footnote below.
+
+### Footnote — synonyms (2026-09-07)
+
+Same container, same judging rule. Twenty spelling-and-acronym pairs (누리집↔홈페이지 for "website", 스쿨존↔어린이보호구역 for "school zone", EV↔전기차, 워크샵↔워크숍) went into a `synonym_graph` filter on the search analyzer only, and a document counted as relevant if it contained any spelling. On the 24 queries that contain such a pair, R@50 went from 0.59 to 0.96 and P@10 from 0.75 to 0.92; on 10 control queries without a pair, not one of the top 50 changed. The gain comes when the query uses the minority spelling — 스쿨존 appears in 0 titles and 어린이보호구역 in 305, so "스쿨존 정비" went from 0 to 0.96.
+
+Two conditions. First, placement: behind the index analyzer (decompound mixed) the rule words analyze into overlapping tokens and Elasticsearch rejects the filter; with `lenient` it drops the rules silently instead. Behind the search analyzer (decompound none) it works. Second, the dictionary comes before the synonyms. A spelling that splits into several tokens (`웹사이트`, `무인비행장치`) becomes a phrase query whose rare-token score pushes the original-spelling documents out — "홈페이지 개편" fell from P@10 1.0 to 0.2 and recovered to 1.0 only after eight such spellings were added to the user dictionary. `무정전전원장치↔UPS` is rejected outright without a dictionary entry, because the tokenizer drops the first character.
+
+Pairs that are merely close in meaning (유지보수↔유지관리, 리모델링↔개보수) gained nothing at R@50 on this corpus and only lowered precision for the original spelling; leave them out unless there is a reason. What remains: a title that writes both spellings, "학습관리시스템(LMS)", scores twice, and the pair that gave the experiment its name, RFP↔제안요청서, occurs in 8 and 7 titles.
 
 ## Summary
 
@@ -102,4 +110,4 @@ The [search-quality diagnostic](/services/search/) on the Korean site is this pr
 
 ## Files
 
-The corpus (183,240 titles), the Dockerfile, the five scripts, the 2,155-rule dictionary, the 50 queries, the results and the exact index settings are in one place: [sizlon/nori-user-dictionary-eval](https://github.com/sizlon/nori-user-dictionary-eval) on GitHub. With Docker and Elasticsearch it reproduces the numbers above in about ten minutes; the README has the run steps and expected output. It is a measurement snapshot, so the repository is archived (read-only).
+The corpus (183,240 titles), the Dockerfile, the five scripts, the 2,155-rule dictionary, the 50 queries, the results and the exact index settings are in one place: [sizlon/nori-user-dictionary-eval](https://github.com/sizlon/nori-user-dictionary-eval) on GitHub. With Docker and Elasticsearch it reproduces the numbers above in about ten minutes; the README has the run steps and expected output. The synonym experiment (26 rules, 42 queries, results) is in the same repository. It is a measurement snapshot, so the repository is archived (read-only).

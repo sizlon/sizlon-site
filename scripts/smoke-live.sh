@@ -18,6 +18,7 @@ check() { # $1 path, $2 expected code, $3 expected Location (optional, 접두 �
 }
 # 살아 있는 페이지
 for p in / /services/search/ /services/rtm/ /services/data/ /work/ /about/ /contact/ /en/ \
+         /notes/ /en/notes/ /notes/korean-tokenizer/ /en/notes/korean-tokenizer/ \
          /legal/terms/ /legal/privacy/ /legal/licenses/ /sitemap-index.xml /robots.txt; do check "$p" 200; done
 # 구 제품 URL → Cloudflare 301 (규칙 1~4)
 check /bid-verification    301 https://miriboa.sizlon.io/

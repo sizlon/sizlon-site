@@ -135,9 +135,9 @@ export const content = {
           { q: '데이터를 반출해야 하나요?', a: '아닙니다. 읽기 계정과 화면 공유로 진행합니다. 로그·설정 파일이 밖으로 나가지 않습니다.' },
           { q: '어떤 스택을 다루나요?', a: 'Elasticsearch·OpenSearch, Nori 를 포함한 한국어 형태소 분석기, 사용자 사전·동의어 사전, BM25 랭킹. 그 외 스택은 통화에서 확인합니다.' },
           { q: '무엇을 보장하나요?', a: '수치로 보장합니다. 1주차에 확정한 골든셋 100건의 before/after 가 개선되지 않으면 2주차분 150만원을 청구하지 않습니다.' },
-          // 반론 처리 3건(2026-09-07, 개선 작업 D). 고객 측 시간 수치는 오너 확인 전까지 [확인 필요].
+          // 반론 처리 3건(2026-09-07, 개선 작업 D). 고객 측 시간 수치는 오너 확정값(09-07).
           { q: '우리 개발자가 직접 하면 되지 않나요?', a: '할 수 있습니다. 차이는 골든셋으로 전후를 재고, 사전·동의어를 운영 가능한 파일과 절차로 넘기는 것입니다. 2주 뒤에는 개발자가 이어서 관리할 수 있게 인계합니다.' },
-          { q: '우리 쪽에서 시간을 얼마나 내야 하나요?', a: '담당자 기준 총 [확인 필요]시간입니다 — 권한 발급 [확인 필요], 골든셋 검수 [확인 필요], 결과 발표 [확인 필요]. 나머지는 읽기 계정과 화면 공유로 진행해 따로 시간을 잡지 않습니다.' },
+          { q: '우리 쪽에서 시간을 얼마나 내야 하나요?', a: '담당자 기준 총 3~4시간입니다 — 권한 발급 30분, 골든셋 검수 2시간, 결과 발표 1시간. 나머지는 읽기 계정과 화면 공유로 진행해 따로 시간을 잡지 않습니다.' },
           { q: '적용은 누가 하나요?', a: '설정 파일과 적용 절차를 드립니다. 원하시면 화면 공유로 함께 적용합니다.' },
         ],
         // 통화 전 무료 스캔(2026-09-07, 개선 작업 B) — 기존 /contact/ 폼을 scan=1 로 재사용. 결과 범위는 Nori 기본 설정 기준으로 한정.
@@ -591,7 +591,7 @@ export const content = {
         },
       ],
       backgroundH: 'Background',
-      background: 'Twenty years as a software engineer. At Korea Newswire (2013–2025, principal engineer) I designed and ran the Elasticsearch architecture behind a media-monitoring service: index and component templates, a custom tokenizer, Nori and Mecab customisation, automatic user-dictionary updates from new-term extraction, monthly index rollover with snapshot policies, and DB-to-index consistency checks. The ingestion side was a crawling platform generating per-source instances for about 7,000 news sources, ~200K new articles a day, on Python, scrapy and playwright, run on-prem, on Docker Compose and on Kubernetes.',
+      background: 'Twenty years as a software engineer. At Korea Newswire (2013–2025, principal engineer) I designed and ran the Elasticsearch architecture behind a media-monitoring service: index and component templates, a custom tokenizer, Nori and Mecab customisation, user-dictionary maintenance from new-term extraction, monthly index rollover with snapshot policies, and DB-to-index consistency checks. The ingestion side was a crawling platform generating per-source instances for about 7,000 news sources, ~200K new articles a day, on Python, scrapy and playwright, run on-prem, on Docker Compose and on Kubernetes.',
       caseH: 'Case studies',
       caseHref: '/en/notes/',
       // 영문 노트 목록(/en/notes/*). 비어 있으면 En.astro 가 절을 렌더하지 않는다.

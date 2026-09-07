@@ -16,6 +16,7 @@ const phoneLabel = lang === 'en' ? site.contactPhoneIntl : site.contactPhone;
 // /en/ 은 한 장뿐이다 — 내비가 한국어 페이지로 이끌면 영어로 들어온 사람이 한 번 클릭에
 // 한국어 사이트로 떨어진다(2026-09-06 보고). 영어 크롬은 이메일·전화·KO 만 낸다.
 const navItems = lang === 'en' ? [] : nav;
+const langLabel = lang === 'en' ? tr.common.koreanSite : tr.common.langSwitch;
 ---
 
 <header class="nav band-ink">
@@ -39,7 +40,8 @@ const navItems = lang === 'en' ? [] : nav;
     <div class="utility">
       {lang === 'en' && <a class="phone" href={`mailto:${site.contactEmail}`}>{site.contactEmail}</a>}
       <a class="phone" href={telHref}>{phoneLabel}</a>
-      <a class="lang" href={otherLangHref} aria-label="Language">{lang === 'en' ? tr.common.koreanSite : tr.common.langSwitch}</a>
+      {/* 접근 가능 이름은 보이는 글자를 포함해야 한다(axe label-content-name-mismatch, 2026-09-07). */}
+      <a class="lang" href={otherLangHref} aria-label={lang === 'en' ? `${langLabel} (한국어)` : `${langLabel} — English site`}>{langLabel}</a>
     </div>
 
     <details class="mnav" data-mobile-nav>

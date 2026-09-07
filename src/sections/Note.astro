@@ -32,7 +32,7 @@ const article = {
 };
 ---
 
-<Base title={d.title} description={d.description} lang={lang} rawTitle schema={[article]} hreflang={hreflang}>
+<Base title={d.metaTitle ?? d.title} description={d.description} lang={lang} rawTitle schema={[article]} hreflang={hreflang}>
   <section class="hero band-ink section">
     <div class="wrap head">
       <span class="eyebrow">{d.eyebrow} · {tr.nav[d.service]}</span>

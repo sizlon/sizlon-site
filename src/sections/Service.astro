@@ -21,10 +21,27 @@ const termsH = 'termsH' in c ? c.termsH : '';
 const terms = 'terms' in c ? c.terms : [];
 const notesH = 'notesH' in c ? c.notesH : '';
 const notes = 'notes' in c ? c.notes : [];
+// 무료 스캔 절(검색 진단만, 2026-09-07 개선 작업 B) — content 에 scan 키가 있을 때만.
+const scan = 'scan' in c ? c : null;
+// '이 다음에 보통 필요한 것'(개선 작업 A) — brief 와 무관하게 항상 렌더: RTM 짧은 판에서도 다른 두 서비스로 가는 길은 있어야 한다.
+const next = 'next' in c ? c.next : [];
+const nextH = 'nextH' in c ? c.nextH : '';
 
 // Service + Offer JSON-LD (2026-09-06). 숫자는 content 의 offer(표시 price 와 같은 값) 에서만.
 const url = new URL(Astro.url.pathname, Astro.site).href;
 const offer = c.offer;
+// FAQPage(2026-09-07, 개선 작업 G) — 화면에 FAQ 가 있는 페이지만(brief 는 FAQ 를 안 그린다).
+const faqSchema = !brief && c.faq.length > 0
+  ? [{
+      '@type': 'FAQPage',
+      '@id': `${url}#faq`,
+      mainEntity: c.faq.map((f) => ({
+        '@type': 'Question',
+        name: f.q,
+        acceptedAnswer: { '@type': 'Answer', text: f.a },
+      })),
+    }]
+  : [];
 const serviceSchema = {
   '@type': 'Service',
   '@id': `${url}#service`,
@@ -51,7 +68,7 @@ const serviceSchema = {
 };
 ---
 
-<Base title={c.title} description={c.description} lang="ko" schema={[serviceSchema]}>
+<Base title={c.title} description={c.description} lang="ko" schema={[serviceSchema, ...faqSchema]}>
   <section class="hero band-ink">
     <div class="wrap head">
       <span class="eyebrow">{c.eyebrow}</span>
@@ -70,6 +87,7 @@ const serviceSchema = {
         <a class="btn btn-primary" href={bookingHref(topic)}>{tr.common.book} <span class="arrow">&rarr;</span></a>
         <a class="btn btn-ghost" href={`tel:${site.contactPhoneIntl}`}>{tr.common.call} {site.contactPhone}</a>
       </div>
+      {scan && <p class="scan-link"><a href="#scan">{scan.scanLink} &rarr;</a></p>}
     </div>
   </section>
 
@@ -96,6 +114,20 @@ const serviceSchema = {
     </section>
   )}
 
+  {notes.length > 0 && (
+    <section class="section wrap block">
+      <h2>{notesH}</h2>
+      <ul class="notes">
+        {notes.map((n) => (
+          <li>
+            <a href={n.href}>{n.label} &rarr;</a>
+            <p>{n.line}</p>
+          </li>
+        ))}
+      </ul>
+    </section>
+  )}
+
   {!brief && c.deliverables.length > 0 && (
     <section class="section wrap block">
       <h2>{c.deliverH}</h2>
@@ -106,6 +138,15 @@ const serviceSchema = {
           <ul class="plain">{c.options.map((o) => <li>{o}</li>)}</ul>
         </div>
       )}
+    </section>
+  )}
+
+  {scan && (
+    <section class="section wrap block scan" id="scan">
+      <h2>{scan.scanH}</h2>
+      <p>{scan.scan}</p>
+      <a class="btn btn-primary" href={scan.scanHref}>{scan.scanCta} <span class="arrow">&rarr;</span></a>
+      <p class="min">{scan.scanSub}</p>
     </section>
   )}
 
@@ -138,11 +179,11 @@ const serviceSchema = {
     </section>
   )}
 
-  {notes.length > 0 && (
+  {next.length > 0 && (
     <section class="section wrap block">
-      <h2>{notesH}</h2>
+      <h2>{nextH}</h2>
       <ul class="notes">
-        {notes.map((n) => (
+        {next.map((n) => (
           <li>
             <a href={n.href}>{n.label} &rarr;</a>
             <p>{n.line}</p>
@@ -159,7 +200,7 @@ const serviceSchema = {
         <a class="btn btn-primary" href={bookingHref(topic)}>{tr.common.book} <span class="arrow">&rarr;</span></a>
         <a class="btn btn-ghost" href={`tel:${site.contactPhoneIntl}`}>{site.contactPhone}</a>
       </div>
-      {c.crossLine && <p class="cross"><a href={c.crossHref}>{c.crossLine} &rarr;</a></p>}
+      {scan && <p class="cross"><a href={scan.scanHref}>{scan.scanLink} &rarr;</a></p>}
     </div>
   </section>
 </Base>
@@ -193,6 +234,9 @@ const serviceSchema = {
   .cta-band { padding-block: var(--section-y); }
   .cta-inner { display: flex; flex-direction: column; gap: 1.5rem; align-items: flex-start; }
   .cta-inner h2 { font-size: var(--step-2); max-width: var(--measure); }
+  .scan-link { margin-top: 0.25rem; font-size: var(--step--1); }
+  .scan-link a { color: var(--color-mist); text-decoration: none; border-bottom: 1px solid var(--color-recovered); }
+  .scan .btn { align-self: flex-start; }
   .cross { color: var(--slate-on-dark); }
   .cross a { color: var(--color-mist); text-decoration: none; border-bottom: 1px solid var(--color-recovered); }
   .notes { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 1rem; }

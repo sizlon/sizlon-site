@@ -60,7 +60,9 @@ export const nav = [
   { href: '/services/search/', key: 'search' },
   { href: '/services/rtm/', key: 'rtm' },
   { href: '/services/data/', key: 'data' },
-  { href: '/work/', key: 'work' },
+  // 실측 노트(2026-09-07, 개선 작업 C) — 노트가 유입의 주 경로라 서비스 셋 바로 뒤.
+  // '만든 것들'은 헤더에서 뺐다(오너 결정 09-07): 7항목이면 821~900px 에서 줄바꿈. 푸터 열·홈 버튼·노트에서 간다.
+  { href: '/notes/', key: 'notes' },
   { href: '/about/', key: 'about' },
   { href: '/contact/', key: 'contact' },
 ] as const;

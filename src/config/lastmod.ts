@@ -7,19 +7,21 @@
  * 경로는 sitemap 의 loc 과 같은 꼴(`/…/`). 여기 없는 경로는 lastmod 없이 나간다.
  */
 export const LASTMOD: Record<string, string> = {
-  '/': '2026-09-06',
-  '/en/': '2026-09-06',
-  '/services/search/': '2026-09-06',
-  '/notes/korean-tokenizer/': '2026-09-06',   // 09-06 GitHub 링크 추가(같은 날)
-  '/en/notes/korean-tokenizer/': '2026-09-06',
+  '/': '2026-09-07',   // 09-07 개선 작업: 작업 방식 위치·카드 관계 줄·만든 것들 3번째·무료 스캔 줄
+  '/en/': '2026-09-07',   // 09-07 검색 블록 포지셔닝·Case studies 링크
+  '/notes/': '2026-09-07',
+  '/en/notes/': '2026-09-07',
+  '/services/search/': '2026-09-07',   // 09-07 H1·FAQ 3건·분할 금액·무료 스캔·이 다음에
+  '/notes/korean-tokenizer/': '2026-09-07',   // 09-07 동의어 각주(4d3576c, 당시 미갱신) + metaTitle
+  '/en/notes/korean-tokenizer/': '2026-09-07',
   '/notes/korean-tables/': '2026-09-06',
   '/en/notes/korean-tables/': '2026-09-06',
-  '/services/rtm/': '2026-09-06',
-  '/services/data/': '2026-09-06',   // 09-06 실측 노트 링크·수집 원칙(품질 고지) 추가
+  '/services/rtm/': '2026-09-07',   // 09-07 이 다음에 보통 필요한 것
+  '/services/data/': '2026-09-07',   // 09-07 이 다음에 보통 필요한 것
   '/work/': '2026-09-06',
   '/about/': '2026-09-06',
   '/founder/': '2026-09-06',
-  '/contact/': '2026-09-06',
+  '/contact/': '2026-09-07',   // 09-07 무료 스캔 안내
   '/legal/terms/': '2026-09-06',
   '/legal/privacy/': '2026-09-06',
   '/legal/licenses/': '2026-09-06',

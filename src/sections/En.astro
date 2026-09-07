@@ -37,7 +37,7 @@ const c = content.en.page;
     </div>
     {c.cases.length > 0 && (
       <div class="block">
-        <span class="eyebrow">{c.caseH}</span>
+        <a class="eyebrow" href={c.caseHref}>{c.caseH} &rarr;</a>
         {c.cases.map((k) => <h2><a href={k.href}>{k.title} &rarr;</a></h2>)}
       </div>
     )}

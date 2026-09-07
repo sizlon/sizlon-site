@@ -19,6 +19,9 @@ const proof = {
   en: 'Built and ran ingestion & search infra for a media-monitoring service: 7,000 news sources, ~200K new articles/day (prior role at Korea Newswire)',
 } as const;
 
+// 서비스 페이지 하단 '이 다음에 보통 필요한 것' 블록 제목 — 세 서비스가 서로를 파는 자리(2026-09-07, 개선 작업 A).
+const nextH = '이 다음에 보통 필요한 것';
+
 const method = '자동화가 제안하고, 규칙이 검증하고, 사람이 승인합니다. 모든 판정에 원문 근거가 붙고, 확인 안 되는 것은 단정하지 않습니다.';
 
 export const content = {
@@ -37,7 +40,7 @@ export const content = {
       vatNote: '표시 가격은 모두 부가세 별도입니다.',
       fixedLine: '고정가 · 결과물 명시 · 대표가 직접 수행',
     },
-    nav: { search: '검색 품질 진단', rtm: '감리 대응 RTM', data: '데이터 피드', work: '만든 것들', about: '회사 소개', contact: '문의', founder: '대표 소개' },
+    nav: { search: '검색 품질 진단', rtm: '감리 대응 RTM', data: '데이터 피드', notes: '실측 노트', work: '만든 것들', about: '회사 소개', contact: '문의', founder: '대표 소개' },
     footer: {
       tagline: 'AI proposes. A deterministic layer verifies.',
       services: '서비스',
@@ -48,6 +51,7 @@ export const content = {
       workItems: [
         { href: '/work/#miriboa', label: '미리보아' },
         { href: '/work/#pipeline', label: '개찰 데이터 파이프라인' },
+        { href: '/notes/', label: '실측 노트' },
       ],
       baseline: '고정가 · 결과물 명시 · 대표가 직접 수행',
       business: '주식회사 시즐론 · 대표 이광연 · 사업자등록번호 420-86-03864 · 전화 02-702-5795 · 서울특별시 용산구 원효로 189-7, 302호 · hello@sizlon.io',
@@ -62,21 +66,27 @@ export const content = {
       h1: '검색 시스템, RAG, 데이터 추출 — 실제로 운영해 본 사람이 합니다.',
       lede: '매체 7,000곳에서 하루 20만 건을 수집·색인하던 검색 엔지니어입니다. 검색 품질을 진단하고, 공공 SI 감리 문서를 만들고, 필요한 데이터를 매달 납품합니다.',
       servicesEyebrow: '서비스',
-      servicesH2: '셋 중 하나를 고르거나, 먼저 통화로 범위를 잡습니다.',
+      servicesH2: '세 가지 일을 한 사람이 같은 방식으로 합니다. 하나를 고르거나, 먼저 통화로 범위를 잡습니다.',
       cards: [
-        { key: 'search', name: '검색 품질 진단', terms: '2주 · 250만원', deliverable: '진단 보고서 + 즉시 적용 설정' },
-        { key: 'rtm', name: '감리 대응 RTM', terms: '감리 1회분 150~200만원 · 전체 400~500만원', deliverable: '요구사항 추적표 + 대조 리포트' },
-        { key: 'data', name: '데이터 피드', terms: '구축 100~300만원 + 월 30~80만원', deliverable: '매달 오는 정제 데이터' },
+        // relation: 세 서비스가 서로 이어진다는 한 줄(2026-09-07, 개선 작업 A) — 기존 고객의 두 번째 계약이 신규보다 중요하다.
+        { key: 'search', name: '검색 품질 진단', terms: '2주 · 250만원', deliverable: '진단 보고서 + 즉시 적용 설정', relation: '색인은 있는데 못 찾을 때. 외부 데이터가 더 필요하면 데이터 피드로 이어집니다.' },
+        { key: 'rtm', name: '감리 대응 RTM', terms: '감리 1회분 150~200만원 · 전체 400~500만원', deliverable: '요구사항 추적표 + 대조 리포트', relation: '공공 SI 납품 전. 지적된 검색 모듈은 검색 진단으로 이어집니다.' },
+        { key: 'data', name: '데이터 피드', terms: '구축 100~300만원 + 월 30~80만원', deliverable: '매달 오는 정제 데이터', relation: '찾을 데이터가 없을 때. 넣었는데 안 나오면 검색 진단으로 이어집니다.' },
       ],
+      // 통화 전 무료 스캔 진입점(2026-09-07, 개선 작업 B) — 카드는 통째로 <a> 라 링크를 안에 못 넣고 카드 아래 한 줄로.
+      scanLine: '검색 진단은 통화 전에 무료 스캔부터 받을 수 있습니다',
+      scanHref: '/contact/?service=search&scan=1#form',
       methodEyebrow: '작업 방식',
       method,
       // "왜 이 사람인가" 절은 09-06 에 없앴다 — 경력은 히어로 부제·대표 소개가, 실적 숫자는
       // 그 숫자를 만든 것 옆(아래 workItems)에 붙는다.
       workEyebrow: '만든 것들',
-      workLine: '시즐론 명의로 만들고 실제로 쓰이는 것들입니다.',
+      workLine: '시즐론 명의로 만들고 실제로 쓰이는 것들, 그리고 그 위에서 잰 수치입니다.',
       workItems: [
         { name: '미리보아', proof: '골든셋 기준 recall 87.4% · "확실" 판정 precision 96.5%', href: '/work/#miriboa' },
         { name: '나라장터 개찰 데이터 파이프라인', proof: '협상에 의한 계약 응찰 73,373건 · 업체 13,220곳 (6개월분)', href: '/work/#pipeline' },
+        // 수치 출처는 노트 본문(docs/tokenizer-experiment-2026-09.md 정본). 2026-09-07 개선 작업 C.
+        { name: '한국어 토크나이저 실측 노트', proof: '공고명 183,240건, Nori 기본 vs 코퍼스 사전 — P@10 0.906→0.986', href: '/notes/korean-tokenizer/' },
       ],
       workLink: '만든 것들 보기',
       closingH2: '어느 쪽이든 먼저 20분 통화로 범위를 잡습니다.',
@@ -86,20 +96,22 @@ export const content = {
     services: {
       search: {
         // <title> 은 접미 "— 시즐론" 이 붙으니 대시 없이 짧게(모바일 SERP ~30자). h1 은 별도.
-        title: 'Elasticsearch·OpenSearch 검색 품질 진단',
-        description: 'Elasticsearch/OpenSearch·Nori 검색 품질 진단 — 2주, 250만원 고정가. 실패 쿼리 골든셋 100건으로 before/after 를 측정하고, 바로 적용 가능한 analyzer·사전·동의어·랭킹 설정을 드립니다.',
+        title: 'Elasticsearch·OpenSearch 검색·RAG 품질 진단',
+        description: 'Elasticsearch/OpenSearch·Nori 검색 품질 진단 — RAG 검색 포함, 2주, 250만원 고정가. 실패 쿼리 골든셋 100건으로 before/after 를 측정하고, 바로 적용 가능한 analyzer·사전·동의어·랭킹 설정을 드립니다.',
         eyebrow: '서비스 · 검색 품질 진단',
-        h1: '검색 품질 진단 — Elasticsearch · OpenSearch',
+        h1: '검색·RAG 품질 진단 — Elasticsearch · OpenSearch',
         sub: '"검색이 이상하다"를 수치로 바꾸고, 2주 안에 고친 설정을 드립니다.',
         price: '250만원 · 2주 · 고정가',
         // JSON-LD Offer 용 숫자(KRW, 부가세 별도) — 위 price 문구와 같은 값이어야 한다.
         offer: { minPrice: 2500000, maxPrice: 2500000 },
-        priceNote: '골든셋 수치가 개선되지 않으면 2주차 비용은 청구하지 않습니다.',
+        // 분할 금액 병기(2026-09-07 오너 결정): 합은 위 price 250만과 같아야 한다.
+        priceNote: '1주차(진단·골든셋 확정) 100만원 / 2주차(재설정·측정) 150만원. 골든셋 수치가 개선되지 않으면 2주차분 150만원은 청구하지 않습니다.',
         whoH: '이런 팀을 위해',
         who: [
           'ES/OpenSearch 를 운영 중인데 "검색이 이상하다"는 CS 가 반복되는 팀',
           'RAG 답이 엉뚱하게 나오는 팀 — 대부분 검색 문제입니다',
           '형태소·사전·동의어 관리의 주인이 없는 조직',
+          '검색 담당자가 없거나 겸직인 팀',
         ],
         howH: '진행',
         how: [
@@ -122,16 +134,32 @@ export const content = {
         faq: [
           { q: '데이터를 반출해야 하나요?', a: '아닙니다. 읽기 계정과 화면 공유로 진행합니다. 로그·설정 파일이 밖으로 나가지 않습니다.' },
           { q: '어떤 스택을 다루나요?', a: 'Elasticsearch·OpenSearch, Nori 를 포함한 한국어 형태소 분석기, 사용자 사전·동의어 사전, BM25 랭킹. 그 외 스택은 통화에서 확인합니다.' },
-          { q: '무엇을 보장하나요?', a: '수치로 보장합니다. 1주차에 확정한 골든셋 100건의 before/after 가 개선되지 않으면 2주차 비용을 청구하지 않습니다.' },
+          { q: '무엇을 보장하나요?', a: '수치로 보장합니다. 1주차에 확정한 골든셋 100건의 before/after 가 개선되지 않으면 2주차분 150만원을 청구하지 않습니다.' },
+          // 반론 처리 3건(2026-09-07, 개선 작업 D). 고객 측 시간 수치는 오너 확인 전까지 [확인 필요].
+          { q: '우리 개발자가 직접 하면 되지 않나요?', a: '할 수 있습니다. 차이는 골든셋으로 전후를 재고, 사전·동의어를 운영 가능한 파일과 절차로 넘기는 것입니다. 2주 뒤에는 개발자가 이어서 관리할 수 있게 인계합니다.' },
+          { q: '우리 쪽에서 시간을 얼마나 내야 하나요?', a: '담당자 기준 총 [확인 필요]시간입니다 — 권한 발급 [확인 필요], 골든셋 검수 [확인 필요], 결과 발표 [확인 필요]. 나머지는 읽기 계정과 화면 공유로 진행해 따로 시간을 잡지 않습니다.' },
+          { q: '적용은 누가 하나요?', a: '설정 파일과 적용 절차를 드립니다. 원하시면 화면 공유로 함께 적용합니다.' },
         ],
-        crossLine: '색인할 외부 데이터가 필요하면 데이터 피드로 함께',
-        crossHref: '/services/data/',
+        // 통화 전 무료 스캔(2026-09-07, 개선 작업 B) — 기존 /contact/ 폼을 scan=1 로 재사용. 결과 범위는 Nori 기본 설정 기준으로 한정.
+        scanH: '통화 전에, 무료 스캔',
+        scan: '실패하는 검색어 20~50개를 보내주시면 영업일 1일 안에 Nori 기본 설정 기준 형태소 분절·미등록어 진단 결과 1쪽을 보냅니다. 통화도 계정도 필요 없습니다.',
+        scanSub: '검색 엔진·버전만 같이 적어 주세요. 결과는 이메일로 갑니다.',
+        scanCta: '무료 스캔 요청',
+        scanHref: '/contact/?service=search&scan=1#form',
+        scanLink: '통화가 부담스러우면 무료 스캔부터',
+        nextH,
+        next: [
+          { label: '색인할 외부 데이터가 필요하면', line: '공공 공고·HWP 첨부·PDF 표를 매달 정제해 색인 가능한 형태로 넣습니다.', href: '/services/data/' },
+          { label: '키워드로 안 잡히는 질의가 남으면', line: 'BM25 + kNN 하이브리드 설계. 진단 뒤 별도 견적.', href: '/contact/?service=search#form' },
+          { label: '이 검색 모듈이 공공 SI 납품물이면', line: '감리 전에 RFP 요구사항과 산출물을 대조합니다.', href: '/services/rtm/' },
+        ],
         // 증거 글(/notes/*) — 실측이 있는 글만. 글 본문은 src/content/notes/.
         notesH: '실측 노트',
         notes: [
           { label: '검색이 못 찾으면 RAG 는 답할 수 없다 — 한국어는 토크나이저부터 본다', href: '/notes/korean-tokenizer/', line: '공고명 183,240건, Nori 기본 vs 코퍼스 사전. P@10 0.906→0.986.' },
         ],
-        cta: '20분 통화 예약',
+        // CTA 밴드 제목 — 버튼 문구와 같은 말이 두 번 나오던 것을 문장형으로(2026-09-07).
+        cta: '실패하는 검색어만 있으면 시작할 수 있습니다.',
       },
       rtm: {
         // 짧은 판(v3 §3.3 착수 조건): SI PM 통화 2~3건으로 "감리 대응"·"RTM"이
@@ -178,8 +206,11 @@ export const content = {
         terms: ['NDA 체결 후 자료 수령', '자료는 납품 후 15일 내 파기', '대표가 직접 수행, 외부 인력 없음'],
         faqH: '',
         faq: [],
-        crossLine: '경쟁 입찰·낙찰 동향은 데이터 피드로 매달',
-        crossHref: '/services/data/',
+        nextH,
+        next: [
+          { label: 'SI 검색 모듈의 품질 이슈가 감리에서 지적되면', line: '골든셋 100건으로 전후를 재고, 2주 안에 고친 설정을 드립니다.', href: '/services/search/' },
+          { label: '경쟁 입찰·낙찰 동향이 매달 필요하면', line: '나라장터 개찰 데이터를 정제해 CSV/JSON/API 로 납품합니다.', href: '/services/data/' },
+        ],
         cta: 'RFP 와 산출물 목록만 주시면 하루 안에 범위와 견적을 드립니다',
       },
       data: {
@@ -238,8 +269,11 @@ export const content = {
           { q: '대상 사이트가 바뀌면요?', a: '복구는 월정액에 포함됩니다.' },
           { q: '주기는 어떻게 정하나요?', a: '구축 단계에서 대상과 함께 확정합니다.' },
         ],
-        crossLine: '',
-        crossHref: '',
+        nextH,
+        next: [
+          { label: '받은 데이터를 검색에 넣었는데 안 나오면', line: '대개 형태소·사전에서 시작합니다. 실패 질의로 골든셋을 만들어 전후를 잽니다.', href: '/services/search/' },
+          { label: '이 데이터가 공공 SI 산출물에 들어가면', line: '감리 제출용 요구사항 추적표와 대조 리포트까지.', href: '/services/rtm/' },
+        ],
         cta: '받고 싶은 데이터와 출처 URL 만 알려주시면 하루 안에 구축비·월정액 견적을 드립니다',
       },
     },
@@ -369,6 +403,14 @@ export const content = {
       byline: '시즐론 이광연',
       tailLine: '이 절차를 고객 코퍼스에 적용하는 서비스:',
     },
+    // ── 노트 목록 /notes/ (2026-09-07, 개선 작업 C) — 컬렉션에서 자동 생성 ──
+    notesIndex: {
+      title: '한국어 검색·RAG·표 추출 실측 노트',
+      description: '한국어 검색·RAG·HWP·PDF 표 추출을 실제 코퍼스로 잰 기록. Nori 사용자 사전, 골든셋 전후 수치, 재현 파일.',
+      eyebrow: '노트',
+      h1: '실측 노트',
+      lede: '실험이나 측정이 있을 때만 씁니다. 숫자는 재현 파일과 함께 공개합니다.',
+    },
 
     // ── 문의 (v3 §3.7) ─────────────────────────────────────────────────
     contact: {
@@ -387,6 +429,13 @@ export const content = {
       // 파일에서 `topics: {…}` 를 읽어 백엔드 TOPIC_LABELS 와 대조한다(주제 유실 가드).
       topics: { search: '검색 품질 진단', rtm: '감리 대응 RTM', datafeed: '데이터 피드', other: '기타' },
       messageDefault: '통화 요청',
+      // 무료 스캔(2026-09-07, 개선 작업 B): ?service=search&scan=1 이면 안내·템플릿을 띄우고 message 앞에 scanTag 를 붙인다. 백엔드·topic 키 무변경.
+      scanNote: '무료 스캔 — 검색 엔진·버전과 실패하는 검색어 20~50개만 적어 보내시면, 영업일 1일 안에 Nori 기본 설정 기준 형태소 분절·미등록어 진단 결과 1쪽을 이메일로 보냅니다.',
+      scanTemplate: '검색 엔진/버전: \n실패하는 검색어(20~50개, 한 줄에 하나):\n',
+      scanTag: '[무료 스캔]',
+      scanLead: '검색 진단 무료 스캔을 원하시면 — 검색어 20~50개를 이 폼에 붙여 넣으세요.',
+      scanLink: '템플릿 채우기',
+      scanHref: '/contact/?service=search&scan=1#form',
       submit: '보내기',
       note: '영업일 1일 내 회신',
       sending: '보내는 중…',
@@ -481,7 +530,7 @@ export const content = {
       vatNote: 'Prices exclude VAT.',
       fixedLine: 'Fixed price · deliverables named up front · done by the founder',
     },
-    nav: { search: 'Search diagnostics', rtm: 'Audit RTM', data: 'Data feeds', work: 'Work', about: 'About', contact: 'Contact', founder: 'Founder' },
+    nav: { search: 'Search diagnostics', rtm: 'Audit RTM', data: 'Data feeds', notes: 'Notes', work: 'Work', about: 'About', contact: 'Contact', founder: 'Founder' },
     footer: {
       tagline: 'AI proposes. A deterministic layer verifies.',
       services: 'Services',
@@ -492,6 +541,7 @@ export const content = {
       workItems: [
         { href: '/work/#miriboa', label: 'Miriboa' },
         { href: '/work/#pipeline', label: 'Bid-opening data pipeline' },
+        { href: '/en/notes/', label: 'Notes' },
       ],
       baseline: 'Fixed price · deliverables named up front · done by the founder',
       business: 'Sizlon Inc. (주식회사 시즐론) · CEO Kwangyeon Lee · Biz. Reg. 420-86-03864 · Tel: +82-2-702-5795 · 302, 189-7 Wonhyo-ro, Yongsan-gu, Seoul, Republic of Korea · hello@sizlon.io',
@@ -501,6 +551,13 @@ export const content = {
     notes: {
       byline: 'Kwangyeon Lee, Sizlon',
       tailLine: 'Want this run on your corpus? Email',
+    },
+    notesIndex: {
+      title: 'Notes on Korean search, RAG & table extraction',
+      description: 'Measurements on real Korean corpora: Nori user dictionaries, golden-set before/after numbers, HWP/PDF table extraction — with the files to reproduce them.',
+      eyebrow: 'Notes',
+      h1: 'Notes',
+      lede: 'Written only when there is a measurement to publish. Numbers ship with the files to reproduce them.',
     },
 
     notFound: {
@@ -524,8 +581,9 @@ export const content = {
           p: 'Korean public-sector data lives in HWP attachments and PDF tables that generic tooling drops silently. I extract them with tables intact, deliver CSV/JSON/API on a fixed schema, and run the source on a self-healing crawler that recovers when a page changes instead of quietly stopping. API first when one exists.',
         },
         {
-          h: 'Korean search that actually retrieves',
-          p: 'Nori and other CJK tokenizers, user dictionaries, synonym sets, analyzer design for Elasticsearch and OpenSearch. Most "our RAG answers are off" problems are retrieval problems, and most Korean retrieval problems start at the tokenizer.',
+          // 대상은 한국 시장에 들어온 해외 서비스·글로벌 SaaS 의 한국어 검색(2026-09-07, 개선 작업 F). 수치는 토크나이저 노트에서.
+          h: 'Korean search relevance for Elasticsearch/OpenSearch',
+          p: 'For global SaaS and overseas services entering the Korean market: Nori and other CJK tokenizers, user dictionaries, synonym sets, analyzer design for Elasticsearch and OpenSearch. Most "our RAG answers are off" problems are retrieval problems, and most Korean retrieval problems start at the tokenizer. On 183,240 public-tender titles, a corpus-built user dictionary took P@10 from 0.906 to 0.986 — details in the note below.',
         },
         {
           h: 'Hybrid retrieval',
@@ -535,6 +593,7 @@ export const content = {
       backgroundH: 'Background',
       background: 'Twenty years as a software engineer. At Korea Newswire (2013–2025, principal engineer) I designed and ran the Elasticsearch architecture behind a media-monitoring service: index and component templates, a custom tokenizer, Nori and Mecab customisation, automatic user-dictionary updates from new-term extraction, monthly index rollover with snapshot policies, and DB-to-index consistency checks. The ingestion side was a crawling platform generating per-source instances for about 7,000 news sources, ~200K new articles a day, on Python, scrapy and playwright, run on-prem, on Docker Compose and on Kubernetes.',
       caseH: 'Case studies',
+      caseHref: '/en/notes/',
       // 영문 노트 목록(/en/notes/*). 비어 있으면 En.astro 가 절을 렌더하지 않는다.
       cases: [
         { title: 'Why Korean RAG fails: start with the tokenizer', href: '/en/notes/korean-tokenizer/' },

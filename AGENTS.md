@@ -21,7 +21,7 @@ product pages (`/bid-verification`, `/web-crawling`, `/how-it-works`,
 ## Dev / build / verify
 
 ```
-npm run build    # static build to ./dist/ (75 routes incl. redirect stubs) + internal-link check
+npm run build    # static build to ./dist/ (81 routes incl. redirect stubs) + internal-link check
 npm run preview  # serve the built ./dist/ locally
 ```
 
@@ -103,12 +103,28 @@ URL 301 with the expected `Location` (those 301s come from Cloudflare, see
   in Chrome at 1200×630 — redo the same way if the hero line changes.
 
 **Adding a page:** section + one route file; copy in `content.ko`; nav entry in
-`site.ts` if it belongs in the nav.
+`site.ts` if it belongs in the nav. The header holds six items on purpose —
+services ×3, 실측 노트, 회사 소개, 문의; `/work/` was dropped from it 2026-09-07
+because a seventh item wraps between 821 and ~900px (footer column, the home
+"만든 것들 보기" button and the notes still link it).
+
+**Service page blocks (2026-09-07 improvement pass, plan in
+`~/Projects/docs/sizlon_io_개선_2단계_변경안.md`):** every service ends with an
+"이 다음에 보통 필요한 것" block (`content.ko.services.<key>.next`) linking the
+other two services — rendered even in RTM `brief` mode. "실측 노트" sits right
+under "진행". The search page carries a **free-scan entry** (`scan*` keys) that
+reuses the contact form: `/contact/?service=search&scan=1#form` preselects the
+topic, prefills `contact.scanTemplate` in the message box and prefixes the
+submission with `contact.scanTag` — no backend or `topics` key change. Pages
+with a visible FAQ also emit a `FAQPage` JSON-LD node.
 
 **Notes (`/notes/<slug>/`, since 2026-09-06)** are the one long-form surface:
 evidence articles hung off a service page. Body is Markdown in
 `src/content/notes/<slug>.md` (collection `notes`, schema in
-`src/content.config.ts`: title, description, date, service). `Note.astro`
+`src/content.config.ts`: title, description, date, service, optional `metaTitle`
+— `<title>` only, for a search-intent phrasing while the h1 keeps the title).
+`/notes/` and `/en/notes/` list the collection (`Notes.astro`, hreflang pair;
+both in `lastmod.ts`). `Note.astro`
 renders it with a `TechArticle` JSON-LD node (author = founder, publisher =
 org). Rules: only write a note when there is a measurement to publish (the
 2026-07-26 criterion — no generic guides); link it from its service page via

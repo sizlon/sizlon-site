@@ -22,6 +22,13 @@ const hrefOf = (key: string) => servicePages.find((s) => s.key === key)?.href ??
     </div>
   </section>
 
+  {/* 작업 방식은 서비스 위(2026-09-07, 개선 작업 E): 세 서비스를 묶는 유일한 원칙이라 카드보다 먼저 보인다. 영문 태그라인은 푸터 문구 그대로. */}
+  <section class="section wrap method tight">
+    <span class="eyebrow">{c.methodEyebrow}</span>
+    <p class="tagline">{tr.footer.tagline}</p>
+    <p class="lede">{c.method}</p>
+  </section>
+
   <section class="section wrap">
     <div class="head">
       <span class="eyebrow">{c.servicesEyebrow}</span>
@@ -33,16 +40,13 @@ const hrefOf = (key: string) => servicePages.find((s) => s.key === key)?.href ??
           <h3>{card.name}</h3>
           <p class="terms">{card.terms}</p>
           <p class="deliverable">{card.deliverable}</p>
+          <p class="relation">{card.relation}</p>
           <span class="more">자세히 <span class="arrow">&rarr;</span></span>
         </a>
       ))}
     </div>
+    <p class="scan"><a href={c.scanHref}>{c.scanLine} &rarr;</a></p>
     <p class="vat eyebrow">{tr.common.vatNote}</p>
-  </section>
-
-  <section class="section wrap method tight">
-    <span class="eyebrow">{c.methodEyebrow}</span>
-    <p class="lede">{c.method}</p>
   </section>
 
   <section class="section wrap work tight">
@@ -95,7 +99,11 @@ const hrefOf = (key: string) => servicePages.find((s) => s.key === key)?.href ??
   dt { font-size: var(--step-0); font-weight: 600; }
   dt a { color: var(--color-ink); text-decoration: none; border-bottom: 1px solid var(--color-recovered); }
   dd { margin: 0; font-family: var(--font-mono); font-size: var(--step--1); color: var(--color-slate); }
-  .method .lede { margin-top: 1rem; max-width: var(--measure); }
+  .method .tagline { margin-top: 0.75rem; font-family: var(--font-mono); font-size: var(--step--1); color: var(--color-slate); }
+  .method .lede { margin-top: 0.5rem; max-width: var(--measure); }
+  .relation { color: var(--color-slate); font-size: var(--step--1); line-height: 1.55; }
+  .scan { margin-top: 1.25rem; }
+  .scan a { color: var(--color-ink); text-decoration: none; border-bottom: 1px solid var(--color-recovered); }
   .work { display: flex; flex-direction: column; gap: 1rem; align-items: flex-start; }
   /* 근거·작업 방식·만든 것들은 짧은 절이라 기본 section 여백이 과하다 */
   .tight { padding-block: clamp(2rem, 1.5rem + 2vw, 3.25rem); }

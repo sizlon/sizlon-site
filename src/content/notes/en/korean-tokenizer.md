@@ -4,6 +4,7 @@ description: "Measured on 183,240 Korean public-tender titles: with Nori's defau
 date: "2026-09-06"
 service: search
 eyebrow: "Note"
+metaTitle: "Nori user dictionary for Korean search relevance, measured on 183,240 tender titles"
 ---
 
 Most "our RAG gives wrong answers" reports are not a generation problem. The document that held the answer never made it into the retrieved set. And in Korean, the reason a document fails to surface usually starts at the tokenizer. Tokenization is the first step that turns both documents and queries into tokens; if the two sides disagree there, nothing you stack on top — BM25 or vectors — will bring the document back.

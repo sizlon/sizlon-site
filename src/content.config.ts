@@ -15,6 +15,8 @@ const notes = defineCollection({
     /** 이 글이 증거가 되는 서비스 — 그 페이지가 이 글을 링크한다 */
     service: z.enum(['search', 'rtm', 'data']),
     eyebrow: z.string().default('노트'),
+    /** <title> 전용(선택, 2026-09-07). h1 은 title 그대로. 검색 의도어("nori 사용자 사전" 등)를 SERP 제목에만 넣을 때 쓴다. */
+    metaTitle: z.string().optional(),
   }),
 });
 

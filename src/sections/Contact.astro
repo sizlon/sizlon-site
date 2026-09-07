@@ -32,6 +32,9 @@ const turnstileKey = site.turnstileSiteKey;
       <h2>{c.formH}</h2>
       <p class="alt">{c.note}</p>
       <p class="alt">{c.altPrefix}: <a href={`mailto:${site.contactEmail}`}>{site.contactEmail}</a></p>
+      {/* 무료 스캔(2026-09-07, 개선 작업 B): 안내는 scan=1 일 때만, 진입 줄은 항상. */}
+      <p class="alt scan-note" hidden data-scan-note>{c.scanNote}</p>
+      <p class="alt" data-scan-lead>{c.scanLead} <a href={c.scanHref}>{c.scanLink} &rarr;</a></p>
     </div>
 
     <div class="formcol">
@@ -42,6 +45,8 @@ const turnstileKey = site.turnstileSiteKey;
         data-contact-form
         data-sending={c.sending}
         data-message-default={c.messageDefault}
+        data-scan-template={c.scanTemplate}
+        data-scan-tag={c.scanTag}
         data-turnstile={turnstileKey ? 'on' : undefined}
       >
         <label>
@@ -109,6 +114,17 @@ const turnstileKey = site.turnstileSiteKey;
   if (serviceSel && serviceParam && [...serviceSel.options].some((o) => o.value === serviceParam)) {
     serviceSel.value = serviceParam;
   }
+  // 무료 스캔(?scan=1): 안내 표시, 검색어 템플릿 프리필, textarea 확장. 백엔드는 모른다 — message 앞에 태그만.
+  const isScan = new URLSearchParams(location.search).get('scan') === '1';
+  const msgEl = form?.querySelector<HTMLTextAreaElement>('[data-message]');
+  if (isScan && form && msgEl) {
+    const note = document.querySelector<HTMLElement>('[data-scan-note]');
+    const lead = document.querySelector<HTMLElement>('[data-scan-lead]');
+    if (note) note.hidden = false;
+    if (lead) lead.hidden = true;
+    if (!msgEl.value) msgEl.value = form.dataset.scanTemplate || '';
+    msgEl.rows = 10;
+  }
   if (form && sent) {
     form.addEventListener('submit', async (e) => {
       e.preventDefault();
@@ -137,6 +153,7 @@ const turnstileKey = site.turnstileSiteKey;
       const original = msg ? msg.value : '';
       if (msg) {
         const parts: string[] = [];
+        if (isScan && form.dataset.scanTag) parts.push(form.dataset.scanTag);
         if (sel && sel.value) parts.push(`[서비스] ${sel.options[sel.selectedIndex].text}`);
         if (phone && phone.value.trim()) parts.push(`[전화] ${phone.value.trim()}`);
         parts.push(original.trim() || form.dataset.messageDefault || '통화 요청');

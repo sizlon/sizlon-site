@@ -172,8 +172,11 @@ English twin is listed in `content.en.page.cases` (the /en/ "Case studies" block
   translation pairs (passed in by Note.astro); nothing else. The sitemap
   integration's `i18n` option is intentionally off — it would fabricate `/en/…`
   alternates for Korean-only pages.
-- **Cloudflare caches static files for 4h.** After a deploy, purge the changed
-  URLs (Caching → Purge Cache → Custom Purge) or verify with `?cb=$RANDOM`.
+- **Cloudflare caching (measured 2026-09-08):** HTML and the sitemap XML are
+  `cf-cache-status: DYNAMIC` (never cached, no purge needed) and `_astro/`
+  assets have hashed filenames. Only `public/` files (images, robots.txt,
+  favicon) are cached for 4h — purge those URLs (Caching → Purge Cache →
+  Custom Purge) when you change one, or verify with `?cb=$RANDOM`.
 
 ## Contact form
 

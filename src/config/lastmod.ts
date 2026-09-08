@@ -11,7 +11,7 @@ export const LASTMOD: Record<string, string> = {
   '/en/': '2026-09-07',   // 09-07 검색 블록 포지셔닝·Case studies 링크
   '/notes/': '2026-09-07',
   '/en/notes/': '2026-09-07',
-  '/services/search/': '2026-09-07',   // 09-07 H1·FAQ 3건·분할 금액·무료 스캔·이 다음에
+  '/services/search/': '2026-09-08',   // 09-07 H1·FAQ 3건·분할 금액·무료 스캔·이 다음에
   '/notes/korean-tokenizer/': '2026-09-07',   // 09-07 동의어 각주(4d3576c, 당시 미갱신) + metaTitle
   '/en/notes/korean-tokenizer/': '2026-09-07',
   '/notes/korean-tables/': '2026-09-06',
@@ -21,7 +21,7 @@ export const LASTMOD: Record<string, string> = {
   '/work/': '2026-09-06',
   '/about/': '2026-09-08',   // 09-08 크롤러 문장 사실 정정(자동 복구는 시즐론에서 더한 것)
   '/founder/': '2026-09-06',
-  '/contact/': '2026-09-07',   // 09-07 무료 스캔 안내
+  '/contact/': '2026-09-08',   // 09-07 무료 스캔 안내
   '/legal/terms/': '2026-09-06',
   '/legal/privacy/': '2026-09-06',
   '/legal/licenses/': '2026-09-06',
